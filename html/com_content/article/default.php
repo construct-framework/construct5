@@ -74,12 +74,14 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 		OR ($params->get('show_hits'))); ?>
 
 	<?php if ($useDefList) : ?>
-	<header class="article-info">
-		<h3 class="article-info-term"><?php  echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?></h3>
+	    <header class="article-info">
+		    <h3 class="article-info-term">
+    		    <?php  echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?>
+    		</h3>
 	<?php endif; ?>
 	<?php if ($params->get('show_parent_category') && $this->item->parent_slug != '1:root') : ?>
 		<?php	$title = $this->escape($this->item->parent_title);
-		$url = '<a href="'.JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->parent_slug)).'">'.$title.'</a>';?>
+		$url = '<a class="parent-category-name" href="'.JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->parent_slug)).'">'.$title.'</a>';?>
 		<?php if ($params->get('link_parent_category') AND $this->item->parent_slug) : ?>
 			<?php echo JText::sprintf('COM_CONTENT_PARENT', $url); ?>
 		<?php else : ?>
@@ -88,7 +90,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 	<?php endif; ?>
 	<?php if ($params->get('show_category')) : ?>
 		<?php 	$title = $this->escape($this->item->category_title);
-		$url = '<a href="'.JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->catslug)).'">'.$title.'</a>';?>
+		$url = '<a class="category-name" href="'.JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->catslug)).'">'.$title.'</a>';?>
 		<?php if ($params->get('link_category') AND $this->item->catslug) : ?>
 			<?php echo JText::sprintf('COM_CONTENT_CATEGORY', $url); ?>
 		<?php else : ?>
@@ -97,17 +99,17 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 	<?php endif; ?>
 	<?php if ($params->get('show_create_date')) : ?>
 		<time class="create">
-		<?php echo JText::sprintf('COM_CONTENT_CREATED_DATE_ON', JHtml::_('date',$this->item->created, JText::_('DATE_FORMAT_LC2'))); ?>
+		    <?php echo JText::sprintf('COM_CONTENT_CREATED_DATE_ON', JHtml::_('date',$this->item->created, JText::_('DATE_FORMAT_LC2'))); ?>
 		</time>
 	<?php endif; ?>
 	<?php if ($params->get('show_modify_date')) : ?>
 		<time class="modified">
-		<?php echo JText::sprintf('COM_CONTENT_LAST_UPDATED', JHtml::_('date',$this->item->modified, JText::_('DATE_FORMAT_LC2'))); ?>
+		    <?php echo JText::sprintf('COM_CONTENT_LAST_UPDATED', JHtml::_('date',$this->item->modified, JText::_('DATE_FORMAT_LC2'))); ?>
 		<time>
 	<?php endif; ?>
 	<?php if ($params->get('show_publish_date')) : ?>
 		<time class="published">
-		<?php echo JText::sprintf('COM_CONTENT_PUBLISHED_DATE', JHtml::_('date',$this->item->publish_up, JText::_('DATE_FORMAT_LC2'))); ?>
+		    <?php echo JText::sprintf('COM_CONTENT_PUBLISHED_DATE', JHtml::_('date',$this->item->publish_up, JText::_('DATE_FORMAT_LC2'))); ?>
 		</time>
 	<?php endif; ?>
 	<?php if ($params->get('show_author') && !empty($this->item->author )) : ?>
@@ -131,7 +133,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 		</span>
 	<?php endif; ?>
 	<?php if ($useDefList) : ?>
-	</header>
+	    </header>
 	<?php endif; ?>
 
 	<?php if (isset ($this->item->toc)) : ?>

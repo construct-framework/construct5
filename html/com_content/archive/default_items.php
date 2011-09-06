@@ -26,11 +26,11 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 		    </h2>
 
     <?php if (($params->get('show_author')) or ($params->get('show_parent_category')) or ($params->get('show_category')) or ($params->get('show_create_date')) or ($params->get('show_modify_date')) or ($params->get('show_publish_date'))  or ($params->get('show_hits'))) : ?>
-    <dl class="article-info">
-    <dt class="article-info-term"><?php echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?></dt>
+    <header class="article-info">
+    <h3 class="article-info-term"><?php echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?></h3>
     <?php endif; ?>
     <?php if ($params->get('show_parent_category')) : ?>
-		    <dd class="parent-category-name">
+		    
 			    <?php	$title = $this->escape($item->parent_title);
 					    $url = '<a href="'.JRoute::_(ContentHelperRoute::getCategoryRoute($item->parent_slug)).'">'.$title.'</a>';?>
 			    <?php if ($params->get('link_parent_category') && $item->parent_slug) : ?>
@@ -53,19 +53,19 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 		    </dd>
     <?php endif; ?>
     <?php if ($params->get('show_create_date')) : ?>
-		    <dd class="create">
+		    <time class="create">
 		    <?php echo JText::sprintf('COM_CONTENT_CREATED_DATE_ON', JHtml::_('date',$item->created, JText::_('DATE_FORMAT_LC2'))); ?>
-		    </dd>
+		    </time>
     <?php endif; ?>
     <?php if ($params->get('show_modify_date')) : ?>
-		    <dd class="modified">
+		    <time class="modified">
 		    <?php echo JText::sprintf('COM_CONTENT_LAST_UPDATED', JHtml::_('date',$item->modified, JText::_('DATE_FORMAT_LC2'))); ?>
-		    </dd>
+		    </time>
     <?php endif; ?>
     <?php if ($params->get('show_publish_date')) : ?>
-		    <dd class="published">
+		    <time class="published">
 		    <?php echo JText::sprintf('COM_CONTENT_PUBLISHED_DATE', JHtml::_('date',$item->publish_up, JText::_('DATE_FORMAT_LC2'))); ?>
-		    </dd>
+		    </time>
     <?php endif; ?>
     <?php if ($params->get('show_author') && !empty($item->author )) : ?>
 	    <dd class="createdby">
@@ -82,7 +82,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 	    </dd>
     <?php endif; ?>
     <?php if ($params->get('show_hits')) : ?>
-		    <dd class="hits">
+		    <span class="hits">
 		    <?php echo JText::sprintf('COM_CONTENT_ARTICLE_HITS', $item->hits); ?>
 		    </dd>
     <?php endif; ?>
@@ -124,7 +124,7 @@ else {
 		</h2>
 
 		<?php if (($params->get('show_author')) or ($params->get('show_parent_category')) or ($params->get('show_category')) or ($params->get('show_create_date')) or ($params->get('show_modify_date')) or ($params->get('show_publish_date'))  or ($params->get('show_hits'))) : ?>
-		<dl class="article-info">
+		<header class="article-info">
 		<?php endif; ?>
 		<?php if ($params->get('show_parent_category')) : ?>
 				<h2 class="parent-category-name">
@@ -165,7 +165,7 @@ else {
 				</time>
 		<?php endif; ?>
 		<?php if ($params->get('show_author') && !empty($item->author )) : ?>
-			<dd class="createdby"> 
+			<address class="createdby" rel="author"> 
 				<?php $author =  $item->author; ?>
 				<?php $author = ($item->created_by_alias ? $item->created_by_alias : $author);?>
 		
@@ -176,15 +176,15 @@ else {
 					<?php else :?>
 						<?php echo JText::sprintf('COM_CONTENT_WRITTEN_BY', $author); ?>
 					<?php endif; ?>
-			</dd>
+			</address>
 		<?php endif; ?>	
 		<?php if ($params->get('show_hits')) : ?>
-			<dd class="hits">
-			<?php echo JText::sprintf('COM_CONTENT_ARTICLE_HITS', $item->hits); ?>
-			</dd>
+			<span class="hits">
+			    <?php echo JText::sprintf('COM_CONTENT_ARTICLE_HITS', $item->hits); ?>
+			</span>
 		<?php endif; ?>
 		<?php if (($params->get('show_author')) or ($params->get('show_category')) or ($params->get('show_create_date')) or ($params->get('show_modify_date')) or ($params->get('show_publish_date')) or ($params->get('show_hits'))) :?>
-		</dl>
+		    </header>
 		<?php endif; ?>
 		
 		<?php if ($params->get('show_intro')) :?>
