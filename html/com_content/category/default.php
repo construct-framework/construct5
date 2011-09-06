@@ -16,9 +16,10 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 
 	<section class="category-list<?php echo $this->pageclass_sfx;?>">
 		<?php if (($this->params->get('show_page_heading', 1)) && ($this->params->get('show_category_title', 1) OR $this->params->get('page_subheading'))) : ?>	
-			<hgroup>
+		<header>
+		    <hgroup>
 		<?php elseif (($this->params->get('show_page_heading', 1)) || ($this->params->get('show_category_title', 1) OR $this->params->get('page_subheading')))  : ?>
-			<header>
+		<header>
 		<?php endif; ?>
 		
 			<?php if ($this->params->get('show_page_heading', 1)) : ?>
@@ -38,19 +39,20 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 			
 		<?php if (($this->params->get('show_page_heading', 1)) && ($this->params->get('show_category_title', 1) OR $this->params->get('page_subheading'))) : ?>	
 			</hgroup>
+		</header>
 		<?php elseif (($this->params->get('show_page_heading', 1)) || ($this->params->get('show_category_title', 1) OR $this->params->get('page_subheading')))  : ?>
-			</header>
+		</header>
 		<?php endif; ?>		
 
 		<?php if ($this->params->get('show_description', 1) || $this->params->def('show_description_image', 1)) : ?>
-		    <section class="category-desc clearfix">
-			    <?php if ($this->params->get('show_description_image') && $this->category->getParams()->get('image')) : ?>
-				    <img src="<?php echo $this->category->getParams()->get('image'); ?>"/>
-			    <?php endif; ?>
-			    <?php if ($this->params->get('show_description') && $this->category->description) : ?>
-				    <?php echo JHtml::_('content.prepare', $this->category->description); ?>
-			    <?php endif; ?>
-		    </section>
+	    <section class="category-desc clearfix">
+		    <?php if ($this->params->get('show_description_image') && $this->category->getParams()->get('image')) : ?>
+			    <img src="<?php echo $this->category->getParams()->get('image'); ?>"/>
+		    <?php endif; ?>
+		    <?php if ($this->params->get('show_description') && $this->category->description) : ?>
+			    <?php echo JHtml::_('content.prepare', $this->category->description); ?>
+		    <?php endif; ?>
+	    </section>
 		<?php endif; ?>
 
 		<section class="cat-items">
@@ -83,17 +85,17 @@ $cparams = JComponentHelper::getParams ('com_media');
 		<?php endif; ?>
 		
 		<?php if ($this->params->def('show_description', 1) || $this->params->def('show_description_image', 1)) : ?>
-			<div class="category-desc">	
-				<?php if ($this->params->get('show_description_image') && $this->category->image) : ?>
-					<img src="<?php echo $this->baseurl . '/' . $cparams->get('image_path') . '/' . $this->category->image; ?>" class="image_<?php echo $this->category->image_position; ?>" />
-				<?php endif; ?>
-				<p class="category-desc-text">					
-					<?php if ($this->params->get('show_description') && $this->category->description) : ?>
-						<?php echo $this->category->description; ?>
-					<?php endif; ?>		
-				</p>	
-			</div>
+		<section class="category-desc clearfix">	
+			<?php if ($this->params->get('show_description_image') && $this->category->image) : ?>
+				<img src="<?php echo $this->baseurl . '/' . $cparams->get('image_path') . '/' . $this->category->image; ?>" class="image_<?php echo $this->category->image_position; ?>" />
 			<?php endif; ?>
+			<p class="category-desc-text">					
+				<?php if ($this->params->get('show_description') && $this->category->description) : ?>
+					<?php echo $this->category->description; ?>
+				<?php endif; ?>		
+			</p>	
+		</section>
+		<?php endif; ?>
 		
 		<section class="cat-items">	
 			<?php $this->items =& $this->getItems(); ?>

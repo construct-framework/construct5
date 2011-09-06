@@ -9,7 +9,7 @@
 $cparams = JComponentHelper::getParams ('com_media');
 ?>
 
-<div class="blog<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
+<section class="blog<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
 
 	<?php if ($this->params->get('show_page_title')) : ?>
 	<h1>
@@ -18,7 +18,7 @@ $cparams = JComponentHelper::getParams ('com_media');
 	<?php endif; ?>
 
 	<?php if ($this->params->def('show_description', 1) || $this->params->def('show_description_image', 1)) : ?>
-	<div class="section-desc">
+	<section class="section-desc clearfix">
 		<?php if ($this->params->get('show_description_image') && $this->section->image) : ?>
 			<img src="<?php echo $this->baseurl . $cparams->get('image_path').'/'.$this->escape($this->section->image); ?>" class="image_<?php echo $this->escape($this->section->image_position); ?>" />
 		<?php endif; ?>		
@@ -27,7 +27,7 @@ $cparams = JComponentHelper::getParams ('com_media');
 				<?php echo $this->section->description; ?>
 			<?php endif; ?>
 		</p>		
-	</div>
+	</section>
 	<?php endif; ?>
 
 	<?php $i = $this->pagination->limitstart;
@@ -53,10 +53,10 @@ $cparams = JComponentHelper::getParams ('com_media');
 		<?php for ($y = 0; $y < $rowcount && $i < $this->total; $y++) : ?>
 			<div class="items-row cols-<?php echo $colcount; ?> row-<?php echo $y; ?> clearfix">
 				<?php for ($z = 0; $z < $colcount && $ii < $introcount && $i < $this->total; $z++, $i++, $ii++) : ?>
-					<div class="item column-<?php echo $z + 1; ?>" >
+					<article class="item column-<?php echo $z + 1; ?>" >
 						<?php $this->item =& $this->getItem($i, $this->params); ?>
 						<?php echo $this->loadTemplate('item'); ?>
-					</div>
+					</article>
 				<?php endfor; ?>
 			</div>
 		<?php endfor;?>
@@ -70,16 +70,16 @@ $cparams = JComponentHelper::getParams ('com_media');
 	<?php endif; ?>
 
 	<?php if ($this->params->def('show_pagination', 2) == 1  || ($this->params->get('show_pagination') == 2 && $this->pagination->get('pages.total') > 1)) : ?>
-		<nav class="pagination">
-			<?php if( $this->pagination->get('pages.total') > 1 ) : ?>
-				<p class="counter">
-					<?php echo $this->pagination->getPagesCounter(); ?>
-				</p>
-			<?php endif; ?>
-			<?php if ($this->params->def('show_pagination_results', 1)) : ?>
-				<?php echo $this->pagination->getPagesLinks(); ?>
-			<?php endif; ?>
-		</nav>
+	<nav class="pagination">
+		<?php if( $this->pagination->get('pages.total') > 1 ) : ?>
+			<p class="counter">
+				<?php echo $this->pagination->getPagesCounter(); ?>
+			</p>
+		<?php endif; ?>
+		<?php if ($this->params->def('show_pagination_results', 1)) : ?>
+			<?php echo $this->pagination->getPagesLinks(); ?>
+		<?php endif; ?>
+	</nav>
 	<?php endif; ?>
 
-</div>
+</section>
