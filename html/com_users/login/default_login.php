@@ -18,29 +18,28 @@ JHtml::_('behavior.keepalive');
 	</h2>
 	<?php endif; ?>
 
-	<?php if ($this->params->get('logindescription_show') == 1 || $this->params->get('login_image') != '') : ?>
+	<?php if ($this->params->get('login_description') !='' || $this->params->get('login_image') != '') : ?>
 	<p class="login-description">
 	<?php endif ; ?>
 
-		<?php if($this->params->get('logindescription_show') == 1) : ?>
-			<?php echo $this->params->get('login_description'); ?>
-		<?php endif; ?>
+	<?php if($this->params->get('login_description') !='') : ?>
+		<?php echo $this->params->get('login_description'); ?>
+	<?php endif; ?>
 
-		<?php if (($this->params->get('login_image')!='')) :?>
-			<img src="<?php echo $this->escape($this->params->get('login_image')); ?>" class="login-image" alt="<?php echo JTEXT::_('COM_USER_LOGIN_IMAGE_ALT')?>"/>
-		<?php endif; ?>
+	<?php if (($this->params->get('login_image')!='')) :?>
+		<img src="<?php echo $this->escape($this->params->get('login_image')); ?>" class="login-image" alt="<?php echo JTEXT::_('COM_USER_LOGIN_IMAGE_ALT')?>"/>
+	<?php endif; ?>
 
-	<?php if ($this->params->get('logindescription_show') == 1 || $this->params->get('login_image') != '') : ?>
+	<?php if (($this->params->get('login_description') !='') || $this->params->get('login_image') != '') : ?>
 	</p>
 	<?php endif ; ?>
 
 	<form action="<?php echo JRoute::_('index.php?option=com_users&task=user.login'); ?>" method="post">
-
 		<fieldset>
 			<?php foreach ($this->form->getFieldset('credentials') as $field): ?>
 				<?php if (!$field->hidden): ?>
-					<div class="login-fields"><?php echo $field->label; ?>
-					<?php echo $field->input; ?></div>
+					<p class="login-fields"><?php echo $field->label; ?>
+					<?php echo $field->input; ?></p>
 				<?php endif; ?>
 			<?php endforeach; ?>
 			<button type="submit" class="button"><?php echo JText::_('JLOGIN'); ?></button>
