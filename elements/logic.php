@@ -463,8 +463,10 @@ if ($googleWebFont3) {
 }
 
 // JavaScript
-//$doc->addScript($template.'/js/head.min.js');
-//$doc->addScript($template.'/js/modernizr-2.0.6.js');
+
+//Quick port of Modernizer's method of replacing "no-js" HTML class with "js" - NOTE: removes all other classes added to HTML element
+$doc->addCustomTag("\n".'  <script type="text/javascript">docElement = document.documentElement;docElement.className = docElement.className.replace(/\bno-js\b/, \'js\');</script>');
+
 $doc->addCustomTag("\n".'  <script type="text/javascript">window.addEvent(\'domready\',function(){new SmoothScroll({duration:1200},window);});</script>');
 if ($loadjQuery) {
 	$doc->addScript($loadjQuery);
