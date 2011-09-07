@@ -8,73 +8,44 @@
 
 // Joomla 1.6+ only
 
+JHtml::_('behavior.keepalive');
 ?>
 
-<section class="login<?php echo $this->escape($this->params->get( 'pageclass_sfx' )); ?>">
-
-	<?php if ( $this->params->get( 'show_login_title' ) ) : ?>
-	    <h2>
-		    <?php echo $this->params->get( 'header_login' ); ?>
-	    </h2>
-	<?php endif; ?>
-	
-	<?php if ( $this->params->get( 'description_login' ) || isset( $this->image ) ) : ?>
-	    <p class="login-description">
-		    <?php if ($this->params->get('description_login')) : ?>
-			    <?php echo $this->params->get('description_login_text'); ?>
-		    <?php endif; ?>		
-		    <?php if (isset ($this->image)) : ?>
-			    <?php echo $this->image; ?>
-		    <?php endif; ?>
-	    </p>
+<section class="login<?php echo $this->pageclass_sfx?>">
+	<?php if ($this->params->get('show_page_heading')) : ?>
+	<h2>
+		<?php echo $this->escape($this->params->get('page_heading')); ?>
+	</h2>
 	<?php endif; ?>
 
-	<form action="<?php echo JRoute::_( 'index.php', true, $this->params->get('usesecure')); ?>" method="post">
-		<fieldset>		
-			<label for="user" ><?php echo JText::_( 'Username' ); ?>
-				<input name="username" type="text" class="inputbox" size="20"  id="user">
-			</label>
-			<label for="pass" ><?php echo JText::_( 'Password' ); ?>
-				<input name="passwd" type="password" class="inputbox" size="20" id="pass">
-			</label>
-			<label for="rem"><?php echo JText::_( 'Remember me' ); ?>
-				<input type="checkbox" name="remember" class="inputbox" value="yes" id="rem">
-			</label>
-			<a href="<?php echo JRoute::_( 'index.php?option=com_user&view=reset#content' ); ?>">
-				<?php echo JText::_('Lost Password?'); ?>
-			</a>
-			<?php if ( $this->params->get( 'registration' ) ) : ?>
-			<?php echo JText::_('No account yet?'); ?>
-			<a href="<?php echo JRoute::_( 'index.php?option=com_user&view=register#content' ); ?>">
-				<?php echo JText::_( 'Register' ); ?>
-			</a>
-			<?php endif; ?>
-			<button type="submit" name="submit" class="button"><?php echo JText::_( 'Login' ); ?></button>
-			<noscript><?php echo JText::_( 'WARNJAVASCRIPT' ); ?></noscript>
-		</fieldset>
-		<input type="hidden" name="option" value="com_user">
-		<input type="hidden" name="task" value="login">
-		<input type="hidden" name="return" value="<?php echo $this->return; ?>">
-		<?php echo JHTML::_( 'form.token' ); ?>
-	</form>
+	<?php if ($this->params->get('logindescription_show') == 1 || $this->params->get('login_image') != '') : ?>
+	<p class="login-description">
+	<?php endif ; ?>
 
-	<ul>
-		<li>
-			<a href="<?php echo JRoute::_('index.php?option=com_users&view=reset'); ?>">
-			<?php echo JText::_('COM_USERS_LOGIN_RESET'); ?></a>
-		</li>
-		<li>
-			<a href="<?php echo JRoute::_('index.php?option=com_users&view=remind'); ?>">
-			<?php echo JText::_('COM_USERS_LOGIN_REMIND'); ?></a>
-		</li>
-		<?php
-		$usersConfig = JComponentHelper::getParams('com_users');
-		if ($usersConfig->get('allowUserRegistration')) : ?>
-		<li>
-			<a href="<?php echo JRoute::_('index.php?option=com_users&view=registration'); ?>">
-				<?php echo JText::_('COM_USERS_LOGIN_REGISTER'); ?></a>
-		</li>
+		<?php if($this->params->get('logindescription_show') == 1) : ?>
+			<?php echo $this->params->get('login_description'); ?>
 		<?php endif; ?>
-	</ul>
 
+		<?php if (($this->params->get('login_image')!='')) :?>
+			<img src="<?php echo $this->escape($this->params->get('login_image')); ?>" class="login-image" alt="<?php echo JTEXT::_('COM_USER_LOGIN_IMAGE_ALT')?>"/>
+		<?php endif; ?>
+
+	<?php if ($this->params->get('logindescription_show') == 1 || $this->params->get('login_image') != '') : ?>
+	</p>
+	<?php endif ; ?>
+
+	<form action="<?php echo JRoute::_('index.php?option=com_users&task=user.login'); ?>" method="post">
+
+		<fieldset>
+			<?php foreach ($this->form->getFieldset('credentials') as $field): ?>
+				<?php if (!$field->hidden): ?>
+					<div class="login-fields"><?php echo $field->label; ?>
+					<?php echo $field->input; ?></div>
+				<?php endif; ?>
+			<?php endforeach; ?>
+			<button type="submit" class="button"><?php echo JText::_('JLOGIN'); ?></button>
+			<input type="hidden" name="return" value="<?php echo base64_encode($this->params->get('login_redirect_url',$this->form->getValue('return'))); ?>" />
+			<?php echo JHtml::_('form.token'); ?>
+		</fieldset>
+	</form>
 </section>

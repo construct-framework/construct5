@@ -8,12 +8,10 @@
 
 // Joomla 1.6+ only
 
-?>
-
-<?php if($this->params->get('show_page_title',1)) : ?>
-    <h2>
-	    <?php echo $this->params->get('page_title') ?>
-    </h2>
-<?php endif; ?>
-
-<?php echo $this->loadTemplate( $this->type ); ?>
+if ($this->user->get('guest')):
+	// The user is not logged in.
+	echo $this->loadTemplate('login');
+else:
+	// The user is already logged in.
+	echo $this->loadTemplate('logout');
+endif;
