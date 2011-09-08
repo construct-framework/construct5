@@ -6,6 +6,9 @@
 * @license		GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+// Load Joomla browser class
+jimport('joomla.environment.browser');
+
 // Call the Construct Template Helper Class
 if (JFile::exists(dirname(__FILE__).'/helper.php')) {
     include dirname(__FILE__).'/helper.php';
@@ -15,6 +18,12 @@ if (JFile::exists(dirname(__FILE__).'/helper.php')) {
 $app 					= JFactory::getApplication();
 // Get the base URL of the website
 $baseUrl 				= JURI::base();
+// Instantiate JBrowser
+$browser 				= JBrowser::getInstance();
+// Get the browser type
+$browserType 			= $browser->getBrowser();
+// Get the browser version
+$browserVersion 		= $browser->getMajor();
 // Returns a reference to the global document object
 $doc 					= JFactory::getDocument();
 // Is version 1.6 and later
@@ -474,45 +483,44 @@ if ($loadjQuery) {
 
 // Layout Declarations
 if ($siteWidth) {
-	$doc->addStyleDeclaration("\n".'  #body-container, #header-above {'.$siteWidthType.':'.$siteWidth.$siteWidthUnit.'}');
+	$doc->addStyleDeclaration("\n".'  #body-container, #header-above {'.$siteWidthType.':'.$siteWidth.$siteWidthUnit.';}');
 }
 if (($siteWidthType == 'max-width') && $fluidMedia ) {
-	$doc->addStyleDeclaration("\n".'  img, object {max-width:100%}');
+	$doc->addStyleDeclaration("\n".'  img, object {max-width:100%;}');
 }
 if (!$fullWidth) {
-	$doc->addStyleDeclaration("\n".'  #header, #footer {'.$siteWidthType.':'.$siteWidth.$siteWidthUnit.'; margin:0 auto}');
+	$doc->addStyleDeclaration("\n".'  #header, #footer {'.$siteWidthType.':'.$siteWidth.$siteWidthUnit.'; margin:0 auto;}');
 }
 
 // Internet Explorer Fixes
-$doc->addCustomTag("\n".'  <!--[if !IE 9]>
-  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>');
-if ($IECSS3) {
-  $doc->addCustomTag("\n".'  <style type="text/css">'.$IECSS3Targets.' {behavior:url("'.$baseUrl.'templates/'.$this->template.'/js/PIE.htc")}</style>');
-}
-$doc->addCustomTag("\n".'  <![endif]-->');
-
-if ($useStickyFooter) {
-	$doc->addStyleDeclaration("\n".'  .sticky-footer #body-container {padding-bottom:'.$stickyFooterHeight.'px;}
-  .sticky-footer #footer {margin-top:-'.$stickyFooterHeight.'px;height:'.$stickyFooterHeight.'px;}');
-	$doc->addCustomTag("\n".'  <!--[if lt IE 7]>
-  <style type="text/css">body.sticky-footer #footer-push {display:table;height:100%}</style>
-  <![endif]-->');
+if(($browserType == 'msie') && ($browserVersion < 9)) {
+	$doc->addCustomTag("\n".'  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>');
+	if ($IECSS3) {
+	  $doc->addCustomTag("\n".'  <style type="text/css">'.$IECSS3Targets.' {behavior:url("'.$baseUrl.'templates/'.$this->template.'/js/PIE.htc")}</style>');
+	}
+	if ($useStickyFooter) {
+		$doc->addStyleDeclaration("\n".'  .sticky-footer #body-container {padding-bottom:'.$stickyFooterHeight.'px;}');
+		$doc->addStyleDeclaration("\n".'  .sticky-footer #footer {margin-top:-'.$stickyFooterHeight.'px;height:'.$stickyFooterHeight.'px;}');
+	}
 }
 
-$doc->addCustomTag('<!--[if lt IE 7]>
-  <link rel="stylesheet" href="'.$template.'/css/ie6.css" type="text/css" media="screen" />
-  <style type="text/css">
-  body {text-align:center}
-  #body-container {text-align:left}');  
-  if (!$fullWidth) {
-  $doc->addCustomTag('#body-container, #header-above, #header, #footer {width: expression( document.body.clientWidth >'.($siteWidth -1).' ? "'.$siteWidth.$siteWidthUnit.'" : "auto" );margin:0 auto}');
-  }
-  else {
-  $doc->addCustomTag('#body-container, #header-above {width: expression( document.body.clientWidth >'.($siteWidth -1).' ? "'.$siteWidth.$siteWidthUnit.'" : "auto" );margin:0 auto}');
-  }
-  $doc->addCustomTag('</style>');
-  if ($IE6TransFix) {
-  $doc->addCustomTag('  <script type="text/javascript" src="'.$template.'/js/DD_belatedPNG_0.0.8a-min.js"></script>
-  <script>DD_belatedPNG.fix(\''.$IE6TransFixTargets.'\');</script>');
-  }
-  $doc->addCustomTag('<![endif]-->');
+// Internet Explorer 6 Fixes
+if(($browserType == 'msie') && ($browserVersion < 7)) {
+	$doc->addStyleSheet($template.'/css/ie6.css','text/css','screen');
+	$doc->addStyleDeclaration("\n".'  body {text-align:center;}');
+	$doc->addStyleDeclaration("\n".'  #body-container {text-align:left;}');	
+	if ($useStickyFooter) {
+		$doc->addStyleDeclaration("\n".'  body.sticky-footer #footer-push {display:table;height:100%;}');		
+	}
+	if(!$fullWidth){
+		$doc->addCustomTag('#body-container, #header-above, #header, #footer {width: expression( document.body.clientWidth >'.($siteWidth -1).' ? "'.$siteWidth.$siteWidthUnit.'" : "auto" );margin:0 auto;}');
+	}
+	else {
+		$doc->addCustomTag('#body-container, #header-above {width: expression( document.body.clientWidth >'.($siteWidth -1).' ? "'.$siteWidth.$siteWidthUnit.'" : "auto" );margin:0 auto;}');
+	}
+	$doc->addCustomTag('</style>');
+	if($IE6TransFix) {
+		$doc->addCustomTag('  <script type="text/javascript" src="'.$template.'/js/DD_belatedPNG_0.0.8a-min.js"></script>
+	<script>DD_belatedPNG.fix(\''.$IE6TransFixTargets.'\');</script>');
+	}
+}
