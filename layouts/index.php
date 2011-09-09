@@ -8,7 +8,6 @@
 ?>
 
 <!doctype html>
-<!-- based on paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <?php
 if($browserType == 'msie') {
 		if($browserVersion < 7) {
