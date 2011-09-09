@@ -491,16 +491,16 @@ if (($siteWidthType == 'max-width') && $fluidMedia ) {
 if (!$fullWidth) {
 	$doc->addStyleDeclaration("\n".'  #header, #footer {'.$siteWidthType.':'.$siteWidth.$siteWidthUnit.'; margin:0 auto;}');
 }
+if ($useStickyFooter) {
+	$doc->addStyleDeclaration("\n".'  .sticky-footer #body-container {padding-bottom:'.$stickyFooterHeight.'px;}');
+	$doc->addStyleDeclaration("\n".'  .sticky-footer #footer {margin-top:-'.$stickyFooterHeight.'px;height:'.$stickyFooterHeight.'px;}');
+}
 
 // Internet Explorer Fixes
 if(($browserType == 'msie') && ($browserVersion < 9)) {
 	$doc->addCustomTag("\n".'  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>');
 	if ($IECSS3) {
 	  $doc->addCustomTag("\n".'  <style type="text/css">'.$IECSS3Targets.' {behavior:url("'.$baseUrl.'templates/'.$this->template.'/js/PIE.htc")}</style>');
-	}
-	if ($useStickyFooter) {
-		$doc->addStyleDeclaration("\n".'  .sticky-footer #body-container {padding-bottom:'.$stickyFooterHeight.'px;}');
-		$doc->addStyleDeclaration("\n".'  .sticky-footer #footer {margin-top:-'.$stickyFooterHeight.'px;height:'.$stickyFooterHeight.'px;}');
 	}
 }
 
