@@ -57,7 +57,7 @@
 	    <h3 class="page-info-term">
 	        <?php echo JText::_('Details'); ?>
 	    </h3>
-<?php endif ;>
+<?php endif; ?>
         <?php if ($this->item->params->get('show_section') && $this->item->sectionid && isset($this->section->title)) : ?>
         <h4 class="section-name">
             <?php if ($this->item->params->get('link_section')) : ?>
