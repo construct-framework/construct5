@@ -107,7 +107,8 @@ button {width: auto; overflow: visible;}
 /* let's clear some floats */
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
 .clearfix:after { clear: both; }  
-.clearfix { zoom: 1; }  
+.clearfix { zoom: 1; }
+.clear{clear:both}
 
 /* End HTML5 Reset ::
 -------------------------------------------------------------------------------*/
@@ -115,48 +116,48 @@ button {width: auto; overflow: visible;}
 /* -- Layout -- */
 body{font-size:76%/* 12px in most modern browsers - used as basis of layout and typography. Calculate em based dims as "target dim(px) / container dim(px) = result in em" */}
 #body-container,
-#header-above{margin:0 auto;padding:0}
+#header-above{margin:0 auto;padding:0;}
 #load-first,
 #footer-above {float:left;}
 #footer-above {width:100%;}
 
-.main-only #content-main{float:left;width:100%}
-.main-only #load-first{width:100%}
+.main-only #content-main{float:left;width:100%;}
+.main-only #load-first{width:100%;}
 
-.alpha-1-main #load-first{width:100%}
-.alpha-1-main #content-main{float:right;width:81% !important;width:79%}
-.alpha-1-main #column-group-alpha{float:left;width:19%}
+.alpha-1-main #load-first{width:100%;}
+.alpha-1-main #content-main{float:right;width:81%;}
+.alpha-1-main #column-group-alpha{float:left;width:19%;}
 
-.alpha-2-main #load-first{width:100%}
-.alpha-2-main #content-main{float:right;width:62% !important;width:60%}
-.alpha-2-main #column-group-alpha{float:left;width:38%}
+.alpha-2-main #load-first{width:100%;}
+.alpha-2-main #content-main{float:right;width:62%;}
+.alpha-2-main #column-group-alpha{float:left;width:38%;}
 
-.main-beta-1 #content-main{float:left;width:100%}
-.main-beta-1 #load-first{width:81% !important;width:79%}
-.main-beta-1 #column-group-beta{float:right;width:19%}
+.main-beta-1 #content-main{float:left;width:100%;}
+.main-beta-1 #load-first{width:81%;}
+.main-beta-1 #column-group-beta{float:right;width:19%;}
 
-.main-beta-2 #content-main{float:left;width:100%}
-.main-beta-2 #load-first{width:62% !important;width:60%}
-.main-beta-2 #column-group-beta{float:right;width:38%}
+.main-beta-2 #content-main{float:left;width:100%;}
+.main-beta-2 #load-first{width:62%;}
+.main-beta-2 #column-group-beta{float:right;width:38%;}
 
-.alpha-1-main-beta-1 #load-first{width:81% !important;width:79%} 
-.alpha-1-main-beta-1 #content-main{float:right;width:74.2% !important;width:72.2%}
-.alpha-1-main-beta-1 #column-group-alpha{float:left;width:25.8%}
-.alpha-1-main-beta-1 #column-group-beta{float:right;width:19%}
+.alpha-1-main-beta-1 #load-first{width:81%;} 
+.alpha-1-main-beta-1 #content-main{float:right;width:74.2%;}
+.alpha-1-main-beta-1 #column-group-alpha{float:left;width:25.8%;}
+.alpha-1-main-beta-1 #column-group-beta{float:right;width:19%;}
 
-.alpha-2-main-beta-1 #load-first{width:81% !important;width:79%} 
-.alpha-2-main-beta-1 #content-main{float:right;width:62% !important;width:60%} 
-.alpha-2-main-beta-1 #column-group-alpha{float:left;width:38%}
-.alpha-2-main-beta-1 #column-group-beta{float:right;width:19%}
+.alpha-2-main-beta-1 #load-first{width:81%;} 
+.alpha-2-main-beta-1 #content-main{float:right;width:62%;} 
+.alpha-2-main-beta-1 #column-group-alpha{float:left;width:38%;}
+.alpha-2-main-beta-1 #column-group-beta{float:right;width:19%;}
 
-.alpha-1-main-beta-2 #load-first{width:62% !important;width:60%} 
-.alpha-1-main-beta-2 #content-main{float:right;width:65.5% !important;width:63.5%}
-.alpha-1-main-beta-2 #column-group-alpha{float:left;width:34.5%}
-.alpha-1-main-beta-2 #column-group-beta{float:right;width:38%}
+.alpha-1-main-beta-2 #load-first{width:62%;} 
+.alpha-1-main-beta-2 #content-main{float:right;width:65.5%;}
+.alpha-1-main-beta-2 #column-group-alpha{float:left;width:34.5%;}
+.alpha-1-main-beta-2 #column-group-beta{float:right;width:38%;}
 
-.alpha-2-main-beta-2 #load-first{width:62% !important;width:60%} 
-.alpha-2-main-beta-2 #content-main{float:right;width:38% !important;width:31%} 
-.alpha-2-main-beta-2 #column-group-alpha{float:left;width:62%}
+.alpha-2-main-beta-2 #load-first{width:62%;} 
+.alpha-2-main-beta-2 #content-main{float:right;width:38%;} 
+.alpha-2-main-beta-2 #column-group-alpha{float:left;width:62%;}
 .alpha-2-main-beta-2 #column-group-beta{float:right;width:38%;}
 
 /* -- spacing rules -- */
@@ -475,11 +476,6 @@ ul.menu ul ul ul li.pie_hover ul{left:auto}
 /* -- Dwyer Method for Image Replacement -- */ /* Fully browser compatible, works with screenreaders but doesn't work with images off/css on */
 /*#nav ul.menu li a {display:block;width:100px;height:20px;background:url(../images/logo.png) -50px -50px no-repeat}
 #nav ul.menu li a span{display:block;width:0;height:0;overflow:hidden;}*/
-/* -- CSS Clearing -- */
-/*.clearfix:after,.clearfix:before{clear:both;content:".";font:1px/0;display:block;height:0;visibility:hidden}/*:before is for gutter margin top*/
-/*.clearfix{display:inline-block;display:block;min-width:0}
-* html .clearfix{height:1%} */
-.clear{clear:both}
 
 /* -- Sticky Footer -- *//*http://www.cssstickyfooter.com/*/
 html, .sticky-footer{height:100%}
