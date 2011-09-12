@@ -495,7 +495,11 @@ if ($useStickyFooter) {
 	$doc->addStyleDeclaration("\n".'  .sticky-footer #body-container {padding-bottom:'.$stickyFooterHeight.'px;}');
 	$doc->addStyleDeclaration("\n".'  .sticky-footer #footer {margin-top:-'.$stickyFooterHeight.'px;height:'.$stickyFooterHeight.'px;}');
 }
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 869153b64a91928eef6a5944e36fb063b26efcc6
 // Internet Explorer Fixes
 if(($browserType == 'msie') && ($browserVersion < 9)) {
 	$doc->addCustomTag("\n".'  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>');
