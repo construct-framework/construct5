@@ -8,22 +8,11 @@
 ?>
 
 <!doctype html>
-<?php
-if($browserType == 'msie') {
-		if($browserVersion < 7) {
-		echo "<html class=\"no-js ie6\" lang=\"en\">";
-		}
-		if($browserVersion = 7) {
-		echo "<html class=\"no-js ie7\" lang=\"en\">";
-		}
-		if($browserVersion = 8) {
-		echo "<html class=\"no-js ie8\" lang=\"en\">";
-		}
-}
-else {
-		echo "<html class=\"no-js\" lang=\"en\">";
-}
-?>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 <jdoc:include type="head" />
 </head>
