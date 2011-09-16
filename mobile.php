@@ -25,14 +25,14 @@ if ($mobileResults) {
 	<head>
 		<meta http-equiv="Content-Type" content="<?php echo $contenttype; ?>; charset=utf-8" />
 		<link rel="stylesheet" href="<?php echo $baseUrl.'templates/'.$this->template; ?>/css/mobile.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.css" />
 		<?php //Load Mobile Extended Template Style Overrides
 		$mobileCssFile = $mobileStyleOverride->getIncludeFile ();		
 		if ($mobileCssFile) : ?>
 			<link rel="stylesheet" href="<?php echo $baseUrl.$mobileCssFile; ?>" type="text/css" media="screen" />			
 		<?php endif; ?>		
 		<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
 		<script>
 			(function($) { //enable using $ along side of other libraries
 				$(document).ready(function() {
