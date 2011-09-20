@@ -79,20 +79,20 @@
 					    <?php if($articleId)	echo '<li>article '.$articleId.'</li>'; ?>
 					    <?php if($itemId)		echo '<li>menu item '.$itemId.'</li>'; ?>
 					    <?php if($catId) {
-					    		echo '<li>category '.$catId.'</li>'; 
-					    		if ($parentCategory) {
-					    		    echo '<li>parent category '.$parentCategory.'</li>';
-					    		}
-					    		$results = getAncestorCategories($catId);
-							    if ($results) {
-							        echo '<li>ancestor categories';
-								        if (count($results) > 0) {
-									        foreach ($results as $item) {
-										        echo ' '.$item->id.' ';
-									        }			
-								        }								
-							        echo'</li>';
-							    }
+						 		echo '<li>category '.$catId.'</li>'; 
+								if ($parentCategory) {
+									echo '<li>parent category '.$parentCategory.'</li>';
+								}
+								$results = getAncestorCategories($catId);
+								if ($results) {
+									echo '<li>ancestor categories';
+										if (count($results) > 0) {
+											foreach ($results as $item) {
+												echo ' '.$item->id.' ';
+											}			
+										}								
+									echo'</li>';
+								}
 							  } ?>
 				    </ul>
 				<?php endif; ?>	
@@ -103,16 +103,18 @@
 					<jdoc:include type="modules" name="header" style="header" />	
 				<?php endif; ?>
 				
-				<ul id="access">
-				  <li>Jump to:</li>
-				  <li><a href="<?php $url->setFragment('content'); echo $url->toString();?>" class="to-content">Content</a></li>					
-				  <?php if ($this->countModules('nav')) : ?>
-					<li><a href="<?php $url->setFragment('nav'); echo $url->toString();?>" class="to-nav">Navigation</a></li>
-				  <?php endif; ?>					
-				  <?php if ($contentBelowCount) : ?>
-					<li><a href="<?php $url->setFragment('additional'); echo $url->toString();?>" class="to-additional">Additional Information</a></li>
-				  <?php endif; ?>
-				</ul>	
+				<nav>
+						<ul id="access">
+						  <li>Jump to:</li>
+						  <li><a href="<?php $url->setFragment('content'); echo $url->toString();?>" class="to-content">Content</a></li>					
+						  <?php if ($this->countModules('nav')) : ?>
+							<li><a href="<?php $url->setFragment('nav'); echo $url->toString();?>" class="to-nav">Navigation</a></li>
+						  <?php endif; ?>					
+						  <?php if ($contentBelowCount) : ?>
+							<li><a href="<?php $url->setFragment('additional'); echo $url->toString();?>" class="to-additional">Additional Information</a></li>
+						  <?php endif; ?>
+						</ul>
+				</nav>
 
 				<?php if ($enableSwitcher) : ?>
 					<ul id="style-switch">
