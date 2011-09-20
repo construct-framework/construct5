@@ -15,54 +15,23 @@ $app 					= JFactory::getApplication();
 $baseUrl 				= JURI::base();
 // Returns a reference to the global document object
 $doc 					= JFactory::getDocument();
+// Check if version 1.5
+$isPresent = (substr(JVERSION, 0, 3) == '1.5');
 // Get the offline status of the website
 $offLine 				= $app->getCfg('offline');
+// Define relative path to the  current template directory
+$template 				= 'templates/'.$this->template;
+// Get language and direction
+$this->language = $doc->language;
+$this->direction = $doc->direction;
+
 // Send the user to the home page if the website is offline
 if ($offLine) {
 	$app->redirect($baseUrl);
 }
-// Define relative path to the  current template directory
-$template 				= 'templates/'.$this->template;
 
-// Check for layout override
-if(JFile::exists($template.'/layouts/error.php')) {
-	include_once $template.'/layouts/error.php';
-}
-else {	
-
-// Manually set and define template parameters
+// Manually define layout and module counts
 $columnLayout			= 'alpha-1-main-beta-1';
-$customStyleSheet 		= 'example.css';
-$detectTablets			= '1';
-$enableSwitcher 		= '0';
-$fluidMedia				= '1';
-$fullWidth				= '1';
-$googleWebFont 			= '';
-$googleWebFontSize		= '85%';
-$googleWebFontTargets	= 'h1,h2,h3,h4,h5,h6';
-$googleWebFont2			= '';
-$googleWebFontSize2		= '';
-$googleWebFontTargets2	= '';
-$googleWebFont3 		= '';
-$googleWebFontSize3		= '';
-$googleWebFontTargets3	= '';
-$IECSS3					= '1';
-$IECSS3Targets			= '.drop-shadow, .outline, .rounded, ul.menu li, ul.menu ul, #nav,#column-group-alpha .moduletable, #column-group-alpha .moduletable_menu, #column-group-beta .moduletable, #column-group-beta .moduletable_menu, #content-above .moduletable, #content-above .moduletable_menu, #nav-below .moduletable, #nav-below .moduletable_menu';
-$IE6TransFix			= '1';
-$IE6TransFixTargets		= 'h1 a, .readon, .parent a, #breadcrumbs';
-$loadMoo 				= '1';
-$loadModal				= '1';
-$loadjQuery 			= '1.4.2';
-$mdetect 				= '1';
-$setGeneratorTag		= 'Joomla Engineering | http://JoomlaEngineering.com';
-$showDiagnostics 		= '0';
-$siteWidth				= '80.5';
-$siteWidthType			= 'max-width';
-$siteWidthUnit			= 'em';
-$stickyFooterHeight		= '175';
-$useStickyFooter 		= '1';
-
-// Define module counts
 $headerAboveClass 		= 'count-1';
 $headerBelowClass 		= 'count-6';
 $navBelowClass 			= 'count-4';
@@ -70,37 +39,66 @@ $contentAboveClass 		= 'count-1';
 $contentBelowClass 		= '';
 $columnGroupAlphaClass 	= 'count-1';
 $columnGroupBetaClass 	= '';
-$footerAboveClass 		= 'count-4';
+$footerAboveClass 		= 'count-1';
 
-// Based on http://forum.joomla.org/index.php/viewtopic.php?p=1077558#p1077558
+// Access template parameters
+if ($isPresent) {
+	global $mainframe;
+	$params = new JParameter(JFile::read(JPATH_BASE.'/templates/'.$mainframe->getTemplate().'/params.ini'));
+}
+else {
+	$params = JFactory::getApplication()->getTemplate(true)->params;
+}
+
+$customStyleSheet 		= $params->get('customStyleSheet');
+$detectTablets			= $params->get('detectTablets');
+$enableSwitcher 		= $params->get('enableSwitcher');
+$fluidMedia				= $params->get('fluidMedia');
+$fullWidth				= $params->get('fullWidth');
+$googleWebFont 			= $params->get('googleWebFont');
+$googleWebFontSize		= $params->get('googleWebFontSize');
+$googleWebFontTargets	= $params->get('googleWebFontTargets');
+$googleWebFont2			= $params->get('googleWebFont2');
+$googleWebFontSize2		= $params->get('googleWebFontSize2');
+$googleWebFontTargets2	= $params->get('googleWebFontTargets2');
+$googleWebFont3			= $params->get('googleWebFont3');
+$googleWebFontSize3		= $params->get('googleWebFontSize3');
+$googleWebFontTargets3	= $params->get('googleWebFontTargets3');
+$IECSS3					= $params->get('IECSS3');
+$IECSS3Targets			= $params->get('IECSS3Targets');
+$IE6TransFix			= $params->get('IE6TransFix');
+$IE6TransFixTargets		= $params->get('IE6TransFixTargets');
+$inheritLayout			= $params->get('inheritLayout');
+$inheritStyle			= $params->get('inheritStyle');
+$loadMoo 				= $params->get('loadMoo');
+$loadModal				= $params->get('loadModal');
+$loadjQuery 			= $params->get('loadjQuery');
+$mContentDataTheme		= $params->get('mContentDataTheme');
+$mdetect 				= $params->get('mdetect');
+$mFooterDataTheme		= $params->get('mFooterDataTheme');
+$mHeaderDataTheme		= $params->get('mHeaderDataTheme');
+$mNavPosition			= $params->get('mNavPosition');
+$mNavDataTheme			= $params->get('mNavDataTheme');
+$mPageDataTheme			= $params->get('mPageDataTheme');
+$setGeneratorTag		= $params->get('setGeneratorTag');
+$showDiagnostics 		= $params->get('showDiagnostics');
+$siteWidth				= $params->get('siteWidth');
+$siteWidthType			= $params->get('siteWidthType');
+$siteWidthUnit			= $params->get('siteWidthUnit');
+$stickyFooterHeight		= $params->get('stickyFooterHeight');
+$useStickyFooter 		= $params->get('useStickyFooter');
+
+// Render module positions
 $renderer   			= $doc->loadRenderer( 'modules' );
 $raw 					= array( 'style' => 'raw' );
 $xhtml 					= array( 'style' => 'xhtml' );
 $jexhtml 				= array( 'style' => 'jexhtml' );
 
-#--------------------------------------------------------------------------#
-
-/*
-// Email notification feature from http://forum.joomla.org/viewtopic.php?p=1760233#p1760233
-
-// change this to whatever email address you want the notifications to be sent to
-$emailaddress = "you@yourdomain.com";
-
-// only change this number if you plan on making other error pages.. eg. 403, 500, etc..
-$errorNum = "404";
-
-// message area - you can stop the emailing of error notices by commented out each of the lines below
-$errortime = (date("M d Y h:m:s"));
-$message = $errorNum." Error Report\r\n\r\nA ".$errorNum." error was encountered by ".$_SERVER['REMOTE_ADDR'];
-$message .= " on $errortime.\r\n\r\n";
-$message .= "The URL which generated the 404 error is: \nhttp://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."\r\n\r\n";
-$message .= "The referring page, if any, was:\n".$_SERVER['HTTP_REFERER']."\r\n\r\n";
-$message .= "The used client was:\n".$_SERVER['HTTP_USER_AGENT']."\r\n\r\n";
-$mastheads = "From: ".$emailaddress."\nDate: ".$errortime." +0100\n";
-$subject = "Error: ".$errorNum." from ".$_SERVER['HTTP_REFERER'];
-mail($emailaddress, $subject, $message, $mastheads);
-*/
-
+// Check for layout override
+if(JFile::exists($template.'/layouts/error.php')) {
+	include_once $template.'/layouts/error.php';
+}
+else {
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
