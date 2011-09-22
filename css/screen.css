@@ -20,7 +20,7 @@ header,
 hgroup,
 nav,
 section {
-    display: block
+    display: block;
 }
 
 /*
@@ -40,7 +40,7 @@ video {
  */
 
 audio:not([controls]) {
-    display: none
+    display: none;
 }
 
 /*
@@ -49,7 +49,7 @@ audio:not([controls]) {
  */
 
 [hidden] {
-    display: none
+    display: none;
 }
 
 /* =============================================================================
@@ -76,7 +76,7 @@ html {
  */
 
 body {
-    margin: 0
+    margin: 0;
 }
 
 /* 
@@ -88,7 +88,7 @@ button,
 input,
 select,
 textarea {
-    font-family: sans-serif
+    font-family: sans-serif;
 }
 
 /* =============================================================================
@@ -96,11 +96,11 @@ textarea {
    ========================================================================== */
 
 a {
-    color: #00e
+    color: #00e;
 }
 
 a:visited {
-    color: #551a8b
+    color: #551a8b;
 }
 
 /*
@@ -108,7 +108,7 @@ a:visited {
  */
 
 a:focus {
-    outline: thin dotted
+    outline: thin dotted;
 }
 
 /*
@@ -118,7 +118,7 @@ a:focus {
 
 a:hover,
 a:active {
-    outline: 0
+    outline: 0;
 }
 
 /* =============================================================================
@@ -130,7 +130,7 @@ a:active {
  */
 
 abbr[title] {
-    border-bottom: 1px dotted
+    border-bottom: 1px dotted;
 }
 
 /*
@@ -139,11 +139,11 @@ abbr[title] {
 
 b,
 strong {
-    font-weight: bold
+    font-weight: bold;
 }
 
 blockquote {
-    margin: 1em 40px
+    margin: 1em 40px;
 }
 
 /*
@@ -151,7 +151,7 @@ blockquote {
  */
 
 dfn {
-    font-style: italic
+    font-style: italic;
 }
 
 /*
@@ -195,7 +195,7 @@ pre {
 /* 1 */
 
 q {
-    quotes: none
+    quotes: none;
 }
 
 /* 2 */
@@ -207,7 +207,7 @@ q:after {
 }
 
 small {
-    font-size: 75%
+    font-size: 75%;
 }
 
 /*
@@ -224,11 +224,11 @@ sup {
 }
 
 sup {
-    top: -0.5em
+    top: -0.5em;
 }
 
 sub {
-    bottom: -0.25em
+    bottom: -0.25em;
 }
 
 /* =============================================================================
@@ -242,7 +242,7 @@ ol {
 }
 
 dd {
-    margin: 0 0 0 40px
+    margin: 0 0 0 40px;
 }
 
 nav ul,
@@ -271,7 +271,7 @@ img {
  */
 
 svg:not(:root) {
-    overflow: hidden
+    overflow: hiddeh;
 }
 
 /* =============================================================================
@@ -283,7 +283,7 @@ svg:not(:root) {
  */
 
 figure {
-    margin: 0
+    margin: 0;
 }
 
 /* =============================================================================
@@ -295,7 +295,7 @@ figure {
  */
 
 form {
-    margin: 0
+    margin: 0;
 }
 
 /*
@@ -352,7 +352,7 @@ input {
 
 table button,
 table input {
-    *overflow: auto
+    *overflow: auto;
 }
 
 /*
@@ -396,7 +396,7 @@ input[type="search"] {
  */
 
 input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none
+    -webkit-appearance: none;
 }
 
 /*
@@ -438,7 +438,7 @@ table {
    ========================================================================== */
 
 body {
-    font-size: 76%
+    font-size: 76%;
 }
 /* 12px in most modern browsers - used as basis of layout and typography.
  * Calculate em based dims as: target dim(px) / container dim(px) = result in em
@@ -452,11 +452,11 @@ body {
 
 #load-first,
 #footer-above {
-    float: left
+    float: left;
 }
 
 #footer-above {
-    width: 100%
+    width: 100%;
 }
 
 .main-only #content-main {
@@ -465,11 +465,11 @@ body {
 }
 
 .main-only #load-first {
-    width: 100%
+    width: 100%;
 }
 
 .alpha-1-main #load-first {
-    width: 100%
+    width: 100%;
 }
 
 .alpha-1-main #content-main {
@@ -483,7 +483,7 @@ body {
 }
 
 .alpha-2-main #load-first {
-    width: 100%
+    width: 100%;
 }
 
 .alpha-2-main #content-main {
@@ -502,7 +502,7 @@ body {
 }
 
 .main-beta-1 #load-first {
-    width: 81%
+    width: 81%;
 }
 
 .main-beta-1 #column-group-beta {
@@ -516,7 +516,7 @@ body {
 }
 
 .main-beta-2 #load-first {
-    width: 62%
+    width: 62%;
 }
 
 .main-beta-2 #column-group-beta {
@@ -525,7 +525,7 @@ body {
 }
 
 .alpha-1-main-beta-1 #load-first {
-    width: 81%
+    width: 81%;
 }
 
 .alpha-1-main-beta-1 #content-main {
@@ -544,7 +544,7 @@ body {
 }
 
 .alpha-2-main-beta-1 #load-first {
-    width: 81%
+    width: 81%;
 }
 
 .alpha-2-main-beta-1 #content-main {
@@ -563,7 +563,7 @@ body {
 }
 
 .alpha-1-main-beta-2 #load-first {
-    width: 62%
+    width: 62%;
 }
 
 .alpha-1-main-beta-2 #content-main {
@@ -582,7 +582,7 @@ body {
 }
 
 .alpha-2-main-beta-2 #load-first {
-    width: 62%
+    width: 62%;
 }
 
 .alpha-2-main-beta-2 #content-main {
@@ -605,23 +605,23 @@ body {
    ========================================================================== */
 
 .gutter {
-    margin: 10px
+    margin: 10px;
 }
 
 #column-group-alpha .gutter {
-    margin: 0 10px 0 0
+    margin: 0 10px 0 0;
 }
 
 #column-group-beta .gutter {
-    margin: 0 0 0 10px
+    margin: 0 0 0 10px;
 }
 
 #bottom-user-modules .gutter {
-    margin-top: 0
+    margin-top: 0;
 }
 
 #top-user-modules .gutter {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 /* =============================================================================
@@ -698,12 +698,12 @@ body {
 .cols-4 .item,
 .cols-5 .item,
 .cols-6 .item {
-    float: left
+    float: left;
 }
 
 .column-1,
 .items-more {
-    clear: both
+    clear: both;
 }
 
 /* =============================================================================
@@ -716,59 +716,59 @@ body {
 }
 
 body.arial {
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body.arial-black {
-    font-family: Arial Black, Gadget, sans-serif
+    font-family: Arial Black, Gadget, sans-serif;
 }
 
 body.courier {
-    font-family: "Courier New", Courier, monospace
+    font-family: "Courier New", Courier, monospace;
 }
 
 body.georgia {
-    font-family: Georgia, serif
+    font-family: Georgia, serif;
 }
 
 body.helvetica {
-    font-family: Helvetica,Arial,FreeSans,sans-serif
+    font-family: Helvetica,Arial,FreeSans,sans-serif;
 }
 
 body.impact {
-    font-family: Impact, Charcoal, sans-serif
+    font-family: Impact, Charcoal, sans-serif;
 }
 
 body.lucida-console {
-    font-family: "Lucida Console", Monaco, monospace
+    font-family: "Lucida Console", Monaco, monospace;
 }
 
 body.lucida-grande {
-    font-family: "Lucida Grande",Lucida,Verdana,sans-serif
+    font-family: "Lucida Grande",Lucida,Verdana,sans-serif;
 }
 
 body.lucida-sans {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 body.palatino {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
 body.tahoma {
-    font-family: Tahoma, Geneva, sans-serif
+    font-family: Tahoma, Geneva, sans-serif;
 }
 
 body.times {
-    font-family: "Times New Roman", Times, serif
+    font-family: "Times New Roman", Times, serif;
 }
 
 body.trebuchet {
-    font-family: "Trebuchet MS", Helvetica, sans-serif
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 body.verdana {
-    font-family: Verdana, Geneva, sans-serif
+    font-family: Verdana, Geneva, sans-serif;
 }
 
 /* =============================================================================
@@ -780,15 +780,15 @@ a:link,
 a:visited,
 a:focus,
 a:active {
-    text-decoration: none
+    text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 b {
-    font-weight: bold
+    font-weight: bold;
 }
 
 blockquote {
@@ -803,19 +803,19 @@ code {
 }
 
 div {
-    font-size: 1em
+    font-size: 1em;
 }
 
 em {
-    font-style: italic
+    font-style: italic;
 }
 
 fieldset {
-    font-size: 100%
+    font-size: 100%;
 }
 
 form table {
-    font-size: 1.1em
+    font-size: 1.1em;
 }
 
 form {
@@ -824,7 +824,7 @@ form {
 }
 
 hr {
-    display: none
+    display: none;
 }
 
 h1 {
@@ -863,7 +863,7 @@ hr,
 pre,
 table,
 address {
-    margin-bottom: 1em
+    margin-bottom: 1em;
 }
 
 h1,
@@ -872,24 +872,24 @@ h3,
 h4,
 h5,
 h6 {
-    margin: .3em 0
+    margin: .3em 0;
 }
 
 h3+ul,
 h3+ol {
-    margin-top: -.3em
+    margin-top: -.3em;
 }
 
 i {
-    font-style: italic
+    font-style: italic;
 }
 
 input.button {
-    padding: 0 10px
+    padding: 0 10px;
 }
 
 li > p {
-    margin: 0.2em 0 0 1em
+    margin: 0.2em 0 0 1em;
 }
 
 ol,
@@ -900,7 +900,7 @@ li {
 }
 
 li {
-    margin-left: 1.25em
+    margin-left: 1.25em;
 }
 
 .item ol,
@@ -914,11 +914,11 @@ li {
 .intro ul,
 .item-page ul,
 .items-leading ul {
-    list-style: disc
+    list-style: disc;
 }
 
 p {
-    font-size: 1em
+    font-size: 1em;
 }
 
 table {
@@ -951,7 +951,7 @@ th {
 }
 
 strong {
-    font-weight: bold
+    font-weight: bold;
 }
 
 label input {
@@ -999,7 +999,7 @@ isindex,
    ========================================================================== */
 
 .actions {
-    float: right
+    float: right;
 }
 
 .actions li {
@@ -1009,15 +1009,15 @@ isindex,
 }
 
 .article-separator {
-    display: none
+    display: none;
 }
 
 .article-info {
-    margin-bottom: 1em
+    margin-bottom: 1em;
 }
 
 .article-info address {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 .article-info time {
@@ -1030,7 +1030,7 @@ isindex,
 }
 
 .breadcrumbs ol {
-    list-style: none
+    list-style: none;
 }
 
 .breadcrumbs li,
@@ -1047,7 +1047,7 @@ isindex,
 }
 
 .button2-left div {
-    float: left
+    float: left;
 }
 
 .button2-left a {
@@ -1059,31 +1059,31 @@ isindex,
 }
 
 .button2-left a:hover {
-    text-decoration: none
+    text-decoration: none;
 }
 
 table.category {
-    border: 1px solid #000
+    border: 1px solid #000;
 }
 
 .category thead {
-    background: #333
+    background: #333;
 }
 
 .category thead a {
-    color: #fff
+    color: #fff;
 }
 
 .category tbody tr:hover {
-    background: #dddddd
+    background: #dddddd;
 }
 
 .category td {
-    padding: 5px
+    padding: 5px;
 }
 
 .category .cat-list-row0 {
-    background: #eeeeee
+    background: #eeeeee;
 }
 
 .category .cat-list-row1 {
@@ -1091,16 +1091,16 @@ table.category {
 }
 
 .category th img {
-    padding-left: 5px
+    padding-left: 5px;
 }
 
 .category-desc-text,
 .section-desc-text {
-    clear: left
+    clear: left;
 }
 
 .contact {
-    margin: 10px 0
+    margin: 10px 0;
 }
 
 .contact button {
@@ -1137,7 +1137,7 @@ table.category {
 }
 
 .content_vote input {
-    margin: 0 5px
+    margin: 0 5px;
 }
 
 .content_vote .button {
@@ -1149,7 +1149,7 @@ table.category {
 }
 
 .date-container {
-    float: right
+    float: right;
 }
 
 .drop-shadow {
@@ -1205,7 +1205,7 @@ table.category {
 }
 
 .even {
-    background: #eeeeee
+    background: #eee;
 }
 
 .footer-text {
@@ -1215,7 +1215,7 @@ table.category {
 }
 
 .formelm-buttons {
-    margin-bottom: 1em
+    margin-bottom: 1em;
 }
 
 ol.form {
@@ -1246,7 +1246,7 @@ ol.form textarea {
 }
 
 ol.form textarea {
-    height: 250px
+    height: 250px;
 }
 
 ol.form li.group label {
@@ -1255,7 +1255,7 @@ ol.form li.group label {
 }
 
 ol.form li.group {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 ol.form li.group ul {
@@ -1272,7 +1272,7 @@ ol.form li.group ul label {
 }
 
 ol.form li.group ul input {
-    width: auto
+    width: auto;
 }
 
 ol.form li.button button {
@@ -1292,12 +1292,12 @@ ol.form span.error {
 }
 
 .hidelabeltxt {
-    display: none
+    display: none;
 }
 
 input.invalid,
 textarea.invalid {
-    border: solid 2px #ff0000
+    border: solid 2px #ff0000;
 }
 
 label.invalid {
@@ -1306,11 +1306,11 @@ label.invalid {
 }
 
 .left {
-    float: left
+    float: left;
 }
 
 .login-fields {
-    padding: 0 0 5px 0
+    padding: 0 0 5px 0;
 }
 
 .login-fields label {
@@ -1322,7 +1322,7 @@ label.invalid {
 }
 
 ul.menu-horizontal li {
-    float: left
+    float: left;
 }
 /*
  * Use -horizontal menu class suffix
@@ -1355,7 +1355,7 @@ ul.menu-horizontal li {
 }
 
 .pagination .counter {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 .pagenav li {
@@ -1370,7 +1370,7 @@ ul.menu-horizontal li {
 }
 
 .pagenav-prev {
-    float: left
+    float: left;
 }
 
 .poll fieldset dl dt {
@@ -1383,7 +1383,7 @@ ul.menu-horizontal li {
 }
 
 .publishing input {
-    width: 300px
+    width: 300px;
 }
 
 .rounded {
@@ -1395,11 +1395,11 @@ ul.menu-horizontal li {
 }
 
 .right {
-    float: right
+    float: right;
 }
 
 .search {
-    float: left
+    float: left;
 }
 
 .search .only {
@@ -1442,7 +1442,7 @@ ul.menu-horizontal li {
 }
 
 .search input {
-    padding: 3px 5px
+    padding: 3px 5px;
 }
 
 .search .word {
@@ -1457,7 +1457,7 @@ ul.menu-horizontal li {
 }
 
 .section-name {
-    float: left
+    float: left;
 }
 
 .tip {
@@ -1495,7 +1495,7 @@ ul.menu-horizontal li {
 }
 
 .userdata dt {
-    float: left
+    float: left;
 }
 
 /* =============================================================================
@@ -1514,11 +1514,11 @@ ul.menu-horizontal li {
 }
 
 #column-group-alpha h3 {
-    padding: 0
+    padding: 0;
 }
 
 #column-group-alpha ul {
-    list-style-type: none
+    list-style-type: none;
 }
 
 #column-group-alpha li {
@@ -1527,15 +1527,15 @@ ul.menu-horizontal li {
 }
 
 #column-group-alpha p {
-    padding: 10px 0 0 0
+    padding: 10px 0 0 0;
 }
 
 #column-group-beta h3 {
-    padding: 0
+    padding: 0;
 }
 
 #column-group-beta ul {
-    list-style-type: none
+    list-style-type: none;
 }
 
 #column-group-beta li {
@@ -1544,11 +1544,11 @@ ul.menu-horizontal li {
 }
 
 #column-group-beta p {
-    padding: 10px 0 0 0
+    padding: 10px 0 0 0;
 }
 
 #content-above {
-    padding-bottom: 15px
+    padding-bottom: 15px;
 }
 
 #editor-xtd-buttons {
@@ -1562,7 +1562,7 @@ ul.menu-horizontal li {
 }
 
 #footer {
-    text-align: center
+    text-align: center;
 }
 
 #footer ul.menu,
@@ -1590,19 +1590,19 @@ ul.menu-horizontal li {
 }
 
 #form-login-remember label {
-    float: left
+    float: left;
 }
 
 #form-login-username {
-    padding-right: 5px
+    padding-right: 5px;
 }
 
 #form-login-password {
-    padding-right: 7px
+    padding-right: 7px;
 }
 
 #form-login ul li {
-    margin-left: 0
+    margin-left: 0;
 }
 
 #header {
@@ -1627,7 +1627,7 @@ ul.menu-horizontal li {
 }
 
 #logo a:focus {
-    outline: none
+    outline: none;
 }
 
 #style-switch {
@@ -1648,7 +1648,7 @@ ul.menu-horizontal li {
 }
 
 #system-message dt {
-    display: none
+    display: none;
 }
 
 #system-message dd {
@@ -1667,7 +1667,7 @@ ul.menu-horizontal li {
 }
 
 #system-message dd ul li {
-    list-style: none
+    list-style: none;
 }
 
 #system-message dd.message {
@@ -1678,7 +1678,7 @@ ul.menu-horizontal li {
 }
 
 #system-message dd.message ul {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 #system-message dd.warning {
@@ -1689,7 +1689,7 @@ ul.menu-horizontal li {
 }
 
 #system-message dd.warning ul {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 #system-message dd.error {
@@ -1728,7 +1728,7 @@ ul.menu ul {
  */
 
 ul.menu ul li {
-    width: 100%
+    width: 100%;
 }
 
 ul.menu ul ul {
@@ -1749,7 +1749,7 @@ ul.menu ul ul {
 
 #column-group-alpha ul.menu,
 #column-group-beta ul.menu {
-    padding: 0
+    padding: 0;
 }
 /*
  * adjust to resize menus
@@ -1772,7 +1772,7 @@ ul.menu ul ul {
 }
 
 #nav {
-    z-index: 999
+    z-index: 999;
 }
 
 #nav ul,
@@ -1792,7 +1792,7 @@ ul.menu ul ul {
    ========================================================================== */
 
 /*
- * #nav{float:right;margin:0 auto;position:relative;z-index:999}
+ * #nav{float:right;margin:0 auto;position:relative;z-index:999;}
  * #nav ul.menu li{float:right;}
  */
 
@@ -1835,24 +1835,17 @@ ul.menu ul ul {
 /*
  * #nav ul li ul{display:none;position:absolute;top:100%;left:0;right:auto}
  * #nav ul li ul li{left:auto;margin:0;clear:left;width:100%;}
- * #nav ul li:hover ul{display:block} /*Flip last item to keep witin area*/
-
-*/
+ * #nav ul li:hover ul{display:block;} /*Flip last item to keep witin area*/
+ */
  
 /* =============================================================================
    Third Level Centered Suckerfish
    ========================================================================== */  
 /*
- * #nav ul li:hover ul li ul {
-    display: none
-}
-
-* #nav ul li:hover ul li a,
-* #nav ul li:hover ul li:hover ul {
-    display: block
-}
-
-*/
+ * #nav ul li:hover ul li ul {display: none;}
+ * #nav ul li:hover ul li a,
+ * #nav ul li:hover ul li:hover ul { display: block;}
+ */
 
 /* =============================================================================
    suckerfish functionality
@@ -1863,7 +1856,7 @@ ul.menu ul ul li:hover ul ul,
 ul.menu li.pie_hover ul ul,
 ul.menu ul li.pie_hover ul ul,
 ul.menu ul ul li.pie_hover ul ul {
-    left: -999em
+    left: -999em;
 }
 
 ul.menu li:hover ul,
@@ -1874,7 +1867,7 @@ ul.menu li.pie_hover ul,
 ul.menu ul li.pie_hover ul,
 ul.menu ul ul li.pie_hover ul,
 ul.menu ul ul ul li.pie_hover ul {
-    left: auto
+    left: auto;
 }
 
 /* =============================================================================
@@ -1900,15 +1893,15 @@ ul.menu ul ul ul li.pie_hover ul {
 }
 
 .clearfix:after {
-    clear: both
+    clear: both;
 }
 
 .clearfix {
-    zoom: 1
+    zoom: 1;
 }
 
 .clear {
-    clear: both
+    clear: both;
 }
 
 /* =============================================================================
@@ -1917,11 +1910,11 @@ ul.menu ul ul ul li.pie_hover ul {
 
 html,
 .sticky-footer {
-    height: 100%
+    height: 100%;
 }
 
 .sticky-footer #footer-push {
-    min-height: 100%
+    min-height: 100%;
 }
 
 .sticky-footer #footer {
@@ -1936,19 +1929,16 @@ html,
     width: 0;
     margin-top: -32767px;
 }
-
-some_nowhitespace {
-    nowhitespace: afterproperty
-}
-
-/*Opera Fix*/
+/*
+ * Opera Fix
+ */
 
 /* =============================================================================
    DOCman Style Overrides
    ========================================================================== */
 
 #dm_docs h3.dm_title {
-    float: left
+    float: left;
 }
 
 #dm_docs .dm_row .dm_description,
@@ -1958,7 +1948,7 @@ some_nowhitespace {
 }
 
 #dm_docs .dm_row .dm_description p {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 /* =============================================================================
@@ -1966,7 +1956,7 @@ some_nowhitespace {
    ========================================================================== */
 
 .mod-preview {
-    position: relative
+    position: relative;
 }
 
 .mod-preview-wrapper {
@@ -1990,7 +1980,7 @@ some_nowhitespace {
 .mod-preview-wrapper div.moduletable_text,
 .mod-preview-wrapper ul.menu,
 .mod-preview-wrapper #breadcrumbs {
-    opacity: 0
+    opacity: 0;
 }
 
 .mod-preview-info {
@@ -2009,27 +1999,27 @@ some_nowhitespace {
 #column-2 .mod-preview-wrapper,
 #column-3 .mod-preview-wrapper,
 #column-4 .mod-preview-wrapper {
-    height: 940px
+    height: 940px;
 }
 
 #breadcrumbs .mod-preview-wrapper {
-    min-width: 125px
+    min-width: 125px;
 }
 
 .alpha-2-main-beta-2 #column-group-alpha {
-    width: 33%
+    width: 33%;
 }
 
 .alpha-2-main-beta-2 #load-first {
-    width: 74% !important
+    width: 74% !important;
 }
 
 .alpha-2-main-beta-2 #column-group-beta {
-    width: 25%
+    width: 25%;
 }
 
 .alpha-2-main-beta-2 #content-main {
-    width: 67% !important
+    width: 67% !important;
 }
 
 #syndicate {
