@@ -7,7 +7,7 @@
 */
 
 if (substr(JVERSION, 0, 3) >= '1.6') {
-// Joomla! 1.6+ Output
+// Joomla! 1.6+
 	
 	// Create a shortcut for params.
 	$params = &$this->item->params;
