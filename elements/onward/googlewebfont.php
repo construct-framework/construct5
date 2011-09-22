@@ -40,8 +40,10 @@ class JFormFieldGooglewebfont extends JFormFieldList
 
         $options[]	= JHtml::_('select.option', '', '- None Selected -');
         $options[]	= JHtml::_('select.option', 'Abel', 'Abel');
+        $options[]	= JHtml::_('select.option', 'Abril+Fatface', 'Abril Fatface');
         $options[]	= JHtml::_('select.option', 'Aclonica', 'Aclonica');
         $options[]	= JHtml::_('select.option', 'Actor', 'Actor');
+        $options[]	= JHtml::_('select.option', 'Adamina', 'Adamina');
         $options[]	= JHtml::_('select.option', 'Aldrich', 'Aldrich');
         $options[]	= JHtml::_('select.option', 'Alice', 'Alice');
         $options[]	= JHtml::_('select.option', 'Alike', 'Alike');
@@ -52,6 +54,7 @@ class JFormFieldGooglewebfont extends JFormFieldList
         $options[]	= JHtml::_('select.option', 'Andika', 'Andika');
         $options[]	= JHtml::_('select.option', 'Annie+Use+Your+Telescope', 'Annie Use Your Telescope');
         $options[]	= JHtml::_('select.option', 'Anonymous+Pro', 'Anonymous Pro');
+        $options[]	= JHtml::_('select.option', 'Antic', 'Antic');
         $options[]	= JHtml::_('select.option', 'Anton', 'Anton');
         $options[]	= JHtml::_('select.option', 'Architects+Daughter', 'Architects Daughter');
         $options[]	= JHtml::_('select.option', 'Arimo', 'Arimo');
@@ -79,6 +82,7 @@ class JFormFieldGooglewebfont extends JFormFieldList
         $options[]	= JHtml::_('select.option', 'Carter+One', 'Carter One');
         $options[]	= JHtml::_('select.option', 'Caudex', 'Caudex');
         $options[]	= JHtml::_('select.option', 'Cedarville+Cursive', 'Cedarville Cursive');
+        $options[]	= JHtml::_('select.option', 'Changa+One', 'Changa One');
         $options[]	= JHtml::_('select.option', 'Cherry+Cream+Soda', 'Cherry Cream Soda');
         $options[]	= JHtml::_('select.option', 'Chewy', 'Chewy');
         $options[]	= JHtml::_('select.option', 'Coda', 'Coda');
@@ -102,11 +106,13 @@ class JFormFieldGooglewebfont extends JFormFieldList
         $options[]	= JHtml::_('select.option', 'Delius+Swash+Caps', 'Delius Swash Caps');
         $options[]	= JHtml::_('select.option', 'Delius+Unicase', 'Delius Unicase');
         $options[]	= JHtml::_('select.option', 'Didact+Gothic', 'Didact Gothic');
+        $options[]	= JHtml::_('select.option', 'Dorsa', 'Dorsa');
         $options[]	= JHtml::_('select.option', 'Droid+Sans', 'Droid Sans');
         $options[]	= JHtml::_('select.option', 'Droid+Sans+Mono', 'Droid Sans Mono');
         $options[]	= JHtml::_('select.option', 'Droid+Serif', 'Droid Serif');
         $options[]	= JHtml::_('select.option', 'EB+Garamond', 'EB Garamond');
         $options[]	= JHtml::_('select.option', 'Expletus+Sans', 'Expletus Sans');
+        $options[]	= JHtml::_('select.option', 'Fanwood+Text', 'Fanwood Text');
         $options[]	= JHtml::_('select.option', 'Federo', 'Federo');
         $options[]	= JHtml::_('select.option', 'Fontdiner+Swanky', 'Fontdiner Swanky');
         $options[]	= JHtml::_('select.option', 'Forum', 'Forum');
@@ -142,6 +148,7 @@ class JFormFieldGooglewebfont extends JFormFieldList
         $options[]	= JHtml::_('select.option', 'Josefin+Sans', 'Josefin Sans');
         $options[]	= JHtml::_('select.option', 'Josefin+Slab', 'Josefin Slab');
         $options[]	= JHtml::_('select.option', 'Judson', 'Judson');
+        $options[]	= JHtml::_('select.option', 'Julee', 'Julee');
         $options[]	= JHtml::_('select.option', 'Jura', 'Jura');
         $options[]	= JHtml::_('select.option', 'Just+Another+Hand', 'Just Another Hand');
         $options[]	= JHtml::_('select.option', 'Just+Me+Again+Down+Here', 'Just Me Again Down Here');
@@ -170,6 +177,7 @@ class JFormFieldGooglewebfont extends JFormFieldList
         $options[]	= JHtml::_('select.option', 'Meddon', 'Meddon');
         $options[]	= JHtml::_('select.option', 'MedievalSharp', 'MedievalSharp');
         $options[]	= JHtml::_('select.option', 'Megrim', 'Megrim');
+        $options[]	= JHtml::_('select.option', 'Merienda+One', 'Merienda One');
         $options[]	= JHtml::_('select.option', 'Merriweather', 'Merriweather');
         $options[]	= JHtml::_('select.option', 'Metrophobic', 'Metrophobic');
         $options[]	= JHtml::_('select.option', 'Michroma', 'Michroma');
@@ -198,7 +206,6 @@ class JFormFieldGooglewebfont extends JFormFieldList
         $options[]	= JHtml::_('select.option', 'Nova+Square', 'Nova Square');
         $options[]	= JHtml::_('select.option', 'Numans', 'Numans');
         $options[]	= JHtml::_('select.option', 'Nunito', 'Nunito');
-        $options[]	= JHtml::_('select.option', 'OFL+Sorts+Mill+Goudy+TT', 'OFL Sorts Mill Goudy TT');
         $options[]	= JHtml::_('select.option', 'Old+Standard+TT', 'Old Standard TT');
         $options[]	= JHtml::_('select.option', 'Open+Sans', 'Open Sans');
         $options[]	= JHtml::_('select.option', 'Open+Sans+Condensed', 'Open Sans Condensed');
@@ -212,6 +219,7 @@ class JFormFieldGooglewebfont extends JFormFieldList
         $options[]	= JHtml::_('select.option', 'PT+Serif', 'PT Serif');
         $options[]	= JHtml::_('select.option', 'PT+Serif+Caption', 'PT Serif Caption');
         $options[]	= JHtml::_('select.option', 'Pacifico', 'Pacifico');
+        $options[]	= JHtml::_('select.option', 'Passero+One', 'Passero One');
         $options[]	= JHtml::_('select.option', 'Patrick+Hand', 'Patrick Hand');
         $options[]	= JHtml::_('select.option', 'Paytone+One', 'Paytone One');
         $options[]	= JHtml::_('select.option', 'Permanent+Marker', 'Permanent Marker');
@@ -220,6 +228,8 @@ class JFormFieldGooglewebfont extends JFormFieldList
         $options[]	= JHtml::_('select.option', 'Playfair+Display', 'Playfair Display');
         $options[]	= JHtml::_('select.option', 'Podkova', 'Podkova');
         $options[]	= JHtml::_('select.option', 'Pompiere', 'Pompiere');
+        $options[]	= JHtml::_('select.option', 'Prata', 'Prata');
+        $options[]	= JHtml::_('select.option', 'Prociono', 'Prociono');
         $options[]	= JHtml::_('select.option', 'Puritan', 'Puritan');
         $options[]	= JHtml::_('select.option', 'Quattrocento', 'Quattrocento');
         $options[]	= JHtml::_('select.option', 'Quattrocento+Sans', 'Quattrocento Sans');
@@ -245,6 +255,7 @@ class JFormFieldGooglewebfont extends JFormFieldList
         $options[]	= JHtml::_('select.option', 'Smythe', 'Smythe');
         $options[]	= JHtml::_('select.option', 'Sniglet', 'Sniglet');
         $options[]	= JHtml::_('select.option', 'Snippet', 'Snippet');
+        $options[]	= JHtml::_('select.option', 'Sorts+Mill+Goudy', 'Sorts Mill Goudy');
         $options[]	= JHtml::_('select.option', 'Special+Elite', 'Special Elite');
         $options[]	= JHtml::_('select.option', 'Stardos+Stencil', 'Stardos Stencil');
         $options[]	= JHtml::_('select.option', 'Sue+Ellen+Francisco', 'Sue Ellen Francisco');
