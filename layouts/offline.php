@@ -6,37 +6,6 @@
 * @license		GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-// Load Joomla filesystem package
-jimport('joomla.filesystem.file');
-
-// Load template logic
-$logicFile				= JPATH_THEMES.'/'.$this->template.'/elements/logic.php';
-if(JFile::exists($logicFile)) {
-	include $logicFile;
-}
-
-// Mobile device detection
-$mTemplate				= JPATH_THEMES.'/'.$this->template.'/mobile-offline.php';
-
-// Initialize mobile device detection
-if(JFile::exists($mdetectFile)) {
-	include_once $mdetectFile;
-	// Instantiate the mobile object class
-	$uagent_obj 		= new uagent_info();
-	$isMobile 			= $uagent_obj->DetectMobileLong();
-	$isTablet			= $uagent_obj->DetectTierTablet();
-}
-
-// Check if mobile device detecion is turned on and test if visitor is a mobile device. If so, load mobile version
-if (( $mdetect && $isMobile ) || ( $mdetect && $detectTablets && $isTablet )) {
-	if(JFile::exists($mTemplate)) {
-	 	include_once $mTemplate;
-	}
-} // Check for layout override
-elseif (JFile::exists($template.'/layouts/offline.php')) {	
-	include_once $template.'/layouts/offline.php';
-}
-else {
 ?>
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
@@ -498,4 +467,3 @@ else {
 	
 	</body>
 </html>
-<?php }

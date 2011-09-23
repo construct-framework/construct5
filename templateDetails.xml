@@ -88,15 +88,16 @@
 		<filename>layouts/category/index.html</filename>
 		<filename>layouts/component/index.html</filename>
 		<filename>layouts/item/index.html</filename>
-		<filename>layouts/section/index.html</filename>		
-		<filename>mobile.php</filename>
-		<filename>mobile-offline.php</filename>		
+		<filename>layouts/section/index.html</filename>
+        <filename>apple-touch-icon.png</filename>
 		<filename>component.php</filename>
 		<filename>error.php</filename>
         <filename>favicon.ico</filename>
         <filename>favicon.png</filename>
         <filename>index.html</filename>
         <filename>index.php</filename>
+		<filename>mobile.php</filename>
+		<filename>mobile-offline.php</filename>		
 		<filename>modal.php</filename>
 		<filename>offline.php</filename>
         <filename>params.ini</filename>

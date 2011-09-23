@@ -5,8 +5,8 @@
 * @copyright	Copyright (C) 2010, 2011 Matt Thomas | Joomla Engineering. All rights reserved.
 * @license		GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
 */
-?>
 
+?>
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
@@ -106,16 +106,16 @@
 				<?php endif; ?>
 				
 				<nav>
-						<ul id="access">
-						  <li>Jump to:</li>
-						  <li><a href="<?php $url->setFragment('content'); echo $url->toString();?>" class="to-content">Content</a></li>					
-						  <?php if ($this->countModules('nav')) : ?>
-							<li><a href="<?php $url->setFragment('nav'); echo $url->toString();?>" class="to-nav">Navigation</a></li>
-						  <?php endif; ?>					
-						  <?php if ($contentBelowCount) : ?>
-							<li><a href="<?php $url->setFragment('additional'); echo $url->toString();?>" class="to-additional">Additional Information</a></li>
-						  <?php endif; ?>
-						</ul>
+					<ul id="access">
+					  <li>Jump to:</li>
+					  <li><a href="<?php $url->setFragment('content'); echo $url->toString();?>" class="to-content">Content</a></li>					
+					  <?php if ($this->countModules('nav')) : ?>
+						<li><a href="<?php $url->setFragment('nav'); echo $url->toString();?>" class="to-nav">Navigation</a></li>
+					  <?php endif; ?>					
+					  <?php if ($contentBelowCount) : ?>
+						<li><a href="<?php $url->setFragment('additional'); echo $url->toString();?>" class="to-additional">Additional Information</a></li>
+					  <?php endif; ?>
+					</ul>
 				</nav>
 
 				<?php if ($enableSwitcher) : ?>

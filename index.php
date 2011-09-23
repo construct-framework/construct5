@@ -36,9 +36,8 @@ if (( $mdetect && $isMobile ) || ( $mdetect && $detectTablets && $isTablet )) {
 elseif ($results) {
 	$alternateIndexFile = $results;
 	include_once $alternateIndexFile;	
-} else {
+} else {	
 ?>
-
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
@@ -138,16 +137,16 @@ elseif ($results) {
 				<?php endif; ?>
 				
 				<nav>
-						<ul id="access">
-						  <li>Jump to:</li>
-						  <li><a href="<?php $url->setFragment('content'); echo $url->toString();?>" class="to-content">Content</a></li>					
-						  <?php if ($this->countModules('nav')) : ?>
-							<li><a href="<?php $url->setFragment('nav'); echo $url->toString();?>" class="to-nav">Navigation</a></li>
-						  <?php endif; ?>					
-						  <?php if ($contentBelowCount) : ?>
-							<li><a href="<?php $url->setFragment('additional'); echo $url->toString();?>" class="to-additional">Additional Information</a></li>
-						  <?php endif; ?>
-						</ul>
+					<ul id="access">
+					  <li>Jump to:</li>
+					  <li><a href="<?php $url->setFragment('content'); echo $url->toString();?>" class="to-content">Content</a></li>					
+					  <?php if ($this->countModules('nav')) : ?>
+						<li><a href="<?php $url->setFragment('nav'); echo $url->toString();?>" class="to-nav">Navigation</a></li>
+					  <?php endif; ?>					
+					  <?php if ($contentBelowCount) : ?>
+						<li><a href="<?php $url->setFragment('additional'); echo $url->toString();?>" class="to-additional">Additional Information</a></li>
+					  <?php endif; ?>
+					</ul>
 				</nav>
 
 				<?php if ($enableSwitcher) : ?>
@@ -216,7 +215,7 @@ elseif ($results) {
 			<div id="content-container" class="clear clearfix">    
 
 				<?php if ($navBelowCount) : ?>
-					<nav id="nav-below" class="clearfix">						
+					<div id="nav-below" class="clearfix">						
 						<?php if ($this->countModules('nav-below-1')) : ?>
 							<div id="nav-below-1" class="<?php echo $navBelowClass ?>">
 								<jdoc:include type="modules" name="nav-below-1" style="div" module-class="gutter" />
@@ -252,7 +251,7 @@ elseif ($results) {
 								<jdoc:include type="modules" name="nav-below-6" style="div" module-class="gutter" />
 							</div><!-- end nav-below-6 -->
 						<?php endif; ?>													
-					</nav><!-- end nav-below -->
+					</div><!-- end nav-below -->
 				<?php endif; ?>
 			
 				<div id="load-first" class="clearfix">
