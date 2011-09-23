@@ -302,9 +302,6 @@ if ($isOnward && $catId && ($inheritStyle || $inheritLayout)) {
 	}
 	
 }
-else {
-    $parentCategory = NULL;
-}
 
 #--------------------------------- Alias ----------------------------------#
 

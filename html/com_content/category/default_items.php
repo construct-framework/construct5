@@ -6,6 +6,9 @@
 * @license		GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+// Joomla 1.5 only
+
+?>
 
 <script type="text/javascript">
 <!--
