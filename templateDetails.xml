@@ -2,13 +2,13 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <install version="1.6" type="template" client="site" method="upgrade">
 	<name>construct5-pro</name>
-	<creationDate>September 5th, 2011</creationDate>
+	<creationDate>September 23rd, 2011</creationDate>
 	<author>Joomla Engineering</author>
 	<authorEmail>support@joomlaengineering.com</authorEmail>
 	<authorUrl>http://joomlaengineering.com</authorUrl>
 	<copyright>Copyright (C) 2010, 2011 Matt Thomas | Joomla Engineering. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<version>0.1</version>	
+	<version>2.5.1 Beta</version>	
 	<description><![CDATA[
 	<style type="text/css">
 		.panel {background: #ddd;
@@ -75,13 +75,11 @@
 		<filename>elements/index.html</filename>
 		<filename>elements/logic.php</filename>		
 		<filename>elements/mdetect.php</filename>	
-		<filename>fonts/index.html</filename>
 		<folder>html</folder>
 		<filename>images/index.html</filename>
 		<filename>images/selector-arrow.png</filename>
 		<filename>images/trans.gif</filename>
 		<filename>js/DD_belatedPNG_0.0.8a-min.js</filename>
-		<filename>js/ie_suckerfish.js</filename>
 		<filename>js/index.html</filename>
 		<filename>js/PIE.htc</filename>
 		<filename>js/styleswitch.js</filename>

@@ -6,99 +6,6 @@
 * @license		GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-// Load Joomla filesystem package
-jimport('joomla.filesystem.file');
-
-// To enable use of site configuration
-$app 					= JFactory::getApplication();
-// Get the base URL of the website
-$baseUrl 				= JURI::base();
-// Returns a reference to the global document object
-$doc 					= JFactory::getDocument();
-// Check if version 1.5
-$isPresent = (substr(JVERSION, 0, 3) == '1.5');
-// Get the offline status of the website
-$offLine 				= $app->getCfg('offline');
-// Define relative path to the  current template directory
-$template 				= 'templates/'.$this->template;
-// Get language and direction
-$this->language = $doc->language;
-$this->direction = $doc->direction;
-
-// Send the user to the home page if the website is offline
-if ($offLine) {
-	$app->redirect($baseUrl);
-}
-
-// Manually define layout and module counts
-$columnLayout			= 'alpha-1-main-beta-1';
-$headerAboveClass 		= 'count-1';
-$headerBelowClass 		= 'count-6';
-$navBelowClass 			= 'count-4';
-$contentAboveClass 		= 'count-1';
-$contentBelowClass 		= '';
-$columnGroupAlphaClass 	= 'count-1';
-$columnGroupBetaClass 	= '';
-$footerAboveClass 		= 'count-1';
-
-// Access template parameters
-if ($isPresent) {
-	global $mainframe;
-	$params = new JParameter(JFile::read(JPATH_BASE.'/templates/'.$mainframe->getTemplate().'/params.ini'));
-}
-else {
-	$params = JFactory::getApplication()->getTemplate(true)->params;
-}
-
-$customStyleSheet 		= $params->get('customStyleSheet');
-$detectTablets			= $params->get('detectTablets');
-$enableSwitcher 		= $params->get('enableSwitcher');
-$fluidMedia				= $params->get('fluidMedia');
-$fullWidth				= $params->get('fullWidth');
-$googleWebFont 			= $params->get('googleWebFont');
-$googleWebFontSize		= $params->get('googleWebFontSize');
-$googleWebFontTargets	= $params->get('googleWebFontTargets');
-$googleWebFont2			= $params->get('googleWebFont2');
-$googleWebFontSize2		= $params->get('googleWebFontSize2');
-$googleWebFontTargets2	= $params->get('googleWebFontTargets2');
-$googleWebFont3			= $params->get('googleWebFont3');
-$googleWebFontSize3		= $params->get('googleWebFontSize3');
-$googleWebFontTargets3	= $params->get('googleWebFontTargets3');
-$IECSS3					= $params->get('IECSS3');
-$IECSS3Targets			= $params->get('IECSS3Targets');
-$IE6TransFix			= $params->get('IE6TransFix');
-$IE6TransFixTargets		= $params->get('IE6TransFixTargets');
-$inheritLayout			= $params->get('inheritLayout');
-$inheritStyle			= $params->get('inheritStyle');
-$loadMoo 				= $params->get('loadMoo');
-$loadModal				= $params->get('loadModal');
-$loadjQuery 			= $params->get('loadjQuery');
-$mContentDataTheme		= $params->get('mContentDataTheme');
-$mdetect 				= $params->get('mdetect');
-$mFooterDataTheme		= $params->get('mFooterDataTheme');
-$mHeaderDataTheme		= $params->get('mHeaderDataTheme');
-$mNavPosition			= $params->get('mNavPosition');
-$mNavDataTheme			= $params->get('mNavDataTheme');
-$mPageDataTheme			= $params->get('mPageDataTheme');
-$setGeneratorTag		= $params->get('setGeneratorTag');
-$showDiagnostics 		= $params->get('showDiagnostics');
-$siteWidth				= $params->get('siteWidth');
-$siteWidthType			= $params->get('siteWidthType');
-$siteWidthUnit			= $params->get('siteWidthUnit');
-$stickyFooterHeight		= $params->get('stickyFooterHeight');
-$useStickyFooter 		= $params->get('useStickyFooter');
-
-// Render module positions
-$renderer   			= $doc->loadRenderer( 'modules' );
-$raw 					= array( 'style' => 'raw' );
-$xhtml 					= array( 'style' => 'xhtml' );
-$jexhtml 				= array( 'style' => 'jexhtml' );
-
-// Check for layout override
-if(JFile::exists($template.'/layouts/error.php')) {
-	include_once $template.'/layouts/error.php';
-}
-else {
 ?>
 
 <!doctype html>
@@ -427,4 +334,3 @@ echo "\n"; ?>
 
 </body>
 </html>
-<?php }
