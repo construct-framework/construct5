@@ -135,7 +135,7 @@ abbr[title] {
 
 /*
  * Addresses style set to 'bolder' in FF3/4, S4/5, Chrome
-*/
+ */
 
 b,
 strong {
@@ -907,7 +907,7 @@ li {
 .intro ol,
 .item-page ol,
 .items-leading ol {
-    list-style: decimal
+    list-style: decimal;
 }
 
 .item ul,
@@ -955,7 +955,7 @@ strong {
 }
 
 label input {
-    display: block
+    display: block;
 }
 
 /* =============================================================================
@@ -1075,7 +1075,7 @@ table.category {
 }
 
 .category tbody tr:hover {
-    background: #dddddd;
+    background: rgba(221, 221, 221, 0.5);
 }
 
 .category td {
@@ -1083,7 +1083,7 @@ table.category {
 }
 
 .category .cat-list-row0 {
-    background: #eeeeee;
+    background: rgba(238, 238, 238, 0.5);
 }
 
 .category .cat-list-row1 {
@@ -1390,6 +1390,9 @@ ul.menu-horizontal li {
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box; 
     padding: 5px;
     margin: 5px;
 }
@@ -1787,6 +1790,10 @@ ul.menu ul ul {
     padding: 6px 15px 5px;
 }
 
+#nav ul.menu ul ul{
+    margin:0 0 0 100%;top:0
+}
+
 /* =============================================================================
    Right aligned navigation
    ========================================================================== */
@@ -1835,7 +1842,8 @@ ul.menu ul ul {
 /*
  * #nav ul li ul{display:none;position:absolute;top:100%;left:0;right:auto}
  * #nav ul li ul li{left:auto;margin:0;clear:left;width:100%;}
- * #nav ul li:hover ul{display:block;} /*Flip last item to keep witin area*/
+ * #nav ul li:hover ul{display:block;}
+ * Flip last item to keep witin area
  */
  
 /* =============================================================================
