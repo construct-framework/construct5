@@ -143,7 +143,7 @@ strong {
 }
 
 blockquote {
-    margin: 1em 40px;
+    margin: 1em;;
 }
 
 /*
@@ -237,12 +237,17 @@ sub {
 
 ul,
 ol {
-    margin: 1em 0;
-    padding: 0 0 0 40px;
+    margin: .2em 0;
+    padding: 0 0 0 1em;
 }
 
 dd {
-    margin: 0 0 0 40px;
+    margin: 0 0 0 1em;;
+}
+
+li {
+    font-size: 1em;
+    margin-left: 1em;
 }
 
 nav ul,
@@ -713,67 +718,8 @@ body {
 body {
     color: #333;
     line-height: 1.6em;
-}
-
-body.arial {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body.arial-black {
-    font-family: Arial Black, Gadget, sans-serif;
-}
-
-body.courier {
-    font-family: "Courier New", Courier, monospace;
-}
-
-body.georgia {
-    font-family: Georgia, serif;
-}
-
-body.helvetica {
     font-family: Helvetica,Arial,FreeSans,sans-serif;
 }
-
-body.impact {
-    font-family: Impact, Charcoal, sans-serif;
-}
-
-body.lucida-console {
-    font-family: "Lucida Console", Monaco, monospace;
-}
-
-body.lucida-grande {
-    font-family: "Lucida Grande",Lucida,Verdana,sans-serif;
-}
-
-body.lucida-sans {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-}
-
-body.palatino {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-}
-
-body.tahoma {
-    font-family: Tahoma, Geneva, sans-serif;
-}
-
-body.times {
-    font-family: "Times New Roman", Times, serif;
-}
-
-body.trebuchet {
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
-}
-
-body.verdana {
-    font-family: Verdana, Geneva, sans-serif;
-}
-
-/* =============================================================================
-   HTML Elements
-   ========================================================================== */
 
 a,
 a:link,
@@ -892,17 +838,6 @@ li > p {
     margin: 0.2em 0 0 1em;
 }
 
-ol,
-ul,
-li {
-    font-size: 1em;
-    margin: 0.2em 0;
-}
-
-li {
-    margin-left: 1.25em;
-}
-
 .item ol,
 .intro ol,
 .item-page ol,
@@ -994,6 +929,29 @@ isindex,
     display: inline-block;
 }
 
+.button2-left {
+    appearance: button;
+    -moz-appearance: button;
+    -webkit-appearance: button;
+    padding: 0;
+}
+
+.button2-left div {
+    float: left;
+}
+
+.button2-left a {
+    display: block;
+    padding: 2px 6px 3px;
+    float: left;
+    color: buttontext;
+    cursor: default;
+}
+
+.button2-left a:hover {
+    text-decoration: none;
+}
+
 /* =============================================================================
    Core Classes
    ========================================================================== */
@@ -1037,29 +995,6 @@ isindex,
 .breadcrumbs img {
     display: inline-block;
     margin: 0;
-}
-
-.button2-left {
-    appearance: button;
-    -moz-appearance: button;
-    -webkit-appearance: button;
-    padding: 0;
-}
-
-.button2-left div {
-    float: left;
-}
-
-.button2-left a {
-    display: block;
-    padding: 2px 6px 3px;
-    float: left;
-    color: buttontext;
-    cursor: default;
-}
-
-.button2-left a:hover {
-    text-decoration: none;
 }
 
 table.category {
@@ -1321,12 +1256,12 @@ label.invalid {
     min-width: 90px;
 }
 
-ul.menu-horizontal li {
-    float: left;
-}
 /*
  * Use -horizontal menu class suffix
  */
+ul.menu-horizontal li {
+    float: left;
+}
 
 .outline {
     border: 1px solid #ccc;
@@ -1706,29 +1641,29 @@ ul.menu-horizontal li {
    Menu
    ========================================================================== */
 
+/*
+ * use padding to indent text
+ */
 ul.menu a,
 ul.menu span.seprator {
     display: block;
     padding: .1em .7em;
 }
-/*
- * use padding to indent text
- */
 
 ul.menu li {
     float: left;
     position: relative;
 }
 
+/*
+ * change width to alter sub-menu widths
+ */
 ul.menu ul {
     position: absolute;
     left: -999em;
     z-index: 999;
     width: 16em;
 }
-/*
- * sub-menu widths
- */
 
 ul.menu ul li {
     width: 100%;
@@ -1750,13 +1685,13 @@ ul.menu ul ul {
     visibility: hidden;
 }
 
+/*
+ * adjust to resize menus
+ */
 #column-group-alpha ul.menu,
 #column-group-beta ul.menu {
     padding: 0;
 }
-/*
- * adjust to resize menus
- */
 
 #column-group-alpha ul.menu li,
 #column-group-beta ul.menu li {
@@ -1930,6 +1865,9 @@ html,
     clear: both;
 }
 
+/*
+ * Opera Fix
+ */
 .sticky-footer:before {
     content: "";
     height: 100%;
@@ -1937,9 +1875,6 @@ html,
     width: 0;
     margin-top: -32767px;
 }
-/*
- * Opera Fix
- */
 
 /* =============================================================================
    DOCman Style Overrides
