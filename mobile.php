@@ -16,7 +16,7 @@ $mobileResults = $mobileLayoutOverride->getIncludeFile ();
 
 if ($mobileResults) {
     $alternateIndexFile = $mobileResults;
-	include_once $alternateIndexFile;	
+	include_once $alternateIndexFile;
 } else {
 ?>
 

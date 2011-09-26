@@ -18,7 +18,7 @@ if(JFile::exists($template.'/layouts/mobile-offline.php')) {
 else {
 ?>
 
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="<?php echo $contenttype; ?>; charset=utf-8" />
