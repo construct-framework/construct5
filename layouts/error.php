@@ -168,9 +168,9 @@ echo "\n"; ?>
 				
 			<?php echo $renderer->render('breadcrumbs', $raw, null);  ?>
 				
-			<div id="nav" class="clear">    
+			<nav id="nav" class="clear">
 				<?php echo $renderer->render('nav', $raw, null);  ?>
-			</div>
+			</nav>
  
 			<div id="content-container" class="clear clearfix">  
 				<?php if ($navBelowClass) : ?>			
