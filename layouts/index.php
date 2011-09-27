@@ -81,7 +81,7 @@
 					    <?php if($itemId)		echo '<li>menu item '.$itemId.'</li>'; ?>
 					    <?php if($sectionId) 	echo '<li>section '.$sectionId.'</li>'; ?>
 					    <?php if($catId)   		echo '<li>category '.$catId.'</li>'; ?>
-					    <?php if ($isOnward && $catId && ($inheritStyle || $inheritLayout)) {
+					    <?php if ($catId && ($inheritStyle || $inheritLayout)) {
 					    		if ($parentCategory) {
 					    		    echo '<li>parent category '.$parentCategory.'</li>';
 					    		}

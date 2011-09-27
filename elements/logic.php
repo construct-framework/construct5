@@ -274,7 +274,7 @@ $catId = getCategory(JRequest::getInt('id'));
 
 #------------------------- Ancestor Category IDs --------------------------#
 
-if ($isOnward && $catId && ($inheritStyle || $inheritLayout)) {
+if ($catId && ($inheritStyle || $inheritLayout)) {
 	
 	function getParentCategory($id) {
 		$database = JFactory::getDBO();	
