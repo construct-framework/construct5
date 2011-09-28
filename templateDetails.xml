@@ -2,13 +2,13 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <install version="1.6" type="template" client="site" method="upgrade">
 	<name>construct5-pro</name>
-	<creationDate>September 23rd, 2011</creationDate>
+	<creationDate>September 27th, 2011</creationDate>
 	<author>Joomla Engineering</author>
 	<authorEmail>support@joomlaengineering.com</authorEmail>
 	<authorUrl>http://joomlaengineering.com</authorUrl>
 	<copyright>Copyright (C) 2010, 2011 Matt Thomas | Joomla Engineering. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<version>2.5.1 Beta</version>	
+	<version>2.5.2 Beta</version>
 	<description><![CDATA[
 	<style type="text/css">
 		.panel {background: #ddd;
