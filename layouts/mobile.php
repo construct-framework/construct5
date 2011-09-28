@@ -32,32 +32,36 @@
 <body class="noscript">	
 	<div data-role="page" data-theme="<?php echo $mPageDataTheme; ?>">
 		<div id="header" data-role="header" data-theme="<?php echo $mHeaderDataTheme; ?>">
+			
 			<h1><a href="<?php echo $baseUrl; ?>/" title="<?php echo $app->getCfg('sitename'); ?>"><?php echo $app->getCfg('sitename'); ?></a></h1>
-			<?php if ($showDiagnostics) : ?>
-				<ul id="diagnostics">
-					<li>component <?php echo $currentComponent; ?></li>					
-					<?php if($view)			echo '<li>'.$view.' view</li>'; ?>						
-					<?php if($articleId)	echo '<li>article '.$articleId.'</li>'; ?>
-					<?php if($itemId)		echo '<li>menu item '.$itemId.'</li>'; ?>
-					<?php if($sectionId) 	echo '<li>section '.$sectionId.'</li>'; ?>
-				    <?php if($catId)   		echo '<li>category '.$catId.'</li>'; ?>
-				    <?php if ($isOnward && $catId && ($inheritStyle || $inheritLayout)) {
-				    		if ($parentCategory) {
-				    		    echo '<li>parent category '.$parentCategory.'</li>';
-				    		}
-				    		$results = getAncestorCategories($catId);
-						    if ($results) {
-						        echo '<li>ancestor categories';
-							        if (count($results) > 0) {
-								        foreach ($results as $item) {
-									        echo ' '.$item->id.' ';
-								        }			
-							        }								
-						        echo'</li>';
-						    }
-						  } ?>
-				</ul>
-			<?php endif; ?>		
+			
+				<?php if ($showDiagnostics) : ?>
+					<ul id="diagnostics">
+					    <li>layout override</li>
+					    <li>column layout <?php echo $columnLayout; ?></li>
+						<li>component <?php echo $currentComponent; ?></li>					
+					    <?php if($view)			echo '<li>'.$view.' view</li>'; ?>						
+					    <?php if($articleId)	echo '<li>article '.$articleId.'</li>'; ?>
+					    <?php if($itemId)		echo '<li>menu item '.$itemId.'</li>'; ?>
+					    <?php if($sectionId) 	echo '<li>section '.$sectionId.'</li>'; ?>
+					    <?php if($catId)   		echo '<li>category '.$catId.'</li>'; ?>
+					    <?php if ($catId && ($inheritStyle || $inheritLayout)) {
+					    		if ($parentCategory) {
+					    		    echo '<li>parent category '.$parentCategory.'</li>';
+					    		}
+					    		$results = getAncestorCategories($catId);
+							    if ($results) {
+							        echo '<li>ancestor categories';
+								        if (count($results) > 0) {
+									        foreach ($results as $item) {
+										        echo ' '.$item->id.' ';
+									        }			
+								        }								
+							        echo'</li>';
+							    }
+							  } ?>
+				    </ul>
+				<?php endif; ?>	
 		</div>
 	
 		<?php if ( $mNavPosition && ($this->countModules('nav'))) : ?>

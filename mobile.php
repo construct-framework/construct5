@@ -45,16 +45,19 @@ if ($mobileResults) {
 <body class="noscript">	
 	<div data-role="page" data-theme="<?php echo $mPageDataTheme; ?>">
 		<div id="header" data-role="header" data-theme="<?php echo $mHeaderDataTheme; ?>">
+			
 			<h1><a href="<?php echo $baseUrl; ?>/" title="<?php echo $app->getCfg('sitename'); ?>"><?php echo $app->getCfg('sitename'); ?></a></h1>
+			
 			<?php if ($showDiagnostics) : ?>
 				<ul id="diagnostics">
+				    <li>column layout <?php echo $columnLayout; ?></li>
 					<li>component <?php echo $currentComponent; ?></li>					
-					<?php if($view)			echo '<li>'.$view.' view</li>'; ?>						
-					<?php if($articleId)	echo '<li>article '.$articleId.'</li>'; ?>
-					<?php if($itemId)		echo '<li>menu item '.$itemId.'</li>'; ?>
-					<?php if($sectionId) 	echo '<li>section '.$sectionId.'</li>'; ?>
+				    <?php if($view)			echo '<li>'.$view.' view</li>'; ?>						
+				    <?php if($articleId)	echo '<li>article '.$articleId.'</li>'; ?>
+				    <?php if($itemId)		echo '<li>menu item '.$itemId.'</li>'; ?>
+				    <?php if($sectionId) 	echo '<li>section '.$sectionId.'</li>'; ?>
 				    <?php if($catId)   		echo '<li>category '.$catId.'</li>'; ?>
-				    <?php if ($isOnward && $catId && ($inheritStyle || $inheritLayout)) {
+				    <?php if ($catId && ($inheritStyle || $inheritLayout)) {
 				    		if ($parentCategory) {
 				    		    echo '<li>parent category '.$parentCategory.'</li>';
 				    		}
@@ -69,7 +72,7 @@ if ($mobileResults) {
 						        echo'</li>';
 						    }
 						  } ?>
-				</ul>
+			    </ul>
 			<?php endif; ?>		
 		</div>
 	

@@ -104,7 +104,6 @@ elseif ($results) {
 				
 				<?php if ($showDiagnostics) : ?>
 					<ul id="diagnostics">
-						<li>layout override</li>
 					    <li>column layout <?php echo $columnLayout; ?></li>
 						<li>component <?php echo $currentComponent; ?></li>					
 					    <?php if($view)			echo '<li>'.$view.' view</li>'; ?>						
