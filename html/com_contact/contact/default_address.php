@@ -67,7 +67,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 				</dd>
 			<?php endif; ?>
 			<?php if ($this->contact->fax && $this->params->get('show_fax')) : ?>
-				<dtclass="<?php echo $this->params->get('marker_class'); ?>" >
+				<dt class="<?php echo $this->params->get('marker_class'); ?>" >
 					<?php echo $this->params->get('marker_fax'); ?>
 				</dt>
 				<dd class="contact-fax tel">
