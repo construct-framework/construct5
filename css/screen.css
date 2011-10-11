@@ -621,14 +621,6 @@ body {
     margin: 0 0 0 10px;
 }
 
-#bottom-user-modules .gutter {
-    margin-top: 0;
-}
-
-#top-user-modules .gutter {
-    margin-bottom: 0;
-}
-
 /* =============================================================================
    dynamic module widths
    ========================================================================== */
@@ -1256,12 +1248,10 @@ label.invalid {
     min-width: 90px;
 }
 
-/*
- * Use -horizontal menu class suffix
- */
 ul.menu-horizontal li {
     float: left;
 }
+/* Use -horizontal menu class suffix */
 
 .outline {
     border: 1px solid #ccc;
@@ -1451,44 +1441,6 @@ ul.menu-horizontal li {
     padding: 2px 5px 3px;
 }
 
-#column-group-alpha h3 {
-    padding: 0;
-}
-
-#column-group-alpha ul {
-    list-style-type: none;
-}
-
-#column-group-alpha li {
-    margin: 0;
-    padding: 0;
-}
-
-#column-group-alpha p {
-    padding: 10px 0 0 0;
-}
-
-#column-group-beta h3 {
-    padding: 0;
-}
-
-#column-group-beta ul {
-    list-style-type: none;
-}
-
-#column-group-beta li {
-    margin: 0;
-    padding: 0;
-}
-
-#column-group-beta p {
-    padding: 10px 0 0 0;
-}
-
-#content-above {
-    padding-bottom: 15px;
-}
-
 #editor-xtd-buttons {
     margin-top: 1em;
     float: left;
@@ -1497,10 +1449,6 @@ ul.menu-horizontal li {
 #diagnostics {
     float: right;
     clear: right;
-}
-
-#footer {
-    text-align: center;
 }
 
 #footer ul.menu,
@@ -1641,29 +1589,31 @@ ul.menu-horizontal li {
    Menu
    ========================================================================== */
 
-/*
- * use padding to indent text
- */
-ul.menu a,
-ul.menu span.seprator {
-    display: block;
-    padding: .1em .7em;
+ul.menu {
+    list-style-type: none;
 }
 
 ul.menu li {
     float: left;
     position: relative;
+	margin: 0;
+    padding: 0;
 }
 
-/*
- * change width to alter sub-menu widths
- */
+ul.menu a,
+ul.menu span.seprator {
+	display: block;
+	padding: .1em .7em;
+}
+/* use padding to indent text */
+
 ul.menu ul {
     position: absolute;
     left: -999em;
     z-index: 999;
     width: 16em;
 }
+/* change width to alter sub-menu widths */
 
 ul.menu ul li {
     width: 100%;
@@ -1685,13 +1635,11 @@ ul.menu ul ul {
     visibility: hidden;
 }
 
-/*
- * adjust to resize menus
- */
 #column-group-alpha ul.menu,
 #column-group-beta ul.menu {
     padding: 0;
 }
+/* adjust to resize menus */
 
 #column-group-alpha ul.menu li,
 #column-group-beta ul.menu li {
@@ -1934,7 +1882,6 @@ html,
     position: absolute;
     left: 5px;
     top: 5px;
-    font-family: BebasNeueRegular;
     font-size: 2em;
 }
 
