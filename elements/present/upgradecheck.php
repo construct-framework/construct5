@@ -1,8 +1,9 @@
 <?php defined('_JEXEC') or die;
 /**
-* @package		Unified Template Framework for Joomla! 1.5, 1.6+
-* @author		Joomla Engineering http://joomlaengineering.com
-* @copyright	Copyright (C) 2010, 2011 Matt Thomas | Joomla Engineering. All rights reserved.
+* @package		Unified HTML5 Template Framework for Joomla!+
+* @author		Cristina Solana http://nightshiftcreative.com
+* @author		Matt Thomas http://construct-framework.com | http://betweenbrain.com
+* @copyright	Copyright (C) 2009 - 2011 Matt Thomas. All rights reserved.
 * @license		GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
 */
 
@@ -17,7 +18,7 @@ class JElementUpgradecheck extends JElement {
 		//If cURL is supported, check the current version available.
 		else 
 				$version = 2;
-				$target = 'http://joomlaengineering.com/upgradecheck/construct5-pro';
+				$target = 'http://construct-framework.com/upgradecheck/construct5-pro';
 				$curl = curl_init();
 				curl_setopt($curl, CURLOPT_URL, $target);
 				curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -29,10 +30,10 @@ class JElementUpgradecheck extends JElement {
 				
 				//If the current version is out of date, notify the user and provide a download link.
 				if ($version < $str)
-					$message = $message . '<a href="http://joomlaengineering.com" target="_blank">Version 2.5.'.$str.' is now available.</a><br /><a href="http://joomlaengineering.com/construct-unified-changelog" target="_blank">See what&rsquo;s new</a>.</label>';
+					$message = $message . '<a href="http://construct-framework.com" target="_blank">Version 2.5.'.$str.' is now available.</a><br /><a href="http://construct-framework.com/construct-unified-changelog" target="_blank">See what&rsquo;s new</a>.</label>';
 				//If the current version is up to date, notify the user. 	
 				elseif (($version == $str) || ($version > $str))
-					$message = $message . 'There are no updates available at this time.<br /><a href="http://joomlaengineering.com/construct5-pro-changelog" target="_blank">View the change log</a>.</label>';
+					$message = $message . 'There are no updates available at this time.<br /><a href="http://construct-framework.com/construct5-pro-changelog" target="_blank">View the change log</a>.</label>';
 				return $message;							
 	  }
 }

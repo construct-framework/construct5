@@ -1,8 +1,10 @@
 <?php defined('_JEXEC') or die;
 /**
-* @package		Unified Template Framework for Joomla! 1.5,1.6+
-* @author		Joomla Engineering http://joomlaengineering.com
-* @copyright	Copyright (C) 2010, 2011 Matt Thomas | Joomla Engineering. All rights reserved.
+* @package		Unified HTML5 Template Framework for Joomla!
+* @author		Cristina Solana http://nightshiftcreative.com
+* @author		Cristina Solana http://nightshiftcreative.com
+* @author		Matt Thomas http://construct-framework.com | http://betweenbrain.com
+* @copyright	Copyright (C) 2009 - 2011 Matt Thomas. All rights reserved.
 * @license		GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
 */
 ?>
@@ -11,7 +13,7 @@ This framework would not exist without the inspiration and ingenuity of countles
 individuals and other projects. Following is a inconclusive list of those individuals,
 projects and other resources that helped shape this framework. If you feel that you should
 be included in this list, we offer you our sincerest apologies for omitting you and ask
-that you contact us at info@joomlaengineering.com
+that you contact us at info@construct-framework.com
 
 A big thanks goes out to Waseem Sadiq for putting together the Blank Skeleton Template,
 available at http://www.bulletprooftemplates.com/. It is a great learning tool and has
