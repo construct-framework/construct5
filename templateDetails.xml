@@ -3,7 +3,7 @@
 <install version="1.6" type="template" client="site" method="upgrade">
 	<name>construct5-pro</name>
 	<creationDate>September 27th, 2011</creationDate>
-	<author>Matt Thomas</author>
+	<author>Cristina Solana | Matt Thomas</author>
 	<authorEmail>support@construct-framework.com</authorEmail>
 	<authorUrl>http://construct-framework.com</authorUrl>
 	<copyright>Copyright (C) 2009 - 2011 Matt Thomas. All rights reserved.</copyright>
