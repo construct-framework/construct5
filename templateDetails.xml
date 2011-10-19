@@ -2,7 +2,7 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <install version="1.6" type="template" client="site" method="upgrade">
 	<name>construct5-pro</name>
-	<creationDate>September 27th, 2011</creationDate>
+	<creationDate>October 19th, 2011</creationDate>
 	<author>Cristina Solana | Matt Thomas</author>
 	<authorEmail>support@construct-framework.com</authorEmail>
 	<authorUrl>http://construct-framework.com</authorUrl>
