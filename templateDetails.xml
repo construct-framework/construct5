@@ -244,7 +244,7 @@
 					<option value="1">Before Content</option>
 					<option value="0">After Content</option>
 				</field>
-				<field name="mPageDataTheme" type="list" default="" label="TPL_CONSTRUCT5_PRO_MPAGEDATATHEME_LABEL" description="TPL_CONSTRUCT5_PRO_MPAGEDATATHEME_DESC">
+				<field name="mPageDataTheme" type="list" default="Blue" label="TPL_CONSTRUCT5_PRO_MPAGEDATATHEME_LABEL" description="TPL_CONSTRUCT5_PRO_MPAGEDATATHEME_DESC">
 					<option value="">- None Selected -</option>
 					<option value="a">Black</option>
 					<option value="b">Blue</option>
@@ -374,7 +374,7 @@
 				<option value="1">Before Content</option>
 				<option value="0">After Content</option>
 			</param>
-			<param name="mPageDataTheme" type="list" default="" label="Page Theme" description="The jQuery Mobile swatch theme to apply to the page portion of the mobile template. See http://jquerymobile.com/test/docs/api/themes.html for more details.">
+			<param name="mPageDataTheme" type="list" default="Blue" label="Page Theme" description="The jQuery Mobile swatch theme to apply to the page portion of the mobile template. See http://jquerymobile.com/test/docs/api/themes.html for more details.">
 				<option value="">- None Selected -</option>
 				<option value="a">Black</option>
 				<option value="b">Blue</option>
