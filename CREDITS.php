@@ -13,9 +13,11 @@ projects and other resources that helped shape this framework. If you feel that 
 be included in this list, we offer you our sincerest apologies for omitting you and ask
 that you contact us at info@construct-framework.com
 
-A big thanks goes out to Waseem Sadiq for putting together the Blank Skeleton Template,
-available at http://www.bulletprooftemplates.com/. It is a great learning tool and has
-helped many.
+The Ladies of Molajo - Amy Stephen, Babs Gösgens, and Cristina Solana. Your continued
+support and inspiration make me a better person and developer.
+
+Waseem Sadiq for putting together the Blank Skeleton Template - available at
+http://www.bulletprooftemplates.com/ - a great learning tool and has helped many.
 
 Mobile device detection script by Anthony Hand http://www.mobileesp.com
 
