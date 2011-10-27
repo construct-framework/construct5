@@ -501,9 +501,9 @@ $doc->addCustomTag("\n".'  <!--[if lt IE 7]>');
 $doc->addCustomTag("\n".'  <link rel="stylesheet" href="'.$template.'/css/ie6.css" type="text/css" media="screen" />');
 $doc->addCustomTag("\n".'  <style type="text/css">');
 $doc->addCustomTag("\n".'  body {text-align:center;}');
-$doc->addCustomTag("\n".'  #body-container {text-align:left;}');	
+$doc->addCustomTag("\n".'  #body-container {text-align:left;}');
 if ($useStickyFooter) {
-	$doc->addCustomTag("\n".'  body.sticky-footer #footer-push {display:table;height:100%;}');		
+	$doc->addCustomTag("\n".'  body.sticky-footer #footer-push {display:table;height:100%;}');
 }
 if(!$fullWidth){
 	$doc->addCustomTag("\n".'  #body-container, #header-above, #header, #footer {width: expression( document.body.clientWidth >'.($siteWidth -1).' ? "'.$siteWidth.$siteWidthUnit.'" : "auto" );margin:0 auto;}');
