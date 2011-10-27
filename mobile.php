@@ -24,7 +24,7 @@ if ($mobileResults) {
 <!DOCTYPE html> 
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="<?php echo $contenttype; ?>; charset=utf-8" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<link rel="stylesheet" href="<?php echo $baseUrl.'templates/'.$this->template; ?>/css/mobile.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css" />
 		<?php //Load Mobile Extended Template Style Overrides
