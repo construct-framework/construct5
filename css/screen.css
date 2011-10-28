@@ -1364,8 +1364,8 @@ ul.menu-horizontal li {
 }
 
 .search .phrases .inputbox option a:hover {
-    background: #C00;
-    border-color: #CFD0D6;
+    background: #c00;
+    border-color: #cfd0d6;
     color: #fff;
 }
 
@@ -1391,7 +1391,7 @@ ul.menu-horizontal li {
 .tip {
     float: left;
     background: #ffc;
-    border: 1px solid #D4D5AA;
+    border: 1px solid #d4d5aa;
     padding: 5px;
     max-width: 400px;
     z-index: 50;
@@ -1557,10 +1557,10 @@ ul.menu-horizontal li {
 }
 
 #system-message dd.message {
-    color: #0055BB;
-    background: #C3D2E5;
-    border-top: 2px solid #84A7DB;
-    border-bottom: 2px solid #84A7DB;
+    color: #0055bb;
+    background: #c3d2e5;
+    border-top: 2px solid #84a7db;
+    border-bottom: 2px solid #84a7db;
 }
 
 #system-message dd.message ul {
@@ -1568,10 +1568,10 @@ ul.menu-horizontal li {
 }
 
 #system-message dd.warning {
-    color: #F00;
-    background: #FBAD18;
-    border-top: 2px solid #F57E20;
-    border-bottom: 2px solid #F57E20;
+    color: #f00;
+    background: #fbad18;
+    border-top: 2px solid #f57e20;
+    border-bottom: 2px solid #f57e20;
 }
 
 #system-message dd.warning ul {
@@ -1579,10 +1579,10 @@ ul.menu-horizontal li {
 }
 
 #system-message dd.error {
-    color: #F00;
-    background: #FBEEF1;
-    border-top: 2px solid #FEABB9;
-    border-bottom: 2px solid #FEABB9;
+    color: #f00;
+    background: #fbeef1;
+    border-top: 2px solid #feabb9;
+    border-bottom: 2px solid #feabb9;
 }
 
 /* =============================================================================
