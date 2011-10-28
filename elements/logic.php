@@ -37,6 +37,7 @@ $view     				= JRequest::getCmd('view');
 $customStyleSheet 		= $this->params->get('customStyleSheet');
 $detectTablets			= $this->params->get('detectTablets');
 $enableSwitcher 		= $this->params->get('enableSwitcher');
+$responsive				= $this->params->get('responsive');
 $fluidMedia				= $this->params->get('fluidMedia');
 $fullWidth				= $this->params->get('fullWidth');
 $googleWebFont 			= $this->params->get('googleWebFont');
@@ -432,6 +433,9 @@ $doc->addStyleSheet($template.'/css/screen.css','text/css','screen');
 $doc->addStyleSheet($template.'/css/print.css','text/css','print');
 if ($customStyleSheet !='-1') {
 	$doc->addStyleSheet($template.'/css/'.$customStyleSheet,'text/css','screen');
+}
+if ($responsive) {
+	$doc->addStyleSheet($template.'/css/responsive.css','text/css','screen');
 }
 if ($this->direction == 'rtl') {
 	$doc->addStyleSheet($template.'/css/rtl.css','text/css','screen');

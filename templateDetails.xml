@@ -59,6 +59,7 @@
 		<filename>css/modal.css</filename>
 		<filename>css/print.css</filename>
 		<filename>css/rtl.css</filename>
+		<filename>css/responsive.css</filename>
 		<filename>css/screen.css</filename>
 		<filename>css/wireframe.css</filename>
 		<filename>elements/onward/googlewebfont.php</filename>
@@ -216,7 +217,11 @@
 					<option value="em">Em</option>
 					<option value="px">Pixel</option>
 					<option value="%">Percent</option>
-				</field>	
+				</field>
+				<field name="responsive" type="radio" default="0" label="TPL_CONSTRUCT5_PRO_RESPONSIVE_LABEL" description="TPL_CONSTRUCT5_PRO_RESPONSIVE_DESC">
+				  <option value="1">Yes</option>
+				  <option value="0">No</option>
+				</field>
 				<field name="fluidMedia" type="radio" default="0" label="TPL_CONSTRUCT5_PRO_FLUID_MEDIA_LABEL" description="TPL_CONSTRUCT5_PRO_FLUID_MEDIA_DESC">
 				  <option value="1">Yes</option>
 				  <option value="0">No</option>
