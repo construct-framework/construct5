@@ -48,14 +48,14 @@
 #column-group-alpha{float:right}
 #column-group-beta{float:left}
 #column-group-alpha ul#mainlevel li,
-#left ul.menu li{float: right;display: block !important;display: inline;position: relative;direction: rtl}
+#left ul.menu li{float: right;position: relative;direction: rtl}
 #column-group-alpha ul.menu ul,
 #column-group-alpha ul.menu ul ul,
 #column-group-alpha ul.menu ul ul ul{display: none;position: absolute;top: 10px;right: 75%;z-index:900}
 #column-group-beta ul#mainlevel li,
 #column-group-beta ul.menu li{width: 100%;list-style:none;padding:0 0 0 0;margin:0;text-align:left;direction: rtl}
 #column-group-beta ul#mainlevel li,
-#column-group-beta ul.menu li{float: right;display: block !important;display: inline;position: relative;direction: rtl}
+#column-group-beta ul.menu li{float: right;position: relative;direction: rtl}
 #column-group-beta ul.menu ul,
 #column-group-beta ul.menu ul ul,
 #column-group-beta ul.menu ul ul ul{display: none;position: absolute;top: 10px;right: -75%;z-index:900}

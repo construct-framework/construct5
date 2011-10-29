@@ -252,8 +252,7 @@ li {
 
 nav ul,
 nav ol {
-    list-style: none;
-    list-style-image: none;
+	list-style: none none;
 }
 
 /* =============================================================================
@@ -1284,9 +1283,8 @@ ul.menu-horizontal li {
 }
 
 .pagenav li {
-    margin: 0;
-    list-style: none;
-    margin: 0;
+	margin: 0;
+	list-style: none;
 }
 
 .pagenav-next {
@@ -1401,14 +1399,11 @@ ul.menu-horizontal li {
 }
 
 .tip-title {
-    padding: 0;
-    margin: 0;
-    font-size: 1em;
+	padding: 15px 0 5px;
+	margin: -15px 0 0;
+	font-size: 1em;
     font-weight: bold;
-    margin-top: -15px;
-    padding-top: 15px;
-    padding-bottom: 5px;
-    background: url(../images/selector-arrow.png) no-repeat;
+	background: url(../images/selector-arrow.png) no-repeat;
 }
 
 .tip-text {
@@ -1454,10 +1449,8 @@ ul.menu-horizontal li {
 #footer ul.menu,
 #footer ul.menu li {
     display: inline;
-    list-style-image: none;
-    list-style-position: outside;
-    list-style-type: none;
-    margin: 0;
+	list-style: none outside none;
+	margin: 0;
     padding: 0;
 }
 
