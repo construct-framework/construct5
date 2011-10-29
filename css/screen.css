@@ -88,7 +88,7 @@ button,
 input,
 select,
 textarea {
-    font-family: sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 /* =============================================================================
@@ -1491,7 +1491,7 @@ ul.menu-horizontal li {
     margin-left: 0;
 }
 
-#header {
+header {
     margin: 0;
     text-align: left;
 }
@@ -1624,7 +1624,7 @@ ul.menu ul ul {
     top: 0;
 }
 
-#nav:after,
+nav:after,
 #column-group-alpha ul.menu:after,
 #column-group-beta ul.menu:after {
     clear: both;
@@ -1657,23 +1657,23 @@ ul.menu ul ul {
     top: 0;
 }
 
-#nav {
+nav {
     z-index: 999;
 }
 
-#nav ul,
-#nav ul li {
+nav ul,
+nav ul li {
     margin: 0;
     padding: 0;
 }
 
-#nav ul.menu li a,
-#nav ul.menu li span.separator {
+nav ul.menu li a,
+nav ul.menu li span.separator {
     line-height: 1.8em;
     padding: 6px 15px 5px;
 }
 
-#nav ul.menu ul ul{
+nav ul.menu ul ul{
     margin:0 0 0 100%;top:0
 }
 
@@ -1682,8 +1682,8 @@ ul.menu ul ul {
    ========================================================================== */
 
 /*
- * #nav{float:right;margin:0 auto;position:relative;z-index:999;}
- * #nav ul.menu li{float:right;}
+ * nav{float:right;margin:0 auto;position:relative;z-index:999;}
+ * nav ul.menu li{float:right;}
  */
 
 /* =============================================================================
@@ -1691,10 +1691,10 @@ ul.menu ul ul {
    ========================================================================== */
 
 /*
- * #nav ul.menu ul {width:1024px;border:none;}
- * #nav ul.menu ul li {width:13em;}
- * #nav ul.menu ul li a{font-size:.8em;}
- * #nav ul.menu ul ul{margin:0 0 0 0;top:100%;}
+ * nav ul.menu ul {width:1024px;border:none;}
+ * nav ul.menu ul li {width:13em;}
+ * nav ul.menu ul li a{font-size:.8em;}
+ * nav ul.menu ul ul{margin:0 0 0 0;top:100%;}
  */
 
 /* =============================================================================
@@ -1702,10 +1702,10 @@ ul.menu ul ul {
    ========================================================================== */
 
 /*
- * #nav ul.menu ul {width:400px;}
- * #nav ul.menu ul li {width:200px;}
- * #nav ul.menu ul li a{font-size:.8em;}
- * #nav ul.menu ul ul{margin:0 0 0 100%;top:0;}
+ * nav ul.menu ul {width:400px;}
+ * nav ul.menu ul li {width:200px;}
+ * nav ul.menu ul li a{font-size:.8em;}
+ * nav ul.menu ul ul{margin:0 0 0 100%;top:0;}
  */
 
 /* =============================================================================
@@ -1713,9 +1713,9 @@ ul.menu ul ul {
    ========================================================================== */
 
 /*
- * #nav{width:100%;}
- * #nav ul{position:relative;float:right;right:50%;}
- * #nav ul li{position:relative;float:left;left:50%;margin:0;}
+ * nav{width:100%;}
+ * nav ul{position:relative;float:right;right:50%;}
+ * nav ul li{position:relative;float:left;left:50%;margin:0;}
  */
 
 /* =============================================================================
@@ -1723,9 +1723,9 @@ ul.menu ul ul {
    ========================================================================== */
 
 /*
- * #nav ul li ul{display:none;position:absolute;top:100%;left:0;right:auto}
- * #nav ul li ul li{left:auto;margin:0;clear:left;width:100%;}
- * #nav ul li:hover ul{display:block;}
+ * nav ul li ul{display:none;position:absolute;top:100%;left:0;right:auto}
+ * nav ul li ul li{left:auto;margin:0;clear:left;width:100%;}
+ * nav ul li:hover ul{display:block;}
  * Flip last item to keep witin area
  */
  
@@ -1733,9 +1733,9 @@ ul.menu ul ul {
    Third Level Centered Suckerfish
    ========================================================================== */  
 /*
- * #nav ul li:hover ul li ul {display: none;}
- * #nav ul li:hover ul li a,
- * #nav ul li:hover ul li:hover ul { display: block;}
+ * nav ul li:hover ul li ul {display: none;}
+ * nav ul li:hover ul li a,
+ * nav ul li:hover ul li:hover ul { display: block;}
  */
 
 /* =============================================================================
@@ -1767,8 +1767,8 @@ ul.menu ul ul ul li.pie_hover ul {
    ========================================================================== */
 
 /*
- * #nav ul.menu li a {display:block;width:100px;height:20px;background:url(../images/logo.png) -50px -50px no-repeat;}
- * #nav ul.menu li a span{display:block;width:0;height:0;overflow:hidden;}
+ * nav ul.menu li a {display:block;width:100px;height:20px;background:url(../images/logo.png) -50px -50px no-repeat;}
+ * nav ul.menu li a span{display:block;width:0;height:0;overflow:hidden;}
  */
 
 /* =============================================================================
@@ -1901,7 +1901,7 @@ html,
 }
 
 .alpha-2-main-beta-2 #load-first {
-    width: 74% !important;
+    width: 74%;
 }
 
 .alpha-2-main-beta-2 #column-group-beta {
@@ -1909,7 +1909,7 @@ html,
 }
 
 .alpha-2-main-beta-2 #content-main {
-    width: 67% !important;
+    width: 67%;
 }
 
 #syndicate {
