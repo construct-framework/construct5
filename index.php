@@ -28,7 +28,7 @@ if(JFile::exists($mdetectFile)) {
 // Layout override
 $results = $layoutOverride->getIncludeFile ();
 
-// Check if mobile device detecion is turned on and, test if visitor is a mobile device, and if so, load mobile sub-template
+// Check if mobile device detection is turned on and, test if visitor is a mobile device, and if so, load mobile sub-template
 if (( $mdetect && $isMobile ) || ( $mdetect && $detectTablets && $isTablet )) {
 	if(JFile::exists($mTemplate)) {
 	 	include_once $mTemplate;

@@ -362,11 +362,11 @@
     	</param>
 		<param name="stickyFooterHeight" type="text" default="175" label="Sticky Footer Height" description="Set the fixed height, in pixels, of your sticky footer." size="5" />				
 		<param type="panel" title="Mobile" />			
-			<param name="mdetect" type="radio" default="1" label="Mobile Device Detection" description="Enable automatic detecion of mobile devices and load a mobile version of the template.">
+			<param name="mdetect" type="radio" default="1" label="Mobile Device Detection" description="Enable automatic detection of mobile devices and load a mobile version of the template.">
 				<option value="1">Yes</option>
 				<option value="0">No</option>
 			</param>
-			<param name="detectTablets" type="radio" default="1" label="Include Tablet Devices" description="Include tablet devices in the mobile detection and load the mobile version of the temeplate.">
+			<param name="detectTablets" type="radio" default="1" label="Include Tablet Devices" description="Include tablet devices in the mobile detection and load the mobile version of the template.">
 				<option value="1">Yes</option>
 				<option value="0">No</option>
 			</param>			
@@ -424,7 +424,7 @@
 		<param name="googleWebFontSize2" type="text" default="" label="Google Web Font Size" description="Define the font size, including the unit of measure, of the font family defined above. Percentage is preferred. NOTE: Construct's base typography uses a font size of 76%, which is 12px in most modern browsers." size="5" />			
 		<param type="spacer" default=" " />
 				<param name="googleWebFont3" type="googlewebfont" default="" label="Google Web Font" description="The Google Web font to be applied to the designated targets below. Visit http://code.google.com/webfonts for more information." />
-		<param name="googleWebFontTargets3" type="text" default="" label="Google Web Font Targets" description="A comma separated list of A comma seperated list of the html elements, CSS IDs, and classes to apply the selected Google Web Font to. If targeting the body, be sure to set the Body Font Family to None Selected." size="50" />
+		<param name="googleWebFontTargets3" type="text" default="" label="Google Web Font Targets" description="A comma separated list of A comma separated list of the html elements, CSS IDs, and classes to apply the selected Google Web Font to. If targeting the body, be sure to set the Body Font Family to None Selected." size="50" />
 		<param name="googleWebFontSize3" type="text" default="" label="Google Web Font Size" description="Define the font size, including the unit of measure, of the font family defined above. Percentage is preferred. NOTE: Construct's base typography uses a font size of 76%, which is 12px in most modern browsers." size="5" />	
 		<param type="panel" title="Version Check" />			
 		<param label="Version Check" type="upgradecheck"/>

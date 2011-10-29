@@ -22,7 +22,7 @@ if ($mobileResults) {
 ?>
 
 <!DOCTYPE html> 
-<html>
+<html class="no-js">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<link rel="stylesheet" href="<?php echo $baseUrl.'templates/'.$this->template; ?>/css/mobile.css" type="text/css" media="screen" />
@@ -37,13 +37,13 @@ if ($mobileResults) {
 		<script>
 			(function($) { //enable using $ along side of other libraries
 				$(document).ready(function() {
-					$('body').removeClass("noscript");
+					$('html').removeClass("no-js");
 				});
 			})(jQuery) // releases $ to other libraries
 		</script>
 	</head>
 
-<body class="noscript">	
+<body>
 	<div data-role="page" data-theme="<?php echo $mPageDataTheme; ?>">
 		<div id="header" data-role="header" data-theme="<?php echo $mHeaderDataTheme; ?>">
 			
