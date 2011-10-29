@@ -910,13 +910,13 @@ keygen,
 select,
 isindex,
 .button2-left {
-    margin: 0em;
+    margin: 0;
     color: initial;
     letter-spacing: normal;
     word-spacing: normal;
     line-height: normal;
     text-transform: none;
-    text-indent: 0px;
+    text-indent: 0;
     text-shadow: none;
     display: inline-block;
 }
