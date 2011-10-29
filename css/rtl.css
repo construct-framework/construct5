@@ -10,30 +10,24 @@
 .alpha-2-main #column-group-alpha{float:right;text-align:right;direction:rtl}
 
 .main-beta-1 #content-main{float:right;text-align:right;direction:rtl}
-.main-beta-1 #load-first{width:80% !important;width:78%}
 .main-beta-1 #column-group-beta{float:left;text-align:right;direction:rtl}
 
 .main-beta-2 #content-main{float:right;text-align:right;direction:rtl}
-.main-beta-2 #load-first{width:60% !important;width:58%}
 .main-beta-2 #column-group-beta{float:left;text-align:right;direction:rtl}
 
-.alpha-1-main-beta-1 #load-first{width:80% !important;width:78%} 
 .alpha-1-main-beta-1 #content-main{float:left;text-align:right;direction:rtl}
 .alpha-1-main-beta-1 #column-group-alpha{float:right;text-align:right;direction:rtl}
 .alpha-1-main-beta-1 #column-group-beta{float:left;text-align:right;direction:rtl}
 
-.alpha-2-main-beta-1 #load-first{width:80% !important;width:78%} 
-.alpha-2-main-beta-1 #content-main{float:left;text-align:right;direction:rtl} 
+.alpha-2-main-beta-1 #content-main{float:left;text-align:right;direction:rtl}
 .alpha-2-main-beta-1 #column-group-alpha{float:right;text-align:right;direction:rtl}
 .alpha-2-main-beta-1 #column-group-beta{float:left;text-align:right;direction:rtl}
 
-.alpha-1-main-beta-2 #load-first{width:60% !important;width:58%} 
 .alpha-1-main-beta-2 #content-main{float:left;text-align:right;direction:rtl}
 .alpha-1-main-beta-2 #column-group-alpha{float:right;text-align:right;direction:rtl}
 .alpha-1-main-beta-2 #column-group-beta{float:left;text-align:right;direction:rtl}
 
-.alpha-2-main-beta-2 #load-first{width:60% !important;width:58%} 
-.alpha-2-main-beta-2 #content-main{float:left;text-align:right;direction:rtl} 
+.alpha-2-main-beta-2 #content-main{float:left;text-align:right;direction:rtl}
 .alpha-2-main-beta-2 #column-group-alpha{float:right;text-align:right;direction:rtl}
 .alpha-2-main-beta-2 #column-group-beta{float:left;text-align:right;direction:rtl}
 
@@ -50,7 +44,7 @@
 #access{float:right;direction:rtl}
 #access li{float:right;direction:rtl}
 #breadcrumbs {float:right;text-align:right;direction:rtl}
-#content-container{padding:0px;margin:0px;text-align:right;direction:rtl}
+#content-container{padding:0;margin:0;text-align:right;direction:rtl}
 #column-group-alpha{float:right}
 #column-group-beta{float:left}
 #column-group-alpha ul#mainlevel li,
