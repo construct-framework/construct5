@@ -19,8 +19,11 @@ div {
 
 /* 480px */
 @media only screen and (max-width: 480px) {
+    #body-container {
+        width: 95%;
+    }
     .alpha-1-main #content-main, .alpha-1-main #column-group-alpha, .alpha-2-main #load-first, .alpha-2-main #content-main, .alpha-2-main #column-group-alpha, .main-beta-1 #content-main, .main-beta-1 #load-first, .main-beta-1 #column-group-beta, .main-beta-2 #content-main, .main-beta-2 #load-first, .main-beta-2 #column-group-beta, .alpha-1-main-beta-1 #load-first, .alpha-1-main-beta-1 #content-main, .alpha-1-main-beta-1 #column-group-alpha, .alpha-1-main-beta-1 #column-group-beta, .alpha-2-main-beta-1 #load-first, .alpha-2-main-beta-1 #content-main, .alpha-2-main-beta-1 #column-group-alpha, .alpha-2-main-beta-1 #column-group-beta, .alpha-1-main-beta-2 #load-first, .alpha-1-main-beta-2 #content-main, .alpha-1-main-beta-2 #column-group-alpha, .alpha-1-main-beta-2 #column-group-beta, .alpha-2-main-beta-2 #load-first, .alpha-2-main-beta-2 #content-main, .alpha-2-main-beta-2 #column-group-alpha, .alpha-2-main-beta-2 #column-group-beta, .count-1, .count-2, .count-3, .count-4, .count-5, .count-6, .cols-1, .cols-2 .item, .cols-3 .item, .cols-4 .item, .cols-5 .item, .cols-6 .item, .cols-2 .item, .cols-3 .item, .cols-4 .item, .cols-5 .item, .cols-6 .item {
-        float: none;
+        float: none ;
         margin: 0 auto;
         width: 100%;
     }
