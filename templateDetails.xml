@@ -322,11 +322,11 @@
 		<param name="customStyleSheet" type="filelist" default="example.css" label="Custom style sheet" directory="templates/construct5-pro/css" filter="\.css" exclude="core-css-classes-ids\.css|diagnostic\.css|editor\.css|modal\.css|normal\.css|print\.css|rtl\.css|screen\.css|core-classes-ids\.css|ie6\.css|overrides\.css|mobile\.css|wireframe\.css" description="Name of the style sheet that contains your custom CSS declarations. Default is custom.css." />		
 		<param name="setGeneratorTag" type="text" default="Construct Framework | http://Construct-Framework.com" label="Generator Meta Tag" description="Customize the generator meta tag output by your template." size="56" />
 <param type="panel" title="Internet Explorer" />		
-		<param name="IECSS3" type="radio" default="1" label="Add CSS3 Support to IE" description="Enable the use of PIE (http://css3pie.com/) to add CSS3 support to Internet Explorer version 8 and before. Also adds pie_hover class to non-link items on hover. For performance reason, you must define the tagret elements below.">
+		<param name="IECSS3" type="radio" default="1" label="Add CSS3 Support to IE" description="Enable the use of PIE (http://css3pie.com/) to add CSS3 support to Internet Explorer version 8 and before. Also adds pie_hover class to non-link items on hover. For performance reason, you must define the target elements below.">
       <option value="1">Yes</option>
     	<option value="0">No</option>
     </param>
-		<param name="IECSS3Targets" type="text" default=".drop-shadow, .outline, .rounded, ul.menu li" label="IE CSS3 Support Targets" description="Enter a comma seprated list of HTML targets to apply PIE to." size="50" />
+		<param name="IECSS3Targets" type="text" default=".drop-shadow, .outline, .rounded, ul.menu li" label="IE CSS3 Support Targets" description="Enter a comma separated list of HTML targets to apply PIE to." size="50" />
 		<param name="IE6TransFix" type="radio" default="1" label="Add IE6 Transparency Fix" description="Enable the use DD_belatedPNG (http://www.dillerdesign.com/experiment/DD_belatedPNG/) to add transparency support to IE6. For performance reason, you must define the target elements below.">
         	<option value="1">Yes</option>
         	<option value="0">No</option>
