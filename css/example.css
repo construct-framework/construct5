@@ -27,7 +27,7 @@ table.category {border:1px solid rgba(10, 163, 74,.8)}
 .category .cat-list-row0,
 .even,
 .sectiontableentry1{background: rgba(10, 163, 74,.2)}
-/* Current Item Inidcator */
+/* Current Item Indicator */
 ul.menu #current a {color:#ED1F24}
 /* Active Item Trail */
 ul.menu li a,
