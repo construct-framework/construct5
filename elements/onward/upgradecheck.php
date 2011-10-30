@@ -18,7 +18,7 @@ class JFormFieldUpgradecheck extends JFormField {
 	
 	protected function getLabel()
 	{
-		//check for cURL support before we do anyting esle.
+		//check for cURL support before we do anything esle.
 		if(!function_exists("curl_init")) return 'cURL is not supported by your server. Please contact your hosting provider to enable this capability.';
 		//If cURL is supported, check the current version available.
 		else 

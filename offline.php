@@ -28,7 +28,7 @@ if(JFile::exists($mdetectFile)) {
 	$isTablet			= $uagent_obj->DetectTierTablet();
 }
 
-// Check if mobile device detecion is turned on and test if visitor is a mobile device. If so, load mobile version
+// Check if mobile device detection is turned on and test if visitor is a mobile device. If so, load mobile version
 if (( $mdetect && $isMobile ) || ( $mdetect && $detectTablets && $isTablet )) {
 	if(JFile::exists($mTemplate)) {
 	 	include_once $mTemplate;
