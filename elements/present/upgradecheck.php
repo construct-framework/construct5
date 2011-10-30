@@ -13,7 +13,7 @@ class JElementUpgradecheck extends JElement {
 	
 	  function fetchElement($name, $value, &$node, $control_name)
 	  {
-		//check for cURL support before we do anything esle.
+		//check for cURL support before we do anything else.
 		if(!function_exists("curl_init")) return 'cURL is not supported by your server. Please contact your hosting provider to enable this capability.';
 		//If cURL is supported, check the current version available.
 		else 
