@@ -431,11 +431,13 @@ $doc->addFavicon($template.'/apple-touch-icon.png','image/png','apple-touch-icon
 // Style sheets
 $doc->addStyleSheet($template.'/css/screen.css','text/css','screen');
 $doc->addStyleSheet($template.'/css/print.css','text/css','print');
+if ($responsive) {
+		$doc->addStyleSheet($template.'/css/responsive.css','text/css','screen');
+	} else {
+		$doc->addStyleSheet($template.'/css/grid.css','text/css','screen');
+}
 if ($customStyleSheet !='-1') {
 	$doc->addStyleSheet($template.'/css/'.$customStyleSheet,'text/css','screen');
-}
-if ($responsive) {
-	$doc->addStyleSheet($template.'/css/responsive.css','text/css','screen');
 }
 if ($this->direction == 'rtl') {
 	$doc->addStyleSheet($template.'/css/rtl.css','text/css','screen');
@@ -511,8 +513,7 @@ if ($useStickyFooter) {
 }
 if(!$fullWidth){
 	$doc->addCustomTag("\n".'  #body-container, #header-above, #header, #footer {width: expression( document.body.clientWidth >'.($siteWidth -1).' ? "'.$siteWidth.$siteWidthUnit.'" : "auto" );margin:0 auto;}');
-}
-else {
+} else {
 	$doc->addCustomTag("\n".'  #body-container, #header-above {width: expression( document.body.clientWidth >'.($siteWidth -1).' ? "'.$siteWidth.$siteWidthUnit.'" : "auto" );margin:0 auto;}');
 }
 $doc->addCustomTag("\n".'  </style>');
