@@ -432,7 +432,7 @@ $doc->addFavicon($template.'/apple-touch-icon.png','image/png','apple-touch-icon
 $doc->addStyleSheet($template.'/css/screen.css','text/css','screen');
 $doc->addStyleSheet($template.'/css/print.css','text/css','print');
 if ($gridSystem !='-1') {
-	$doc->addStyleSheet($template.'/css/grid/'.$gridSystem,'text/css','screen');
+	$doc->addStyleSheet($template.'/css/grids/'.$gridSystem,'text/css','screen');
 }
 if ($customStyleSheet !='-1') {
 	$doc->addStyleSheet($template.'/css/'.$customStyleSheet,'text/css','screen');
