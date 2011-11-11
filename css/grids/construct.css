@@ -262,19 +262,3 @@ body {
 .items-more {
     clear: both;
 }
-
-.alpha-2-main-beta-2 #column-group-alpha {
-    width: 33%;
-}
-
-.alpha-2-main-beta-2 #load-first {
-    width: 74%;
-}
-
-.alpha-2-main-beta-2 #column-group-beta {
-    width: 25%;
-}
-
-.alpha-2-main-beta-2 #content-main {
-    width: 67%;
-}
