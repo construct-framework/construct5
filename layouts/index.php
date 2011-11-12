@@ -64,13 +64,15 @@
 
 		<header id="header" class="clear clearfix">
 			<div class="gutter clearfix">
-
+				
+				<!-- Uncomment to add date to header
 				<div class="date-container">
 					<span class="date-weekday"><?php	$now = &JFactory::getDate(); echo $now->toFormat('%A').','; ?></span>
 					<span class="date-month"><?php 		$now = &JFactory::getDate(); echo $now->toFormat('%B'); ?></span>
 					<span class="date-day"><?php 		$now = &JFactory::getDate(); echo $now->toFormat('%d').','; ?></span>
 					<span class="date-year"><?php 		$now = &JFactory::getDate(); echo $now->toFormat('%Y'); ?></span>
 				</div>
+				-->
 				
 				<?php if ($showDiagnostics) : ?>
 					<ul id="diagnostics">
@@ -106,6 +108,7 @@
 					<jdoc:include type="modules" name="header" style="header" />	
 				<?php endif; ?>
 				
+				<!-- Uncomment to add Access menu
 				<nav>
 					<ul id="access">
 					  <li>Jump to:</li>
@@ -118,6 +121,7 @@
 					  <?php endif; ?>
 					</ul>
 				</nav>
+				-->
 
 				<?php if ($enableSwitcher) : ?>
 					<ul id="style-switch">

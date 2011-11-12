@@ -49,6 +49,8 @@
 		<filename>css/article/index.html</filename>
 		<filename>css/category/index.html</filename>
 		<filename>css/component/index.html</filename>
+		<filename>css/grids/construct.css</filename>
+		<filename>css/grids/index.html</filename>
 		<filename>css/item/index.html</filename>
 		<filename>css/section/index.html</filename>
 		<filename>css/diagnostic.css</filename>
@@ -59,23 +61,22 @@
 		<filename>css/modal.css</filename>
 		<filename>css/print.css</filename>
 		<filename>css/rtl.css</filename>
-		<filename>css/responsive.css</filename>
 		<filename>css/screen.css</filename>
 		<filename>css/wireframe.css</filename>
 		<filename>elements/onward/googlewebfont.php</filename>
 		<filename>elements/onward/index.html</filename>
-		<filename>elements/onward/jqueryversion.php</filename>		
+		<filename>elements/onward/jqueryversion.php</filename>
 		<filename>elements/onward/upgradecheck.php</filename>
-		<filename>elements/present/googlewebfont.php</filename>		
+		<filename>elements/present/googlewebfont.php</filename>
 		<filename>elements/present/index.html</filename>
-		<filename>elements/present/jqueryversion.php</filename>			
+		<filename>elements/present/jqueryversion.php</filename>
 		<filename>elements/present/panel.php</filename>
 		<filename>elements/present/panels.php</filename>
 		<filename>elements/present/upgradecheck.php</filename>
-		<filename>elements/helper.php</filename>		
+		<filename>elements/helper.php</filename>
 		<filename>elements/index.html</filename>
-		<filename>elements/logic.php</filename>		
-		<filename>elements/mdetect.php</filename>	
+		<filename>elements/logic.php</filename>
+		<filename>elements/mdetect.php</filename>
 		<folder>html</folder>
 		<filename>images/index.html</filename>
 		<filename>images/selector-arrow.png</filename>
@@ -98,7 +99,7 @@
         <filename>index.html</filename>
         <filename>index.php</filename>
 		<filename>mobile.php</filename>
-		<filename>mobile-offline.php</filename>		
+		<filename>mobile-offline.php</filename>
 		<filename>modal.php</filename>
 		<filename>offline.php</filename>
         <filename>params.ini</filename>
@@ -114,37 +115,37 @@
 	<positions>
 		<position>analytics</position>
 		<position>breadcrumbs</position>
-		<position>column-1</position>		
+		<position>column-1</position>
 		<position>column-2</position>
 		<position>column-3</position>
-		<position>column-4</position>	
+		<position>column-4</position>
 		<position>content-above-1</position>
 		<position>content-above-2</position>
 		<position>content-above-3</position>
-		<position>content-above-4</position>			
-		<position>content-above-5</position>		
-		<position>content-above-6</position>		
+		<position>content-above-4</position>
+		<position>content-above-5</position>
+		<position>content-above-6</position>
 		<position>content-below-1</position>
 		<position>content-below-2</position>
 		<position>content-below-3</position>
 		<position>content-below-4</position>
 		<position>content-below-5</position>
-		<position>content-below-6</position>		
-		<position>debug</position>		
-		<position>footer</position>							
+		<position>content-below-6</position>
+		<position>debug</position>
+		<position>footer</position>
 		<position>footer-above-1</position>
 		<position>footer-above-2</position>
 		<position>footer-above-3</position>
-		<position>footer-above-4</position>		
+		<position>footer-above-4</position>
 		<position>footer-above-5</position>
-		<position>footer-above-6</position>	
-		<position>header</position>					
+		<position>footer-above-6</position>
+		<position>header</position>
 		<position>header-above-1</position>
 		<position>header-above-2</position>
 		<position>header-above-3</position>
 		<position>header-above-4</position>
 		<position>header-above-5</position>
-		<position>header-above-6</position>		
+		<position>header-above-6</position>
 		<position>header-below-1</position>
 		<position>header-below-2</position>
 		<position>header-below-3</position>
@@ -157,14 +158,14 @@
 		<position>nav-below-3</position>
 		<position>nav-below-4</position>
 		<position>nav-below-5</position>
-		<position>nav-below-6</position>		
+		<position>nav-below-6</position>
 		<position>offline</position>
-		<position>syndicate</position>		
+		<position>syndicate</position>
 	</positions>
 	
 	<config>
 		<fields name="params">
-			<fieldset name="general" addfieldpath="/templates/construct5-pro/elements/onward" >									
+			<fieldset name="general" addfieldpath="/templates/construct5-pro/elements/onward" >
 				<field name="enableSwitcher" type="radio" default="0" label="TPL_CONSTRUCT5_PRO_ENABLE_SWITCHER_LABEL" description="TPL_CONSTRUCT5_PRO_ENABLE_SWITCHER_DESC">
 					<option value="1">Show</option>
 					<option value="0">Hide</option>
@@ -193,10 +194,10 @@
 				<field name="IE6TransFix" type="radio" default="1" label="TPL_CONSTRUCT5_PRO_IE6_TRANS_FIX_LABEL" description="TPL_CONSTRUCT5_PRO_IE6_TRANS_FIX_DESC">
 		        	<option value="1">Yes</option>
 		        	<option value="0">No</option>
-		    	</field>		
+		    	</field>
 				<field name="IE6TransFixTargets" type="textarea" default="h1 a" label="TPL_CONSTRUCT5_PRO_IE6_TRANS_FIX_TARGETS_LABEL" description="TPL_CONSTRUCT5_PRO_IE6_TRANS_FIX_TARGETS_DESC" rows="5" cols="50" />
-			</fieldset>			
-			<fieldset name="javascript">									
+			</fieldset>
+			<fieldset name="javascript">
 				<field name="loadMoo" type="radio" default="1" label="TPL_CONSTRUCT5_PRO_LOAD_MOO_LABEL" description="TPL_CONSTRUCT5_PRO_LOAD_MOO_DESC">
 					<option value="1">Yes</option>
 					<option value="0">No</option>
@@ -207,7 +208,8 @@
 				</field>
 				<field name="loadjQuery" type="jqueryversion" default="" label="TPL_CONSTRUCT5_PRO_LOAD_JQUERY_LABEL" description="TPL_CONSTRUCT5_PRO_LOAD_JQUERY_DESC" />
 			</fieldset>
-			<fieldset name="Layout">				
+			<fieldset name="Layout">
+				<field name="gridSystem" type="filelist" default="construct.css" label="TPL_CONSTRUCT5_PRO_GRID_SYSTEM_LABEL" directory="templates/construct5-pro/css/grids" filter="\.css" description="TPL_CONSTRUCT5_PRO_GRID_SYSTEM_DESC" />
 				<field name="siteWidth" type="text" default="80.5" label="TPL_CONSTRUCT5_PRO_SITE_WIDTH_LABEL" description="TPL_CONSTRUCT5_PRO_SITE_WIDTH_DESC" size="10" />	
 				<field name="siteWidthType" type="radio" default="max-width" label="TPL_CONSTRUCT5_PRO_SITE_WIDTH_TYPE_LABEL" description="TPL_CONSTRUCT5_PRO_SITE_WIDTH_TYPE_DESC">
 					<option value="max-width">Fluid Max Width</option>
@@ -218,14 +220,10 @@
 					<option value="px">Pixel</option>
 					<option value="%">Percent</option>
 				</field>
-				<field name="responsive" type="radio" default="0" label="TPL_CONSTRUCT5_PRO_RESPONSIVE_LABEL" description="TPL_CONSTRUCT5_PRO_RESPONSIVE_DESC">
-				  <option value="1">Yes</option>
-				  <option value="0">No</option>
-				</field>
 				<field name="fluidMedia" type="radio" default="0" label="TPL_CONSTRUCT5_PRO_FLUID_MEDIA_LABEL" description="TPL_CONSTRUCT5_PRO_FLUID_MEDIA_DESC">
 				  <option value="1">Yes</option>
 				  <option value="0">No</option>
-				</field>				
+				</field>
 				<field name="fullWidth" type="radio" default="1" label="TPL_CONSTRUCT5_PRO_FULL_WIDTH_LABEL" description="TPL_CONSTRUCT5_PRO_FULL_WIDTH_DESC">
 				  <option value="1">Yes</option>
 				  <option value="0">No</option>
@@ -280,7 +278,7 @@
 					<option value="c">Gray</option>
 					<option value="d">Dark Gray</option>
 					<option value="e">Accent</option>
-				</field>																	
+				</field>
 				<field name="mFooterDataTheme" type="list" default="" label="TPL_CONSTRUCT5_PRO_MFOOTERDATATHEME_LABEL" description="TPL_CONSTRUCT5_PRO_MFOOTERDATATHEME_DESC">
 					<option value="">- None Selected -</option>
 					<option value="a">Black</option>
@@ -288,20 +286,20 @@
 					<option value="c">Gray</option>
 					<option value="d">Dark Gray</option>
 					<option value="e">Accent</option>
-				</field>					
-			</fieldset>							
-			<fieldset name="typography">		
-				<field name="googleWebFont" type="googlewebfont" default="" label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_LABEL" description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_DESC" />										
+				</field>
+			</fieldset>
+			<fieldset name="typography">
+				<field name="googleWebFont" type="googlewebfont" default="" label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_LABEL" description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_DESC" />		
 				<field name="googleWebFontTargets" type="text" default="h1,h2,h3,h4,h5,h6" label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_LABEL" description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_DESC" size="50" />
-				<field name="googleWebFontSize" type="text" default="85%" label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_SIZE_LABEL" description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_SIZE_DESC" size="5" />					
-				<field type="spacer" default=" " />				
-				<field name="googleWebFont2" type="googlewebfont" default="" label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_LABEL" description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_DESC" />										
+				<field name="googleWebFontSize" type="text" default="85%" label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_SIZE_LABEL" description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_SIZE_DESC" size="5" />	
+				<field type="spacer" default=" " />
+				<field name="googleWebFont2" type="googlewebfont" default="" label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_LABEL" description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_DESC" />		
 				<field name="googleWebFontTargets2" type="text" default="h1,h2,h3,h4,h5,h6" label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_LABEL" description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_DESC" size="50"/>
-				<field name="googleWebFontSize2" type="text" default="2.1em" label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_SIZE_LABEL" description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_SIZE_DESC" size="5" />					
-				<field type="spacer" default=" " />				
-				<field name="googleWebFont3" type="googlewebfont" default="" label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_LABEL" description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_DESC" />										
+				<field name="googleWebFontSize2" type="text" default="2.1em" label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_SIZE_LABEL" description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_SIZE_DESC" size="5" />	
+				<field type="spacer" default=" " />
+				<field name="googleWebFont3" type="googlewebfont" default="" label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_LABEL" description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_DESC" />		
 				<field name="googleWebFontTargets3" type="text" default="h1,h2,h3,h4,h5,h6" label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_LABEL" description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_DESC" size="50" />
-				<field name="googleWebFontSize3" type="text" default="20px" label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_SIZE_LABEL" description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_SIZE_DESC" size="5" />									
+				<field name="googleWebFontSize3" type="text" default="20px" label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_SIZE_LABEL" description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_SIZE_DESC" size="5" />	
 			</fieldset>			
 			<fieldset name="version_check">
 				<field label="TPL_CONSTRUCT5_PRO_VERSION_CHECK_LABEL" type="upgradecheck" />
@@ -315,24 +313,24 @@
 			<option value="1">Show</option>
 			<option value="0">Hide</option>
 		</param>		
-		<param name="showDiagnostics" type="radio" default="0" label="Override Diagnostics" description="Enable display of the current article, item, category, section, and component extended template override information.">
+		<param name="showDiagnostics" type="radio" default="0" label="Override Diagnostics" description="Enable display of the current article, item, category, section, and component exteneded template override information.">
       <option value="1">Show</option>
     	<option value="0">Hide</option>
     </param>
 		<param name="customStyleSheet" type="filelist" default="example.css" label="Custom style sheet" directory="templates/construct5-pro/css" filter="\.css" exclude="core-css-classes-ids\.css|diagnostic\.css|editor\.css|modal\.css|normal\.css|print\.css|rtl\.css|screen\.css|core-classes-ids\.css|ie6\.css|overrides\.css|mobile\.css|wireframe\.css" description="Name of the style sheet that contains your custom CSS declarations. Default is custom.css." />		
 		<param name="setGeneratorTag" type="text" default="Construct Framework | http://Construct-Framework.com" label="Generator Meta Tag" description="Customize the generator meta tag output by your template." size="56" />
 <param type="panel" title="Internet Explorer" />		
-		<param name="IECSS3" type="radio" default="1" label="Add CSS3 Support to IE" description="Enable the use of PIE (http://css3pie.com/) to add CSS3 support to Internet Explorer version 8 and before. Also adds pie_hover class to non-link items on hover. For performance reason, you must define the target elements below.">
+		<param name="IECSS3" type="radio" default="1" label="Add CSS3 Support to IE" description="Enable the use of PIE (http://css3pie.com/) to add CSS3 support to Internet Explorer version 8 and before. Also adds pie_hover class to non-link items on hover. For performance reason, you must define the tagret elements below.">
       <option value="1">Yes</option>
     	<option value="0">No</option>
     </param>
-		<param name="IECSS3Targets" type="text" default=".drop-shadow, .outline, .rounded, ul.menu li" label="IE CSS3 Support Targets" description="Enter a comma separated list of HTML targets to apply PIE to." size="50" />
-		<param name="IE6TransFix" type="radio" default="1" label="Add IE6 Transparency Fix" description="Enable the use DD_belatedPNG (http://www.dillerdesign.com/experiment/DD_belatedPNG/) to add transparency support to IE6. For performance reason, you must define the target elements below.">
+		<param name="IECSS3Targets" type="text" default=".drop-shadow, .outline, .rounded, ul.menu li" label="IE CSS3 Support Targets" description="Enter a comma seprated list of HTML targets to apply PIE to." size="50" />
+		<param name="IE6TransFix" type="radio" default="1" label="Add IE6 Transparency Fix" description="Enable the use DD_belatedPNG (http://www.dillerdesign.com/experiment/DD_belatedPNG/) to add transparentcy support to IE6. For performance reason, you must define the tagret elements below.">
         	<option value="1">Yes</option>
         	<option value="0">No</option>
     </param>		
-		<param name="IE6TransFixTargets" type="text" default="h1 a" label="IE6 Transparency Fix Targets" description="Enter a comma separated list of HTML targets to apply DD_belatedPNG to." size="50" />
-		<param type="panel" title="Javascript" />			
+		<param name="IE6TransFixTargets" type="text" default="h1 a" label="IE6 Transparency Fix Targets" description="Enter a comma seprated list of HTML targets to apply DD_belatedPNG to." size="50" />
+		<param type="panel" title="Javascript" />
 		<param name="loadMoo" type="radio" default="1" label="Load MooTools" description="Load the MooTools JavaScript library that is included with Joomla.">
 			<option value="1">Yes</option>
 			<option value="0">No</option>
@@ -342,7 +340,8 @@
 			<option value="0">No</option>
 		</param>
 		<param name="loadjQuery" type="jqueryversion" default="" label="Load jQuery" description="Select the version of the jQuery JavaScript library to load, hosted by Google. jQuery will not load if no version is selected." />
-		<param type="panel" title="Layout" />			
+		<param type="panel" title="Layout" />
+		<param name="gridSystem" type="filelist" default="construct.css" label="Grid System" directory="templates/construct5-pro/css/grids" filter="\.css" description="Optionally select the grid system to use. Default is Construct's standard layout. Add other grid system style sheets to templates/construct5-pro/css/grids/" />
 		<param name="siteWidth" type="text" default="80.5" label="Site Width" description="Define the overall width of the layout. Enter only a number, no units, as you will choose which unit to use below." size="10" />	
 		<param name="siteWidthType" type="radio" default="max-width" label="Site Width Style" description="Set whether to use a fluid max-width or fixed width layout.">
 			<option value="max-width">Fluid Max-width</option>
@@ -365,71 +364,71 @@
         	<option value="1">Yes</option>
         	<option value="0">No</option>
     	</param>
-		<param name="stickyFooterHeight" type="text" default="175" label="Sticky Footer Height" description="Set the fixed height, in pixels, of your sticky footer." size="5" />				
-		<param type="panel" title="Mobile" />			
-			<param name="mdetect" type="radio" default="1" label="Mobile Device Detection" description="Enable automatic detection of mobile devices and load a mobile version of the template.">
-				<option value="1">Yes</option>
-				<option value="0">No</option>
-			</param>
-			<param name="detectTablets" type="radio" default="1" label="Include Tablet Devices" description="Include tablet devices in the mobile detection and load the mobile version of the template.">
-				<option value="1">Yes</option>
-				<option value="0">No</option>
-			</param>			
-			<param name="mNavPosition" type="radio" default="1" label="Navigation Position" description="Placement of the navigation, in relation to the main content area.">
-				<option value="1">Before Content</option>
-				<option value="0">After Content</option>
-			</param>
-			<param name="mPageDataTheme" type="list" default="b" label="Page Theme" description="The jQuery Mobile swatch theme to apply to the page portion of the mobile template. See http://jquerymobile.com/test/docs/api/themes.html for more details.">
-				<option value="">- None Selected -</option>
-				<option value="a">Black</option>
-				<option value="b">Blue</option>
-				<option value="c">Gray</option>
-				<option value="d">Dark Gray</option>
-				<option value="e">Accent</option>
-			</param>
-			<param name="mHeaderDataTheme" type="list" default="" label="Header Theme" description="The jQuery Mobile swatch theme to apply to the header portion of the mobile template.">
-				<option value="">- None Selected -</option>
-				<option value="a">Black</option>
-				<option value="b">Blue</option>
-				<option value="c">Gray</option>
-				<option value="d">Dark Gray</option>
-				<option value="e">Accent</option>
-			</param>	
-			<param name="mNavDataTheme" type="list" default="" label="Navigation Theme" description="The jQuery Mobile swatch theme to apply to the navigation portion of the mobile template.">
-				<option value="">- None Selected -</option>
-				<option value="a">Black</option>
-				<option value="b">Blue</option>
-				<option value="c">Gray</option>
-				<option value="d">Dark Gray</option>
-				<option value="e">Accent</option>
-			</param>	
-			<param name="mContentDataTheme" type="list" default="" label="Content Theme" description="The jQuery Mobile swatch theme to apply to the content portion of the mobile template.">
-				<option value="">- None Selected -</option>
-				<option value="a">Black</option>
-				<option value="b">Blue</option>
-				<option value="c">Gray</option>
-				<option value="d">Dark Gray</option>
-				<option value="e">Accent</option>
-			</param>																	
-			<param name="mFooterDataTheme" type="list" default="" label="Footer Theme" description="The jQuery Mobile swatch theme to apply to the footer portion of the mobile template.">
-				<option value="">- None Selected -</option>
-				<option value="a">Black</option>
-				<option value="b">Blue</option>
-				<option value="c">Gray</option>
-				<option value="d">Dark Gray</option>
-				<option value="e">Accent</option>
-			</param>		
+		<param name="stickyFooterHeight" type="text" default="175" label="Sticky Footer Height" description="Set the fixed height, in pixels, of your sticky footer." size="5" />
+		<param type="panel" title="Mobile" />
+		<param name="mdetect" type="radio" default="1" label="Mobile Device Detection" description="Enable automatic detecion of mobile devices and load a mobile version of the template.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="detectTablets" type="radio" default="1" label="Include Tablet Devices" description="Include tablet devices in the mobile detection and load the mobile version of the temeplate.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="mNavPosition" type="radio" default="1" label="Navigation Position" description="Placement of the navigation, in relation to the main content area.">
+			<option value="1">Before Content</option>
+			<option value="0">After Content</option>
+		</param>
+		<param name="mPageDataTheme" type="list" default="b" label="Page Theme" description="The jQuery Mobile swatch theme to apply to the page portion of the mobile template. See http://jquerymobile.com/test/docs/api/themes.html for more details.">
+			<option value="">- None Selected -</option>
+			<option value="a">Black</option>
+			<option value="b">Blue</option>
+			<option value="c">Gray</option>
+			<option value="d">Dark Gray</option>
+			<option value="e">Accent</option>
+		</param>
+		<param name="mHeaderDataTheme" type="list" default="" label="Header Theme" description="The jQuery Mobile swatch theme to apply to the header portion of the mobile template.">
+			<option value="">- None Selected -</option>
+			<option value="a">Black</option>
+			<option value="b">Blue</option>
+			<option value="c">Gray</option>
+			<option value="d">Dark Gray</option>
+			<option value="e">Accent</option>
+		</param>
+		<param name="mNavDataTheme" type="list" default="" label="Navigation Theme" description="The jQuery Mobile swatch theme to apply to the navigation portion of the mobile template.">
+			<option value="">- None Selected -</option>
+			<option value="a">Black</option>
+			<option value="b">Blue</option>
+			<option value="c">Gray</option>
+			<option value="d">Dark Gray</option>
+			<option value="e">Accent</option>
+		</param>
+		<param name="mContentDataTheme" type="list" default="" label="Content Theme" description="The jQuery Mobile swatch theme to apply to the content portion of the mobile template.">
+			<option value="">- None Selected -</option>
+			<option value="a">Black</option>
+			<option value="b">Blue</option>
+			<option value="c">Gray</option>
+			<option value="d">Dark Gray</option>
+			<option value="e">Accent</option>
+		</param>
+		<param name="mFooterDataTheme" type="list" default="" label="Footer Theme" description="The jQuery Mobile swatch theme to apply to the footer portion of the mobile template.">
+			<option value="">- None Selected -</option>
+			<option value="a">Black</option>
+			<option value="b">Blue</option>
+			<option value="c">Gray</option>
+			<option value="d">Dark Gray</option>
+			<option value="e">Accent</option>
+		</param>
 		<param type="panel" title="Typography" />	
-		<param name="googleWebFont" type="googlewebfont" default="" label="Google Web Font" description="The Google Web font to be applied to the designated targets below. Visit http://code.google.com/webfonts for more information." />								
-		<param name="googleWebFontTargets" type="text" default="h1,h2,h3,h4,h5,h6" label="Google Web Font Targets" description="A comma separated list of the html elements, CSS IDs, and classes to apply the selected Google Web Font to. If targeting the body, be sure to set the Body Font Family to None Selected." size="50" />
-		<param name="googleWebFontSize" type="text" default="2.5em" label="Google Web Font Size" description="Define the font size, including the unit of measure, of the font family defined above. Percentage is preferred. NOTE: Construct's base typography uses a font size of 76%, which is 12px in most modern browsers." size="5" />				
+		<param name="googleWebFont" type="googlewebfont" default="" label="Google Web Font" description="The Google Web font to be applied to the designated targets below. Visit http://code.google.com/webfonts for more information." />
+		<param name="googleWebFontTargets" type="text" default="h1,h2,h3,h4,h5,h6" label="Google Web Font Targets" description="A comma seperated list of the html elements, CSS IDs, and classes to apply the selected Google Web Font to. If targeting the body, be sure to set the Body Font Family to None Selected." size="50" />
+		<param name="googleWebFontSize" type="text" default="2.5em" label="Google Web Font Size" description="Define the font size, including the unit of measure, of the font family defined above. Percentage is preferred. NOTE: Construct's base typography uses a font size of 76%, which is 12px in most modern browsers." size="5" />
 		<param type="spacer" default=" " />
-				<param name="googleWebFont2" type="googlewebfont" default="" label="Google Web Font" description="The Google Web font to be applied to the designated targets below. Visit http://code.google.com/webfonts for more information." />
-		<param name="googleWebFontTargets2" type="text" default="" label="Google Web Font Targets" description="A comma separated list of the html elements, CSS IDs, and classes to apply the selected Google Web Font to. If targeting the body, be sure to set the Body Font Family to None Selected." size="50" />
+		<param name="googleWebFont2" type="googlewebfont" default="" label="Google Web Font" description="The Google Web font to be applied to the designated targets below. Visit http://code.google.com/webfonts for more information." />
+		<param name="googleWebFontTargets2" type="text" default="" label="Google Web Font Targets" description="A comma seperated list of the html elements, CSS IDs, and classes to apply the selected Google Web Font to. If targeting the body, be sure to set the Body Font Family to None Selected." size="50" />
 		<param name="googleWebFontSize2" type="text" default="" label="Google Web Font Size" description="Define the font size, including the unit of measure, of the font family defined above. Percentage is preferred. NOTE: Construct's base typography uses a font size of 76%, which is 12px in most modern browsers." size="5" />			
 		<param type="spacer" default=" " />
-				<param name="googleWebFont3" type="googlewebfont" default="" label="Google Web Font" description="The Google Web font to be applied to the designated targets below. Visit http://code.google.com/webfonts for more information." />
-		<param name="googleWebFontTargets3" type="text" default="" label="Google Web Font Targets" description="A comma separated list of A comma separated list of the html elements, CSS IDs, and classes to apply the selected Google Web Font to. If targeting the body, be sure to set the Body Font Family to None Selected." size="50" />
+		<param name="googleWebFont3" type="googlewebfont" default="" label="Google Web Font" description="The Google Web font to be applied to the designated targets below. Visit http://code.google.com/webfonts for more information." />
+		<param name="googleWebFontTargets3" type="text" default="" label="Google Web Font Targets" description="A comma seperated list of A comma seperated list of the html elements, CSS IDs, and classes to apply the selected Google Web Font to. If targeting the body, be sure to set the Body Font Family to None Selected." size="50" />
 		<param name="googleWebFontSize3" type="text" default="" label="Google Web Font Size" description="Define the font size, including the unit of measure, of the font family defined above. Percentage is preferred. NOTE: Construct's base typography uses a font size of 76%, which is 12px in most modern browsers." size="5" />	
 		<param type="panel" title="Version Check" />			
 		<param label="Version Check" type="upgradecheck"/>

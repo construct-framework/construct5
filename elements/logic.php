@@ -37,7 +37,6 @@ $view     				= JRequest::getCmd('view');
 $customStyleSheet 		= $this->params->get('customStyleSheet');
 $detectTablets			= $this->params->get('detectTablets');
 $enableSwitcher 		= $this->params->get('enableSwitcher');
-$responsive				= $this->params->get('responsive');
 $fluidMedia				= $this->params->get('fluidMedia');
 $fullWidth				= $this->params->get('fullWidth');
 $googleWebFont 			= $this->params->get('googleWebFont');
@@ -49,6 +48,7 @@ $googleWebFontTargets2	= $this->params->get('googleWebFontTargets2');
 $googleWebFont3			= $this->params->get('googleWebFont3');
 $googleWebFontSize3		= $this->params->get('googleWebFontSize3');
 $googleWebFontTargets3	= $this->params->get('googleWebFontTargets3');
+$gridSystem				= $this->params->get('gridSystem');
 $IECSS3					= $this->params->get('IECSS3');
 $IECSS3Targets			= $this->params->get('IECSS3Targets');
 $IE6TransFix			= $this->params->get('IE6TransFix');
@@ -431,11 +431,11 @@ $doc->addFavicon($template.'/apple-touch-icon.png','image/png','apple-touch-icon
 // Style sheets
 $doc->addStyleSheet($template.'/css/screen.css','text/css','screen');
 $doc->addStyleSheet($template.'/css/print.css','text/css','print');
+if ($gridSystem !='-1') {
+	$doc->addStyleSheet($template.'/css/grids/'.$gridSystem,'text/css','screen');
+}
 if ($customStyleSheet !='-1') {
 	$doc->addStyleSheet($template.'/css/'.$customStyleSheet,'text/css','screen');
-}
-if ($responsive) {
-	$doc->addStyleSheet($template.'/css/responsive.css','text/css','screen');
 }
 if ($this->direction == 'rtl') {
 	$doc->addStyleSheet($template.'/css/rtl.css','text/css','screen');
@@ -511,8 +511,7 @@ if ($useStickyFooter) {
 }
 if(!$fullWidth){
 	$doc->addCustomTag("\n".'  #body-container, #header-above, #header, #footer {width: expression( document.body.clientWidth >'.($siteWidth -1).' ? "'.$siteWidth.$siteWidthUnit.'" : "auto" );margin:0 auto;}');
-}
-else {
+} else {
 	$doc->addCustomTag("\n".'  #body-container, #header-above {width: expression( document.body.clientWidth >'.($siteWidth -1).' ? "'.$siteWidth.$siteWidthUnit.'" : "auto" );margin:0 auto;}');
 }
 $doc->addCustomTag("\n".'  </style>');

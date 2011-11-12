@@ -88,7 +88,7 @@ button,
 input,
 select,
 textarea {
-    font-family: sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 /* =============================================================================
@@ -435,271 +435,6 @@ textarea {
 table {
     border-collapse: collapse;
     border-spacing: 0;
-}
-
-/* =============================================================================
-   Layout
-   ========================================================================== */
-
-body {
-    font-size: 76%;
-}
-/* 12px in most modern browsers - used as basis of layout and typography.
- * Calculate em based dims as: target dim(px) / container dim(px) = result in em
- */
-
-#body-container,
-#header-above {
-    margin: 0 auto;
-    padding: 0;
-}
-
-#load-first,
-#footer-above {
-    float: left;
-}
-
-#footer-above {
-    width: 100%;
-}
-
-.main-only #content-main {
-    float: left;
-    width: 100%;
-}
-
-.main-only #load-first {
-    width: 100%;
-}
-
-.alpha-1-main #load-first {
-    width: 100%;
-}
-
-.alpha-1-main #content-main {
-    float: right;
-    width: 81%;
-}
-
-.alpha-1-main #column-group-alpha {
-    float: left;
-    width: 19%;
-}
-
-.alpha-2-main #load-first {
-    width: 100%;
-}
-
-.alpha-2-main #content-main {
-    float: right;
-    width: 62%;
-}
-
-.alpha-2-main #column-group-alpha {
-    float: left;
-    width: 38%;
-}
-
-.main-beta-1 #content-main {
-    float: left;
-    width: 100%;
-}
-
-.main-beta-1 #load-first {
-    width: 81%;
-}
-
-.main-beta-1 #column-group-beta {
-    float: right;
-    width: 19%;
-}
-
-.main-beta-2 #content-main {
-    float: left;
-    width: 100%;
-}
-
-.main-beta-2 #load-first {
-    width: 62%;
-}
-
-.main-beta-2 #column-group-beta {
-    float: right;
-    width: 38%;
-}
-
-.alpha-1-main-beta-1 #load-first {
-    width: 81%;
-}
-
-.alpha-1-main-beta-1 #content-main {
-    float: right;
-    width: 74.2%;
-}
-
-.alpha-1-main-beta-1 #column-group-alpha {
-    float: left;
-    width: 25.8%;
-}
-
-.alpha-1-main-beta-1 #column-group-beta {
-    float: right;
-    width: 19%;
-}
-
-.alpha-2-main-beta-1 #load-first {
-    width: 81%;
-}
-
-.alpha-2-main-beta-1 #content-main {
-    float: right;
-    width: 62%;
-}
-
-.alpha-2-main-beta-1 #column-group-alpha {
-    float: left;
-    width: 38%;
-}
-
-.alpha-2-main-beta-1 #column-group-beta {
-    float: right;
-    width: 19%;
-}
-
-.alpha-1-main-beta-2 #load-first {
-    width: 62%;
-}
-
-.alpha-1-main-beta-2 #content-main {
-    float: right;
-    width: 65.5%;
-}
-
-.alpha-1-main-beta-2 #column-group-alpha {
-    float: left;
-    width: 34.5%;
-}
-
-.alpha-1-main-beta-2 #column-group-beta {
-    float: right;
-    width: 38%;
-}
-
-.alpha-2-main-beta-2 #load-first {
-    width: 62%;
-}
-
-.alpha-2-main-beta-2 #content-main {
-    float: right;
-    width: 38%;
-}
-
-.alpha-2-main-beta-2 #column-group-alpha {
-    float: left;
-    width: 62%;
-}
-
-.alpha-2-main-beta-2 #column-group-beta {
-    float: right;
-    width: 38%;
-}
-
-/* =============================================================================
-   spacing rules
-   ========================================================================== */
-
-.gutter {
-    margin: 10px;
-}
-
-#column-group-alpha .gutter {
-    margin: 0 10px 0 0;
-}
-
-#column-group-beta .gutter {
-    margin: 0 0 0 10px;
-}
-
-/* =============================================================================
-   dynamic module widths
-   ========================================================================== */
-
-.count-1 {
-    float: left;
-    width: 100%;
-}
-
-.count-2 {
-    float: left;
-    width: 50%;
-}
-
-.count-3 {
-    float: left;
-    width: 33.3%;
-}
-
-.count-4 {
-    float: left;
-    width: 25%;
-}
-
-.count-5 {
-    float: left;
-    width: 20%;
-}
-
-.count-6 {
-    float: left;
-    width: 16.6%;
-}
-
-/* =============================================================================
-   column widths 
-   ========================================================================== */
-
-.cols-1 {
-    display: block;
-    float: none !important;
-    margin: 0 !important;
-}
-
-.cols-2 .item {
-    width: 47.8%;
-    padding: 1%;
-}
-
-.cols-3 .item {
-    width: 30.9%;
-    padding: 1%;
-}
-
-.cols-4 .item {
-    width: 22.4%;
-    padding: 1%;
-}
-
-.cols-5 .item {
-    width: 19.1%;
-    padding: 1%;
-}
-
-.cols-6 .item {
-    width: 15.9%;
-    padding: 1%;
-}
-
-.cols-2 .item,
-.cols-3 .item,
-.cols-4 .item,
-.cols-5 .item,
-.cols-6 .item {
-    float: left;
-}
-
-.column-1,
-.items-more {
-    clear: both;
 }
 
 /* =============================================================================
@@ -1484,7 +1219,7 @@ ul.menu-horizontal li {
     margin-left: 0;
 }
 
-#header {
+header {
     margin: 0;
     text-align: left;
 }
@@ -1617,7 +1352,7 @@ ul.menu ul ul {
     top: 0;
 }
 
-#nav:after,
+nav:after,
 #column-group-alpha ul.menu:after,
 #column-group-beta ul.menu:after {
     clear: both;
@@ -1650,23 +1385,23 @@ ul.menu ul ul {
     top: 0;
 }
 
-#nav {
+nav {
     z-index: 999;
 }
 
-#nav ul,
-#nav ul li {
+nav ul,
+nav ul li {
     margin: 0;
     padding: 0;
 }
 
-#nav ul.menu li a,
-#nav ul.menu li span.separator {
+nav ul.menu li a,
+nav ul.menu li span.separator {
     line-height: 1.8em;
     padding: 6px 15px 5px;
 }
 
-#nav ul.menu ul ul{
+nav ul.menu ul ul{
     margin:0 0 0 100%;top:0
 }
 
@@ -1675,8 +1410,8 @@ ul.menu ul ul {
    ========================================================================== */
 
 /*
- * #nav{float:right;margin:0 auto;position:relative;z-index:999;}
- * #nav ul.menu li{float:right;}
+ * nav{float:right;margin:0 auto;position:relative;z-index:999;}
+ * nav ul.menu li{float:right;}
  */
 
 /* =============================================================================
@@ -1684,10 +1419,10 @@ ul.menu ul ul {
    ========================================================================== */
 
 /*
- * #nav ul.menu ul {width:1024px;border:none;}
- * #nav ul.menu ul li {width:13em;}
- * #nav ul.menu ul li a{font-size:.8em;}
- * #nav ul.menu ul ul{margin:0 0 0 0;top:100%;}
+ * nav ul.menu ul {width:1024px;border:none;}
+ * nav ul.menu ul li {width:13em;}
+ * nav ul.menu ul li a{font-size:.8em;}
+ * nav ul.menu ul ul{margin:0 0 0 0;top:100%;}
  */
 
 /* =============================================================================
@@ -1695,10 +1430,10 @@ ul.menu ul ul {
    ========================================================================== */
 
 /*
- * #nav ul.menu ul {width:400px;}
- * #nav ul.menu ul li {width:200px;}
- * #nav ul.menu ul li a{font-size:.8em;}
- * #nav ul.menu ul ul{margin:0 0 0 100%;top:0;}
+ * nav ul.menu ul {width:400px;}
+ * nav ul.menu ul li {width:200px;}
+ * nav ul.menu ul li a{font-size:.8em;}
+ * nav ul.menu ul ul{margin:0 0 0 100%;top:0;}
  */
 
 /* =============================================================================
@@ -1706,9 +1441,9 @@ ul.menu ul ul {
    ========================================================================== */
 
 /*
- * #nav{width:100%;}
- * #nav ul{position:relative;float:right;right:50%;}
- * #nav ul li{position:relative;float:left;left:50%;margin:0;}
+ * nav{width:100%;}
+ * nav ul{position:relative;float:right;right:50%;}
+ * nav ul li{position:relative;float:left;left:50%;margin:0;}
  */
 
 /* =============================================================================
@@ -1716,9 +1451,9 @@ ul.menu ul ul {
    ========================================================================== */
 
 /*
- * #nav ul li ul{display:none;position:absolute;top:100%;left:0;right:auto}
- * #nav ul li ul li{left:auto;margin:0;clear:left;width:100%;}
- * #nav ul li:hover ul{display:block;}
+ * nav ul li ul{display:none;position:absolute;top:100%;left:0;right:auto}
+ * nav ul li ul li{left:auto;margin:0;clear:left;width:100%;}
+ * nav ul li:hover ul{display:block;}
  * Flip last item to keep witin area
  */
  
@@ -1726,9 +1461,9 @@ ul.menu ul ul {
    Third Level Centered Suckerfish
    ========================================================================== */  
 /*
- * #nav ul li:hover ul li ul {display: none;}
- * #nav ul li:hover ul li a,
- * #nav ul li:hover ul li:hover ul { display: block;}
+ * nav ul li:hover ul li ul {display: none;}
+ * nav ul li:hover ul li a,
+ * nav ul li:hover ul li:hover ul { display: block;}
  */
 
 /* =============================================================================
@@ -1760,8 +1495,8 @@ ul.menu ul ul ul li.pie_hover ul {
    ========================================================================== */
 
 /*
- * #nav ul.menu li a {display:block;width:100px;height:20px;background:url(../images/logo.png) -50px -50px no-repeat;}
- * #nav ul.menu li a span{display:block;width:0;height:0;overflow:hidden;}
+ * nav ul.menu li a {display:block;width:100px;height:20px;background:url(../images/logo.png) -50px -50px no-repeat;}
+ * nav ul.menu li a span{display:block;width:0;height:0;overflow:hidden;}
  */
 
 /* =============================================================================
@@ -1887,22 +1622,6 @@ html,
 
 #breadcrumbs .mod-preview-wrapper {
     min-width: 125px;
-}
-
-.alpha-2-main-beta-2 #column-group-alpha {
-    width: 33%;
-}
-
-.alpha-2-main-beta-2 #load-first {
-    width: 74% !important;
-}
-
-.alpha-2-main-beta-2 #column-group-beta {
-    width: 25%;
-}
-
-.alpha-2-main-beta-2 #content-main {
-    width: 67% !important;
 }
 
 #syndicate {
