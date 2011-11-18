@@ -26,7 +26,7 @@
 				$(document).ready(function() {
 					$('html').removeClass("no-js");
 				});
-			})(jQuery) // releases $ to other libraries
+			})(jQuery); // releases $ to other libraries
 		</script>
 	</head>
 

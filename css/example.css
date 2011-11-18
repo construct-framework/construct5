@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
-html{background:#f4f4f4 url(../images/example-fade.png) 50% 0 repeat-y !important;background:url(../images/example-fade.png) 50% 0 repeat-y/*for IE6*/}
+html{background : #f4f4f4 url(../images/example-fade.png) repeat-y 50% 0 !important; /*for IE6*/}
 .componentheading,
 .contentheading,
 .je-header,

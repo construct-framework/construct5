@@ -28,9 +28,11 @@ else {
 		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
 		<script>
-			$(document).ready(function() {
-				$('html').removeClass("no-js");
-			});
+			(function($) { //enable using $ along side of other libraries
+				$(document).ready(function() {
+					$('html').removeClass("no-js");
+				});
+			})(jQuery); // releases $ to other libraries
 		</script>
 	</head>
 
