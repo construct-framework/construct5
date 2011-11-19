@@ -60,9 +60,8 @@ div {
         word-wrap: break-word;
     }
     * #column-group-alpha .gutter {
-        margin: 0;
-        margin-left: 1em;
-    }
+		margin : 0 0 0 1em;
+	}
     * .gutter, #column-group-beta .gutter {
         margin: 0;
     }

@@ -51,15 +51,15 @@ function readCookie(name) {
 }
 
 window.onload = function(e) {
-  var cookie = readCookie("style");
-  var title = cookie ? cookie : getPreferredStyleSheet();
-  setActiveStyleSheet(title);
-}
+	var cookie = readCookie("style");
+	var title = cookie ? cookie : getPreferredStyleSheet();
+	setActiveStyleSheet(title);
+};
 
 window.onunload = function(e) {
-  var title = getActiveStyleSheet();
-  createCookie("style", title, 365);
-}
+	var title = getActiveStyleSheet();
+	createCookie("style", title, 365);
+};
 
 var cookie = readCookie("style");
 var title = cookie ? cookie : getPreferredStyleSheet();
