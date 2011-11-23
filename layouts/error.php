@@ -8,7 +8,6 @@
 */
 
 ?>
-
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
@@ -29,6 +28,8 @@
 <?php	
 	if ($customStyleSheet !='-1')
 		echo "\n".'  <link rel="stylesheet" href="'.$baseUrl.'templates/'.$this->template.'/css/'.$customStyleSheet.'"  type="text/css" media="screen" />';
+	if ($gridSystem !='-1')
+		echo "\n".'  <link rel="stylesheet" href="'.$baseUrl.'templates/'.$this->template.'/css/grids/'.$gridSystem.'"  type="text/css" media="screen" />';		
 	if ($this->direction == 'rtl')
 		echo "\n".'  <link rel="stylesheet" href="'.$baseUrl.'templates/'.$this->template.'/css/rtl.css"  type="text/css" media="screen" />';
 	if (isset($cssFile))

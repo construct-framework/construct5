@@ -65,6 +65,7 @@ $googleWebFontTargets2	= $params->get('googleWebFontTargets2');
 $googleWebFont3			= $params->get('googleWebFont3');
 $googleWebFontSize3		= $params->get('googleWebFontSize3');
 $googleWebFontTargets3	= $params->get('googleWebFontTargets3');
+$gridSystem				= $params->get('gridSystem');
 $IECSS3					= $params->get('IECSS3');
 $IECSS3Targets			= $params->get('IECSS3Targets');
 $IE6TransFix			= $params->get('IE6TransFix');
@@ -122,6 +123,8 @@ else {
 <?php	
 	if ($customStyleSheet !='-1')
 		echo "\n".'  <link rel="stylesheet" href="'.$baseUrl.'templates/'.$this->template.'/css/'.$customStyleSheet.'"  type="text/css" media="screen" />';
+	if ($gridSystem !='-1')
+		echo "\n".'  <link rel="stylesheet" href="'.$baseUrl.'templates/'.$this->template.'/css/grids/'.$gridSystem.'"  type="text/css" media="screen" />';		
 	if ($this->direction == 'rtl')
 		echo "\n".'  <link rel="stylesheet" href="'.$baseUrl.'templates/'.$this->template.'/css/rtl.css"  type="text/css" media="screen" />';
 	if (isset($cssFile))
