@@ -17,7 +17,7 @@ class JElementUpgradecheck extends JElement {
 		if(!function_exists("curl_init")) return 'cURL is not supported by your server. Please contact your hosting provider to enable this capability.';
 		//If cURL is supported, check the current version available.
 		else 
-				$version = 3;
+				$version = 4;
 				$target = 'http://construct-framework.com/upgradecheck/construct5-pro';
 				$curl = curl_init();
 				curl_setopt($curl, CURLOPT_URL, $target);
@@ -26,7 +26,7 @@ class JElementUpgradecheck extends JElement {
 				$str = curl_exec($curl);
 				curl_close($curl);
 				
-				$message = '<label style="max-width:100%">You are using Construct5 Pro version 2.5.'.$version.' Beta. ';
+				$message = '<label style="max-width:100%">You are using Construct5 Pro version 2.5.'.$version.'. ';
 				
 				//If the current version is out of date, notify the user and provide a download link.
 				if ($version < $str)
