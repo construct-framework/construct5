@@ -41,10 +41,10 @@ elseif ($results) {
 ?>
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="<?php echo substr($this->language, 0, 2); ?>"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="<?php echo substr($this->language, 0, 2); ?>"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="<?php echo substr($this->language, 0, 2); ?>"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="<?php echo substr($this->language, 0, 2); ?>"> <!--<![endif]-->
 <head>
 <jdoc:include type="head" />
 </head>
@@ -54,11 +54,11 @@ elseif ($results) {
 	<div id="footer-push">
 			<a id="page-top" name="page-top"></a>
 			<?php if ($headerAboveCount) : ?>
-				<div id="header-above" class="clearfix">						
+				<div id="header-above" class="clearfix">
 					<?php if ($this->countModules('header-above-1')) : ?>
 						<div id="header-above-1" class="<?php echo $headerAboveClass ?>">
 							<jdoc:include type="modules" name="header-above-1" style="div" />
-						</div><!-- end header-above-1 -->								
+						</div><!-- end header-above-1 -->
 					<?php endif; ?>
 					
 					<?php if ($this->countModules('header-above-2')) : ?>
