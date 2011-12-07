@@ -34,6 +34,9 @@ if ($mobileResults) {
 		<?php endif; ?>		
 		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+		<script type="text/javascript">
+			jQuery.noConflict();
+		</script>
 		<script>
 			(function($) { //enable using $ along side of other libraries
 				$(document).ready(function() {
