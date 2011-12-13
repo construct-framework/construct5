@@ -33,9 +33,10 @@ if ($mobileResults) {
 			<link rel="stylesheet" href="<?php echo $baseUrl.$mobileCssFile; ?>" type="text/css" media="screen" />			
 		<?php endif; ?>		
 		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js">jQuery.noConflict();</script>
+		<script>$(document).bind("mobileinit", function(){$.mobile.ajaxEnabled = false;});</script>
+		<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
 		<script>
-			(function($) { //enable using $ along side of other libraries
+			(function($) {
 				$(document).ready(function() {
 					$('html').removeClass("no-js");
 				});
