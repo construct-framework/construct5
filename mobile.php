@@ -40,12 +40,14 @@ if ($mobileResults) {
 				$(document).ready(function() {
 					$('html').removeClass("no-js");
 				});
-			})(jQuery); // releases $ to other libraries
+			})(jQuery);
 		</script>
 	</head>
 
 <body>
+
 	<div data-role="page" data-theme="<?php echo $mPageDataTheme; ?>">
+	
 		<div id="header" data-role="header" data-theme="<?php echo $mHeaderDataTheme; ?>">
 			
 			<h1><a href="<?php echo $baseUrl; ?>/" title="<?php echo $app->getCfg('sitename'); ?>"><?php echo $app->getCfg('sitename'); ?></a></h1>

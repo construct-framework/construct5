@@ -33,7 +33,7 @@ else {
 				$(document).ready(function() {
 					$('html').removeClass("no-js");
 				});
-			})(jQuery); // releases $ to other libraries
+			})(jQuery);
 		</script>
 	</head>
 
