@@ -35,7 +35,7 @@ class JFormFieldUpgradecheck extends JFormField {
 				
 				//If the current version is out of date, notify the user and provide a download link.
 				if ($version < $str)
-					$message = $message . '<a href="http://construct-framework.com" target="_blank">Version 2.5.'.$str.' is now available.</a><br /><a href="http://construct-framework.com/construct-unified-changelog" target="_blank">See what&rsquo;s new</a>.</label>';
+					$message = $message . '<a href="http://construct-framework.com" target="_blank">Version 2.5.'.$str.' is now available.</a><br /><a href="http://construct-framework.com/construct5-pro-changelog" target="_blank">See what&rsquo;s new</a>.</label>';
 				//If the current version is up to date, notify the user. 	
 				elseif (($version == $str) || ($version > $str))
 					$message = $message . 'There are no updates available at this time.<br /><a href="http://construct-framework.com/construct5-pro-changelog" target="_blank">View the change log</a>.</label>';
