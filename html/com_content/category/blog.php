@@ -13,21 +13,23 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
     JHtml::addIncludePath(JPATH_COMPONENT.'/helpers'); ?>
 
 	<section class="blog<?php echo $this->pageclass_sfx;?>">
-	    <?php if ($this->params->get('show_page_heading', 1)) : ?>
+	    <?php if ($this->params->get('show_page_heading', 1) || $this->params->get('show_category_title', 1) || $this->params->get('page_subheading')) : ?>
 	    <hgroup>
-	        <h1>
+            <?php if ($this->params->get('show_page_heading', 1)) : ?>
+	        <h2>
 		        <?php echo $this->escape($this->params->get('page_heading')); ?>
-	        </h1>
+	        </h2>
 	        <?php endif; ?>
 
-	        <?php if ($this->params->get('show_category_title', 1) OR $this->params->get('page_subheading')) : ?>
+	        <?php if ($this->params->get('show_category_title', 1) || $this->params->get('page_subheading')) : ?>
 	        <h2>
 		        <?php echo $this->escape($this->params->get('page_subheading')); ?>
 		        <?php if ($this->params->get('show_category_title')) : ?>
 			        <span class="subheading-category"><?php echo $this->category->title;?></span>
 		        <?php endif; ?>
 	        </h2>
-	    </hgroup>
+            <?php endif; ?>
+        </hgroup>
 	    <?php endif; ?>
 
 	    <?php if ($this->params->get('show_description', 1) || $this->params->def('show_description_image', 1)) : ?>
