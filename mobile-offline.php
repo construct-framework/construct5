@@ -28,13 +28,7 @@ else {
 		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 		<script>(function($) {$(document).bind("mobileinit", function() {$.mobile.ajaxEnabled = false;});})(jQuery);</script>
 		<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
-		<script>
-			(function($) {
-				$(document).ready(function() {
-					$('html').removeClass("no-js");
-				});
-			})(jQuery);
-		</script>
+		<script>(function($) {$(document).ready(function() {$('html').removeClass("no-js").addClass("js");});})(jQuery);</script>
 	</head>
 
 <body>
