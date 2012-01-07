@@ -15,12 +15,12 @@ $canEdit	= $this->item->params->get('access-edit');
     <?php if ($this->item->state == 0) : ?>
     <section class="system-unpublished">
     <?php endif; ?>
-    
+
     <?php if ($params->get('show_title')) : ?>
     <h2>
         <?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
 	        <a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid)); ?>">
-	        <?php echo $this->escape($this->item->title); ?></a>
+	        <?php echo $this->escapez($this->item->title); ?></a>
         <?php else : ?>
 	        <?php echo $this->escape($this->item->title); ?>
         <?php endif; ?>
@@ -55,8 +55,8 @@ $canEdit	= $this->item->params->get('access-edit');
     <?php echo $this->item->event->beforeDisplayContent; ?>
 
     <?php $useDefList = (($params->get('show_author')) or ($params->get('show_category')) or ($params->get('show_create_date')) or ($params->get('show_modify_date')) or ($params->get('show_publish_date')) or ($params->get('show_parent_category')) or ($params->get('show_hits'))); ?>
-    
-    <?php if ($useDefList) : ?>     
+
+    <?php if ($useDefList) : ?>
     <header class="article-info">
         <hgroup>
              <h3 class="article-info-term">
@@ -65,7 +65,7 @@ $canEdit	= $this->item->params->get('access-edit');
         <?php endif; ?>
 
             <?php if ($params->get('show_parent_category') && $this->item->parent_id != 1) : ?>
-            <h4 class="parent-category-name">    
+            <h4 class="parent-category-name">
                  <?php $title = $this->escape($this->item->parent_title);
                     $url = '<a href="' . JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->parent_slug)) . '">' . $title . '</a>'; ?>
                 <?php if ($params->get('link_parent_category') AND $this->item->parent_slug) : ?>
@@ -86,9 +86,9 @@ $canEdit	= $this->item->params->get('access-edit');
                 <?php endif; ?>
             </h5>
             <?php endif; ?>
-        <?php if ($useDefList) : ?>     
+        <?php if ($useDefList) : ?>
         </hgroup>
-        <?php endif; ?>              
+        <?php endif; ?>
 
         <?php if ($params->get('show_create_date')) : ?>
         <time class="create">
@@ -106,24 +106,24 @@ $canEdit	= $this->item->params->get('access-edit');
         </time>
         <?php endif; ?>
         <?php if ($params->get('show_author') && !empty($this->item->author )) : ?>
-        <address class="createdby" rel="author"> 
+        <address class="createdby" rel="author">
             <?php $author =  $this->item->author; ?>
             <?php $author = ($this->item->created_by_alias ? $this->item->created_by_alias : $author);?>
             <?php if (!empty($this->item->contactid ) &&  $params->get('link_author') == true):?>
-                <?php 	echo JText::sprintf('COM_CONTENT_WRITTEN_BY' , 
+                <?php 	echo JText::sprintf('COM_CONTENT_WRITTEN_BY' ,
                  JHtml::_('link',JRoute::_('index.php?option=com_contact&view=contact&id='.$this->item->contactid),$author)); ?>
 
             <?php else :?>
                 <?php echo JText::sprintf('COM_CONTENT_WRITTEN_BY', $author); ?>
             <?php endif; ?>
         </address>
-        <?php endif; ?>	
+        <?php endif; ?>
         <?php if ($params->get('show_hits')) : ?>
         <span class="hits">
             <?php echo JText::sprintf('COM_CONTENT_ARTICLE_HITS', $this->item->hits); ?>
         </span>
         <?php endif; ?>
-    <?php if ($useDefList) : ?>     
+    <?php if ($useDefList) : ?>
     </header>
     <?php endif; ?>
 
@@ -142,7 +142,7 @@ $canEdit	= $this->item->params->get('access-edit');
 	        $link->setVar('return', base64_encode($returnURL));
         endif;
     ?>
-    
+
     <a class="readmore" href="<?php echo $link; ?>">
         <?php if (!$params->get('access-view')) :
             echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
@@ -152,13 +152,13 @@ $canEdit	= $this->item->params->get('access-edit');
                 echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
             endif;
         elseif ($params->get('show_readmore_title', 0) == 0) :
-            echo JText::sprintf('COM_CONTENT_READ_MORE_TITLE');	
+            echo JText::sprintf('COM_CONTENT_READ_MORE_TITLE');
         else :
             echo JText::_('COM_CONTENT_READ_MORE');
             echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
         endif; ?>
     </a>
-        
+
     <?php endif; ?>
 
     <?php if ($this->item->state == 0) : ?>
@@ -167,3 +167,4 @@ $canEdit	= $this->item->params->get('access-edit');
 
 
     <?php echo $this->item->event->afterDisplayContent; ?>
+
