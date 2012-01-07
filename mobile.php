@@ -44,7 +44,7 @@ if ($mobileResults) {
 	
 		<div id="header" data-role="header" data-theme="<?php echo $mHeaderDataTheme; ?>">
 			
-			<h1><a href="<?php echo $baseUrl; ?>/" title="<?php echo htmlspecialchars($app->getCfg('sitename')); ?>"><?php echo htmlspecialchars($app->getCfg('sitename')); ?></a></h1>
+			<h1><a href="<?php echo $baseUrl; ?>/" title="<?php echo $app->getCfg('sitename'); ?>"><?php echo $app->getCfg('sitename'); ?></a></h1>
 			
 			<?php if ($showDiagnostics) : ?>
 				<ul id="diagnostics">
