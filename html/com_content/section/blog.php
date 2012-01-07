@@ -10,18 +10,18 @@
 $cparams = JComponentHelper::getParams ('com_media');
 ?>
 
-<section class="blog<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
+<section class="blog<?php echo htmlspecialchars($this->params->get('pageclass_sfx')); ?>">
 
 	<?php if ($this->params->get('show_page_title')) : ?>
 	<h1>
-		<?php echo $this->escape($this->params->get('page_title')); ?>
+		<?php echo htmlspecialchars($this->params->get('page_title')); ?>
 	</h1>
 	<?php endif; ?>
 
 	<?php if ($this->params->def('show_description', 1) || $this->params->def('show_description_image', 1)) : ?>
 	<section class="section-desc clearfix">
 		<?php if ($this->params->get('show_description_image') && $this->section->image) : ?>
-			<img src="<?php echo $this->baseurl.'/'.$cparams->get('image_path').'/'.$this->escape($this->section->image); ?>" class="image_<?php echo $this->escape($this->section->image_position); ?> section-image" />
+			<img src="<?php echo $this->baseurl.'/'.$cparams->get('image_path').'/'.$this->escape($this->section->image); ?>" class="image_<?php echo htmlspecialchars($this->section->image_position); ?> section-image" />
 		<?php endif; ?>		
 		<p class="section-desc-text">
 			<?php if ($this->params->get('show_description') && $this->section->description) : ?>

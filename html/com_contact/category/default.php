@@ -14,7 +14,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 	<section class="contact-category<?php echo $this->pageclass_sfx;?>">
 	<?php if ($this->params->def('show_page_heading', 1)) : ?>
 		<h1>
-			<?php echo $this->escape($this->params->get('page_heading')); ?>
+			<?php echo htmlspecialchars($this->params->get('page_heading')); ?>
 		</h1>
 	<?php endif; ?>
 	<?php if($this->params->get('show_category_title', 1)) : ?>
@@ -49,11 +49,11 @@ else {
 // Joomla 1.5
 ?>
 
-	<section class="contact-category<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
+	<section class="contact-category<?php echo htmlspecialchars($this->params->get('pageclass_sfx')); ?>">
 
 		<?php if ($this->params->get('show_page_title',1)) : ?>
 			<h1>
-				<?php echo $this->escape($this->params->get('page_title')); ?>
+				<?php echo htmlspecialchars($this->params->get('page_title')); ?>
 			</h1>
 		<?php endif; ?>
 

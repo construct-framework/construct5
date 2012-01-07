@@ -185,13 +185,13 @@ else {
 
 		<?php if ($this->params->get('show_position')) : ?>
 		<td class="item-position">
-			<?php echo $this->escape($item->con_position); ?>
+			<?php echo htmlspecialchars($item->con_position); ?>
 		</td>
 		<?php endif; ?>
 
 		<td class="item-name">
 			<a href="<?php echo $item->link; ?>">
-				<?php echo $this->escape($item->name); ?></a>
+				<?php echo htmlspecialchars($item->name); ?></a>
 		</td>
 
 		<?php if ($this->params->get('show_email')) : ?>
@@ -202,19 +202,19 @@ else {
 
 		<?php if ($this->params->get('show_telephone')) : ?>
 		<td class="item-phone">
-			<?php echo $this->escape($item->telephone); ?>
+			<?php echo htmlspecialchars($item->telephone); ?>
 		</td>
 		<?php endif; ?>
 
 		<?php if ($this->params->get('show_mobile')) : ?>
 		<td class="item-mobile">
-			<?php echo $this->escape($item->mobile); ?>
+			<?php echo htmlspecialchars($item->mobile); ?>
 		</td>
 		<?php endif; ?>
 
 		<?php if ($this->params->get('show_fax')) : ?>
 		<td class="item-fax">
-			<?php echo $this->escape($item->fax); ?>
+			<?php echo htmlspecialchars($item->fax); ?>
 		</td>
 		<?php endif; ?>
 	</tr>

@@ -12,7 +12,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 
     <?php if($this->error): ?>
         <section class="error">
-	        <?php echo $this->escape($this->error); ?>
+	        <?php echo htmlspecialchars($this->error); ?>
         </section>
     <?php endif; ?>
 
@@ -23,7 +23,7 @@ else {
 
     <?php if($this->error): ?>
 	    <section class="error">
-		    <?php echo $this->escape($this->error); ?>
+		    <?php echo htmlspecialchars($this->error); ?>
 	    </section>
     <?php endif; ?>
 

@@ -12,7 +12,7 @@
 ?>
 
 
-<section class="reset-confirm<?php echo $this->escape($this->params->get('pageclass_sfx')) ?>">
+<section class="reset-confirm<?php echo htmlspecialchars($this->params->get('pageclass_sfx')) ?>">
 	<h2>
 		<?php echo JText::_('Confirm your Account'); ?>
 	</h2>

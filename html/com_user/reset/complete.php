@@ -11,7 +11,7 @@
 
 ?>
 
-<section class="reset-complete<?php echo $this->escape($this->params->get('pageclass_sfx')) ?>">
+<section class="reset-complete<?php echo htmlspecialchars($this->params->get('pageclass_sfx')) ?>">
 	<h2>
 		<?php echo JText::_('Reset your Password'); ?>
 	</h2>

@@ -37,7 +37,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
     <section class="newsfeed<?php echo $this->pageclass_sfx?><?php echo $direction; ?>">
         <?php if ($this->params->get('show_page_heading', 1)) : ?>
             <h1 class="<?php echo $direction; ?>">
-	            <?php echo $this->escape($this->params->get('page_heading')); ?>
+	            <?php echo htmlspecialchars($this->params->get('page_heading')); ?>
             </h1>
         <?php endif; ?>
 	        <h2 class="<?php echo $direction; ?>">
@@ -101,12 +101,12 @@ else {
 	    }
     ?>
 
-    <section class="newsfeed<?php echo $this->escape($this->params->get('pageclass_sfx')); ?><?php echo $direction; ?>">
+    <section class="newsfeed<?php echo htmlspecialchars($this->params->get('pageclass_sfx')); ?><?php echo $direction; ?>">
 
 	    <?php if ( $this->params->get( 'show_page_title', 1 ) ) : ?>
 	        <header>
 		        <h2 class="<?php echo $direction; ?>">
-			        <?php echo $this->escape($this->params->get('page_title')); ?>
+			        <?php echo htmlspecialchars($this->params->get('page_title')); ?>
 		        </h2>
 	        </header>
 	    <?php endif; ?>
@@ -123,7 +123,7 @@ else {
 	    <?php endif; ?>
 
 	    <?php if ( isset( $this->newsfeed->image['url'] ) && isset( $this->newsfeed->image['title'] ) && $this->params->get( 'show_feed_image' ) ) : ?>
-		    <img src="<?php echo $this->escape($this->newsfeed->image['url']); ?>" alt="<?php echo $this->escape($this->newsfeed->image['title']); ?>">
+		    <img src="<?php echo htmlspecialchars($this->newsfeed->image['url']); ?>" alt="<?php echo htmlspecialchars($this->newsfeed->image['title']); ?>">
 	    <?php endif; ?>
 
 	    <?php if ( count( $this->newsfeed->items ) ) : ?>
@@ -131,8 +131,8 @@ else {
 		    <?php foreach ( $this->newsfeed->items as $item ) : ?>
 		    <li>
 			    <?php if ( !is_null( $item->get_link() ) ) : ?>
-				    <a href="<?php echo $this->escape($item->get_link()); ?>">
-					    <?php echo $this->escape($item->get_title()); ?>
+				    <a href="<?php echo htmlspecialchars($item->get_link()); ?>">
+					    <?php echo htmlspecialchars($item->get_title()); ?>
 				    </a>
 			    <?php endif; ?>
 			

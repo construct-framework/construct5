@@ -16,15 +16,15 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 		        <?php echo $this->pagination->limitstart + $result->count.'. ';?>
 		        <?php if ($result->href) :?>
 			        <a href="<?php echo JRoute::_($result->href); ?>"<?php if ($result->browsernav == 1) :?> target="_blank"<?php endif;?>>
-				        <?php echo $this->escape($result->title);?>
+				        <?php echo htmlspecialchars($result->title);?>
 			        </a>
 		        <?php else:?>
-			        <?php echo $this->escape($result->title);?>
+			        <?php echo htmlspecialchars($result->title);?>
 		        <?php endif; ?>
 	        </dt>
 	        <?php if ($result->section) : ?>
 		        <dd class="result-category">
-			        <?php echo $this->escape($result->section); ?>
+			        <?php echo htmlspecialchars($result->section); ?>
 		        </dd>
 	        <?php endif; ?>
 	        <dd class="result-text">
@@ -55,17 +55,17 @@ else {
 			    <?php echo $this->pagination->limitstart + $result->count.'. ';?>
 			    <?php if ($result->href) : ?>
 			    <a href="<?php echo JRoute :: _($result->href) ?>">
-					    <?php echo $this->escape($result->title); ?>
+					    <?php echo htmlspecialchars($result->title); ?>
 			    </a>
 			    <?php else : ?>
-				    <?php echo $this->escape($result->title); ?>
+				    <?php echo htmlspecialchars($result->title); ?>
 			    <?php endif; ?>
 		    </dt>
 		    <?php if ($result->section) : ?>
 		    <dd class="result-category">
 			    <?php echo JText::_('Category') ?>:
 			    <span>
-				    <?php echo $this->escape($result->section); ?>
+				    <?php echo htmlspecialchars($result->section); ?>
 			    </span>	
 		    </dd>			
 		    <?php endif; ?>

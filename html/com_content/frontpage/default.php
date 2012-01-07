@@ -8,12 +8,12 @@
 */
 ?>
 
-<div class="blog-featured<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
+<div class="blog-featured<?php echo htmlspecialchars($this->params->get('pageclass_sfx')); ?>">
 
 
 <?php if ($this->params->get('show_page_title',1)) : ?>
 <h1>
-	<?php echo $this->escape($this->params->get('page_title')); ?>
+	<?php echo htmlspecialchars($this->params->get('page_title')); ?>
 </h1>
 <?php endif; ?>
 

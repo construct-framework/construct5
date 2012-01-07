@@ -26,9 +26,9 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 	<h2>
 		<?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
 			<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid)); ?>">
-			<?php echo $this->escape($this->item->title); ?></a>
+			<?php echo htmlspecialchars($this->item->title); ?></a>
 		<?php else : ?>
-			<?php echo $this->escape($this->item->title); ?>
+			<?php echo htmlspecialchars($this->item->title); ?>
 		<?php endif; ?>
 	</h2>
 	<?php endif; ?>
@@ -183,9 +183,9 @@ else {
 	<h2>
 		<?php if ($this->item->params->get('link_titles') && $this->item->readmore_link != '') : ?>
 			<a href="<?php echo $this->item->readmore_link; ?>" class="contentpagetitle">
-				<?php echo $this->escape($this->item->title); ?></a>
+				<?php echo htmlspecialchars($this->item->title); ?></a>
 		<?php else :
-			echo $this->escape($this->item->title);
+			echo htmlspecialchars($this->item->title);
 		endif; ?>
 	</h2>
 	<?php endif; ?>
@@ -237,7 +237,7 @@ else {
 				<?php if ($this->item->params->get('link_section')) : ?>
 					<a href="<?php echo JRoute::_(ContentHelperRoute::getSectionRoute($this->item->sectionid)); ?>">
 				<?php endif; ?>
-				<?php echo $this->escape($this->item->section); ?>
+				<?php echo htmlspecialchars($this->item->section); ?>
 				<?php if ($this->item->params->get('link_section')) : ?>
 					<?php echo '</a>'; ?>
 				<?php endif; ?>
@@ -252,7 +252,7 @@ else {
 				<?php if ($this->item->params->get('link_category')) : ?>
 					<a href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->catslug, $this->item->sectionid)); ?>">
 				<?php endif; ?>
-				<?php echo $this->escape($this->item->category); ?>
+				<?php echo htmlspecialchars($this->item->category); ?>
 				<?php if ($this->item->params->get('link_category')) : ?>
 					<?php echo '</a>'; ?>
 				<?php endif; ?>
@@ -284,7 +284,7 @@ else {
 		<?php if ($this->item->params->get('show_url') && $this->item->urls) : ?>
 		<span class="hits">
 			<a href="<?php echo $this->item->urls; ?>" target="_blank">
-				<?php echo $this->escape($this->item->urls); ?></a>
+				<?php echo htmlspecialchars($this->item->urls); ?></a>
 		</span>
 		<?php endif; ?>
 			

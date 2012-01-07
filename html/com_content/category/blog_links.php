@@ -37,7 +37,7 @@ else {
 			<?php foreach ($this->links as $link) : ?>
 			<li>
 				<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($link->slug, $link->catslug, $link->sectionid)); ?>">
-					<?php echo $this->escape($link->title); ?></a>
+					<?php echo htmlspecialchars($link->title); ?></a>
 			</li>
 			<?php endforeach; ?>
 		</ol>

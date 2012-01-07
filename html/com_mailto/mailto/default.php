@@ -115,22 +115,22 @@ else {
 
 		        <label for="mailto-field">
 			        <?php echo JText::_('EMAIL_TO'); ?>:
-			        <input type="text" id="mailto-field" name="mailto" class="inputbox" size="25" value="<?php echo $this->escape($data->mailto) ?>"/>
+			        <input type="text" id="mailto-field" name="mailto" class="inputbox" size="25" value="<?php echo htmlspecialchars($data->mailto) ?>"/>
 		        </label>				    
 
 		        <label for="sender-field">
 			        <?php echo JText::_('SENDER'); ?>:
-			        <input type="text" id="sender-field" name="sender" class="inputbox" value="<?php echo $this->escape($data->sender) ?>" size="25" />
+			        <input type="text" id="sender-field" name="sender" class="inputbox" value="<?php echo htmlspecialchars($data->sender) ?>" size="25" />
 		        </label>				    
 
 		        <label for="from-field">
 			        <?php echo JText::_('YOUR_EMAIL'); ?>:
-			        <input type="text" id="from-field" name="from" class="inputbox" value="<?php echo $this->escape($data->from) ?>" size="25" />
+			        <input type="text" id="from-field" name="from" class="inputbox" value="<?php echo htmlspecialchars($data->from) ?>" size="25" />
 		        </label>				    
 
 		        <label for="subject-field">
 			        <?php echo JText::_('SUBJECT'); ?>:
-			        <input type="text" id="subject-field"  name="subject" class="inputbox" value="<?php echo $this->escape($data->subject) ?>" size="25" />
+			        <input type="text" id="subject-field"  name="subject" class="inputbox" value="<?php echo htmlspecialchars($data->subject) ?>" size="25" />
 		        </label>
 
 			    <button class="button" onclick="return submitbutton('send');">

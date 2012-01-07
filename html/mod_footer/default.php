@@ -8,7 +8,7 @@
 */
 
 $app = JFactory::getApplication();
-$sitename = $app->getCfg('sitename');
+$sitename = htmlspecialchars($app->getCfg('sitename'));
 ?>
 
 <p class="footer-text">All rights reserved. &copy; <?php echo $cur_year ?> <a href="<?php echo JURI::base( true ) ?>" title="<?php echo $sitename ?>"><?php echo $sitename ?></a>.</p>

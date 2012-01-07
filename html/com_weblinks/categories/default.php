@@ -15,7 +15,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
     <section class="categories-list<?php echo $this->pageclass_sfx;?>">
         <?php if ($this->params->get('show_page_heading', 1)) : ?>
             <h1>
-	            <?php echo $this->escape($this->params->get('page_heading')); ?>
+	            <?php echo htmlspecialchars($this->params->get('page_heading')); ?>
             </h1>
         <?php endif; ?>
 
@@ -46,18 +46,18 @@ else {
 $cparams = JComponentHelper::getParams ('com_media');
 ?>
 
-    <section class="categories-list<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
+    <section class="categories-list<?php echo htmlspecialchars($this->params->get('pageclass_sfx')); ?>">
 
 	    <?php if ($this->params->get('show_page_title',1)) : ?>
 			    <h2>
-				    <?php echo $this->escape($this->params->get('page_title')); ?>
+				    <?php echo htmlspecialchars($this->params->get('page_title')); ?>
 			    </h2>
 	    <?php endif; ?>
 
 	    <?php if ($this->params->def('show_comp_description', 1) || $this->params->def('image', -1) != -1) : ?>
 		    <p class="category-desc base-desc">
 			    <?php if ($this->params->def('image', -1) != -1) : ?>
-				    <img src="<?php echo $this->baseurl . $this->escape($cparams->get('image_path')).'/'.$this->escape($this->params->get('image')); ?>" alt="" class="image_<?php echo $this->escape($this->params->get('image_align')); ?>">
+				    <img src="<?php echo $this->baseurl . $this->escape($cparams->get('image_path')).'/'.$this->escape($this->params->get('image')); ?>" alt="" class="image_<?php echo htmlspecialchars($this->params->get('image_align')); ?>">
 			    <?php endif; ?>
 			    <?php if ($this->params->get('show_comp_description')) : ?>
 				    <?php echo $this->params->get('comp_description'); ?>
@@ -71,7 +71,7 @@ $cparams = JComponentHelper::getParams ('com_media');
 			    <li>
 				    <h3 class="item-title">
 					    <a href="<?php echo $category->link; ?>" class="category">
-						    <?php echo $this->escape($category->title); ?>
+						    <?php echo htmlspecialchars($category->title); ?>
 					    </a>
 				    </h3>
 				    <dl>

@@ -20,9 +20,9 @@ $canEdit	= $this->item->params->get('access-edit');
     <h2>
         <?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
 	        <a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid)); ?>">
-	        <?php echo $this->escape($this->item->title); ?></a>
+	        <?php echo htmlspecialchars($this->item->title); ?></a>
         <?php else : ?>
-	        <?php echo $this->escape($this->item->title); ?>
+	        <?php echo htmlspecialchars($this->item->title); ?>
         <?php endif; ?>
     </h2>
     <?php endif; ?>

@@ -11,10 +11,10 @@
 <?php if ($this->item->params->get('show_title')) : ?>
 <h2>
 	<?php if ($this->item->params->get('link_titles') && $this->item->readmore_link != '') : ?>
-		<a href="<?php echo $this->escape($this->item->readmore_link); ?>">
-			<?php echo $this->escape($this->item->title); ?></a>
+		<a href="<?php echo htmlspecialchars($this->item->readmore_link); ?>">
+			<?php echo htmlspecialchars($this->item->title); ?></a>
 	<?php else : ?>
-		<?php echo $this->escape($this->item->title); ?>
+		<?php echo htmlspecialchars($this->item->title); ?>
 	<?php endif; ?>
 </h2>
 <?php endif; ?>
@@ -64,7 +64,7 @@
             <?php if ($this->item->params->get('link_section')) : ?>
                <a href="<?php echo JRoute::_(ContentHelperRoute::getSectionRoute($this->item->sectionid)); ?>">
             <?php endif; ?>
-            <?php echo $this->escape($this->section->title); ?>
+            <?php echo htmlspecialchars($this->section->title); ?>
             <?php if ($this->item->params->get('link_section')) : ?>
                 <?php echo '</a>'; ?>
             <?php endif; ?>
@@ -78,7 +78,7 @@
             <?php if ($this->item->params->get('link_category')) : ?>
                 <a href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->catslug, $this->item->sectionid)); ?>">
             <?php endif; ?>
-            <?php echo $this->escape($this->item->category); ?>
+            <?php echo htmlspecialchars($this->item->category); ?>
             <?php if ($this->item->params->get('link_category')) : ?>
                 <?php echo '</a>'; ?>
             <?php endif; ?>
@@ -108,8 +108,8 @@
 	
 	<?php if ($this->item->params->get('show_url') && $this->item->urls) : ?>
 	<span class="hits">
-		<a href="<?php echo $this->escape($this->item->urls); ?>" target="_blank">
-			<?php echo $this->escape($this->item->urls); ?></a>
+		<a href="<?php echo htmlspecialchars($this->item->urls); ?>" target="_blank">
+			<?php echo htmlspecialchars($this->item->urls); ?></a>
 	</span>
 	<?php endif; ?>
 	

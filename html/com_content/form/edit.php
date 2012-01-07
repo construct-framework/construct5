@@ -24,7 +24,7 @@ $params = $this->state->get('params');
 			<?php echo $this->form->getField('articletext')->save(); ?>
 			Joomla.submitform(task);
 		} else {
-			alert('<?php echo $this->escape(JText::_('JGLOBAL_VALIDATION_FORM_FAILED'));?>');
+			alert('<?php echo htmlspecialchars(JText::_('JGLOBAL_VALIDATION_FORM_FAILED'));?>');
 		}
 	}
 </script>
@@ -32,7 +32,7 @@ $params = $this->state->get('params');
     <section class="edit item-page<?php echo $this->pageclass_sfx; ?>">
         <?php if ($params->get('show_page_heading', 1)) : ?>
         <h1>
-	        <?php echo $this->escape($params->get('page_heading')); ?>
+	        <?php echo htmlspecialchars($params->get('page_heading')); ?>
         </h1>
         <?php endif; ?>
 

@@ -12,9 +12,9 @@
 <h2>
 	<?php if ($this->item->params->get('link_titles') && $this->item->readmore_link != '') : ?>
 	<a href="<?php echo $this->item->readmore_link; ?>" class="contentpagetitle">
-			<?php echo $this->escape($this->item->title); ?></a>
+			<?php echo htmlspecialchars($this->item->title); ?></a>
 	<?php else :
-		echo $this->escape($this->item->title);
+		echo htmlspecialchars($this->item->title);
 	endif; ?>
 </h2>
 <?php endif; ?>
@@ -65,7 +65,7 @@
 		    <?php if ($this->item->params->get('link_section')) : ?>
 		       <a href="<?php echo JRoute::_(ContentHelperRoute::getSectionRoute($this->item->sectionid)); ?>">
 		    <?php endif; ?>
-		    <?php echo $this->escape($this->section->title); ?>
+		    <?php echo htmlspecialchars($this->section->title); ?>
 		    <?php if ($this->item->params->get('link_section')) : ?>
 			    <?php echo '</a>'; ?>
 		    <?php endif; ?>
@@ -79,7 +79,7 @@
 		    <?php if ($this->item->params->get('link_category')) : ?>
 			    <a href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->catslug, $this->item->sectionid)); ?>">
 		    <?php endif; ?>
-		    <?php echo $this->escape($this->item->category); ?>
+		    <?php echo htmlspecialchars($this->item->category); ?>
 		    <?php if ($this->item->params->get('link_category')) : ?>
 			    <?php echo '</a>'; ?>
 		    <?php endif; ?>
@@ -108,8 +108,8 @@
 	
     <?php if ($this->item->params->get('show_url') && $this->item->urls) : ?>
     <span class="hits">
-	    <a href="<?php echo $this->escape($this->item->urls); ?>" target="_blank">
-		    <?php echo $this->escape($this->item->urls); ?></a>
+	    <a href="<?php echo htmlspecialchars($this->item->urls); ?>" target="_blank">
+		    <?php echo htmlspecialchars($this->item->urls); ?></a>
     </span>
     <?php endif; ?>
 	

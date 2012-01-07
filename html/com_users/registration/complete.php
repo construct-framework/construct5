@@ -15,7 +15,7 @@
 <section class="registration-complete<?php echo $this->pageclass_sfx;?>">
 	<?php if ($this->params->get('show_page_heading')) : ?>
         <h1>
-	        <?php echo $this->escape($this->params->get('page_heading')); ?>
+	        <?php echo htmlspecialchars($this->params->get('page_heading')); ?>
         </h1>
 	<?php endif; ?>
 </section>

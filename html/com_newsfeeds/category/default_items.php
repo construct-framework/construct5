@@ -140,7 +140,7 @@ else {
 		    <?php if ( $this->params->get( 'show_name' ) ) : ?>
 			    <td class="item-title" mastheads="tableOrdering">
 				    <a href="<?php echo $item->link; ?>">
-					    <?php echo $this->escape($item->name); ?>
+					    <?php echo htmlspecialchars($item->name); ?>
 				    </a>
 			    </td>
 		    <?php endif; ?>	

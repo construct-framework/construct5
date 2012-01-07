@@ -16,7 +16,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
         <?php if ($this->params->get('show_page_heading', 1)) : ?>
         <header>
             <h2>
-	            <?php echo $this->escape($this->params->get('page_heading')); ?>
+	            <?php echo htmlspecialchars($this->params->get('page_heading')); ?>
             </h2>
 		</header>
         <?php endif; ?>
@@ -26,7 +26,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 	        <legend class="hidelabeltxt"><?php echo JText::_('JGLOBAL_FILTER_LABEL'); ?></legend>
             <?php if ($this->params->get('filter_field') != 'hide') : ?>
 	            <label class="filter-search-lbl" for="filter-search"><?php echo JText::_('COM_CONTENT_'.$this->params->get('filter_field').'_FILTER_LABEL').'&#160;'; ?>
-	            	<input type="text" name="filter-search" id="filter-search" value="<?php echo $this->escape($this->filter); ?>" class="inputbox" onchange="document.getElementById('adminForm').submit();" />
+	            	<input type="text" name="filter-search" id="filter-search" value="<?php echo htmlspecialchars($this->filter); ?>" class="inputbox" onchange="document.getElementById('adminForm').submit();" />
 	            </label>
             <?php endif; ?>
 
@@ -47,16 +47,16 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 else {
 // Joomla 1.5 ?>
 
-    <form id="jForm" class="archive<?php echo $this->escape($this->params->get('pageclass_sfx')); ?> action="<?php JRoute::_('index.php')?>" method="post">
+    <form id="jForm" class="archive<?php echo htmlspecialchars($this->params->get('pageclass_sfx')); ?> action="<?php JRoute::_('index.php')?>" method="post">
         <?php if ($this->params->get('show_page_title', 1)) : ?>
             <h2 class="componentheading">
-                <?php echo $this->escape($this->params->get('page_title')); ?>
+                <?php echo htmlspecialchars($this->params->get('page_title')); ?>
             </h2>
         <?php endif; ?>
         <fieldset>
 	        <?php if ($this->params->get('filter')) : ?>
 	            <?php echo JText::_('Filter').'&nbsp;'; ?>
-	            <input type="text" name="filter" value="<?php echo $this->escape($this->filter); ?>" class="inputbox" onchange="document.jForm.submit();" />
+	            <input type="text" name="filter" value="<?php echo htmlspecialchars($this->filter); ?>" class="inputbox" onchange="document.jForm.submit();" />
 	        <?php endif; ?>
 	        
 	        <?php echo $this->form->monthField; ?>

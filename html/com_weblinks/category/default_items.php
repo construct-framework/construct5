@@ -112,8 +112,8 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 						    case 3:
 							    // open in a modal window
 							    JHtml::_('behavior.modal', 'a.modal'); ?>
-							    <a class="modal" href="<?php echo $link;?>"  rel="{handler: 'iframe', size: {x:<?php echo $this->escape($width);?>, y:<?php echo $this->escape($height);?>}}">
-								    <?php echo $this->escape($item->title). ' </a>' ;
+							    <a class="modal" href="<?php echo $link;?>"  rel="{handler: 'iframe', size: {x:<?php echo htmlspecialchars($width);?>, y:<?php echo htmlspecialchars($height);?>}}">
+								    <?php echo htmlspecialchars($item->title). ' </a>' ;
 							    break;
 
 						    default:
@@ -179,7 +179,7 @@ else {
 		}
 	</script>
 
-	<form action="<?php echo $this->escape($this->action); ?>" method="post" name="adminForm">
+	<form action="<?php echo htmlspecialchars($this->action); ?>" method="post" name="adminForm">
 		<fieldset>
 			<?php echo JText :: _('Display Num'); ?>&nbsp;
 			<?php echo $this->pagination->getLimitBox(); ?>

@@ -17,13 +17,13 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 	    <hgroup>
             <?php if ($this->params->get('show_page_heading', 1)) : ?>
 	        <h2>
-		        <?php echo $this->escape($this->params->get('page_heading')); ?>
+		        <?php echo htmlspecialchars($this->params->get('page_heading')); ?>
 	        </h2>
 	        <?php endif; ?>
 
 	        <?php if ($this->params->get('show_category_title', 1) || $this->params->get('page_subheading')) : ?>
 	        <h2>
-		        <?php echo $this->escape($this->params->get('page_subheading')); ?>
+		        <?php echo htmlspecialchars($this->params->get('page_subheading')); ?>
 		        <?php if ($this->params->get('show_category_title')) : ?>
 			        <span class="subheading-category"><?php echo $this->category->title;?></span>
 		        <?php endif; ?>
@@ -130,11 +130,11 @@ else {
 $cparams = JComponentHelper::getParams ('com_media');
 ?>
 
-	<section class="blog<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
+	<section class="blog<?php echo htmlspecialchars($this->params->get('pageclass_sfx')); ?>">
 
 		<?php if ($this->params->get('show_page_title')) : ?>
 		<h1>
-			<?php echo $this->escape($this->params->get('page_title')); ?>
+			<?php echo htmlspecialchars($this->params->get('page_title')); ?>
 		</h1>
 		<?php endif; ?>
 		

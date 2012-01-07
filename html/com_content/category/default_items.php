@@ -33,7 +33,7 @@ document.adminForm.submit( task );
 			</legend>		
 
 			<label class="filter-search-lbl" for="filter-search"><?php echo JText::_($this->escape($this->params->get('filter_type')) . ' ' . 'Filter').'&nbsp;'; ?>
-                <input type="text" name="filter-search" value="<?php echo $this->escape($this->lists['filter']); ?>" class="inputbox" onchange="document.adminForm.submit();" />				
+                <input type="text" name="filter-search" value="<?php echo htmlspecialchars($this->lists['filter']); ?>" class="inputbox" onchange="document.adminForm.submit();" />
 			</label>	
 
 			
@@ -95,7 +95,7 @@ document.adminForm.submit( task );
 				<?php if ($this->params->get('show_title')) : ?>
 				<td class="list-title" mastheads="tableOrdering">
 					<?php if ($item->access <= $this->user->get('aid', 0)) : ?>				
-						<a href="<?php echo $item->link; ?>"><?php echo $this->escape($item->title); ?></a>
+						<a href="<?php echo $item->link; ?>"><?php echo htmlspecialchars($item->title); ?></a>
 						<ul class="actions">
 							<li class="edit-icon">
 								<?php echo JHTML::_('icon.edit', $item, $this->params, $this->access); ?>
@@ -111,7 +111,7 @@ document.adminForm.submit( task );
 		
 				<?php if ($this->params->get('show_date')) : ?>
 				<td class="list-date" mastheads="tableOrdering2">
-					<?php echo $this->escape($item->created); ?>
+					<?php echo htmlspecialchars($item->created); ?>
 				</td>
 				<?php endif; ?>
 		

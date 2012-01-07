@@ -26,19 +26,19 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
         <?php if ($this->params->get('show_page_heading', 1)) : ?>
 	        <h1>
 		        <?php if ($this->escape($this->params->get('page_heading'))) :?>
-			        <?php echo $this->escape($this->params->get('page_heading')); ?>
+			        <?php echo htmlspecialchars($this->params->get('page_heading')); ?>
 		        <?php else : ?>
-			        <?php echo $this->escape($this->params->get('page_title')); ?>
+			        <?php echo htmlspecialchars($this->params->get('page_title')); ?>
 		        <?php endif; ?>
 	        </h1>
         <?php endif; ?>
         <iframe <?php echo $this->wrapper->load; ?>
 	        id="blockrandom"
 	        name="iframe"
-	        src="<?php echo $this->escape($this->wrapper->url); ?>"
-	        width="<?php echo $this->escape($this->params->get('width')); ?>"
-	        height="<?php echo $this->escape($this->params->get('height')); ?>"
-	        scrolling="<?php echo $this->escape($this->params->get('scrolling')); ?>"
+	        src="<?php echo htmlspecialchars($this->wrapper->url); ?>"
+	        width="<?php echo htmlspecialchars($this->params->get('width')); ?>"
+	        height="<?php echo htmlspecialchars($this->params->get('height')); ?>"
+	        scrolling="<?php echo htmlspecialchars($this->params->get('scrolling')); ?>"
 	        class="wrapper<?php echo $this->pageclass_sfx; ?>">
 	        <?php echo JText::_('COM_WRAPPER_NO_IFRAMES'); ?>
         </iframe>
@@ -61,10 +61,10 @@ function iFrameHeight() {
 	}
 }
 </script>
-<section class="contentpane<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
+<section class="contentpane<?php echo htmlspecialchars($this->params->get('pageclass_sfx')); ?>">
 	<?php if ( $this->params->get( 'show_page_title', 1 ) ) : ?>
 		<h2>
-			<?php echo $this->escape($this->params->get( 'page_title' )); ?>
+			<?php echo htmlspecialchars($this->params->get( 'page_title' )); ?>
 		</h2>
 	<?php endif; ?>
 	<iframe <?php echo $this->wrapper->load; ?>

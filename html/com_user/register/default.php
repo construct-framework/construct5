@@ -11,12 +11,12 @@
 
 ?>
 
-<section class="registration<?php echo $this->escape($this->params->get('pageclass_sfx')) ?>">
+<section class="registration<?php echo htmlspecialchars($this->params->get('pageclass_sfx')) ?>">
 
 	<?php if($this->params->get('show_page_title',1)) : ?>
 	<header>
 		<h2>
-			<?php echo $this->escape($this->params->get('page_title')) ?>
+			<?php echo htmlspecialchars($this->params->get('page_title')) ?>
 		</h2>
 	</header>
 	<?php endif; ?>
@@ -35,15 +35,15 @@
 			<p><?php echo JText::_('REGISTER_REQUIRED'); ?></p>
 			<label id="namemsg" for="name">
 				<?php echo JText::_('Name'); ?>: *
-				<input type="text" name="name" id="name" value="<?php echo $this->escape($this->user->get('name')); ?>" class="inputbox validate required none namemsg" maxlength="50">
+				<input type="text" name="name" id="name" value="<?php echo htmlspecialchars($this->user->get('name')); ?>" class="inputbox validate required none namemsg" maxlength="50">
 			</label>
 			<label id="usernamemsg" for="username">
 				<?php echo JText::_('Username'); ?>: *
-				<input type="text" id="username" name="username"  value="<?php echo $this->escape($this->user->get('username')); ?>" class="inputbox validate required username usernamemsg" maxlength="25">
+				<input type="text" id="username" name="username"  value="<?php echo htmlspecialchars($this->user->get('username')); ?>" class="inputbox validate required username usernamemsg" maxlength="25">
 			</label>
 			<label id="emailmsg" for="email">
 				<?php echo JText::_('Email'); ?>: *
-				<input type="email" id="email" name="email"  value="<?php echo $this->escape($this->user->get('email')); ?>" class="inputbox validate required email emailmsg" maxlength="100">
+				<input type="email" id="email" name="email"  value="<?php echo htmlspecialchars($this->user->get('email')); ?>" class="inputbox validate required email emailmsg" maxlength="100">
 			</label>
 			<label id="pwmsg" for="password">
 				<?php echo JText::_('Password'); ?>: *

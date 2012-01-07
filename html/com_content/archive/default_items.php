@@ -20,9 +20,9 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 		    <h2>
 		    <?php if ($params->get('link_titles')): ?>
 			    <a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($item->slug,$item->catslug)); ?>">
-				    <?php echo $this->escape($item->title); ?></a>
+				    <?php echo htmlspecialchars($item->title); ?></a>
 		    <?php else: ?>
-				    <?php echo $this->escape($item->title); ?>
+				    <?php echo htmlspecialchars($item->title); ?>
 		    <?php endif; ?>
 		    </h2>
 
@@ -128,9 +128,9 @@ else {
 		<h2>
 		    <?php if ($params->get('link_titles')): ?>
 			    <a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($item->slug,$item->catslug)); ?>">
-				    <?php echo $this->escape($item->title); ?></a>
+				    <?php echo htmlspecialchars($item->title); ?></a>
 		    <?php else: ?>
-				    <?php echo $this->escape($item->title); ?>
+				    <?php echo htmlspecialchars($item->title); ?>
 		    <?php endif; ?>
 		</h2>
 
@@ -224,7 +224,7 @@ else {
     <li class="row<?php echo ($item->odd +1 ); ?>">
 	    <h4 class="contentheading">
 		    <a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($item->slug)); ?>">
-			    <?php echo $this->escape($item->title); ?></a>
+			    <?php echo htmlspecialchars($item->title); ?></a>
 	    </h4>
 
 	    <?php if (($this->params->get('show_section') && $item->sectionid) || ($this->params->get('show_category') && $item->catid)) : ?>
@@ -235,7 +235,7 @@ else {
 				    <?php echo '<a href="'.JRoute::_(ContentHelperRoute::getSectionRoute($item->sectionid)).'">'; ?>
 			    <?php endif; ?>
 
-			    <?php echo $this->escape($item->section); ?>
+			    <?php echo htmlspecialchars($item->section); ?>
 
 			    <?php if ($this->params->get('link_section')) : ?>
 				    <?php echo '</a>'; ?>
@@ -251,7 +251,7 @@ else {
 			    <?php if ($this->params->get('link_category')) : ?>
 				    <?php echo '<a href="'.JRoute::_(ContentHelperRoute::getCategoryRoute($item->catslug, $item->sectionid)).'">'; ?>
 			    <?php endif; ?>
-			    <?php echo $this->escape($item->category); ?>
+			    <?php echo htmlspecialchars($item->category); ?>
 			    <?php if ($this->params->get('link_category')) : ?>
 				    <?php echo '</a>'; ?>
 			    <?php endif; ?>
@@ -268,7 +268,7 @@ else {
 		    <?php endif; ?>
 		    <?php if ($this->params->get('show_author')) : ?>
 		    <span class="author">
-			    <?php echo JText::_('Author').': '; echo $this->escape($item->created_by_alias) ? $this->escape($item->created_by_alias) : $this->escape($item->author); ?>
+			    <?php echo JText::_('Author').': '; echo htmlspecialchars($item->created_by_alias) ? $this->escape($item->created_by_alias) : $this->escape($item->author); ?>
 		    </span>
 	    <?php endif; ?>
 	    </h5>

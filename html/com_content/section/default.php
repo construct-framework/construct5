@@ -9,18 +9,18 @@
 
 $cparams = JComponentHelper::getParams ('com_media'); ?>
 
-<section class="section-list<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
+<section class="section-list<?php echo htmlspecialchars($this->params->get('pageclass_sfx')); ?>">
 
 	<?php if ($this->params->get('show_page_title',1)) : ?>
 	    <h1>
-		    <?php echo $this->escape($this->params->get('page_title')); ?>
+		    <?php echo htmlspecialchars($this->params->get('page_title')); ?>
 	    </h1>
 	<?php endif; ?>
 	
 	<?php if ($this->params->def('show_description', 1) || $this->params->def('show_description_image', 1)) : ?>
 		<section class="section-desc clearfix">
 			<?php if ($this->params->get('show_description_image') && $this->section->image) : ?>
-				<img src="<?php echo $this->baseurl . '/' . $this->escape($cparams->get('image_path')).'/'.$this->escape($this->section->image); ?>" class="image_<?php echo $this->escape($this->section->image_position); ?>" />
+				<img src="<?php echo $this->baseurl . '/' . $this->escape($cparams->get('image_path')).'/'.$this->escape($this->section->image); ?>" class="image_<?php echo htmlspecialchars($this->section->image_position); ?>" />
 			<?php endif; ?>
 			<p class="section-desc-text">
 				<?php if ($this->params->get('show_description') && $this->section->description) : ?>
@@ -39,7 +39,7 @@ $cparams = JComponentHelper::getParams ('com_media'); ?>
 			    <li>
 				    <span class="item-title">
 					    <a href="<?php echo $category->link; ?>" class="category">
-						    <?php echo $this->escape($category->title); ?>
+						    <?php echo htmlspecialchars($category->title); ?>
 					    </a>
 				    </span>
 				    <?php if ($this->params->get('show_cat_num_articles')) : ?>

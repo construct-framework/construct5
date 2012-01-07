@@ -13,7 +13,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 	<section class="contact<?php echo $this->pageclass_sfx?>">
 		<?php if ($this->params->get('show_page_heading', 1)) : ?>
 			<h1>
-				<?php echo $this->escape($this->params->get('page_heading')); ?>
+				<?php echo htmlspecialchars($this->params->get('page_heading')); ?>
 			</h1>
 		<?php endif; ?>
 			<?php if ($this->contact->name && $this->params->get('show_name')) : ?>
@@ -30,7 +30,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 				<?php $contactLink = ContactHelperRoute::getCategoryRoute($this->contact->catid);?>
 				<h3 class="contact-category">
 					<a href="<?php echo $contactLink; ?>">
-						<?php echo $this->escape($this->contact->category_title); ?>
+						<?php echo htmlspecialchars($this->contact->category_title); ?>
 					</a>					
 				</h3>
 			<?php endif; ?>
@@ -131,17 +131,17 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 else {
 // Joomla 1.5 ?>
 
-	<section class="contact<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
+	<section class="contact<?php echo htmlspecialchars($this->params->get('pageclass_sfx')); ?>">
 
 		<?php if ($this->params->get('show_page_title',1) && $this->params->get('page_title') != $this->contact->name) : ?>
 			<h1>
-				<?php echo $this->escape($this->params->get('page_title')); ?>
+				<?php echo htmlspecialchars($this->params->get('page_title')); ?>
 			</h1>
 		<?php endif; ?>
 
 		<?php if ($this->contact->name && $this->contact->params->get('show_name')) : ?>
 			<h2>
-				<?php echo $this->escape($this->contact->name); ?>
+				<?php echo htmlspecialchars($this->contact->name); ?>
 			</h2>
 		<?php endif; ?>
 
@@ -157,7 +157,7 @@ else {
 		<?php endif; ?>
 
 		<?php if ($this->contact->con_position && $this->contact->params->get('show_position')) : ?>
-			<p class="contact-position"><?php echo $this->escape($this->contact->con_position); ?></p>
+			<p class="contact-position"><?php echo htmlspecialchars($this->contact->con_position); ?></p>
 		<?php endif; ?>
 
 		<?php if ($this->contact->image && $this->contact->params->get('show_image')) : ?>

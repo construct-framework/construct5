@@ -11,14 +11,14 @@
 
 ?>
 
-<section class="poll<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
+<section class="poll<?php echo htmlspecialchars($this->params->get('pageclass_sfx')); ?>">
 
 	<?php JHTML::_('stylesheet', 'poll_bars.css', 'components/com_poll/assets/'); ?>
 	
 	<?php if ($this->params->get('show_page_title',1)) : ?>
 	<header>
 		<h2>
-			<?php echo $this->escape($this->params->get('page_title')); ?>
+			<?php echo htmlspecialchars($this->params->get('page_title')); ?>
 		</h2>
 	</header>
 	<?php endif; ?>

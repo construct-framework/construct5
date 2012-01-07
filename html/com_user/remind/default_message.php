@@ -11,11 +11,11 @@
 
 ?>
 
-<section class="remind<?php echo $this->escape($this->params->get('pageclass_sfx')) ?>">
+<section class="remind<?php echo htmlspecialchars($this->params->get('pageclass_sfx')) ?>">
 	<h2>
-		<?php echo $this->escape($this->message->title); ?>
+		<?php echo htmlspecialchars($this->message->title); ?>
 	</h2>
 	<p class="message">
-		<?php echo $this->escape($this->message->text); ?>
+		<?php echo htmlspecialchars($this->message->text); ?>
 	</p>
 </section>

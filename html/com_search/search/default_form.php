@@ -20,7 +20,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 		    <label for="search-searchword">
 			    <?php echo JText::_('COM_SEARCH_SEARCH_KEYWORD'); ?>
 		    </label>
-		    <input type="text" name="searchword" id="search-searchword" size="30" maxlength="<?php echo $upper_limit; ?>" value="<?php echo $this->escape($this->origkeyword); ?>" class="inputbox" />
+		    <input type="text" name="searchword" id="search-searchword" size="30" maxlength="<?php echo $upper_limit; ?>" value="<?php echo htmlspecialchars($this->origkeyword); ?>" class="inputbox" />
 		    <button name="Search" onclick="this.form.submit()" class="button"><?php echo JText::_('COM_SEARCH_SEARCH');?></button>
 		    <input type="hidden" name="task" value="search" />
 	    </fieldset>
@@ -89,7 +89,7 @@ else {
 	<fieldset class="word">
 		<label for="search-searchword">
 			<?php echo JText::_('Search Keyword') ?>
-			<input type="search" name="searchword" id="search-searchword"  maxlength="20" value="<?php echo $this->escape($this->searchword) ?>" class="inputbox">
+			<input type="search" name="searchword" id="search-searchword"  maxlength="20" value="<?php echo htmlspecialchars($this->searchword) ?>" class="inputbox">
 		</label>
 		<button name="Search" onclick="this.form.submit()" class="button">
 			<?php echo JText::_( 'Search' );?>
@@ -98,7 +98,7 @@ else {
 	
 	<?php if (!empty($this->searchword)) : ?>
 		<div class="searchintro">
-				<?php echo JText::_('Search Keyword') ?> <?php echo $this->escape($this->searchword) ?>
+				<?php echo JText::_('Search Keyword') ?> <?php echo htmlspecialchars($this->searchword) ?>
 				<?php echo $this->result ?>
 		</div>
 	<?php endif; ?>

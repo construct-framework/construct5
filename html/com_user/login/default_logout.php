@@ -11,7 +11,7 @@
 
 ?>
 
-<section class="logout<?php echo $this->escape($this->params->get( 'pageclass_sfx' )); ?>">
+<section class="logout<?php echo htmlspecialchars($this->params->get( 'pageclass_sfx' )); ?>">
 
 	<?php if ( $this->params->get( 'show_logout_title' ) ) : ?>
 		<h1>

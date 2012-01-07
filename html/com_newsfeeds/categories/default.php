@@ -15,7 +15,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
     <section class="categories-list<?php echo $this->pageclass_sfx;?>">
         <?php if ($this->params->get('show_page_heading', 1)) : ?>
             <h1>
-	            <?php echo $this->escape($this->params->get('page_heading')); ?>
+	            <?php echo htmlspecialchars($this->params->get('page_heading')); ?>
             </h1>
         <?php endif; ?>
 
@@ -45,12 +45,12 @@ else {
 $cparams = JComponentHelper::getParams ('com_media');
 ?>
 
-<div class="categories-list<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
+<div class="categories-list<?php echo htmlspecialchars($this->params->get('pageclass_sfx')); ?>">
 
 	<?php if ($this->params->get('show_page_title',1)) : ?>
 	<header>
 		<h2>
-			<?php echo $this->escape($this->params->get('page_title')); ?>
+			<?php echo htmlspecialchars($this->params->get('page_title')); ?>
 		</h2>
 	</header>
 	<?php endif; ?>
@@ -58,7 +58,7 @@ $cparams = JComponentHelper::getParams ('com_media');
 	<?php if ($this->params->def( 'show_comp_description', 1 ) || $this->params->get( 'image', -1 ) != -1) : ?>
 		<div class="category-desc base-desc">
 			<?php if ($this->params->get( 'image', -1 ) != -1) : ?>
-				<img src="<?php echo $this->baseurl . '/' . $this->escape($cparams->get('image_path')).'/'.$this->escape($this->params->get('image')); ?>" class="image_<?php echo $this->escape($this->params->get( 'image_align' )); ?>">
+				<img src="<?php echo $this->baseurl . '/' . $this->escape($cparams->get('image_path')).'/'.$this->escape($this->params->get('image')); ?>" class="image_<?php echo htmlspecialchars($this->params->get( 'image_align' )); ?>">
 			<?php endif; ?>
 			<?php echo $this->params->get( 'comp_description' ); ?>
 		</div>
@@ -69,7 +69,7 @@ $cparams = JComponentHelper::getParams ('com_media');
 		<?php foreach ( $this->categories as $category ) : ?>
 		<li>
 			<h3 class="item-title"><a href="<?php echo $category->link; ?>">
-				<?php echo $this->escape($category->title); ?></a>
+				<?php echo htmlspecialchars($category->title); ?></a>
 			</h3>
 			<?php if ( $this->params->def( 'show_cat_description', 1 ) && $category->description) : ?>
 				<p class="category-desc">

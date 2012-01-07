@@ -20,7 +20,7 @@ $lang->load( 'plg_user_profile', JPATH_ADMINISTRATOR );
 
 <section class="profile-edit<?php echo $this->pageclass_sfx?>">
     <?php if ($this->params->get('show_page_heading')) : ?>
-	    <h1><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
+	    <h1><?php echo htmlspecialchars($this->params->get('page_heading')); ?></h1>
     <?php endif; ?>
 
     <form id="member-profile" action="<?php echo JRoute::_('index.php?option=com_users&task=profile.save'); ?>" method="post" class="form-validate">

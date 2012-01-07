@@ -11,7 +11,7 @@
 
 ?>
 
-<section class="login<?php echo $this->escape($this->params->get( 'pageclass_sfx' )); ?>">
+<section class="login<?php echo htmlspecialchars($this->params->get( 'pageclass_sfx' )); ?>">
 
 	<?php if ( $this->params->get( 'show_login_title' ) ) : ?>
 		<h1>

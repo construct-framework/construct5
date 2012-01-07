@@ -15,9 +15,9 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
             <header>
                 <h1>
 	                <?php if ($this->escape($this->params->get('page_heading'))) :?>
-		                <?php echo $this->escape($this->params->get('page_heading')); ?>
+		                <?php echo htmlspecialchars($this->params->get('page_heading')); ?>
 	                <?php else : ?>
-		                <?php echo $this->escape($this->params->get('page_title')); ?>
+		                <?php echo htmlspecialchars($this->params->get('page_title')); ?>
 	                <?php endif; ?>
                 </h1>
             </header>
@@ -36,11 +36,11 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 else {
 // Joomla 1.5 ?>
 
-    <section class="search<?php echo $this->escape($this->params->get('pageclass_sfx')) ?>">
+    <section class="search<?php echo htmlspecialchars($this->params->get('pageclass_sfx')) ?>">
 	    <?php if($this->params->get('show_page_title',1)) : ?>
 	    <header>
 		    <h2>
-			    <?php echo $this->escape($this->params->get('page_title')) ?>
+			    <?php echo htmlspecialchars($this->params->get('page_title')) ?>
 		    </h2>
 	    </header>
 	    <?php endif; ?>
