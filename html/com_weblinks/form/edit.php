@@ -24,7 +24,7 @@ $params = $this->state->get('params');
 			Joomla.submitform(task);
 		}
 		else {
-			alert('<?php echo $this->escape(JText::_('JGLOBAL_VALIDATION_FORM_FAILED'));?>');
+			alert('<?php echo htmlspecialchars(JText::_('JGLOBAL_VALIDATION_FORM_FAILED'));?>');
 		}
 	}
 </script>
@@ -32,7 +32,7 @@ $params = $this->state->get('params');
 <section class="edit<?php echo $this->pageclass_sfx; ?>">
 	<?php if ($this->params->def('show_page_heading', 1)) : ?>
 		<h1>
-			<?php echo $this->escape($this->params->get('page_heading')); ?>
+			<?php echo htmlspecialchars($this->params->get('page_heading')); ?>
 		</h1>
 	<?php endif; ?>
 <form action="<?php echo JRoute::_('index.php?option=com_weblinks&view=form&w_id='.(int) $this->item->id); ?>" method="post" name="adminForm" id="adminForm" class="form-validate">

@@ -38,7 +38,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 		</legend>
 
 			<label class="filter-search-lbl" for="filter-search"><?php echo JText::_('COM_CONTENT_'.$this->params->get('filter_field').'_FILTER_LABEL').'&#160;'; ?>
-    			<input type="text" name="filter-search" id="filter-search" value="<?php echo $this->escape($this->state->get('list.filter')); ?>" class="inputbox" onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_CONTENT_FILTER_SEARCH_DESC'); ?>" />			
+    			<input type="text" name="filter-search" id="filter-search" value="<?php echo htmlspecialchars($this->state->get('list.filter')); ?>" class="inputbox" onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_CONTENT_FILTER_SEARCH_DESC'); ?>" />
 			
 			</label>
 
@@ -100,7 +100,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 
 					<td class="list-title">
 						<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid)); ?>">
-							<?php echo $this->escape($article->title); ?></a>
+							<?php echo htmlspecialchars($article->title); ?></a>
 
 						<?php if ($article->params->get('access-edit')) : ?>
 						<ul class="actions">
@@ -145,7 +145,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 				<?php else : // Show unauth links. ?>
 					<td>
 						<?php
-							echo $this->escape($article->title).' : ';
+							echo htmlspecialchars($article->title).' : ';
 							$menu		= JFactory::getApplication()->getMenu();
 							$active		= $menu->getActive();
 							$itemId		= $active->id;

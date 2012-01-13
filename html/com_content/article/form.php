@@ -62,9 +62,9 @@ function submitbutton(pressbutton) {
 }
 //-->
 </script>
-<header class="componentheading<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
+<header class="componentheading<?php echo htmlspecialchars($this->params->get('pageclass_sfx')); ?>">
 	<h2>
-		<?php echo $this->escape($this->params->get('page_title')); ?>
+		<?php echo htmlspecialchars($this->params->get('page_title')); ?>
 	</h2>
 </header>
 
@@ -80,8 +80,8 @@ function submitbutton(pressbutton) {
 			<label for="title">
 				<?php echo JText::_( 'Title' ); ?>:
 			</label>
-			<input class="inputbox" type="text" id="title" name="title" size="50" maxlength="100" value="<?php echo $this->escape($this->article->title); ?>" />
-			<input class="inputbox" type="hidden" id="alias" name="alias" value="<?php echo $this->escape($this->article->alias); ?>" />
+			<input class="inputbox" type="text" id="title" name="title" size="50" maxlength="100" value="<?php echo htmlspecialchars($this->article->title); ?>" />
+			<input class="inputbox" type="hidden" id="alias" name="alias" value="<?php echo htmlspecialchars($this->article->alias); ?>" />
 		</div>
 		<div style="float: right;">
 			<button type="button" onclick="submitbutton('save')">
@@ -151,7 +151,7 @@ echo $this->editor->display('text', $this->article->text, '100%', '400', '70', '
 		</label>
 	</td>
 	<td>
-		<input type="text" id="created_by_alias" name="created_by_alias" size="50" maxlength="100" value="<?php echo $this->escape($this->article->created_by_alias); ?>" class="inputbox" />
+		<input type="text" id="created_by_alias" name="created_by_alias" size="50" maxlength="100" value="<?php echo htmlspecialchars($this->article->created_by_alias); ?>" class="inputbox" />
 	</td>
 </tr>
 <tr>

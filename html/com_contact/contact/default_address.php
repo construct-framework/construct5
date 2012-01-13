@@ -1,9 +1,9 @@
 <?php defined('_JEXEC') or die;
 /**
-* @package		Unified HTML5 Template Framework for Joomla!
+* @package		Unified HTML5 Template Framework for Joomla!+
 * @author		Cristina Solana http://nightshiftcreative.com
 * @author		Matt Thomas http://construct-framework.com | http://betweenbrain.com
-* @copyright	Copyright (C) 2009 - 2011 Matt Thomas. All rights reserved.
+* @copyright	Copyright (C) 2009 - 2012 Matt Thomas. All rights reserved.
 * @license		GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
 */
 
@@ -124,25 +124,25 @@ else {
 			
 						<?php if($this->contact->suburb && $this->contact->params->get('show_suburb')) : ?>
 							<span class="contact-suburb locality">
-								<?php echo $this->escape($this->contact->suburb); ?>
+								<?php echo htmlspecialchars($this->contact->suburb); ?>
 							</span>
 						<?php endif; ?>
 			
 						<?php if($this->contact->state && $this->contact->params->get('show_state')) : ?>
 							<span class="contact-state region">
-								<?php echo $this->escape($this->contact->state); ?>
+								<?php echo htmlspecialchars($this->contact->state); ?>
 							</span>
 						<?php endif; ?>
 			
 						<?php if($this->contact->postcode && $this->contact->params->get('show_postcode')) : ?>
 							<span class="contact-postcode postal-code">
-								<?php echo $this->escape($this->contact->postcode); ?>
+								<?php echo htmlspecialchars($this->contact->postcode); ?>
 							</span>
 						<?php endif; ?>	
 	
 						<?php if($this->contact->country && $this->contact->params->get('show_country')) : ?>
 							<span class="contact-country country-name">
-								<?php echo $this->escape($this->contact->country); ?>
+								<?php echo htmlspecialchars($this->contact->country); ?>
 							</span>
 						<?php endif; ?>	
 					</dd>
@@ -207,7 +207,7 @@ else {
 						<?php echo $this->contact->params->get( 'marker_webpage' ); ?>
 					</dt>
 					<dd class="contact-webpage">			    
-						<a href="<?php echo $this->escape($this->contact->webpage); ?>" target="_blank"><?php echo $this->escape($this->contact->webpage); ?></a>
+						<a href="<?php echo htmlspecialchars($this->contact->webpage); ?>" target="_blank"><?php echo htmlspecialchars($this->contact->webpage); ?></a>
 					</dd>	
 				<?php endif; ?>
 					</dl>

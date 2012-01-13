@@ -1,9 +1,9 @@
 <?php defined('_JEXEC') or die;
 /**
-* @package		Unified HTML5 Template Framework for Joomla!
+* @package		Unified HTML5 Template Framework for Joomla!+
 * @author		Cristina Solana http://nightshiftcreative.com
 * @author		Matt Thomas http://construct-framework.com | http://betweenbrain.com
-* @copyright	Copyright (C) 2009 - 2011 Matt Thomas. All rights reserved.
+* @copyright	Copyright (C) 2009 - 2012 Matt Thomas. All rights reserved.
 * @license		GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
 */
 
@@ -22,6 +22,8 @@ class JElementGooglewebfont extends JElement
 		$options[]	= JHtml::_('select.option', 'Aclonica', 'Aclonica');
 		$options[]	= JHtml::_('select.option', 'Actor', 'Actor');
 		$options[]	= JHtml::_('select.option', 'Adamina', 'Adamina');
+		$options[]	= JHtml::_('select.option', 'Aguafina+Script', 'Aguafina Script');
+		$options[]	= JHtml::_('select.option', 'Aladin', 'Aladin');
 		$options[]	= JHtml::_('select.option', 'Aldrich', 'Aldrich');
 		$options[]	= JHtml::_('select.option', 'Alice', 'Alice');
 		$options[]	= JHtml::_('select.option', 'Alike', 'Alike');
@@ -38,6 +40,7 @@ class JElementGooglewebfont extends JElement
 		$options[]	= JHtml::_('select.option', 'Antic', 'Antic');
 		$options[]	= JHtml::_('select.option', 'Anton', 'Anton');
 		$options[]	= JHtml::_('select.option', 'Arapey', 'Arapey');
+		$options[]	= JHtml::_('select.option', 'Arbutus', 'Arbutus');
 		$options[]	= JHtml::_('select.option', 'Architects+Daughter', 'Architects Daughter');
 		$options[]	= JHtml::_('select.option', 'Arimo', 'Arimo');
 		$options[]	= JHtml::_('select.option', 'Artifika', 'Artifika');
@@ -47,18 +50,24 @@ class JElementGooglewebfont extends JElement
 		$options[]	= JHtml::_('select.option', 'Atomic+Age', 'Atomic Age');
 		$options[]	= JHtml::_('select.option', 'Aubrey', 'Aubrey');
 		$options[]	= JHtml::_('select.option', 'Bangers', 'Bangers');
+		$options[]	= JHtml::_('select.option', 'Baumans', 'Baumans');
 		$options[]	= JHtml::_('select.option', 'Bentham', 'Bentham');
 		$options[]	= JHtml::_('select.option', 'Bevan', 'Bevan');
 		$options[]	= JHtml::_('select.option', 'Bigshot+One', 'Bigshot One');
+		$options[]	= JHtml::_('select.option', 'Bilbo', 'Bilbo');
 		$options[]	= JHtml::_('select.option', 'Bitter', 'Bitter');
 		$options[]	= JHtml::_('select.option', 'Black+Ops+One', 'Black Ops One');
+		$options[]	= JHtml::_('select.option', 'Bonbon', 'Bonbon');
 		$options[]	= JHtml::_('select.option', 'Bowlby+One', 'Bowlby One');
 		$options[]	= JHtml::_('select.option', 'Bowlby+One+SC', 'Bowlby One SC');
 		$options[]	= JHtml::_('select.option', 'Brawler', 'Brawler');
+		$options[]	= JHtml::_('select.option', 'Bubblegum+Sans', 'Bubblegum Sans');
 		$options[]	= JHtml::_('select.option', 'Buda', 'Buda');
 		$options[]	= JHtml::_('select.option', 'Butcherman+Caps', 'Butcherman Caps');
 		$options[]	= JHtml::_('select.option', 'Cabin', 'Cabin');
+		$options[]	= JHtml::_('select.option', 'Cabin+Condensed', 'Cabin Condensed');
 		$options[]	= JHtml::_('select.option', 'Cabin+Sketch', 'Cabin Sketch');
+		$options[]	= JHtml::_('select.option', 'Cagliostro', 'Cagliostro');
 		$options[]	= JHtml::_('select.option', 'Calligraffitti', 'Calligraffitti');
 		$options[]	= JHtml::_('select.option', 'Candal', 'Candal');
 		$options[]	= JHtml::_('select.option', 'Cantarell', 'Cantarell');
@@ -67,9 +76,11 @@ class JElementGooglewebfont extends JElement
 		$options[]	= JHtml::_('select.option', 'Carter+One', 'Carter One');
 		$options[]	= JHtml::_('select.option', 'Caudex', 'Caudex');
 		$options[]	= JHtml::_('select.option', 'Cedarville+Cursive', 'Cedarville Cursive');
+		$options[]	= JHtml::_('select.option', 'Ceviche+One', 'Ceviche One');
 		$options[]	= JHtml::_('select.option', 'Changa+One', 'Changa One');
 		$options[]	= JHtml::_('select.option', 'Cherry+Cream+Soda', 'Cherry Cream Soda');
 		$options[]	= JHtml::_('select.option', 'Chewy', 'Chewy');
+		$options[]	= JHtml::_('select.option', 'Chicle', 'Chicle');
 		$options[]	= JHtml::_('select.option', 'Chivo', 'Chivo');
 		$options[]	= JHtml::_('select.option', 'Coda', 'Coda');
 		$options[]	= JHtml::_('select.option', 'Coda+Caption', 'Coda Caption');
@@ -98,13 +109,18 @@ class JElementGooglewebfont extends JElement
 		$options[]	= JHtml::_('select.option', 'Devonshire', 'Devonshire');
 		$options[]	= JHtml::_('select.option', 'Didact+Gothic', 'Didact Gothic');
 		$options[]	= JHtml::_('select.option', 'Dorsa', 'Dorsa');
+		$options[]	= JHtml::_('select.option', 'Dr+Sugiyama', 'Dr Sugiyama');
 		$options[]	= JHtml::_('select.option', 'Droid+Sans', 'Droid Sans');
 		$options[]	= JHtml::_('select.option', 'Droid+Sans+Mono', 'Droid Sans Mono');
 		$options[]	= JHtml::_('select.option', 'Droid+Serif', 'Droid Serif');
 		$options[]	= JHtml::_('select.option', 'EB+Garamond', 'EB Garamond');
 		$options[]	= JHtml::_('select.option', 'Eater+Caps', 'Eater Caps');
+		$options[]	= JHtml::_('select.option', 'Electrolize', 'Electrolize');
+		$options[]	= JHtml::_('select.option', 'Engagement', 'Engagement');
 		$options[]	= JHtml::_('select.option', 'Expletus+Sans', 'Expletus Sans');
 		$options[]	= JHtml::_('select.option', 'Fanwood+Text', 'Fanwood Text');
+		$options[]	= JHtml::_('select.option', 'Fascinate', 'Fascinate');
+		$options[]	= JHtml::_('select.option', 'Fascinate+Inline', 'Fascinate Inline');
 		$options[]	= JHtml::_('select.option', 'Federant', 'Federant');
 		$options[]	= JHtml::_('select.option', 'Federo', 'Federo');
 		$options[]	= JHtml::_('select.option', 'Fjord+One', 'Fjord One');
@@ -112,6 +128,8 @@ class JElementGooglewebfont extends JElement
 		$options[]	= JHtml::_('select.option', 'Fontdiner+Swanky', 'Fontdiner Swanky');
 		$options[]	= JHtml::_('select.option', 'Forum', 'Forum');
 		$options[]	= JHtml::_('select.option', 'Francois+One', 'Francois One');
+		$options[]	= JHtml::_('select.option', 'Fresca', 'Fresca');
+		$options[]	= JHtml::_('select.option', 'Galdeano', 'Galdeano');
 		$options[]	= JHtml::_('select.option', 'Gentium+Basic', 'Gentium Basic');
 		$options[]	= JHtml::_('select.option', 'Gentium+Book+Basic', 'Gentium Book Basic');
 		$options[]	= JHtml::_('select.option', 'Geo', 'Geo');
@@ -125,6 +143,7 @@ class JElementGooglewebfont extends JElement
 		$options[]	= JHtml::_('select.option', 'Gravitas+One', 'Gravitas One');
 		$options[]	= JHtml::_('select.option', 'Gruppo', 'Gruppo');
 		$options[]	= JHtml::_('select.option', 'Hammersmith+One', 'Hammersmith One');
+		$options[]	= JHtml::_('select.option', 'Herr+Von+Muellerhoff', 'Herr Von Muellerhoff');
 		$options[]	= JHtml::_('select.option', 'Holtwood+One+SC', 'Holtwood One SC');
 		$options[]	= JHtml::_('select.option', 'Homemade+Apple', 'Homemade Apple');
 		$options[]	= JHtml::_('select.option', 'IM+Fell+DW+Pica', 'IM Fell DW Pica');
@@ -137,6 +156,7 @@ class JElementGooglewebfont extends JElement
 		$options[]	= JHtml::_('select.option', 'IM+Fell+French+Canon+SC', 'IM Fell French Canon SC');
 		$options[]	= JHtml::_('select.option', 'IM+Fell+Great+Primer', 'IM Fell Great Primer');
 		$options[]	= JHtml::_('select.option', 'IM+Fell+Great+Primer+SC', 'IM Fell Great Primer SC');
+		$options[]	= JHtml::_('select.option', 'Iceland', 'Iceland');
 		$options[]	= JHtml::_('select.option', 'Inconsolata', 'Inconsolata');
 		$options[]	= JHtml::_('select.option', 'Indie+Flower', 'Indie Flower');
 		$options[]	= JHtml::_('select.option', 'Irish+Grover', 'Irish Grover');
@@ -152,6 +172,7 @@ class JElementGooglewebfont extends JElement
 		$options[]	= JHtml::_('select.option', 'Kameron', 'Kameron');
 		$options[]	= JHtml::_('select.option', 'Kelly+Slab', 'Kelly Slab');
 		$options[]	= JHtml::_('select.option', 'Kenia', 'Kenia');
+		$options[]	= JHtml::_('select.option', 'Knewave', 'Knewave');
 		$options[]	= JHtml::_('select.option', 'Kranky', 'Kranky');
 		$options[]	= JHtml::_('select.option', 'Kreon', 'Kreon');
 		$options[]	= JHtml::_('select.option', 'Kristi', 'Kristi');
@@ -161,6 +182,7 @@ class JElementGooglewebfont extends JElement
 		$options[]	= JHtml::_('select.option', 'League+Script', 'League Script');
 		$options[]	= JHtml::_('select.option', 'Leckerli+One', 'Leckerli One');
 		$options[]	= JHtml::_('select.option', 'Lekton', 'Lekton');
+		$options[]	= JHtml::_('select.option', 'Lemon', 'Lemon');
 		$options[]	= JHtml::_('select.option', 'Limelight', 'Limelight');
 		$options[]	= JHtml::_('select.option', 'Linden+Hill', 'Linden Hill');
 		$options[]	= JHtml::_('select.option', 'Lobster', 'Lobster');
@@ -172,6 +194,7 @@ class JElementGooglewebfont extends JElement
 		$options[]	= JHtml::_('select.option', 'Maiden+Orange', 'Maiden Orange');
 		$options[]	= JHtml::_('select.option', 'Mako', 'Mako');
 		$options[]	= JHtml::_('select.option', 'Marck+Script', 'Marck Script');
+		$options[]	= JHtml::_('select.option', 'Marmelad', 'Marmelad');
 		$options[]	= JHtml::_('select.option', 'Marvel', 'Marvel');
 		$options[]	= JHtml::_('select.option', 'Mate', 'Mate');
 		$options[]	= JHtml::_('select.option', 'Mate+SC', 'Mate SC');
@@ -185,16 +208,24 @@ class JElementGooglewebfont extends JElement
 		$options[]	= JHtml::_('select.option', 'Michroma', 'Michroma');
 		$options[]	= JHtml::_('select.option', 'Miltonian', 'Miltonian');
 		$options[]	= JHtml::_('select.option', 'Miltonian+Tattoo', 'Miltonian Tattoo');
+		$options[]	= JHtml::_('select.option', 'Miss+Fajardose', 'Miss Fajardose');
+		$options[]	= JHtml::_('select.option', 'Miss+Saint+Delafield', 'Miss Saint Delafield');
 		$options[]	= JHtml::_('select.option', 'Modern+Antiqua', 'Modern Antiqua');
 		$options[]	= JHtml::_('select.option', 'Molengo', 'Molengo');
 		$options[]	= JHtml::_('select.option', 'Monofett', 'Monofett');
 		$options[]	= JHtml::_('select.option', 'Monoton', 'Monoton');
+		$options[]	= JHtml::_('select.option', 'Monsieur+La+Doulaise', 'Monsieur La Doulaise');
 		$options[]	= JHtml::_('select.option', 'Montez', 'Montez');
 		$options[]	= JHtml::_('select.option', 'Mountains+of+Christmas', 'Mountains of Christmas');
+		$options[]	= JHtml::_('select.option', 'Mr+Bedford', 'Mr Bedford');
+		$options[]	= JHtml::_('select.option', 'Mr+Dafoe', 'Mr Dafoe');
+		$options[]	= JHtml::_('select.option', 'Mr+De+Haviland', 'Mr De Haviland');
+		$options[]	= JHtml::_('select.option', 'Mrs+Sheppards', 'Mrs Sheppards');
 		$options[]	= JHtml::_('select.option', 'Muli', 'Muli');
 		$options[]	= JHtml::_('select.option', 'Neucha', 'Neucha');
 		$options[]	= JHtml::_('select.option', 'Neuton', 'Neuton');
 		$options[]	= JHtml::_('select.option', 'News+Cycle', 'News Cycle');
+		$options[]	= JHtml::_('select.option', 'Niconne', 'Niconne');
 		$options[]	= JHtml::_('select.option', 'Nixie+One', 'Nixie One');
 		$options[]	= JHtml::_('select.option', 'Nobile', 'Nobile');
 		$options[]	= JHtml::_('select.option', 'Nosifer+Caps', 'Nosifer Caps');
@@ -213,6 +244,7 @@ class JElementGooglewebfont extends JElement
 		$options[]	= JHtml::_('select.option', 'Open+Sans', 'Open Sans');
 		$options[]	= JHtml::_('select.option', 'Open+Sans+Condensed', 'Open Sans Condensed');
 		$options[]	= JHtml::_('select.option', 'Orbitron', 'Orbitron');
+		$options[]	= JHtml::_('select.option', 'Original+Surfer', 'Original Surfer');
 		$options[]	= JHtml::_('select.option', 'Oswald', 'Oswald');
 		$options[]	= JHtml::_('select.option', 'Over+the+Rainbow', 'Over the Rainbow');
 		$options[]	= JHtml::_('select.option', 'Ovo', 'Ovo');
@@ -228,6 +260,7 @@ class JElementGooglewebfont extends JElement
 		$options[]	= JHtml::_('select.option', 'Permanent+Marker', 'Permanent Marker');
 		$options[]	= JHtml::_('select.option', 'Petrona', 'Petrona');
 		$options[]	= JHtml::_('select.option', 'Philosopher', 'Philosopher');
+		$options[]	= JHtml::_('select.option', 'Piedra', 'Piedra');
 		$options[]	= JHtml::_('select.option', 'Pinyon+Script', 'Pinyon Script');
 		$options[]	= JHtml::_('select.option', 'Play', 'Play');
 		$options[]	= JHtml::_('select.option', 'Playfair+Display', 'Playfair Display');
@@ -249,6 +282,9 @@ class JElementGooglewebfont extends JElement
 		$options[]	= JHtml::_('select.option', 'Rationale', 'Rationale');
 		$options[]	= JHtml::_('select.option', 'Redressed', 'Redressed');
 		$options[]	= JHtml::_('select.option', 'Reenie+Beanie', 'Reenie Beanie');
+		$options[]	= JHtml::_('select.option', 'Ribeye', 'Ribeye');
+		$options[]	= JHtml::_('select.option', 'Ribeye+Marrow', 'Ribeye Marrow');
+		$options[]	= JHtml::_('select.option', 'Righteous', 'Righteous');
 		$options[]	= JHtml::_('select.option', 'Rochester', 'Rochester');
 		$options[]	= JHtml::_('select.option', 'Rock+Salt', 'Rock Salt');
 		$options[]	= JHtml::_('select.option', 'Rokkitt', 'Rokkitt');
@@ -263,6 +299,8 @@ class JElementGooglewebfont extends JElement
 		$options[]	= JHtml::_('select.option', 'Shanti', 'Shanti');
 		$options[]	= JHtml::_('select.option', 'Short+Stack', 'Short Stack');
 		$options[]	= JHtml::_('select.option', 'Sigmar+One', 'Sigmar One');
+		$options[]	= JHtml::_('select.option', 'Signika', 'Signika');
+		$options[]	= JHtml::_('select.option', 'Signika+Negative', 'Signika Negative');
 		$options[]	= JHtml::_('select.option', 'Six+Caps', 'Six Caps');
 		$options[]	= JHtml::_('select.option', 'Slackey', 'Slackey');
 		$options[]	= JHtml::_('select.option', 'Smokum', 'Smokum');
@@ -272,7 +310,9 @@ class JElementGooglewebfont extends JElement
 		$options[]	= JHtml::_('select.option', 'Sorts+Mill+Goudy', 'Sorts Mill Goudy');
 		$options[]	= JHtml::_('select.option', 'Special+Elite', 'Special Elite');
 		$options[]	= JHtml::_('select.option', 'Spinnaker', 'Spinnaker');
+		$options[]	= JHtml::_('select.option', 'Spirax', 'Spirax');
 		$options[]	= JHtml::_('select.option', 'Stardos+Stencil', 'Stardos Stencil');
+		$options[]	= JHtml::_('select.option', 'Stint+Ultra+Condensed', 'Stint Ultra Condensed');
 		$options[]	= JHtml::_('select.option', 'Sue+Ellen+Francisco', 'Sue Ellen Francisco');
 		$options[]	= JHtml::_('select.option', 'Sunshiney', 'Sunshiney');
 		$options[]	= JHtml::_('select.option', 'Supermercado+One', 'Supermercado One');
@@ -292,6 +332,7 @@ class JElementGooglewebfont extends JElement
 		$options[]	= JHtml::_('select.option', 'UnifrakturCook', 'UnifrakturCook');
 		$options[]	= JHtml::_('select.option', 'UnifrakturMaguntia', 'UnifrakturMaguntia');
 		$options[]	= JHtml::_('select.option', 'Unkempt', 'Unkempt');
+		$options[]	= JHtml::_('select.option', 'Unlock', 'Unlock');
 		$options[]	= JHtml::_('select.option', 'Unna', 'Unna');
 		$options[]	= JHtml::_('select.option', 'VT323', 'VT323');
 		$options[]	= JHtml::_('select.option', 'Varela', 'Varela');
@@ -299,6 +340,7 @@ class JElementGooglewebfont extends JElement
 		$options[]	= JHtml::_('select.option', 'Vast+Shadow', 'Vast Shadow');
 		$options[]	= JHtml::_('select.option', 'Vibur', 'Vibur');
 		$options[]	= JHtml::_('select.option', 'Vidaloka', 'Vidaloka');
+		$options[]	= JHtml::_('select.option', 'Viga', 'Viga');
 		$options[]	= JHtml::_('select.option', 'Volkhov', 'Volkhov');
 		$options[]	= JHtml::_('select.option', 'Vollkorn', 'Vollkorn');
 		$options[]	= JHtml::_('select.option', 'Voltaire', 'Voltaire');

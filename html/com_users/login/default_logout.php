@@ -15,7 +15,7 @@
 <section class="logout<?php echo $this->pageclass_sfx?>">
 	<?php if ($this->params->get('show_page_heading')) : ?>
 	<h2>
-		<?php echo $this->escape($this->params->get('page_heading')); ?>
+		<?php echo htmlspecialchars($this->params->get('page_heading')); ?>
 	</h2>
 	<?php endif; ?>
 
@@ -28,7 +28,7 @@
 		<?php endif; ?>
 
 		<?php if (($this->params->get('logout_image')!='')) :?>
-			<img src="<?php echo $this->escape($this->params->get('logout_image')); ?>" class="logout-image" alt="<?php echo JTEXT::_('COM_USER_LOGOUT_IMAGE_ALT')?>"/>
+			<img src="<?php echo htmlspecialchars($this->params->get('logout_image')); ?>" class="logout-image" alt="<?php echo JTEXT::_('COM_USER_LOGOUT_IMAGE_ALT')?>"/>
 		<?php endif; ?>
 
 	<?php if ($this->params->get('logout_description') != '' || $this->params->get('logout_image') != '') : ?>

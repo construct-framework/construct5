@@ -24,7 +24,7 @@ if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) : ?>
 	        <li<?php echo $class; ?>>
 	        <?php $class = ''; ?>
 		        <h2 class="item-title"><a href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($item->id));?>">
-			        <?php echo $this->escape($item->title); ?></a>
+			        <?php echo htmlspecialchars($item->title); ?></a>
 		        </h2>
 		        <?php if ($this->params->get('show_subcat_desc_cat') == 1) :?>
 		        <?php if ($item->description) : ?>

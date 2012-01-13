@@ -1,9 +1,9 @@
 <?php defined('_JEXEC') or die;
 /**
-* @package		Unified HTML5 Template Framework for Joomla!
+* @package		Unified HTML5 Template Framework for Joomla!+
 * @author		Cristina Solana http://nightshiftcreative.com
 * @author		Matt Thomas http://construct-framework.com | http://betweenbrain.com
-* @copyright	Copyright (C) 2009 - 2011 Matt Thomas. All rights reserved.
+* @copyright	Copyright (C) 2009 - 2012 Matt Thomas. All rights reserved.
 * @license		GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
 */
 
@@ -11,11 +11,11 @@
 
 ?>
 
-<section class="edit weblink<?php echo $this->escape($this->params->get('pageclass_sfx')) ?>">
+<section class="edit weblink<?php echo htmlspecialchars($this->params->get('pageclass_sfx')) ?>">
 
 	<?php if($this->params->get('show_page_title',1)) : ?>
 		<h2>
-			<?php echo $this->escape($this->params->get('page_title')) ?>
+			<?php echo htmlspecialchars($this->params->get('page_title')) ?>
 		</h2>
 	<?php endif; ?>
 	<script type="text/javascript">
@@ -48,7 +48,7 @@
 
 				<label for="jformtitle">
 				    <?php echo JText::_( 'Name' ); ?>:
-    				<input class="inputbox" type="text" id="jformtitle" name="jform[title]" size="50" maxlength="250" value="<?php echo $this->escape($this->weblink->title);?>">
+    				<input class="inputbox" type="text" id="jformtitle" name="jform[title]" size="50" maxlength="250" value="<?php echo htmlspecialchars($this->weblink->title);?>">
                 </label>
 				 
 				<label for="jformcatid">
@@ -58,7 +58,7 @@
 
 				<label for="jformurl">
 				    <?php echo JText::_( 'URL' ); ?>:
-				    <input class="inputbox" type="url" id="jformurl" name="jform[url]" value="<?php echo $this->escape($this->weblink->url); ?>" size="50" maxlength="250">
+				    <input class="inputbox" type="url" id="jformurl" name="jform[url]" value="<?php echo htmlspecialchars($this->weblink->url); ?>" size="50" maxlength="250">
                 </label>
 				
 				<label for="jformdescription">

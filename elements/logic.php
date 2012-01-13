@@ -1,9 +1,9 @@
 <?php defined('_JEXEC') or die;
 /**
-* @package		Unified HTML5 Template Framework for Joomla!
+* @package		Unified HTML5 Template Framework for Joomla!+
 * @author		Cristina Solana http://nightshiftcreative.com
 * @author		Matt Thomas http://construct-framework.com | http://betweenbrain.com
-* @copyright	Copyright (C) 2009 - 2011 Matt Thomas. All rights reserved.
+* @copyright	Copyright (C) 2009 - 2012 Matt Thomas. All rights reserved.
 * @license		GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
 */
 
@@ -40,19 +40,19 @@ $enableSwitcher 		= $this->params->get('enableSwitcher');
 $fluidMedia				= $this->params->get('fluidMedia');
 $fullWidth				= $this->params->get('fullWidth');
 $googleWebFont 			= $this->params->get('googleWebFont');
-$googleWebFontSize		= $this->params->get('googleWebFontSize');
-$googleWebFontTargets	= $this->params->get('googleWebFontTargets');
+$googleWebFontSize		= htmlspecialchars($this->params->get('googleWebFontSize'));
+$googleWebFontTargets	= htmlspecialchars($this->params->get('googleWebFontTargets'));
 $googleWebFont2			= $this->params->get('googleWebFont2');
-$googleWebFontSize2		= $this->params->get('googleWebFontSize2');
-$googleWebFontTargets2	= $this->params->get('googleWebFontTargets2');
+$googleWebFontSize2		= htmlspecialchars($this->params->get('googleWebFontSize2'));
+$googleWebFontTargets2	= htmlspecialchars($this->params->get('googleWebFontTargets2'));
 $googleWebFont3			= $this->params->get('googleWebFont3');
-$googleWebFontSize3		= $this->params->get('googleWebFontSize3');
-$googleWebFontTargets3	= $this->params->get('googleWebFontTargets3');
+$googleWebFontSize3		= htmlspecialchars($this->params->get('googleWebFontSize3'));
+$googleWebFontTargets3	= htmlspecialchars($this->params->get('googleWebFontTargets3'));
 $gridSystem				= $this->params->get('gridSystem');
 $IECSS3					= $this->params->get('IECSS3');
-$IECSS3Targets			= $this->params->get('IECSS3Targets');
+$IECSS3Targets			= htmlspecialchars($this->params->get('IECSS3Targets'));
 $IE6TransFix			= $this->params->get('IE6TransFix');
-$IE6TransFixTargets		= $this->params->get('IE6TransFixTargets');
+$IE6TransFixTargets		= htmlspecialchars($this->params->get('IE6TransFixTargets'));
 $inheritLayout			= $this->params->get('inheritLayout');
 $inheritStyle			= $this->params->get('inheritStyle');
 $loadMoo 				= $this->params->get('loadMoo');
@@ -65,12 +65,12 @@ $mHeaderDataTheme		= $this->params->get('mHeaderDataTheme');
 $mNavPosition			= $this->params->get('mNavPosition');
 $mNavDataTheme			= $this->params->get('mNavDataTheme');
 $mPageDataTheme			= $this->params->get('mPageDataTheme');
-$setGeneratorTag		= $this->params->get('setGeneratorTag');
+$setGeneratorTag		= htmlspecialchars($this->params->get('setGeneratorTag'));
 $showDiagnostics 		= $this->params->get('showDiagnostics');
-$siteWidth				= $this->params->get('siteWidth');
+$siteWidth				= htmlspecialchars($this->params->get('siteWidth'));
 $siteWidthType			= $this->params->get('siteWidthType');
 $siteWidthUnit			= $this->params->get('siteWidthUnit');
-$stickyFooterHeight		= $this->params->get('stickyFooterHeight');
+$stickyFooterHeight		= htmlspecialchars($this->params->get('stickyFooterHeight'));
 $useStickyFooter 		= $this->params->get('useStickyFooter');
 
 // Define absolute paths to files
@@ -422,7 +422,7 @@ $doc->addCustomTag('<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1
 // Mobile viewport optimized: j.mp/bplateviewport
 $doc->addCustomTag(' <meta name="viewport" content="width=device-width, initial-scale=1.0">');
 
-$doc->addCustomTag('<meta name="copyright" content="'.$app->getCfg('sitename').'" />');
+$doc->addCustomTag('<meta name="copyright" content="'.htmlspecialchars($app->getCfg('sitename')).'" />');
 
 // Site icons
 $doc->addFavicon($template.'/favicon.png','image/png','shortcut icon');
@@ -474,7 +474,8 @@ $doc->addCustomTag("\n".'  <script type="text/javascript">docElement = document.
 
 $doc->addCustomTag("\n".'  <script type="text/javascript">window.addEvent(\'domready\',function(){new SmoothScroll({duration:1200},window);});</script>');
 if ($loadjQuery) {
-	$doc->addScript($loadjQuery);
+	$doc->addCustomTag("\n".'  <script type="text/javascript" src="'.$loadjQuery.'"></script>');
+	$doc->addCustomTag("\n".'  <script type="text/javascript">jQuery.noConflict();</script>');
 }
 
 // Layout Declarations

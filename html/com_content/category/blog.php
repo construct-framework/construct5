@@ -1,9 +1,9 @@
 <?php defined('_JEXEC') or die;
 /**
-* @package		Unified HTML5 Template Framework for Joomla!
+* @package		Unified HTML5 Template Framework for Joomla!+
 * @author		Cristina Solana http://nightshiftcreative.com
 * @author		Matt Thomas http://construct-framework.com | http://betweenbrain.com
-* @copyright	Copyright (C) 2009 - 2011 Matt Thomas. All rights reserved.
+* @copyright	Copyright (C) 2009 - 2012 Matt Thomas. All rights reserved.
 * @license		GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
 */
 
@@ -13,21 +13,23 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
     JHtml::addIncludePath(JPATH_COMPONENT.'/helpers'); ?>
 
 	<section class="blog<?php echo $this->pageclass_sfx;?>">
-	    <?php if ($this->params->get('show_page_heading', 1)) : ?>
+	    <?php if ($this->params->get('show_page_heading', 1) || $this->params->get('show_category_title', 1) || $this->params->get('page_subheading')) : ?>
 	    <hgroup>
-	        <h1>
-		        <?php echo $this->escape($this->params->get('page_heading')); ?>
-	        </h1>
+            <?php if ($this->params->get('show_page_heading', 1)) : ?>
+	        <h2>
+		        <?php echo htmlspecialchars($this->params->get('page_heading')); ?>
+	        </h2>
 	        <?php endif; ?>
 
-	        <?php if ($this->params->get('show_category_title', 1) OR $this->params->get('page_subheading')) : ?>
+	        <?php if ($this->params->get('show_category_title', 1) || $this->params->get('page_subheading')) : ?>
 	        <h2>
-		        <?php echo $this->escape($this->params->get('page_subheading')); ?>
+		        <?php echo htmlspecialchars($this->params->get('page_subheading')); ?>
 		        <?php if ($this->params->get('show_category_title')) : ?>
 			        <span class="subheading-category"><?php echo $this->category->title;?></span>
 		        <?php endif; ?>
 	        </h2>
-	    </hgroup>
+            <?php endif; ?>
+        </hgroup>
 	    <?php endif; ?>
 
 	    <?php if ($this->params->get('show_description', 1) || $this->params->def('show_description_image', 1)) : ?>
@@ -128,11 +130,11 @@ else {
 $cparams = JComponentHelper::getParams ('com_media');
 ?>
 
-	<section class="blog<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
+	<section class="blog<?php echo htmlspecialchars($this->params->get('pageclass_sfx')); ?>">
 
 		<?php if ($this->params->get('show_page_title')) : ?>
 		<h1>
-			<?php echo $this->escape($this->params->get('page_title')); ?>
+			<?php echo htmlspecialchars($this->params->get('page_title')); ?>
 		</h1>
 		<?php endif; ?>
 		

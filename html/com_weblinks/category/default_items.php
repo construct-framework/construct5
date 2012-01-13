@@ -1,9 +1,9 @@
 <?php defined('_JEXEC') or die;
 /**
-* @package		Unified HTML5 Template Framework for Joomla!
+* @package		Unified HTML5 Template Framework for Joomla!+
 * @author		Cristina Solana http://nightshiftcreative.com
 * @author		Matt Thomas http://construct-framework.com | http://betweenbrain.com
-* @copyright	Copyright (C) 2009 - 2011 Matt Thomas. All rights reserved.
+* @copyright	Copyright (C) 2009 - 2012 Matt Thomas. All rights reserved.
 * @license		GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
 */
 
@@ -112,8 +112,8 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 						    case 3:
 							    // open in a modal window
 							    JHtml::_('behavior.modal', 'a.modal'); ?>
-							    <a class="modal" href="<?php echo $link;?>"  rel="{handler: 'iframe', size: {x:<?php echo $this->escape($width);?>, y:<?php echo $this->escape($height);?>}}">
-								    <?php echo $this->escape($item->title). ' </a>' ;
+							    <a class="modal" href="<?php echo $link;?>"  rel="{handler: 'iframe', size: {x:<?php echo htmlspecialchars($width);?>, y:<?php echo htmlspecialchars($height);?>}}">
+								    <?php echo htmlspecialchars($item->title). ' </a>' ;
 							    break;
 
 						    default:
@@ -179,7 +179,7 @@ else {
 		}
 	</script>
 
-	<form action="<?php echo $this->escape($this->action); ?>" method="post" name="adminForm">
+	<form action="<?php echo htmlspecialchars($this->action); ?>" method="post" name="adminForm">
 		<fieldset>
 			<?php echo JText :: _('Display Num'); ?>&nbsp;
 			<?php echo $this->pagination->getLimitBox(); ?>
