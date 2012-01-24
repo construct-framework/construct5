@@ -29,7 +29,7 @@ if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) : ?>
 		    <?php if ($this->params->get('show_subcat_desc_cat') == 1) :?>
 		    <?php if ($item->description) : ?>
 			    <section class="category-desc">
-				    <?php echo JHtml::_('content.prepare', $item->description); ?>
+				    <?php echo JHtml::_('content.prepare', $item->description), '', 'com_newsfeeds.categories'); ?>
 			    </section>
 		    <?php endif; ?>
             <?php endif; ?>

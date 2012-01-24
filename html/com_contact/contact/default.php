@@ -150,7 +150,7 @@ else {
 				<fieldset>
 					<?php echo JText::_('Select Contact'); ?>
 					<br />
-					<?php echo JHTML::_('select.genericlist', $this->contacts, 'contact_id', 'class="inputbox" onchange="this.form.submit()"', 'id', 'name', $this->contact->id); ?>
+					<?php echo JHtml::_('select.genericlist', $this->contacts, 'contact_id', 'class="inputbox" onchange="this.form.submit()"', 'id', 'name', $this->contact->id); ?>
 				</fieldset>
 				<input type="hidden" name="option" value="com_contact" />		
 			</form>
@@ -162,7 +162,7 @@ else {
 
 		<?php if ($this->contact->image && $this->contact->params->get('show_image')) : ?>
 			<div class="contact-image">
-				<?php echo JHTML::_('image', 'images/stories' . '/'.$this->escape($this->contact->image), JText::_( 'Contact' )); ?>
+				<?php echo JHtml::_('image', 'images/stories' . '/'.$this->escape($this->contact->image), JText::_( 'Contact' )); ?>
 			</div>
 		<?php endif; ?>
 

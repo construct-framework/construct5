@@ -83,17 +83,17 @@ $this->setGenerator($setGeneratorTag);
 
 // Enable Mootols
 if ( $isOnward && $loadMoo ) {
-	JHTML::_('behavior.framework', true);
+	JHtml::_('behavior.framework', true);
 }
 
 // Behavior.mootools is depreciated and may be removed after 1.6
 if ( $isPresent && $loadMoo ) {	
-	JHTML::_('behavior.mootools');
+	JHtml::_('behavior.mootools');
 }
 
 // Enable modal pop-ups
 if ( $loadMoo && $loadModal ) {	
-	JHTML::_('behavior.modal');
+	JHtml::_('behavior.modal');
 }
 
 // Remove MooTools if set to no.

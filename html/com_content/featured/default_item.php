@@ -9,6 +9,7 @@
 
 // Create a shortcut for params.
 $params 	= &$this->item->params;
+$images 	= json_decode($this->item->images);
 $canEdit	= $this->item->params->get('access-edit');
 ?>
 

@@ -32,5 +32,5 @@
 	<input type="hidden" name="option" value="com_poll">
 	<input type="hidden" name="id" value="<?php echo $poll->id; ?>">
 	<input type="hidden" name="task" value="vote">
-	<?php echo JHTML::_( 'form.token' ); ?>
+	<?php echo JHtml::_( 'form.token' ); ?>
 </form>

@@ -11,7 +11,8 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 // Joomla! 1.6+
 	
 	// Create a shortcut for params.
-	$params = &$this->item->params;
+	$params 	= &$this->item->params;
+	$images 	= json_decode($this->item->images);
 	$canEdit	= $this->item->params->get('access-edit');
 	JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
 	JHtml::_('behavior.tooltip');
@@ -195,23 +196,23 @@ else {
 		
 		<?php if ($this->item->params->get('show_pdf_icon')) : ?>
 			<li class="pdf-icon">
-				<?php echo JHTML::_('icon.pdf', $this->item, $this->item->params, $this->access); ?>
+				<?php echo JHtml::_('icon.pdf', $this->item, $this->item->params, $this->access); ?>
 			</li>
 		<?php endif; ?>
 		<?php if ($this->item->params->get('show_print_icon')) : ?>
 			<li class="print-icon">
-				<?php echo JHTML::_('icon.print_popup', $this->item, $this->item->params, $this->access); ?>
+				<?php echo JHtml::_('icon.print_popup', $this->item, $this->item->params, $this->access); ?>
 			</li>
 		<?php endif; ?>
 		<?php if ($this->item->params->get('show_email_icon')) : ?>
 			<li class="email-icon">
-				<?php echo JHTML::_('icon.email', $this->item, $this->item->params, $this->access); ?>
+				<?php echo JHtml::_('icon.email', $this->item, $this->item->params, $this->access); ?>
 			</li>
 		<?php endif; ?>
 		
 		<?php if ($this->user->authorize('com_content', 'edit', 'content', 'all') || $this->user->authorize('com_content', 'edit', 'content', 'own')) : ?>
 			<li class="edit-icon">
-				<?php echo JHTML::_('icon.edit', $this->item, $this->item->params, $this->access); ?>
+				<?php echo JHtml::_('icon.edit', $this->item, $this->item->params, $this->access); ?>
 			</li>
 		<?php endif; ?>	
 	</ul>
@@ -265,13 +266,13 @@ else {
 			
 		<?php if ($this->item->params->get('show_create_date')) : ?>
 		<time class="create">
-			<?php echo JHTML::_('date', $this->item->created, JText::_('DATE_FORMAT_LC2')); ?>
+			<?php echo JHtml::_('date', $this->item->created, JText::_('DATE_FORMAT_LC2')); ?>
 		</time>
 		<?php endif; ?>		
 
 		<?php if (intval($this->item->modified) !=0 && $this->item->params->get('show_modify_date')) : ?>
 		<time class="modified">
-			<?php echo JText::sprintf('LAST_UPDATED2', JHTML::_('date', $this->item->modified, JText::_('DATE_FORMAT_LC2'))); ?>
+			<?php echo JText::sprintf('LAST_UPDATED2', JHtml::_('date', $this->item->modified, JText::_('DATE_FORMAT_LC2'))); ?>
 		</time>
 		<?php endif; ?>
 	

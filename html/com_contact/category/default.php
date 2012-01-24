@@ -19,7 +19,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 	<?php endif; ?>
 	<?php if($this->params->get('show_category_title', 1)) : ?>
 		<h2>
-			<?php echo JHtml::_('content.prepare', $this->category->title); ?>
+			<?php echo JHtml::_('content.prepare', $this->category->title, '', 'com_contact.category'); ?>
 		</h2>
 	<?php endif; ?>
 	<?php if ($this->params->def('show_description', 1) || $this->params->def('show_description_image', 1)) : ?>
@@ -28,7 +28,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 			    <img src="<?php echo $this->category->getParams()->get('image'); ?>"/>
 		    <?php endif; ?>
 		    <?php if ($this->params->get('show_description') && $this->category->description) : ?>
-			    <?php echo JHtml::_('content.prepare', $this->category->description); ?>
+			    <?php echo JHtml::_('content.prepare', $this->category->description, '', 'com_contact.category'); ?>
 		    <?php endif; ?>
 		</section>
 	<?php endif; ?>
@@ -101,12 +101,12 @@ else {
 					
 							<?php if ($this->params->get('show_position')) : ?>
 							<th id="item-position">
-								<?php echo JHTML::_('grid.sort', 'Position', 'cd.con_position', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+								<?php echo JHtml::_('grid.sort', 'Position', 'cd.con_position', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 							</th>
 							<?php endif; ?>
 					
 							<th id="item-name">
-								<?php echo JHTML::_('grid.sort', 'Name', 'cd.name', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+								<?php echo JHtml::_('grid.sort', 'Name', 'cd.name', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 							</th>
 					
 							<?php if ($this->params->get('show_email')) : ?>

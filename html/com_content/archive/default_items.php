@@ -75,7 +75,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
             <?php endif; ?>
                 <?php if ($params->get('show_publish_date')) : ?>
             <time class="published">
-            <?php echo JText::sprintf('COM_CONTENT_PUBLISHED_DATE', JHtml::_('date',$item->publish_up, JText::_('DATE_FORMAT_LC2'))); ?>
+            <?php echo JText::sprintf('COM_CONTENT_PUBLISHED_DATE_ON', JHtml::_('date',$item->publish_up, JText::_('DATE_FORMAT_LC2'))); ?>
             </time>
             <?php endif; ?>
             <?php if ($params->get('show_author') && !empty($item->author )) : ?>
@@ -179,7 +179,7 @@ else {
 		    <?php endif; ?>
 		    <?php if ($params->get('show_publish_date')) : ?>
 		    <time class="published">
-		        <?php echo JText::sprintf('COM_CONTENT_PUBLISHED_DATE', JHtml::_('date',$item->publish_up, JText::_('DATE_FORMAT_LC2'))); ?>
+		        <?php echo JText::sprintf('COM_CONTENT_PUBLISHED_DATE_ON', JHtml::_('date',$item->publish_up, JText::_('DATE_FORMAT_LC2'))); ?>
 		    </time>
 		    <?php endif; ?>
 		    <?php if ($params->get('show_author') && !empty($item->author )) : ?>
@@ -263,7 +263,7 @@ else {
 	    <h5 class="metadata">
 	    <?php if ($this->params->get('show_create_date')) : ?>
 		    <span class="created-date">
-			    <?php echo JText::_('Created') .': '.  JHTML::_( 'date', $item->created, JText::_('DATE_FORMAT_LC2')) ?>
+			    <?php echo JText::_('Created') .': '.  JHtml::_( 'date', $item->created, JText::_('DATE_FORMAT_LC2')) ?>
 		    </span>
 		    <?php endif; ?>
 		    <?php if ($this->params->get('show_author')) : ?>

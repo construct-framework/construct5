@@ -24,13 +24,13 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 	//If there is a description in the menu parameters use that; ?>
 		<?php if($this->params->get('categories_description')) : ?>
 			<section class="category-desc base-desc">
-				<?php echo  JHtml::_('content.prepare',$this->params->get('categories_description')); ?>
+				<?php echo  JHtml::_('content.prepare',$this->params->get('categories_description'), '', 'com_contact.categories'); ?>
 			</section>
 		<?php  else:
 		//Otherwise get one from the database if it exists. ?>
 			<?php  if ($this->parent->description) : ?>
 				<section class="category-desc base-desc">
-					<?php  echo JHtml::_('content.prepare', $this->parent->description); ?>
+					<?php  echo JHtml::_('content.prepare', $this->parent->description), '', 'com_contact.categories'); ?>
 				</section>
 			<?php  endif; ?>
 		<?php  endif; ?>	

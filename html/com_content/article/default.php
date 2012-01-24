@@ -13,9 +13,11 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
     JHtml::addIncludePath(JPATH_COMPONENT.DS.'helpers');
 
     // Create shortcuts to some parameters.
-    $params		= $this->item->params;
-    $canEdit	= $this->item->params->get('access-edit');
-    $user		= JFactory::getUser();
+	$params		= $this->item->params;
+	$images 	= json_decode($this->item->images);
+	$urls 		= json_decode($this->item->urls);
+	$canEdit	= $this->item->params->get('access-edit');
+	$user		= JFactory::getUser();
     $details    = ($params->get('show_parent_category') + $params->get('show_category') + $params->get('show_create_date') + $params->get('show_modify_date') + $params->get('show_publish_date') + ($params->get('show_author') && !empty($this->item->author )) + $params->get('show_hits') + ($canEdit ||  $params->get('show_print_icon') || $params->get('show_email_icon')));
     $hgroup     = ($this->params->get('show_page_heading') + $params->get('show_title') + $params->get('show_parent_category') + $params->get('show_category'));
     $header     = ($this->params->get('show_page_heading') + $params->get('show_title') + $params->get('show_parent_category') + $params->get('show_category') + $params->get('show_create_date') + $params->get('show_modify_date') + $params->get('show_publish_date') + ($params->get('show_author') && !empty($this->item->author )) + $params->get('show_hits') + ($canEdit ||  $params->get('show_print_icon') || $params->get('show_email_icon')));
@@ -167,9 +169,31 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 	    <?php echo $this->item->toc; ?>
     <?php endif; ?>
 
-    <?php if ($params->get('access-view')):?>
-        <?php // Display the article text ?>
-	    <?php echo $this->item->text; ?>
+	<?php if ($params->get('access-view')):?>
+	<?php  if (isset($images->image_fulltext) and !empty($images->image_fulltext)) : ?>
+	<?php $imgfloat = (empty($images->float_fulltext)) ? $params->get('float_fulltext') : $images->float_fulltext; ?>
+	<div class="img-fulltext-<?php echo htmlspecialchars($imgfloat); ?>">
+	<img
+		<?php if ($images->image_fulltext_caption):
+			echo 'class="caption"'.' title="' .htmlspecialchars($images->image_fulltext_caption) .'"';
+		endif; ?>
+		src="<?php echo htmlspecialchars($images->image_fulltext); ?>" alt="<?php echo htmlspecialchars($images->image_fulltext_alt); ?>"/>
+	</div>
+	<?php endif; ?>
+	<?php
+	if (!empty($this->item->pagination) AND $this->item->pagination AND !$this->item->paginationposition AND !$this->item->paginationrelative):
+		echo $this->item->pagination;
+	 endif;
+	?>
+	<?php echo $this->item->text; ?>
+	<?php
+	if (!empty($this->item->pagination) AND $this->item->pagination AND $this->item->paginationposition AND!$this->item->paginationrelative):
+		 echo $this->item->pagination;?>
+	<?php endif; ?>
+
+	<?php if (isset($urls) AND ((!empty($urls->urls_position)  AND ($urls->urls_position=='1')) OR ( $params->get('urls_position')=='1') )): ?>
+	<?php echo $this->loadTemplate('links'); ?>
+	<?php endif; ?>
 
 	    <?php //optional teaser intro text for guests ?>
     <?php elseif ($params->get('show_noauth') == true AND  $user->get('guest') ) : ?>
@@ -232,27 +256,27 @@ else {
 			<?php if (!$this->print) : ?>
 			<?php if ($this->params->get('show_pdf_icon')) : ?>
 			    <li class="pdf-icon">
-				    <?php echo JHTML::_('icon.pdf', $this->article, $this->params, $this->access); ?>
+				    <?php echo JHtml::_('icon.pdf', $this->article, $this->params, $this->access); ?>
 			    </li>
 			<?php endif; ?>
 			<?php if ($this->params->get('show_print_icon')) : ?>
 			    <li class="print-icon">
-				    <?php echo JHTML::_('icon.print_popup', $this->article, $this->params, $this->access); ?>
+				    <?php echo JHtml::_('icon.print_popup', $this->article, $this->params, $this->access); ?>
 			    </li>
 			<?php endif; ?>
 			<?php if ($this->params->get('show_email_icon')) : ?>
 			    <li class="print-icon">
-				    <?php echo JHTML::_('icon.email', $this->article, $this->params, $this->access); ?>
+				    <?php echo JHtml::_('icon.email', $this->article, $this->params, $this->access); ?>
 			    </li>
 			<?php endif; ?>
 			<?php if ($this->user->authorize('com_content', 'edit', 'content', 'all') || $this->user->authorize('com_content', 'edit', 'content', 'own')) : ?>
 			    <li class="edit-icon">
-				    <?php echo JHTML::_('icon.edit', $this->article, $this->params, $this->access); ?>
+				    <?php echo JHtml::_('icon.edit', $this->article, $this->params, $this->access); ?>
 			    </li>
 			<?php endif; ?>
 			<?php else : ?>
 			    <li>
-				    <?php echo JHTML::_('icon.print_screen', $this->article, $this->params, $this->access); ?>
+				    <?php echo JHtml::_('icon.print_screen', $this->article, $this->params, $this->access); ?>
 			    </li>
 			<?php endif; ?>
 		</ul>
@@ -301,7 +325,7 @@ else {
             <?php endif; ?>
 				<?php if (intval($this->article->modified) !=0 && $this->params->get('show_modify_date')) : ?>
 			    <time class="modified">
-				    <?php echo JText::sprintf('LAST_UPDATED2', JHTML::_('date', $this->article->modified, JText::_('DATE_FORMAT_LC2'))); ?>
+				    <?php echo JText::sprintf('LAST_UPDATED2', JHtml::_('date', $this->article->modified, JText::_('DATE_FORMAT_LC2'))); ?>
 			    </time>
 				<?php endif; ?>
 
@@ -313,7 +337,7 @@ else {
 
 				<?php if ($this->params->get('show_create_date')) : ?>
 			    <time class="create">
-				    <?php echo JHTML::_('date', $this->article->created, JText::_('DATE_FORMAT_LC2')); ?>
+				    <?php echo JHtml::_('date', $this->article->created, JText::_('DATE_FORMAT_LC2')); ?>
 			    </time>
 				<?php endif; ?>
 				<?php if ($this->params->get('show_url') && $this->article->urls) : ?>

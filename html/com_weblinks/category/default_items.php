@@ -196,11 +196,11 @@ else {
 						<?php echo JText::_('Num'); ?>
 					</th>		
 					<th id="tableOrdering2" class="title">
-						<?php echo JHTML::_('grid.sort', 'Web Link', 'title', $this->lists['order_Dir'], $this->lists['order']); ?>
+						<?php echo JHtml::_('grid.sort', 'Web Link', 'title', $this->lists['order_Dir'], $this->lists['order']); ?>
 					</th>		
 					<?php if ($this->params->get('show_link_hits')) : ?>
 					<th id="tableOrdering3" class="hits">
-						<?php echo JHTML::_('grid.sort', 'Hits', 'hits', $this->lists['order_Dir'], $this->lists['order']); ?>
+						<?php echo JHtml::_('grid.sort', 'Hits', 'hits', $this->lists['order_Dir'], $this->lists['order']); ?>
 					</th>
 					<?php endif; ?>		
 				</tr>

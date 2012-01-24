@@ -59,25 +59,25 @@ document.adminForm.submit( task );
 		
 				<?php if ($this->params->get('show_title')) : ?>
 				<th class="list-title" id="tableOrdering">
-					<?php echo JHTML::_('grid.sort', 'Item Title', 'a.title', $this->lists['order_Dir'], $this->lists['order']); ?>
+					<?php echo JHtml::_('grid.sort', 'Item Title', 'a.title', $this->lists['order_Dir'], $this->lists['order']); ?>
 				</th>
 				<?php endif; ?>
 		
 				<?php if ($this->params->get('show_date')) : ?>
 				<th class="list-date" id="tableOrdering2">
-					<?php echo JHTML::_('grid.sort', 'Date', 'a.created', $this->lists['order_Dir'], $this->lists['order']); ?>
+					<?php echo JHtml::_('grid.sort', 'Date', 'a.created', $this->lists['order_Dir'], $this->lists['order']); ?>
 				</th>
 				<?php endif; ?>
 		
 				<?php if ($this->params->get('show_author')) : ?>
 				<th class="list-author" id="tableOrdering3">
-					<?php echo JHTML::_('grid.sort', 'Author', 'author', $this->lists['order_Dir'], $this->lists['order']); ?>
+					<?php echo JHtml::_('grid.sort', 'Author', 'author', $this->lists['order_Dir'], $this->lists['order']); ?>
 				</th>
 				<?php endif; ?>
 		
 				<?php if ($this->params->get('show_hits')) : ?>
 				<th class="list-hits" id="tableOrdering4">
-					<?php echo JHTML::_('grid.sort', 'Hits', 'a.hits', $this->lists['order_Dir'], $this->lists['order']); ?>
+					<?php echo JHtml::_('grid.sort', 'Hits', 'a.hits', $this->lists['order_Dir'], $this->lists['order']); ?>
 				</th>
 				<?php endif; ?>
 			</tr>
@@ -98,7 +98,7 @@ document.adminForm.submit( task );
 						<a href="<?php echo $item->link; ?>"><?php echo htmlspecialchars($item->title); ?></a>
 						<ul class="actions">
 							<li class="edit-icon">
-								<?php echo JHTML::_('icon.edit', $item, $this->params, $this->access); ?>
+								<?php echo JHtml::_('icon.edit', $item, $this->params, $this->access); ?>
 							</li>
 						</ul>
 					<?php else : ?>
