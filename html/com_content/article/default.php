@@ -171,6 +171,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 
 	<?php if ($params->get('access-view')):?>
 	<?php  if (isset($images->image_fulltext) and !empty($images->image_fulltext)) : ?>
+
 	<?php $imgfloat = (empty($images->float_fulltext)) ? $params->get('float_fulltext') : $images->float_fulltext; ?>
 	<div class="img-fulltext-<?php echo htmlspecialchars($imgfloat); ?>">
 	<img
@@ -180,52 +181,53 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 		src="<?php echo htmlspecialchars($images->image_fulltext); ?>" alt="<?php echo htmlspecialchars($images->image_fulltext_alt); ?>"/>
 	</div>
 	<?php endif; ?>
-	<?php
-	if (!empty($this->item->pagination) AND $this->item->pagination AND !$this->item->paginationposition AND !$this->item->paginationrelative):
-		echo $this->item->pagination;
-	 endif;
-	?>
+
+	<?php if (!empty($this->item->pagination) AND $this->item->pagination AND !$this->item->paginationposition AND !$this->item->paginationrelative):
+		echo $this->item->pagination; ?>
+	 <?php endif; ?>
+
 	<?php echo $this->item->text; ?>
-	<?php
-	if (!empty($this->item->pagination) AND $this->item->pagination AND $this->item->paginationposition AND!$this->item->paginationrelative):
-		 echo $this->item->pagination;?>
+	<?php if (!empty($this->item->pagination) AND $this->item->pagination AND $this->item->paginationposition AND!$this->item->paginationrelative):
+		echo $this->item->pagination; ?>
 	<?php endif; ?>
 
 	<?php if (isset($urls) AND ((!empty($urls->urls_position)  AND ($urls->urls_position=='1')) OR ( $params->get('urls_position')=='1') )): ?>
 	<?php echo $this->loadTemplate('links'); ?>
 	<?php endif; ?>
 
-	    <?php //optional teaser intro text for guests ?>
-    <?php elseif ($params->get('show_noauth') == true AND  $user->get('guest') ) : ?>
-	    <?php echo $this->item->introtext; ?>
-	    <?php //Optional link to let them register to see the whole article. ?>
-	    <?php if ($params->get('show_readmore') && $this->item->fulltext != null) :
-		    $link1 = JRoute::_('index.php?option=com_users&view=login');
-		    $link = new JURI($link1);?>
-		    <p class="readmore">
-			    <a href="<?php echo $link; ?>">
-			    <?php $attribs = json_decode($this->item->attribs);  ?>
-			    <?php
-			    if ($attribs->alternative_readmore == null) :
-				    echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
-			    elseif ($readmore = $this->item->alternative_readmore) :
-				    echo $readmore;
-				    if ($params->get('show_readmore_title', 0) != 0) :
-					    echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
-				    endif;
-			    elseif ($params->get('show_readmore_title', 0) == 0) :
-				    echo JText::sprintf('COM_CONTENT_READ_MORE_TITLE');
-			    else :
-				    echo JText::_('COM_CONTENT_READ_MORE');
-				    echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
-			    endif; ?>
-			    </a>
-		    </p>
-	    <?php endif; ?>
-    <?php endif; ?>
-    <?php echo $this->item->event->afterDisplayContent; ?>
-    </article>
-
+	<?php //optional teaser intro text for guests ?>
+	<?php elseif ($params->get('show_noauth') == true AND  $user->get('guest') ) : ?>
+		<?php echo $this->item->introtext; ?>
+		<?php //Optional link to let them register to see the whole article. ?>
+		<?php if ($params->get('show_readmore') && $this->item->fulltext != null) :
+			$link1 = JRoute::_('index.php?option=com_users&view=login');
+			$link = new JURI($link1);?>
+			<p class="readmore">
+				<a href="<?php echo $link; ?>">
+				<?php $attribs = json_decode($this->item->attribs);  ?>
+				<?php
+				if ($attribs->alternative_readmore == null) :
+					echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
+				elseif ($readmore = $this->item->alternative_readmore) :
+					echo $readmore;
+					if ($params->get('show_readmore_title', 0) != 0) :
+						echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
+					endif;
+				elseif ($params->get('show_readmore_title', 0) == 0) :
+					echo JText::sprintf('COM_CONTENT_READ_MORE_TITLE');
+				else :
+					echo JText::_('COM_CONTENT_READ_MORE');
+					echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
+				endif; ?>
+				</a>
+			</p>
+		<?php endif; ?>
+	<?php endif; ?>
+	<?php if (!empty($this->item->pagination) AND $this->item->pagination AND $this->item->paginationposition AND $this->item->paginationrelative):
+		 echo $this->item->pagination;?>
+	<?php endif; ?>
+	<?php echo $this->item->event->afterDisplayContent; ?>
+	</article>
 <?php
 }
 else {

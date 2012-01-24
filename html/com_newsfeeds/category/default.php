@@ -11,7 +11,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 // Joomla 1.6+ ?>
 
     <section class="newsfeed-category<?php echo $this->pageclass_sfx;?>">
-        <?php if ($this->params->def('show_page_heading', 1)) : ?>
+        <?php if ($this->params->get('show_page_heading', 1)) : ?>
             <h1>
 	            <?php echo htmlspecialchars($this->params->get('page_heading')); ?>
             </h1>

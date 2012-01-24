@@ -156,7 +156,6 @@ $params = &$this->item->params;
 					<?php endif; ?>
 				</tr>
 			<?php endforeach; ?>
-
 		</tbody>
 	</table>
 </form>
