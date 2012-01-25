@@ -27,13 +27,13 @@
 				}
 				if($i < $count -2){
                     echo '<li>';
-					echo ' '.$separator.' ';
+					echo $separator;
 					echo '</li>';
 				}
 			}  elseif ($params->get('showLast', 1)) { // when $i == $count -1 and 'showLast' is true
 				if($i > 0){
     				echo '<li>';
-					echo ' '.$separator.' ';
+					echo $separator;
 					echo '</li>';
 				}
 				    echo '<li>';
