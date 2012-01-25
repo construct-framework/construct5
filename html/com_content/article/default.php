@@ -131,21 +131,27 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 
 		<?php if ($params->get('show_print_icon') || $params->get('show_email_icon') || $canEdit) : ?>
 			<ul class="actions">
+			<?php if (!$this->print) : ?>
 				<?php if ($params->get('show_print_icon')) : ?>
-				<li class="print-icon">
-					<?php echo JHtml::_('icon.print_popup', $this->item, $params); ?>
-				</li>
+					<li class="print-icon">
+					<?php echo JHtml::_('icon.print_popup',  $this->item, $params); ?>
+					</li>
 				<?php endif; ?>
 				<?php if ($params->get('show_email_icon')) : ?>
-				<li class="email-icon">
-					<?php echo JHtml::_('icon.email', $this->item, $params); ?>
-				</li>
+					<li class="email-icon">
+					<?php echo JHtml::_('icon.email',  $this->item, $params); ?>
+					</li>
 				<?php endif; ?>
 				<?php if ($canEdit) : ?>
-				<li class="edit-icon">
+					<li class="edit-icon">
 					<?php echo JHtml::_('icon.edit', $this->item, $params); ?>
-				</li>
+					</li>
 				<?php endif; ?>
+			<?php else : ?>
+				<li>
+				<?php echo JHtml::_('icon.print_screen',  $this->item, $params); ?>
+				</li>
+			<?php endif; ?>
 			</ul>
 		<?php endif; ?>
 
