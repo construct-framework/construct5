@@ -19,11 +19,11 @@ JHtml::_('behavior.keepalive');
 	</h2>
 	<?php endif; ?>
 
-	<?php if ($this->params->get('login_description') !='' || $this->params->get('login_image') != '') : ?>
+	<?php if (($this->params->get('logindescription_show') == 1 && str_replace(' ', '', $this->params->get('login_description')) != '') || $this->params->get('login_image') != '') : ?>
 	<p class="login-description">
 	<?php endif ; ?>
 
-	<?php if($this->params->get('login_description') !='') : ?>
+	<?php if($this->params->get('logindescription_show') == 1) : ?>
 		<?php echo $this->params->get('login_description'); ?>
 	<?php endif; ?>
 
@@ -31,7 +31,7 @@ JHtml::_('behavior.keepalive');
 		<img src="<?php echo htmlspecialchars($this->params->get('login_image')); ?>" class="login-image" alt="<?php echo JTEXT::_('COM_USER_LOGIN_IMAGE_ALT')?>"/>
 	<?php endif; ?>
 
-	<?php if (($this->params->get('login_description') !='') || $this->params->get('login_image') != '') : ?>
+	<?php if (($this->params->get('logindescription_show') == 1 && str_replace(' ', '', $this->params->get('login_description')) != '') || $this->params->get('login_image') != '') : ?>
 	</p>
 	<?php endif ; ?>
 

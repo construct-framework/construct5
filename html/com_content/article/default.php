@@ -171,15 +171,12 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 
 	<?php if ($params->get('access-view')):?>
 	<?php  if (isset($images->image_fulltext) and !empty($images->image_fulltext)) : ?>
-
-	<?php $imgfloat = (empty($images->float_fulltext)) ? $params->get('float_fulltext') : $images->float_fulltext; ?>
-	<div class="img-fulltext-<?php echo htmlspecialchars($imgfloat); ?>">
-	<img
+		<?php $imgfloat = (empty($images->float_fulltext)) ? $params->get('float_fulltext') : $images->float_fulltext; ?>
+		<img class="img-fulltext-<?php echo htmlspecialchars($imgfloat); ?>"
 		<?php if ($images->image_fulltext_caption):
 			echo 'class="caption"'.' title="' .htmlspecialchars($images->image_fulltext_caption) .'"';
 		endif; ?>
 		src="<?php echo htmlspecialchars($images->image_fulltext); ?>" alt="<?php echo htmlspecialchars($images->image_fulltext_alt); ?>"/>
-	</div>
 	<?php endif; ?>
 
 	<?php if (!empty($this->item->pagination) AND $this->item->pagination AND !$this->item->paginationposition AND !$this->item->paginationrelative):

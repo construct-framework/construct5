@@ -24,24 +24,37 @@ $templateParams = JFactory::getApplication()->getTemplate(true)->params;
 ?>>
 <?php
 foreach ($list as $i => &$item) :
-	$class = '';
+	$class = 'item-'.$item->id;
 	if ($item->id == $active_id) {
-		$class .= 'current ';
+		$class .= ' current';
 	}
 
 	if (in_array($item->id, $path)) {
-		$class .= 'active ';
+		$class .= ' active';
+	}
+	elseif ($item->type == 'alias') {
+		$aliasToId = $item->params->get('aliasoptions');
+		if (count($path) > 0 && $aliasToId == $path[count($path)-1]) {
+			$class .= ' active';
+		}
+		elseif (in_array($aliasToId, $path)) {
+			$class .= ' alias-parent-active';
+		}
 	}
 
 	if ($item->deeper) {
-		$class .= 'parent ';
+		$class .= ' deeper';
+	}
+
+	if ($item->parent) {
+		$class .= ' parent';
 	}
 
 	if (!empty($class)) {
 		$class = ' class="'.trim($class) .'"';
 	}
 
-	echo '<li id="item-'.$item->id.'"'.$class.'>';
+	echo '<li'.$class.'>';
 
 	// Render the menu item.
 	switch ($item->type) :
@@ -61,7 +74,7 @@ foreach ($list as $i => &$item) :
 		echo '<ul>';
 	}
 	// The next item is shallower.
-	else if ($item->shallower) {
+	elseif ($item->shallower) {
 		echo '</li>';
 		echo str_repeat('</ul></li>', $item->level_diff);
 	}

@@ -126,9 +126,18 @@ $canEdit	= $this->item->params->get('access-edit');
         <?php endif; ?>
     <?php if ($useDefList) : ?>     
     </header>
-    <?php endif; ?>
+	<?php endif; ?>
 
-    <?php echo $this->item->introtext; ?>
+	<?php  if (isset($images->image_intro) and !empty($images->image_intro)) : ?>
+		<?php $imgfloat = (empty($images->float_intro)) ? $params->get('float_intro') : $images->float_intro; ?>
+		<img class="img-intro-<?php echo htmlspecialchars($imgfloat); ?>"
+			<?php if ($images->image_intro_caption):
+				echo 'class="caption"'.' title="' .htmlspecialchars($images->image_intro_caption) .'"';
+			endif; ?>
+			src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>"/>
+	<?php endif; ?>
+
+	<?php echo $this->item->introtext; ?>
 
     <?php if ($params->get('show_readmore') && $this->item->readmore) :
         if ($params->get('access-view')) :
@@ -165,6 +174,5 @@ $canEdit	= $this->item->params->get('access-edit');
     <?php if ($this->item->state == 0) : ?>
     </section>
     <?php endif; ?>
-
 
     <?php echo $this->item->event->afterDisplayContent; ?>
