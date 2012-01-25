@@ -221,6 +221,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 	<?php endif; ?>
 	<?php echo $this->item->event->afterDisplayContent; ?>
 	</article>
+
 <?php
 }
 else {

@@ -9,14 +9,15 @@
 
 if (substr(JVERSION, 0, 3) >= '1.6') {
 // Joomla! 1.6+
-	
-	// Create a shortcut for params.
-	$params 	= &$this->item->params;
-	$images 	= json_decode($this->item->images);
-	$canEdit	= $this->item->params->get('access-edit');
+
 	JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
 	JHtml::_('behavior.tooltip');
 	JHtml::core();
+
+	// Create a shortcut for params.
+	$params		= &$this->item->params;
+	$images 	= json_decode($this->item->images);
+	$canEdit	= $this->item->params->get('access-edit');
 	$details    = $params->get('show_parent_category') + $params->get('show_category') + $params->get('show_create_date') + $params->get('show_modify_date') + $params->get('show_publish_date') + ($params->get('show_author') && !empty($this->item->author )) + $params->get('show_hits');
 	$header     = $details + $this->params->get('show_page_heading') + $params->get('show_title') + $params->get('show_parent_category') + $params->get('show_category');
 	?>
@@ -50,7 +51,6 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 		    <?php endif; ?>
 	    </h2>
 		<?php endif; ?>
-
 
 	    <?php  if (!$params->get('show_intro')) :
 		    echo $this->item->event->afterDisplayTitle;
@@ -155,6 +155,8 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 	</header>
 	<?php endif; ?>
 
+	<?php echo $this->item->event->beforeDisplayContent; ?>
+
 	<?php echo $this->item->introtext; ?>
 
 	<?php if ($params->get('show_readmore') && $this->item->readmore) :
@@ -170,22 +172,22 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 			$link->setVar('return', base64_encode($returnURL));
 		endif;
 	?>
-			<p class="readmore">
-				<a href="<?php echo $link; ?>">
-					<?php if (!$params->get('access-view')) :
-						echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
-					elseif ($readmore = $this->item->alternative_readmore) :
-						echo $readmore;
-						if ($params->get('show_readmore_title', 0) != 0) :
-							echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
-						endif;
-					elseif ($params->get('show_readmore_title', 0) == 0) :
-						echo JText::sprintf('COM_CONTENT_READ_MORE_TITLE');	
-					else :
-						echo JText::_('COM_CONTENT_READ_MORE');
-						echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
-					endif; ?></a>
-			</p>
+	<p class="readmore">
+		<a href="<?php echo $link; ?>">
+			<?php if (!$params->get('access-view')) :
+				echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
+			elseif ($readmore = $this->item->alternative_readmore) :
+				echo $readmore;
+				if ($params->get('show_readmore_title', 0) != 0) :
+					echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
+				endif;
+			elseif ($params->get('show_readmore_title', 0) == 0) :
+				echo JText::sprintf('COM_CONTENT_READ_MORE_TITLE');
+			else :
+				echo JText::_('COM_CONTENT_READ_MORE');
+				echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
+			endif; ?></a>
+	</p>
 	<?php endif; ?>
 
 	<?php if ($this->item->state == 0) : ?>
