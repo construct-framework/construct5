@@ -30,7 +30,7 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 		//Otherwise get one from the database if it exists. ?>
 			<?php  if ($this->parent->description) : ?>
 				<section class="category-desc base-desc">
-					<?php  echo JHtml::_('content.prepare', $this->parent->description), '', 'com_contact.categories'); ?>
+					<?php  echo JHtml::_('content.prepare', $this->parent->description, '', 'com_contact.categories'); ?>
 				</section>
 			<?php  endif; ?>
 		<?php  endif; ?>	
