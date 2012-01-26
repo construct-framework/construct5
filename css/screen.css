@@ -717,9 +717,8 @@ isindex,
     list-style: none;
 }
 
-.breadcrumbs li,
-.breadcrumbs img {
-    display: inline-block;
+.breadcrumbs li {
+    display: inline;
     margin: 0;
 }
 
