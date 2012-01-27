@@ -42,8 +42,8 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 
 		<?php if ($params->get('show_title')) : ?>
 	    <h2>
-		    <?php if ($params->get('link_titles') && !empty($this->item->readmore_link)) : ?>
-		    <a href="<?php echo $this->item->readmore_link; ?>">
+			<?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
+			<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid)); ?>">
 			    <?php echo htmlspecialchars($this->item->title); ?>
 		    </a>
 		    <?php else : ?>
