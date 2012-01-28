@@ -88,7 +88,7 @@ button,
 input,
 select,
 textarea {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: sans-serif;
 }
 
 /* =============================================================================
@@ -252,7 +252,8 @@ li {
 
 nav ul,
 nav ol {
-	list-style: none none;
+    list-style: none;
+    list-style-image: none;
 }
 
 /* =============================================================================
