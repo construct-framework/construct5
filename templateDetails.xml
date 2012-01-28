@@ -14,7 +14,7 @@
 		.panel {background: #ddd;
 		background-image: -moz-linear-gradient(100% 100% 90deg, rgba(225,225,225,1), rgba(255,255,255,1));
 		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,1)), to(rgba(225,225,225,1)));
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dddddd');gr
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dddddd');
 		-moz-border-radius: 2px 12px 2px 2px;
 		-webkit-border-radius: 2px 12px 2px 2px;
 		border-radius: 2px 12px 2px 2px;

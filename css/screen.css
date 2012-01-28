@@ -79,7 +79,7 @@ body {
     margin: 0;
 }
 
-/* 
+/*
  * Addresses font-family inconsistency between 'textarea' and other form elements.
  */
 
@@ -252,8 +252,7 @@ li {
 
 nav ul,
 nav ol {
-    list-style: none;
-    list-style-image: none;
+    list-style: none none;
 }
 
 /* =============================================================================
@@ -272,7 +271,7 @@ img {
 }
 
 /*
- * Corrects overflow displayed oddly in IE9 
+ * Corrects overflow displayed oddly in IE9
  */
 
 svg:not(:root) {
@@ -429,7 +428,7 @@ textarea {
    Tables
    ========================================================================== */
 
-/* 
+/*
  * Remove most spacing between table cells
  */
 
@@ -1050,7 +1049,7 @@ ul.menu-horizontal li {
     border-radius: 10px;
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
-    background-clip: padding-box; 
+    background-clip: padding-box;
     padding: 5px;
     margin: 5px;
 }
@@ -1456,10 +1455,10 @@ nav ul.menu ul ul{
  * nav ul li:hover ul{display:block;}
  * Flip last item to keep witin area
  */
- 
+
 /* =============================================================================
    Third Level Centered Suckerfish
-   ========================================================================== */  
+   ========================================================================== */
 /*
  * nav ul li:hover ul li ul {display: none;}
  * nav ul li:hover ul li a,
@@ -1468,7 +1467,7 @@ nav ul.menu ul ul{
 
 /* =============================================================================
    suckerfish functionality
-   ========================================================================== */    
+   ========================================================================== */
 ul.menu li:hover ul ul,
 ul.menu ul li:hover ul ul,
 ul.menu ul ul li:hover ul ul,
@@ -1569,3 +1568,4 @@ html,
 #dm_docs .dm_row .dm_description p {
     margin-bottom: 0;
 }
+
