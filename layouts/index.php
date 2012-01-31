@@ -306,13 +306,13 @@
 									<?php endif; ?>
 									
 									<?php if ($this->countModules('content-below-5')) : ?>
-										<div id="content-below-5" class="<?php echo $contentAboveClass ?>">
+										<div id="content-below-5" class="<?php echo $contentBelowClass ?>">
 											<jdoc:include type="modules" name="content-below-5" style="div" module-class="gutter" />
 										</div><!-- end content-below-5 -->
 									<?php endif; ?>
 									
 									<?php if ($this->countModules('content-below-6')) : ?>
-										<div id="content-below-6" class="<?php echo $contentAboveClass ?>">
+										<div id="content-below-6" class="<?php echo $contentBelowClass ?>">
 											<jdoc:include type="modules" name="content-below-6" style="div" module-class="gutter" />
 										</div><!-- end content-below-6 -->
 									<?php endif; ?>									
