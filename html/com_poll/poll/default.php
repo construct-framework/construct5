@@ -13,7 +13,7 @@
 
 <section class="poll<?php echo htmlspecialchars($this->params->get('pageclass_sfx')); ?>">
 
-	<?php JHTML::_('stylesheet', 'poll_bars.css', 'components/com_poll/assets/'); ?>
+	<?php JHtml::_('stylesheet', 'poll_bars.css', 'components/com_poll/assets/'); ?>
 	
 	<?php if ($this->params->get('show_page_title',1)) : ?>
 	<header>

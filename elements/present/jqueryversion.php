@@ -39,7 +39,7 @@ class JElementJqueryversion extends JElement
 		$options[]	= JHtml::_('select.option', 'https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js', '1.2.6');
 		$options[]	= JHtml::_('select.option', 'https://ajax.googleapis.com/ajax/libs/jquery/1.2.0/jquery.min.js', '1.2.0');
         
-        return JHTML::_('select.genericlist',  $options, ''.$control_name.'['.$name.']', '', 'value', 'text', $value, $control_name.$name);
+        return JHtml::_('select.genericlist',  $options, ''.$control_name.'['.$name.']', '', 'value', 'text', $value, $control_name.$name);
 
     }
 }

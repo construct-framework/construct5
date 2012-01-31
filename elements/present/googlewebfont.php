@@ -353,7 +353,7 @@ class JElementGooglewebfont extends JElement
 		$options[]	= JHtml::_('select.option', 'Yeseva+One', 'Yeseva One');
 		$options[]	= JHtml::_('select.option', 'Zeyada', 'Zeyada');
 
-        return JHTML::_('select.genericlist',  $options, ''.$control_name.'['.$name.']', '', 'value', 'text', $value, $control_name.$name);
+        return JHtml::_('select.genericlist',  $options, ''.$control_name.'['.$name.']', '', 'value', 'text', $value, $control_name.$name);
 
     }
 }

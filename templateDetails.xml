@@ -2,13 +2,13 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <install version="1.6" type="template" client="site" method="upgrade">
 	<name>construct5-pro</name>
-	<creationDate>January 7th, 2012</creationDate>
+	<creationDate>January 27th, 2012</creationDate>
 	<author>Cristina Solana | Matt Thomas</author>
 	<authorEmail>support@construct-framework.com</authorEmail>
 	<authorUrl>http://construct-framework.com</authorUrl>
 	<copyright>Copyright (C) 2009 - 2012 Matt Thomas. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<version>2.5.5</version>
+	<version>2.5.7</version>
 	<description><![CDATA[
 	<style type="text/css">
 		.panel {background: #ddd;
@@ -178,6 +178,7 @@
 					<option value="0">No</option>
 				</field>
 				<field name="customStyleSheet" type="filelist" default="example.css" label="TPL_CONSTRUCT5_PRO_CUSTOM_STYLE_SHEET_LABEL" directory="templates/construct5-pro/css" filter="\.css" exclude="core-classes-ids\.css|diagnostic\.css|editor\.css|modal\.css|normal\.css|print\.css|rtl\.css|screen\.css|ie6\.css|wireframe\.css|mobile\.css|mobile\.css" description="TPL_CONSTRUCT5_PRO_CUSTOM_STYLE_SHEET_DESC" />
+				<field name="gridSystem" type="filelist" default="construct.css" label="TPL_CONSTRUCT5_PRO_GRID_SYSTEM_LABEL" directory="templates/construct5-pro/css/grids" filter="\.css" description="TPL_CONSTRUCT5_PRO_GRID_SYSTEM_DESC" />
 				<field name="setGeneratorTag" type="text" default="Construct Framework | http://Construct-Framework.com" label="Generator Meta Tag" description="Customize the generator meta tag output by your template." size="56" />
 			</fieldset>
 			<fieldset name="IE">
@@ -204,7 +205,6 @@
 				<field name="loadjQuery" type="jqueryversion" default="" label="TPL_CONSTRUCT5_PRO_LOAD_JQUERY_LABEL" description="TPL_CONSTRUCT5_PRO_LOAD_JQUERY_DESC" />
 			</fieldset>
 			<fieldset name="Layout">
-				<field name="gridSystem" type="filelist" default="construct.css" label="TPL_CONSTRUCT5_PRO_GRID_SYSTEM_LABEL" directory="templates/construct5-pro/css/grids" filter="\.css" description="TPL_CONSTRUCT5_PRO_GRID_SYSTEM_DESC" />
 				<field name="siteWidth" type="text" default="80.5" label="TPL_CONSTRUCT5_PRO_SITE_WIDTH_LABEL" description="TPL_CONSTRUCT5_PRO_SITE_WIDTH_DESC" size="10" />
 				<field name="siteWidthType" type="radio" default="max-width" label="TPL_CONSTRUCT5_PRO_SITE_WIDTH_TYPE_LABEL" description="TPL_CONSTRUCT5_PRO_SITE_WIDTH_TYPE_DESC">
 					<option value="max-width">Fluid Max Width</option>
@@ -313,6 +313,7 @@
     	<option value="0">Hide</option>
     </param>
 		<param name="customStyleSheet" type="filelist" default="example.css" label="Custom style sheet" directory="templates/construct5-pro/css" filter="\.css" exclude="core-css-classes-ids\.css|diagnostic\.css|editor\.css|modal\.css|normal\.css|print\.css|rtl\.css|screen\.css|core-classes-ids\.css|ie6\.css|overrides\.css|mobile\.css|wireframe\.css" description="Name of the style sheet that contains your custom CSS declarations. Default is custom.css." />
+		<param name="gridSystem" type="filelist" default="construct.css" label="Grid System" directory="templates/construct5-pro/css/grids" filter="\.css" description="Optionally select the grid system to use. Default is Construct's standard layout. Add other grid system style sheets to templates/construct5-pro/css/grids/" />
 		<param name="setGeneratorTag" type="text" default="Construct Framework | http://Construct-Framework.com" label="Generator Meta Tag" description="Customize the generator meta tag output by your template." size="56" />
 <param type="panel" title="Internet Explorer" />
 		<param name="IECSS3" type="radio" default="1" label="Add CSS3 Support to IE" description="Enable the use of PIE (http://css3pie.com/) to add CSS3 support to Internet Explorer version 8 and before. Also adds pie_hover class to non-link items on hover. For performance reason, you must define the tagret elements below.">
@@ -336,7 +337,6 @@
 		</param>
 		<param name="loadjQuery" type="jqueryversion" default="" label="Load jQuery" description="Select the version of the jQuery JavaScript library to load, hosted by Google. jQuery will not load if no version is selected." />
 		<param type="panel" title="Layout" />
-		<param name="gridSystem" type="filelist" default="construct.css" label="Grid System" directory="templates/construct5-pro/css/grids" filter="\.css" description="Optionally select the grid system to use. Default is Construct's standard layout. Add other grid system style sheets to templates/construct5-pro/css/grids/" />
 		<param name="siteWidth" type="text" default="80.5" label="Site Width" description="Define the overall width of the layout. Enter only a number, no units, as you will choose which unit to use below." size="10" />
 		<param name="siteWidthType" type="radio" default="max-width" label="Site Width Style" description="Set whether to use a fluid max-width or fixed width layout.">
 			<option value="max-width">Fluid Max-width</option>

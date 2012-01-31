@@ -63,6 +63,6 @@
 		<input type="hidden" name="gid" value="<?php echo (int)$this->user->get('gid');?>">
 		<input type="hidden" name="option" value="com_user">
 		<input type="hidden" name="task" value="save">
-		<?php echo JHTML::_( 'form.token' ); ?>
+		<?php echo JHtml::_( 'form.token' ); ?>
 	</form>
 </section>

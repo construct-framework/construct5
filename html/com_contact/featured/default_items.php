@@ -156,19 +156,7 @@ $params = &$this->item->params;
 					<?php endif; ?>
 				</tr>
 			<?php endforeach; ?>
-
 		</tbody>
 	</table>
-
-	<?php if ($this->params->get('show_pagination')) : ?>
-	<nav class="pagination">
-		<?php if ($this->params->def('show_pagination_results', 1)) : ?>
-		<p class="counter">
-			<?php echo $this->pagination->getPagesCounter(); ?>
-		</p>
-		<?php endif; ?>
-		<?php echo $this->pagination->getPagesLinks(); ?>
-	</nav>
-	<?php endif; ?>
 </form>
 <?php endif; ?>

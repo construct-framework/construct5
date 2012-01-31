@@ -30,7 +30,7 @@ $params = $this->state->get('params');
 </script>
 
 <section class="edit<?php echo $this->pageclass_sfx; ?>">
-	<?php if ($this->params->def('show_page_heading', 1)) : ?>
+	<?php if ($this->params->get('show_page_heading', 1)) : ?>
 		<h1>
 			<?php echo htmlspecialchars($this->params->get('page_heading')); ?>
 		</h1>

@@ -32,6 +32,6 @@
 		<button type="submit" class="validate">
 			<?php echo JText::_('Submit'); ?>
 		</button>
-		<?php echo JHTML::_( 'form.token' ); ?>
+		<?php echo JHtml::_( 'form.token' ); ?>
 	</form>
 </section>

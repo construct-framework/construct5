@@ -8,7 +8,7 @@
  */
 
 // Joomla 1.6 only
-
+require_once JPATH_SITE . '/components/com_content/helpers/route.php';
 ?>
 
 <?php if ($this->params->get('show_articles')) : ?>
@@ -16,10 +16,7 @@
 	    <ol>
 		    <?php foreach ($this->item->articles as $article) :	?>
 			    <li>
-			    <?php $link = JRoute::_('index.php?option=com_content&view=article&id='.$article->id); ?>
-			    <?php echo '<a href="'.$link.'">' ?>
-				    <?php echo $article->text = htmlspecialchars($article->title, ENT_COMPAT, 'UTF-8'); ?>
-				    </a>
+					<?php echo JHtml::_('link', JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catslug)), htmlspecialchars($article->title, ENT_COMPAT, 'UTF-8')); ?>
 			    </li>
 		    <?php endforeach; ?>
 	    </ol>
