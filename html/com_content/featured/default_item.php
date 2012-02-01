@@ -28,14 +28,14 @@ $header     = $details + $this->params->get('show_page_heading') + $params->get(
 <?php endif; ?>
 
 <?php if ($params->get('show_title')) : ?>
-<h2>
+<h1>
 	<?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
 		<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid)); ?>">
 		<?php echo $this->escape($this->item->title); ?></a>
 	<?php else : ?>
 		<?php echo $this->escape($this->item->title); ?>
 	<?php endif; ?>
-</h2>
+</h1>
 <?php endif; ?>
 
 
@@ -44,9 +44,9 @@ $header     = $details + $this->params->get('show_page_heading') + $params->get(
 endif; ?>
 
 <?php if ($details) : ?>
-<h3 class="article-info-term">
+<h2 class="article-info-term">
  <?php  echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?>
-</h3>
+</h2>
 <?php endif; ?>
 
 <?php if ($params->get('show_parent_category') && $this->item->parent_slug != '1:root') : ?>

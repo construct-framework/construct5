@@ -173,6 +173,14 @@ body {
     margin: 10px;
 }
 
+header .gutter {
+	margin-top:0;
+}
+
+footer .gutter {
+	margin-bottom: 0;
+}
+
 #column-group-alpha .gutter {
     margin: 0 10px 0 0;
 }

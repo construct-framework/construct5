@@ -35,7 +35,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 	    <?php endif; ?>
 
 		<?php if ($params->get('show_title')) : ?>
-	    <h2>
+	    <h1>
 			<?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
 			<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid)); ?>">
 			    <?php echo htmlspecialchars($this->item->title); ?>
@@ -43,7 +43,7 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 		    <?php else : ?>
 		    <?php echo htmlspecialchars($this->item->title); ?>
 		    <?php endif; ?>
-	    </h2>
+	    </h1>
 		<?php endif; ?>
 
 	    <?php  if (!$params->get('show_intro')) :
@@ -51,16 +51,16 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 	    endif; ?>
 
 	    <?php if ($details) : ?>
-	    <h3 class="article-info-term">
+	    <h2 class="article-info-term">
 		    <?php  echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?>
-		</h3>
+		</h2>
 	    <?php endif; ?>
 
-	    <?php if ($params->get('show_parent_category') && $this->item->parent_slug != '1:root') : ?>
+	    <?php if ($params->get('show_parent_category') && $this->item->parent_id != 1) : ?>
 	    <h3 class="parent-category-name">
 	        <?php	$title = $this->escape($this->item->parent_title);
-	        $url = '<a href="'.JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->parent_slug)).'">'.$title.'</a>';?>
-	        <?php if ($params->get('link_parent_category') AND $this->item->parent_slug) : ?>
+	        $url = '<a href="' . JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->parent_id)) . '">' . $title . '</a>'; ?>
+	        <?php if ($params->get('link_parent_category')) : ?>
 	            <?php echo JText::sprintf('COM_CONTENT_PARENT', $url); ?>
 	        <?php else : ?>
 	            <?php echo JText::sprintf('COM_CONTENT_PARENT', $title); ?>
@@ -71,8 +71,8 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 	    <?php if ($params->get('show_category')) : ?>
 	    <h3 class="category-name">
 	        <?php 	$title = $this->escape($this->item->category_title);
-	        $url = '<a href="'.JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->catslug)).'">'.$title.'</a>';?>
-	        <?php if ($params->get('link_category') AND $this->item->catslug) : ?>
+	        $url = '<a href="' . JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->catid)) . '">' . $title . '</a>'; ?>
+	        <?php if ($params->get('link_category')) : ?>
 	            <?php echo JText::sprintf('COM_CONTENT_CATEGORY', $url); ?>
 	        <?php else : ?>
 	            <?php echo JText::sprintf('COM_CONTENT_CATEGORY', $title); ?>
