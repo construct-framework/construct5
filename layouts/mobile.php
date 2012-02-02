@@ -82,6 +82,7 @@
 		<?php endif; ?>		
 									
 		<div id="footer" data-role="footer" data-theme="<?php echo $mFooterDataTheme; ?>">
+			<a class="view-desktop" href="<?php echo JURI::current(); ?>?viewDesktop=true">View Desktop Version</a>
 			<?php if ($this->countModules('footer')) : ?>
 				<jdoc:include type="modules" name="footer" style="xhtml" />
 			<?php endif; ?>
