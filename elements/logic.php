@@ -308,7 +308,7 @@ if ($catId && ($inheritStyle || $inheritLayout)) {
 #--------------------------------- Alias ----------------------------------#
 
 if ($itemId) {
-    $currentAlias 							= JSite::getMenu()->getActive()->alias;
+    $currentAlias 							= $app->getMenu()->getActive()->alias;
 }
 
 #----------------------------- Component Name -----------------------------#
