@@ -87,24 +87,23 @@ if ( $isOnward && $loadMoo ) {
 }
 
 // Behavior.mootools is depreciated and may be removed after 1.6
-if ( $isPresent && $loadMoo ) {	
+if ( $isPresent && $loadMoo ) {
 	JHtml::_('behavior.mootools');
 }
 
 // Enable modal pop-ups
-if ( $loadMoo && $loadModal ) {	
+if ( $loadMoo && $loadModal ) {
 	JHtml::_('behavior.modal');
 }
 
 // Remove MooTools if set to no.
 if ( !$loadMoo ) {
-	$head=$this->getHeadData();
-	reset($head['scripts']);
-	unset($head['scripts'][$this->baseurl . '/media/system/js/mootools.js']);
-	unset($head['scripts'][$this->baseurl . '/plugins/system/mtupgrade/mootools.js']);
-	unset($head['scripts'][$this->baseurl . '/media/system/js/mootools-core.js']);
-	unset($head['scripts'][$this->baseurl . '/media/system/js/mootools-more.js']);		
-	$this->setHeadData($head);
+    unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-core.js']);
+    unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-more.js']);
+    unset($doc->_scripts[$this->baseurl.'/media/system/js/core.js']);
+    unset($doc->_scripts[$this->baseurl.'/media/system/js/caption.js']);
+    unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools.js']);
+    unset($doc->_scripts[$this->baseurl.'/plugins/system/mtupgrade/mootools.js']);
 }
 
 // Change Google Web Font name for CSS
@@ -210,7 +209,7 @@ $columnGroupBetaCount = $column3Count + $column4Count;
 if ($columnGroupBetaCount) : $columnGroupBetaClass = 'count-'.$columnGroupBetaCount; endif;
 
 $columnLayout= 'main-only';
-	
+
 if (($columnGroupAlphaCount > 0 ) && ($columnGroupBetaCount == 0)) :
 	$columnLayout = 'alpha-'.$columnGroupAlphaCount.'-main';
 elseif (($columnGroupAlphaCount > 0) && ($columnGroupBetaCount > 0)) :
@@ -218,14 +217,14 @@ elseif (($columnGroupAlphaCount > 0) && ($columnGroupBetaCount > 0)) :
 elseif (($columnGroupAlphaCount == 0) && ($columnGroupBetaCount > 0)) :
 	$columnLayout = 'main-beta-'.$columnGroupBetaCount;
 endif;
-	
+
 #-------------------------------- Item ID ---------------------------------#
 
 $itemId = JRequest::getInt('Itemid', 0);
 
 #------------------------------- Article ID -------------------------------#
 
-if ($view == 'article') 
+if ($view == 'article')
 $articleId = JRequest::getInt('id');
 else ($articleId = NULL);
 
@@ -249,9 +248,9 @@ function getSection($id) {
 			$sql = "SELECT sectionid FROM #__content WHERE id = ".$temp[0];
 			$database->setQuery( $sql );
 			return $database->loadResult();
-		}		
+		}
 	}
-	
+
 $sectionId = getSection(JRequest::getInt('id'));
 
 #------------------------------ Category ID -------------------------------#
@@ -263,34 +262,34 @@ function getCategory($id) {
 		}
 	  elseif((JRequest::getCmd('view', 0) == "category") || (JRequest::getCmd('view', 0) == "categories")) {
 			return $id;
-		}		
+		}
 	  elseif(JRequest::getCmd('view', 0) == "article") {
 			$temp = explode(":",$id);
 			$sql = "SELECT catid FROM #__content WHERE id = ".$temp[0];
 			$database->setQuery( $sql );
 			return $database->loadResult();
-		}		
+		}
 	}
-	
+
 $catId = getCategory(JRequest::getInt('id'));
 
 #------------------------- Ancestor Category IDs --------------------------#
 
 if ($catId && ($inheritStyle || $inheritLayout)) {
-	
+
 	function getParentCategory($id) {
-		$database = JFactory::getDBO();	
-		$sql = "SELECT parent_id 
-		FROM #__categories 
+		$database = JFactory::getDBO();
+		$sql = "SELECT parent_id
+		FROM #__categories
 		WHERE id = $id";
 		$database->setQuery( $sql );
 		return $database->loadResult();
 	}
-	
+
 	$parentCategory = getParentCategory($catId);
 
 	function getAncestorCategories($id) {
-		$database = JFactory::getDBO();	
+		$database = JFactory::getDBO();
 		$sql = "SELECT b.id, b.title
 		FROM #__categories a,
 		#__categories b
@@ -300,9 +299,9 @@ if ($catId && ($inheritStyle || $inheritLayout)) {
 		AND a.id <> b.id
 		AND b.lft > 0";
 		$database->setQuery( $sql );
-		return $database->loadObjectList();		
+		return $database->loadObjectList();
 	}
-	
+
 }
 
 #--------------------------------- Alias ----------------------------------#
@@ -329,16 +328,16 @@ $styleOverride->includeFile[] 				= $template.'/css/item/item-'.$itemId.'.css';
 $styleOverride->includeFile[] 				= $template.'/css/category/'.$overrideTheme.'-category-'.$catId.'.css';
 $styleOverride->includeFile[] 				= $template.'/css/category/category-'.$catId.'.css';
 if ($isOnward && $catId && $inheritStyle) {
-	$styleOverride->includeFile[] 			= $template.'/css/category/category-'.$parentCategory.'.css';	
+	$styleOverride->includeFile[] 			= $template.'/css/category/category-'.$parentCategory.'.css';
 
 	$results 								= getAncestorCategories($catId);
 	if (count($results) > 0) {
-		foreach ($results as $result) {			
+		foreach ($results as $result) {
 			$styleOverride->includeFile[] 	= $template.'/css/category/category-'.$result->id.'.css';
 		}
-	}				
+	}
 }
-if ($view == 'category') {						
+if ($view == 'category') {
 	$styleOverride->includeFile[] 			= $template.'/css/category/category.css';
 }
 if ($view == 'categories') {
@@ -368,34 +367,34 @@ $layoutOverride 							= new ConstructTemplateHelper ();
 
 $layoutOverride->includeFile 				= array ();
 
-$layoutOverride->includeFile[] 				= $template.'/layouts/article/'.$overrideTheme.'-article-'.$articleId.'.php';	
-$layoutOverride->includeFile[] 				= $template.'/layouts/article/article-'.$articleId.'.php';	
-$layoutOverride->includeFile[] 				= $template.'/layouts/article/article.php';	
-$layoutOverride->includeFile[] 				= $template.'/layouts/item/'.$overrideTheme.'-item-'.$itemId.'.php';	
-$layoutOverride->includeFile[] 				= $template.'/layouts/item/item-'.$itemId.'.php';	
-$layoutOverride->includeFile[] 				= $template.'/layouts/category/'.$overrideTheme.'-category-'.$catId.'.php';	
+$layoutOverride->includeFile[] 				= $template.'/layouts/article/'.$overrideTheme.'-article-'.$articleId.'.php';
+$layoutOverride->includeFile[] 				= $template.'/layouts/article/article-'.$articleId.'.php';
+$layoutOverride->includeFile[] 				= $template.'/layouts/article/article.php';
+$layoutOverride->includeFile[] 				= $template.'/layouts/item/'.$overrideTheme.'-item-'.$itemId.'.php';
+$layoutOverride->includeFile[] 				= $template.'/layouts/item/item-'.$itemId.'.php';
+$layoutOverride->includeFile[] 				= $template.'/layouts/category/'.$overrideTheme.'-category-'.$catId.'.php';
 $layoutOverride->includeFile[] 				= $template.'/layouts/category/category-'.$catId.'.php';
 if ($isOnward && $catId && $inheritLayout) {
-	$layoutOverride->includeFile[] 			= $template.'/layouts/category/category-'.$parentCategory.'.php';	
+	$layoutOverride->includeFile[] 			= $template.'/layouts/category/category-'.$parentCategory.'.php';
 
 	$results 								= getAncestorCategories($catId);
 	if (count($results) > 0) {
-		foreach ($results as $result) {			
+		foreach ($results as $result) {
 			$layoutOverride->includeFile[] 	= $template.'/layouts/category/category-'.$result->id.'.php';
 		}
-	}				
+	}
 }
-if ($view == 'category') {						
+if ($view == 'category') {
 	$layoutOverride->includeFile[] 			= $template.'/layouts/category/category.php';
 }
 if ($view == 'categories') {
 	$layoutOverride->includeFile[]			= $template.'/layouts/category/categories.php';
 }
-$layoutOverride->includeFile[] 				= $template.'/layouts/section/'.$overrideTheme.'-section-'.$sectionId.'.php';	
-$layoutOverride->includeFile[] 				= $template.'/layouts/section/section-'.$sectionId.'.php';	
-$layoutOverride->includeFile[] 				= $template.'/layouts/section/section.php';	
-$layoutOverride->includeFile[] 				= $template.'/layouts/component/'.$overrideTheme.'-'.$currentComponent.'.php';	
-$layoutOverride->includeFile[] 				= $template.'/layouts/component/'.$currentComponent.'.php';	
+$layoutOverride->includeFile[] 				= $template.'/layouts/section/'.$overrideTheme.'-section-'.$sectionId.'.php';
+$layoutOverride->includeFile[] 				= $template.'/layouts/section/section-'.$sectionId.'.php';
+$layoutOverride->includeFile[] 				= $template.'/layouts/section/section.php';
+$layoutOverride->includeFile[] 				= $template.'/layouts/component/'.$overrideTheme.'-'.$currentComponent.'.php';
+$layoutOverride->includeFile[] 				= $template.'/layouts/component/'.$currentComponent.'.php';
 $layoutOverride->includeFile[] 				= $template.'/layouts/'.$overrideTheme.'-index.php';
 $layoutOverride->includeFile[] 				= $template.'/layouts/index.php';
 
@@ -451,7 +450,7 @@ if ($enableSwitcher) {
 	$doc->addCustomTag('<link rel="alternate stylesheet" href="'.$template.'/css/diagnostic.css" type="text/css" media="screen" title="diagnostic" />');
 	$doc->addCustomTag('<link rel="alternate stylesheet" href="'.$template.'/css/wireframe.css" type="text/css" media="screen" title="wireframe" />');
 	$doc->addScript($template.'/js/styleswitch.js');
-} 	
+}
 
 // Typography
 if ($googleWebFont) {
@@ -521,3 +520,4 @@ if($IE6TransFix) {
 	$doc->addCustomTag("\n".'  <script type="text/javascript">DD_belatedPNG.fix(\''.$IE6TransFixTargets.'\');</script>');
 }
 $doc->addCustomTag('<![endif]-->');
+
