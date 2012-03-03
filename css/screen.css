@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/*! normalize.css 2011-09-14T10:27 UTC - http://github.com/necolas/normalize.css */
+/*! normalize.css 2012-02-07T12:37 UTC - http://github.com/necolas/normalize.css */
 
 /* =============================================================================
    HTML5 display definitions
@@ -19,7 +19,8 @@ footer,
 header,
 hgroup,
 nav,
-section {
+section,
+summary {
     display: block;
 }
 
@@ -52,6 +53,7 @@ audio:not([controls]) {
     display: none;
 }
 
+
 /* =============================================================================
    Base
    ========================================================================== */
@@ -59,16 +61,26 @@ audio:not([controls]) {
 /*
  * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
  *    http://clagnut.com/blog/348/#c790
- * 2. Keeps page centred in all browsers regardless of content height
- * 3. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
  *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
  */
 
 html {
     font-size: 100%; /* 1 */
-    overflow-y: scroll; /* 2 */
-    -webkit-text-size-adjust: 100%; /* 3 */
-    -ms-text-size-adjust: 100%; /* 3 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+
+/*
+ * Addresses font-family inconsistency between 'textarea' and other form elements.
+ */
+
+html,
+button,
+input,
+select,
+textarea {
+    font-family: sans-serif;
 }
 
 /*
@@ -79,29 +91,10 @@ body {
     margin: 0;
 }
 
-/*
- * Addresses font-family inconsistency between 'textarea' and other form elements.
- */
-
-body,
-button,
-input,
-select,
-textarea {
-    font-family: sans-serif;
-}
 
 /* =============================================================================
    Links
    ========================================================================== */
-
-a {
-    color: #00e;
-}
-
-a:visited {
-    color: #551a8b;
-}
 
 /*
  * Addresses outline displayed oddly in Chrome
@@ -121,6 +114,7 @@ a:active {
     outline: 0;
 }
 
+
 /* =============================================================================
    Typography
    ========================================================================== */
@@ -134,8 +128,8 @@ abbr[title] {
 }
 
 /*
- * Addresses style set to 'bolder' in FF3/4, S4/5, Chrome
- */
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+*/
 
 b,
 strong {
@@ -250,6 +244,10 @@ li {
     margin-left: 1em;
 }
 
+/*
+ * Corrects list images handled incorrectly in IE7
+ */
+
 nav ul,
 nav ol {
     list-style: none none;
@@ -314,17 +312,20 @@ fieldset {
 
 /*
  * 1. Corrects color not being inherited in IE6/7/8/9
- * 2. Corrects alignment displayed oddly in IE6/7
+ * 2. Corrects text not wrapping in FF3
+ * 3. Corrects alignment displayed oddly in IE6/7
  */
 
 legend {
     border: 0; /* 1 */
-    *margin-left: -7px; /* 2 */
+    padding: 0;
+    white-space: normal; /* 2 */
+    *margin-left: -7px; /* 3 */
 }
 
 /*
  * 1. Corrects font size not being inherited in all browsers
- * 2. Addresses margins set differently in IE6/7, FF3/4, S5, Chrome
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
  * 3. Improves appearance and consistency in all browsers
  */
 
@@ -339,29 +340,19 @@ textarea {
 }
 
 /*
- * 1. Addresses FF3/4 setting line-height using !important in the UA stylesheet
- * 2. Corrects inner spacing displayed oddly in IE6/7
+ * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
  */
 
 button,
 input {
     line-height: normal; /* 1 */
-    *overflow: visible; /* 2 */
-}
-
-/*
- * Corrects overlap and whitespace issue for buttons and inputs in IE6/7
- * Known issue: reintroduces inner spacing
- */
-
-table button,
-table input {
-    *overflow: auto;
 }
 
 /*
  * 1. Improves usability and consistency of cursor style between image-type 'input' and others
  * 2. Corrects inability to style clickable 'input' types in iOS
+ * 3. Removes inner spacing in IE7 without affecting normal text inputs
+ *    Known issue: inner spacing remains in IE6
  */
 
 button,
@@ -370,22 +361,36 @@ input[type="reset"],
 input[type="submit"] {
     cursor: pointer; /* 1 */
     -webkit-appearance: button; /* 2 */
+    *overflow: visible;  /* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+
+button[disabled],
+input[disabled] {
+    cursor: default;
 }
 
 /*
  * 1. Addresses box sizing set to content-box in IE8/9
- * 2. Addresses excess padding in IE8/9
+ * 2. Removes excess padding in IE8/9
+ * 3. Removes excess padding in IE7
+      Known issue: excess padding remains in IE6
  */
 
 input[type="checkbox"],
 input[type="radio"] {
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
 }
 
 /*
  * 1. Addresses appearance set to searchfield in S5, Chrome
- * 2. Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof)
+ * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
  */
 
 input[type="search"] {
@@ -396,15 +401,16 @@ input[type="search"] {
 }
 
 /*
- * Corrects inner padding displayed oddly in S5, Chrome on OSX
+ * Removes inner padding and search cancel button in S5, Chrome on OS X
  */
 
-input[type="search"]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: none;
 }
 
 /*
- * Corrects inner padding and border displayed oddly in FF3/4
+ * Removes inner padding and border in FF3+
  * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
  */
 
@@ -423,6 +429,8 @@ textarea {
     overflow: auto; /* 1 */
     vertical-align: top; /* 2 */
 }
+
+/*! end normalize.css 2012-02-07T12:37 UTC - http://github.com/necolas/normalize.css */
 
 /* =============================================================================
    Tables
@@ -447,11 +455,7 @@ body {
     font-family: Helvetica,Arial,FreeSans,sans-serif;
 }
 
-a,
-a:link,
-a:visited,
-a:focus,
-a:active {
+a {
     text-decoration: none;
 }
 
@@ -1222,9 +1226,7 @@ header {
     margin: 0;
 }
 
-#logo a:link,
-#logo a:visited,
-#logo a:hover {
+#logo a {
     background: url(../images/logo.png) 0 0 no-repeat;
     display: block;
     width: 300px;
