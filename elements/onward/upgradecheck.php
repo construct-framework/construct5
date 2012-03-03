@@ -22,7 +22,7 @@ class JFormFieldUpgradecheck extends JFormField {
 		if(!function_exists("curl_init")) return 'cURL is not supported by your server. Please contact your hosting provider to enable this capability.';
 		//If cURL is supported, check the current version available.
 		else
-				$version = 10;
+				$version = 11;
 				$target = 'http://construct-framework.com/upgradecheck/construct5-pro';
 				$curl = curl_init();
 				curl_setopt($curl, CURLOPT_URL, $target);
