@@ -10,9 +10,7 @@
 if (substr(JVERSION, 0, 3) >= '1.6') {
 // Joomla! 1.6+
 
-	//Access template parameters
-	$templateParams = JFactory::getApplication()->getTemplate(true)->params; 
-	$outputType = $templateParams->get('coreOutput');
+	JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 	?>
 
 	<section class="category-list<?php echo $this->pageclass_sfx;?>">
