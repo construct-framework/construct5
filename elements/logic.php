@@ -14,8 +14,6 @@ if (JFile::exists(dirname(__FILE__).'/helper.php')) {
 
 // To enable use of site configuration
 $app 					= JFactory::getApplication();
-// Get the base URL of the website
-$baseUrl 				= JURI::base();
 // Returns a reference to the global document object
 $doc 					= JFactory::getDocument();
 // Is version 1.6 and later
@@ -23,9 +21,9 @@ $isOnward = (substr(JVERSION, 0, 3) >= '1.6');
 // Is version 1.5
 $isPresent = (substr(JVERSION, 0, 3) == '1.5');
 // Define relative path to the  current template directory
-$template 				= 'templates/'.$this->template;
+$template 				= 'templates/' . $this->template;
 // Define absolute path to the template directory
-$templateDir			= JPATH_THEMES.'/'.$this->template;
+$templateDir			= JPATH_THEMES.'/' . $this->template;
 // Get the current URL
 $url 					= clone(JURI::getInstance());
 // To access the current user object
@@ -74,9 +72,9 @@ $stickyFooterHeight		= htmlspecialchars($this->params->get('stickyFooterHeight')
 $useStickyFooter 		= $this->params->get('useStickyFooter');
 
 // Define absolute paths to files
-$mdetectFile 			= JPATH_THEMES.'/'.$this->template.'/elements/mdetect.php';
-$mTemplate				= JPATH_THEMES.'/'.$this->template.'/mobile.php';
-$alternatemTemplate		= JPATH_THEMES.'/'.$this->template.'/layouts/mobile.php';
+$mdetectFile 			= JPATH_THEMES.'/'. $this->template .'/elements/mdetect.php';
+$mTemplate				= JPATH_THEMES.'/'. $this->template .'/mobile.php';
+$alternatemTemplate		= JPATH_THEMES.'/'. $this->template .'/layouts/mobile.php';
 
 // Change generator tag
 $this->setGenerator($setGeneratorTag);
@@ -98,12 +96,12 @@ if ( $loadMoo && $loadModal ) {
 
 // Remove MooTools if set to no.
 if ( !$loadMoo ) {
-    unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-core.js']);
-    unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-more.js']);
-    unset($doc->_scripts[$this->baseurl.'/media/system/js/core.js']);
-    unset($doc->_scripts[$this->baseurl.'/media/system/js/caption.js']);
-    unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools.js']);
-    unset($doc->_scripts[$this->baseurl.'/plugins/system/mtupgrade/mootools.js']);
+    unset($doc->_scripts[$this->baseurl . '/media/system/js/mootools-core.js']);
+    unset($doc->_scripts[$this->baseurl . '/media/system/js/mootools-more.js']);
+    unset($doc->_scripts[$this->baseurl . '/media/system/js/core.js']);
+    unset($doc->_scripts[$this->baseurl . '/media/system/js/caption.js']);
+    unset($doc->_scripts[$this->baseurl . '/media/system/js/mootools.js']);
+    unset($doc->_scripts[$this->baseurl . '/plugins/system/mtupgrade/mootools.js']);
 }
 
 // Change Google Web Font name for CSS
@@ -496,7 +494,7 @@ if ($useStickyFooter) {
 $doc->addCustomTag("\n".'  <!--[if lt IE 9]>');
 $doc->addCustomTag("\n".'  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>');
 if ($IECSS3) {
-  $doc->addCustomTag("\n".'  <style type="text/css">'.$IECSS3Targets.' {behavior:url("'.$baseUrl.'templates/'.$this->template.'/js/PIE.htc")}</style>');
+  $doc->addCustomTag("\n".'  <style type="text/css">'.$IECSS3Targets.' {behavior:url("'. $this->baseurl . '/templates/'. $this->template .'/js/PIE.htc")}</style>');
 }
 $doc->addCustomTag('<![endif]-->');
 
