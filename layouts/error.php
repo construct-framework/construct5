@@ -12,7 +12,7 @@
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="<?php echo substr($this->language, 0, 2) ?>"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="<?php echo substr($this->language, 0, 2) ?>"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="<?php echo substr($this->language, 0, 2) ?>"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="<?php echo substr($this->language, 0, 2) ?>"> <!--<![endif]-->
+<!--[if gt IE 8]> <!--> <html class="no-js" lang="<?php echo substr($this->language, 0, 2) ?>"> <!--<![endif]-->
 <head>
   <meta name="copyright" content="<?php echo htmlspecialchars($app->getCfg('sitename')) ?>" />
   <link rel="shortcut icon" href="<?php echo $this->baseurl . '/templates/' . $this->template ?>/favicon.ico" type="image/x-icon" />
