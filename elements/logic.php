@@ -467,55 +467,55 @@ if ($googleWebFont3) {
 // JavaScript
 
 //Quick port of Modernizer's method of replacing "no-js" HTML class with "js" - NOTE: removes all other classes added to HTML element
-$doc->addCustomTag("\n".'  <script type="text/javascript">docElement = document.documentElement;docElement.className = docElement.className.replace(/\bno-js\b/, \'js\');</script>');
+$doc->addCustomTag('<script type="text/javascript">docElement = document.documentElement;docElement.className = docElement.className.replace(/\bno-js\b/, \'js\');</script>');
 
-$doc->addCustomTag("\n".'  <script type="text/javascript">window.addEvent(\'domready\',function(){new SmoothScroll({duration:1200},window);});</script>');
+$doc->addCustomTag('<script type="text/javascript">window.addEvent(\'domready\',function(){new SmoothScroll({duration:1200},window);});</script>');
 if ($loadjQuery) {
-	$doc->addCustomTag("\n".'  <script type="text/javascript" src="'.$loadjQuery.'"></script>');
-	$doc->addCustomTag("\n".'  <script type="text/javascript">jQuery.noConflict();</script>');
+	$doc->addCustomTag('<script type="text/javascript" src="'.$loadjQuery.'"></script>');
+	$doc->addCustomTag('<script type="text/javascript">jQuery.noConflict();</script>');
 }
 
 // Layout Declarations
 if ($siteWidth) {
-	$doc->addStyleDeclaration("\n".'  #body-container, #header-above {'.$siteWidthType.':'.$siteWidth.$siteWidthUnit.';}');
+	$doc->addStyleDeclaration('#body-container, #header-above {'.$siteWidthType.':'.$siteWidth.$siteWidthUnit.';}');
 }
 if (($siteWidthType == 'max-width') && $fluidMedia ) {
-	$doc->addStyleDeclaration("\n".'  img, object {max-width:100%;}');
+	$doc->addStyleDeclaration('img, object {max-width:100%;}');
 }
 if (!$fullWidth) {
-	$doc->addStyleDeclaration("\n".'  #header, #footer {'.$siteWidthType.':'.$siteWidth.$siteWidthUnit.'; margin:0 auto;}');
+	$doc->addStyleDeclaration('#header, #footer {'.$siteWidthType.':'.$siteWidth.$siteWidthUnit.'; margin:0 auto;}');
 }
 if ($useStickyFooter) {
-	$doc->addStyleDeclaration("\n".'  .sticky-footer #body-container {padding-bottom:'.$stickyFooterHeight.'px;}');
-	$doc->addStyleDeclaration("\n".'  .sticky-footer #footer {margin-top:-'.$stickyFooterHeight.'px;height:'.$stickyFooterHeight.'px;}');
+	$doc->addStyleDeclaration('.sticky-footer #body-container {padding-bottom:'.$stickyFooterHeight.'px;}');
+	$doc->addStyleDeclaration('.sticky-footer #footer {margin-top:-'.$stickyFooterHeight.'px;height:'.$stickyFooterHeight.'px;}');
 }
 
 // Internet Explorer Fixes
-$doc->addCustomTag("\n".'  <!--[if lt IE 9]>');
-$doc->addCustomTag("\n".'  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>');
+$doc->addCustomTag('<!--[if lt IE 9]>');
+$doc->addCustomTag('<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>');
 if ($IECSS3) {
-  $doc->addCustomTag("\n".'  <style type="text/css">'.$IECSS3Targets.' {behavior:url("'. $this->baseurl . '/templates/'. $this->template .'/js/PIE.htc")}</style>');
+  $doc->addCustomTag('<style type="text/css">'.$IECSS3Targets.' {behavior:url("'. $this->baseurl . '/templates/'. $this->template .'/js/PIE.htc")}</style>');
 }
 $doc->addCustomTag('<![endif]-->');
 
 // Internet Explorer 6 Fixes
-$doc->addCustomTag("\n".'  <!--[if lt IE 7]>');
-$doc->addCustomTag("\n".'  <link rel="stylesheet" href="'.$template.'/css/ie6.css" type="text/css" media="screen" />');
-$doc->addCustomTag("\n".'  <style type="text/css">');
-$doc->addCustomTag("\n".'  body {text-align:center;}');
-$doc->addCustomTag("\n".'  #body-container {text-align:left;}');
+$doc->addCustomTag('<!--[if lt IE 7]>');
+$doc->addCustomTag('<link rel="stylesheet" href="'.$template.'/css/ie6.css" type="text/css" media="screen" />');
+$doc->addCustomTag('<style type="text/css">');
+$doc->addCustomTag('body {text-align:center;}');
+$doc->addCustomTag('#body-container {text-align:left;}');
 if ($useStickyFooter) {
-	$doc->addCustomTag("\n".'  body.sticky-footer #footer-push {display:table;height:100%;}');
+	$doc->addCustomTag('body.sticky-footer #footer-push {display:table;height:100%;}');
 }
 if(!$fullWidth){
-	$doc->addCustomTag("\n".'  #body-container, #header-above, #header, #footer {width: expression( document.body.clientWidth >'.($siteWidth -1).' ? "'.$siteWidth.$siteWidthUnit.'" : "auto" );margin:0 auto;}');
+	$doc->addCustomTag('#body-container, #header-above, #header, #footer {width: expression( document.body.clientWidth >'.($siteWidth -1).' ? "'.$siteWidth.$siteWidthUnit.'" : "auto" );margin:0 auto;}');
 } else {
-	$doc->addCustomTag("\n".'  #body-container, #header-above {width: expression( document.body.clientWidth >'.($siteWidth -1).' ? "'.$siteWidth.$siteWidthUnit.'" : "auto" );margin:0 auto;}');
+	$doc->addCustomTag('#body-container, #header-above {width: expression( document.body.clientWidth >'.($siteWidth -1).' ? "'.$siteWidth.$siteWidthUnit.'" : "auto" );margin:0 auto;}');
 }
-$doc->addCustomTag("\n".'  </style>');
+$doc->addCustomTag('</style>');
 if($IE6TransFix) {
-	$doc->addCustomTag("\n".'  <script type="text/javascript" src="'.$template.'/js/DD_belatedPNG_0.0.8a-min.js"></script>');
-	$doc->addCustomTag("\n".'  <script type="text/javascript">DD_belatedPNG.fix(\''.$IE6TransFixTargets.'\');</script>');
+	$doc->addCustomTag('<script type="text/javascript" src="'.$template.'/js/DD_belatedPNG_0.0.8a-min.js"></script>');
+	$doc->addCustomTag('<script type="text/javascript">DD_belatedPNG.fix(\''.$IE6TransFixTargets.'\');</script>');
 }
 $doc->addCustomTag('<![endif]-->');
 

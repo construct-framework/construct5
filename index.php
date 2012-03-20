@@ -41,8 +41,8 @@ if ((( $mdetect && $isMobile ) || ( $mdetect && $detectTablets && $isTablet )) &
 } // Check for layout override
 elseif ($results) {
 	$alternateIndexFile = $results;
-	include_once $alternateIndexFile;	
-} else {	
+	include_once $alternateIndexFile;
+} else {
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="<?php echo substr($this->language, 0, 2) ?>"> <![endif]-->

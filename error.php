@@ -117,32 +117,32 @@ else {
 } ?>  
 <?php	
 	if ($customStyleSheet !='-1')
-		echo "\n".'  <link rel="stylesheet" href="'. $this->baseurl . '/templates/'. $this->template .'/css/'.$customStyleSheet.'"  type="text/css" media="screen" />';
+		echo '<link rel="stylesheet" href="'. $this->baseurl . '/templates/'. $this->template .'/css/'.$customStyleSheet.'"  type="text/css" media="screen" />';
 	if ($gridSystem !='-1')
-		echo "\n".'  <link rel="stylesheet" href="'. $this->baseurl . '/templates/'. $this->template .'/css/grids/'.$gridSystem.'"  type="text/css" media="screen" />';
+		echo '<link rel="stylesheet" href="'. $this->baseurl . '/templates/'. $this->template .'/css/grids/'.$gridSystem.'"  type="text/css" media="screen" />';
 	if ($this->direction == 'rtl')
-		echo "\n".'  <link rel="stylesheet" href="'. $this->baseurl . '/templates/'. $this->template .'/css/rtl.css"  type="text/css" media="screen" />';
+		echo '<link rel="stylesheet" href="'. $this->baseurl . '/templates/'. $this->template .'/css/rtl.css"  type="text/css" media="screen" />';
 	if (isset($cssFile))
 		echo "\n".$cssFile;
 	if ($googleWebFont != "")
-		echo "\n".'  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family='.$googleWebFont.'">
+		echo '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family='.$googleWebFont.'">
 		<style type="text/css">'.$googleWebFontTargets.'{font-family:'.$googleWebFont.', serif !important;font-size:'.$googleWebFontSize.'} </style>';
 	if ($googleWebFont2 != "")
-		echo "\n".'  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family='.$googleWebFont2.'">
+		echo '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family='.$googleWebFont2.'">
 		<style type="text/css">'.$googleWebFontTargets2.'{font-family:'.$googleWebFont2.', serif !important;font-size:'.$googleWebFontSize2.'} </style>';
 	if ($googleWebFont3 != "")
-		echo "\n".'  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family='.$googleWebFont3.'">
+		echo '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family='.$googleWebFont3.'">
 		<style type="text/css">'.$googleWebFontTargets3.'{font-family:'.$googleWebFont3.', serif !important;font-size:'.$googleWebFontSize3.'} </style>';
 	if ($loadjQuery != "")
 		$doc->addScript("http://ajax.googleapis.com/ajax/libs/jquery/'.$loadjQuery.'/jquery.min.js");
 	if ($enableSwitcher)
-		echo "\n".'  <script type="text/javascript" src="'. $this->baseurl . '/templates/'. $this->template .'/js/styleswitch.js"></script>';
+		echo '<script type="text/javascript" src="'. $this->baseurl . '/templates/'. $this->template .'/js/styleswitch.js"></script>';
 	if ($siteWidth)
-		echo "\n".'  <style type="text/css"> #body-container, #header-above {'.$siteWidthType.':'.$siteWidth.$siteWidthUnit.' !important}</style>';
+		echo '<style type="text/css"> #body-container, #header-above {'.$siteWidthType.':'.$siteWidth.$siteWidthUnit.' !important}</style>';
 	if (!$fullWidth)
-		echo "\n".'  <style type="text/css"> #header, #footer {'.$siteWidthType.':'.$siteWidth.$siteWidthUnit.';margin:0 auto}</style>';
+		echo '<style type="text/css"> #header, #footer {'.$siteWidthType.':'.$siteWidth.$siteWidthUnit.';margin:0 auto}</style>';
 	if (($siteWidthType == 'max-width') && $fluidMedia )
-		echo "\n".'  <style type="text/css"> img, object {max-width:100%}</style>';		
+		echo '<style type="text/css"> img, object {max-width:100%}</style>';
 ?>  
   <script type="text/javascript">window.addEvent('domready',function(){new SmoothScroll({duration:1200},window);});</script>
   <!--[if lt IE 7]>
