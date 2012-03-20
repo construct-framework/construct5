@@ -7,9 +7,7 @@
 * @license		GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
 */
 ?>
-
 <?php function modChrome_div( $module, &$params, &$attribs ) {
-	
 	$headerLevel = isset($attribs['level']) ? (int) $attribs['level'] : 3;
 	$headerClass = isset($attribs['header-class']) ? $attribs['header-class'] : 'je-header';
 	$moduleClass = isset($attribs['module-class']) ? $attribs['module-class'] : null;
@@ -24,7 +22,6 @@
 <?php	}
 	}
 ?>
-
 <?php function modChrome_aside( $module, &$params, &$attribs ) {
 	$headerLevel = isset($attribs['level']) ? (int) $attribs['level'] : 3;
 	$headerClass = isset($attribs['header-class']) ? $attribs['header-class'] : 'je-header';
@@ -39,9 +36,8 @@
 		</aside>
 
 <?php	}
-	}			
+	}
 ?>
-
 <?php function modChrome_figure( $module, &$params, &$attribs ) {
 	$headerLevel = isset($attribs['level']) ? (int) $attribs['level'] : 3;
 	$headerClass = isset($attribs['header-class']) ? $attribs['header-class'] : 'je-header';
@@ -56,9 +52,8 @@
 		</figure>
 
 <?php	}
-	}			
+	}
 ?>
-
 <?php function modChrome_footer( $module, &$params, &$attribs ) {
 	$headerLevel = isset($attribs['level']) ? (int) $attribs['level'] : 3;
 	$headerClass = isset($attribs['header-class']) ? $attribs['header-class'] : 'je-header';
@@ -73,9 +68,8 @@
 		</footer>
 
 <?php	}
-	}			
+	}
 ?>
-
 <?php function modChrome_header( $module, &$params, &$attribs ) {
 	$headerLevel = isset($attribs['level']) ? (int) $attribs['level'] : 3;
 	$headerClass = isset($attribs['header-class']) ? $attribs['header-class'] : 'je-header';
@@ -90,9 +84,8 @@
 		</header>
 
 <?php	}
-	}			
+	}
 ?>
-
 <?php function modChrome_nav( $module, &$params, &$attribs ) {
 	$headerLevel = isset($attribs['level']) ? (int) $attribs['level'] : 3;
 	$headerClass = isset($attribs['header-class']) ? $attribs['header-class'] : 'je-header';
@@ -107,9 +100,8 @@
 		</nav>
 
 <?php	}
-	}			
+	}
 ?>
-
 <?php function modChrome_section( $module, &$params, &$attribs ) {
 	$headerLevel = isset($attribs['level']) ? (int) $attribs['level'] : 3;
 	$headerClass = isset($attribs['header-class']) ? $attribs['header-class'] : 'je-header';
@@ -124,5 +116,5 @@
 		</section>
 
 <?php	}
-	}			
+	}
 ?>
