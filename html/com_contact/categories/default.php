@@ -7,20 +7,15 @@
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// Joomla 1.6+ only
-
 JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
-
-?>
-
-<section class="categories-list<?php echo $this->pageclass_sfx;?>">
+?><section class="categories-list<?php echo $this->pageclass_sfx;?>">
 	<?php if ($this->params->get('show_page_heading', 1)) : ?>
 		<h1>
 			<?php echo htmlspecialchars($this->params->get('page_heading')); ?>
 		</h1>
 	<?php endif; ?>
-	
-	<?php if ($this->params->get('show_base_description')) : 
+
+	<?php if ($this->params->get('show_base_description')) :
 	//If there is a description in the menu parameters use that; ?>
 		<?php if($this->params->get('categories_description')) : ?>
 			<section class="category-desc base-desc">
@@ -33,8 +28,9 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 					<?php  echo JHtml::_('content.prepare', $this->parent->description, '', 'com_contact.categories'); ?>
 				</section>
 			<?php  endif; ?>
-		<?php  endif; ?>	
+		<?php  endif; ?>
 	<?php endif; ?>
-	
+
     <?php echo $this->loadTemplate('items'); ?>
 </section>
+

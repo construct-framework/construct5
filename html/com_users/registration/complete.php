@@ -8,14 +8,11 @@
  * @since		1.6
  */
 
-// Joomla 1.6+ only
-
-?>
-
-<section class="registration-complete<?php echo $this->pageclass_sfx;?>">
+?><section class="registration-complete<?php echo $this->pageclass_sfx;?>">
 	<?php if ($this->params->get('show_page_heading')) : ?>
         <h1>
 	        <?php echo htmlspecialchars($this->params->get('page_heading')); ?>
         </h1>
 	<?php endif; ?>
 </section>
+

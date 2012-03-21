@@ -8,8 +8,6 @@
  * @since		1.6
  */
 
-// Joomla 1.6+ only
-
 JHtml::_('behavior.keepalive');
 JHtml::_('behavior.tooltip');
 JHtml::_('behavior.formvalidation');
@@ -57,6 +55,7 @@ $lang->load( 'plg_user_profile', JPATH_ADMINISTRATOR );
         <input type="hidden" name="option" value="com_users" />
         <input type="hidden" name="task" value="profile.save" />
         <?php echo JHtml::_('form.token'); ?>
-    
+
 	</form>
 </section>
+

@@ -7,8 +7,6 @@
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// Joomla 1.6+ only
-
 JHtml::_('stylesheet', 'mod_languages/template.css', array(), true);
 ?>
 
@@ -18,7 +16,7 @@ JHtml::_('stylesheet', 'mod_languages/template.css', array(), true);
             <?php echo $headerText; ?></p>
         </p>
     <?php endif; ?>
-    
+
     <?php if ($params->get('dropdown',1)) : ?>
         <form name="lang" method="post" action="">
             <select class="inputbox" onchange="document.location.replace(this.value);" >
@@ -45,10 +43,11 @@ JHtml::_('stylesheet', 'mod_languages/template.css', array(), true);
         <?php endforeach;?>
         </ul>
     <?php endif; ?>
-    
+
     <?php if ($footerText) : ?>
         <p class="posttext">
             <?php echo $footerText; ?>
         </p>
     <?php endif; ?>
 </div>
+

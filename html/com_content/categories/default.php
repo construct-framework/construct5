@@ -7,9 +7,14 @@
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');?>
+JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
+$header = $this->params->get('show_page_heading', 1) + ($this->params->get('show_base_description') || $this->parent->description);
+?>
 
 <section class="categories-list<?php echo $this->pageclass_sfx;?>">
+	<?php if ($header) : ?>
+	<header>
+	<?php endif; ?>
     <?php if ($this->params->get('show_page_heading', 1)) : ?>
     <h1>
         <?php echo htmlspecialchars($this->params->get('page_heading')); ?>
@@ -26,6 +31,10 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');?>
 		</p>
 		<?php  endif; ?>
 		<?php  endif; ?>
+	<?php endif; ?>
+
+	<?php if ($header) : ?>
+	</header>
 	<?php endif; ?>
 	
     <?php echo $this->loadTemplate('items'); ?>
