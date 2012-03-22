@@ -20,6 +20,8 @@ $doc 					= JFactory::getDocument();
 $isOnward = (substr(JVERSION, 0, 3) >= '1.6');
 // Is version 1.5
 $isPresent = (substr(JVERSION, 0, 3) == '1.5');
+// Returns an array of any system messages
+$messageQueue = count($app->getMessageQueue());
 // Define relative path to the  current template directory
 $template 				= 'templates/' . $this->template;
 // Define absolute path to the template directory

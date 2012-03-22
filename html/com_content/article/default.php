@@ -112,9 +112,10 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 	    <?php $author = $this->item->created_by_alias ? $this->item->created_by_alias : $this->item->author; ?>
 	    <?php if (!empty($this->item->contactid) && $params->get('link_author') == true): ?>
 	    <?php
-	        $needle = 'index.php?option=com_contact&view=contact&id=' . $this->item->contactid;
-	        $item = JSite::getMenu()->getItems('link', $needle, true);
-	        $cntlink = !empty($item) ? $needle . '&Itemid=' . $item->id : $needle;
+			$needle = 'index.php?option=com_contact&view=contact&id=' . $this->item->contactid;
+			$menu = JFactory::getApplication()->getMenu();
+			$item = $menu->getItems('link', $needle, true);
+			$cntlink = !empty($item) ? $needle . '&Itemid=' . $item->id : $needle;
 	    ?>
 	        <?php echo JText::sprintf('COM_CONTENT_WRITTEN_BY', JHtml::_('link', JRoute::_($cntlink), $author)); ?>
 	    <?php else: ?>

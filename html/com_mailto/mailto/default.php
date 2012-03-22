@@ -40,23 +40,23 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 
 		    <label for="mailto_field">
 		        <?php echo JText::_('COM_MAILTO_EMAIL_TO'); ?>
-		        <input type="text" id="mailto_field" name="mailto" class="inputbox" size="25" value="<?php echo $data->mailto ?>"/>
+		        <input type="text" id="mailto_field" name="mailto" class="inputbox" size="25" value="<?php echo $this->escape($data->mailto) ?>"/>
 		    </label>
 
 
 		    <label for="sender_field">
 		        <?php echo JText::_('COM_MAILTO_SENDER'); ?>
-		        <input type="text" id="sender_field" name="sender" class="inputbox" value="<?php echo $data->sender ?>" size="25" />
+		        <input type="text" id="sender_field" name="sender" class="inputbox" value="<?php echo $this->escape($data->sender) ?>" size="25" />
 		    </label>
 		
 		    <label for="from_field">
         		<?php echo JText::_('COM_MAILTO_YOUR_EMAIL'); ?>
-			    <input type="text" id="from_field" name="from" class="inputbox" value="<?php echo $data->from ?>" size="25" />
+			    <input type="text" id="from_field" name="from" class="inputbox" value="<?php echo $this->escape($data->from) ?>" size="25" />
 		    </label>
 		
 		    <label for="subject_field">
         		<?php echo JText::_('COM_MAILTO_SUBJECT'); ?>
-			    <input type="text" id="subject_field" name="subject" class="inputbox" value="<?php echo $data->subject ?>" size="25" />
+			    <input type="text" id="subject_field" name="subject" class="inputbox" value="<?php echo $this->escape($data->subject) ?>" size="25" />
 		    </label>
 
 		    <button class="button" onclick="return Joomla.submitbutton('send');">
