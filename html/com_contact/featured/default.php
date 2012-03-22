@@ -7,9 +7,13 @@
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
+// Joomla 1.6+ only
+
 JHtml::addIncludePath(JPATH_COMPONENT.DS.'helpers');
 
-?><section class="blog-featured<?php echo $this->pageclass_sfx;?>">
+?>
+
+<section class="blog-featured<?php echo $this->pageclass_sfx;?>">
     <?php if ($this->params->get('show_page_heading')!=0 ): ?>
 	        <h1>
 	        <?php echo htmlspecialchars($this->params->get('page_heading')); ?>
@@ -28,4 +32,3 @@ JHtml::addIncludePath(JPATH_COMPONENT.DS.'helpers');
 	        </nav>
     <?php endif; ?>
 </section>
-

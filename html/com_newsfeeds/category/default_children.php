@@ -7,10 +7,13 @@
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
+// Joomla 1.6+ only
 
 $class = ' class="first"';
 
-if (count($this->children[$this->category->id]) > 0 && $this->maxLevel != 0) : ?>
+?>
+
+<?php if (count($this->children[$this->category->id]) > 0 && $this->maxLevel != 0) : ?>
     <ol>
     <?php foreach($this->children[$this->category->id] as $id => $child) : ?>
 	    <?php
@@ -54,4 +57,3 @@ if (count($this->children[$this->category->id]) > 0 && $this->maxLevel != 0) : ?
 	    <?php endforeach; ?>
 	    </ol>
 <?php endif;
-

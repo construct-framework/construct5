@@ -7,6 +7,8 @@
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
+// Joomla 1.6+ only
+
 $class = ' class="first"';
 if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) : ?>
 
@@ -55,5 +57,4 @@ if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) : ?>
 	    <?php endif; ?>
     <?php endforeach; ?>
     </ol>
-<?php endif;
-
+<?php endif; ?>

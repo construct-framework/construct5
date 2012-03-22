@@ -59,5 +59,4 @@ $class = ' class="first"';
 		<?php endif; ?>
 	<?php endforeach; ?>
 	</ul>
-<?php endif;
-
+<?php endif; ?>

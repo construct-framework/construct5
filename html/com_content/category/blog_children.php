@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		$Id: blog_children.php 22338 2011-11-04 17:24:53Z github_bot $
+ * @version		$Id: blog_children.php 20196 2011-01-09 02:40:25Z ian $
  * @package		Joomla.Site
  * @subpackage	com_content
  * @copyright	Copyright (C) 2005 - 2011 Open Source Matters, Inc. All rights reserved.
@@ -23,27 +23,25 @@ $class = ' class="first"';
 		?>
 		<li<?php echo $class; ?>>
 			<?php $class = ''; ?>
-			<span class="item-title"><a href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($child->id));?>">
+			<h2 class="item-title"><a href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($child->id));?>">
 				<?php echo htmlspecialchars($child->title); ?></a>
-			</span>
+			</h2>
 
 			<?php if ($this->params->get('show_subcat_desc') == 1) :?>
 			<?php if ($child->description) : ?>
-				<div class="category-desc">
+				<p class="category-desc">
 					<?php echo JHtml::_('content.prepare', $child->description, '', 'com_content.category'); ?>
-				</div>
+				</p>
 			<?php endif; ?>
             <?php endif; ?>
 
 			<?php if ( $this->params->get('show_cat_num_articles',1)) : ?>
-			<dl>
-				<dt>
+				<span>
 					<?php echo JText::_('COM_CONTENT_NUM_ITEMS') ; ?>
-				</dt>
-				<dd>
+				</span>
+				<span class="category-items-count">
 					<?php echo $child->getNumItems(true); ?>
-				</dd>
-			</dl>
+				</span>
 			<?php endif ; ?>
 
 			<?php if (count($child->getChildren()) > 0):

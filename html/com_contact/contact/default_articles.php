@@ -7,10 +7,12 @@
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
+// Joomla 1.6 only
 require_once JPATH_SITE . '/components/com_content/helpers/route.php';
+?>
 
-if ($this->params->get('show_articles')) :
-?><section class="contact-articles">
+<?php if ($this->params->get('show_articles')) : ?>
+    <section class="contact-articles">
 	    <ol>
 		    <?php foreach ($this->item->articles as $article) :	?>
 			    <li>

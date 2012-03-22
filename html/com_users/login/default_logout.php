@@ -8,7 +8,11 @@
  * @since		1.5
  */
 
-?><section class="logout<?php echo $this->pageclass_sfx?>">
+// Joomla 1.6+ only
+
+?>
+
+<section class="logout<?php echo $this->pageclass_sfx?>">
 	<?php if ($this->params->get('show_page_heading')) : ?>
 	<h2>
 		<?php echo htmlspecialchars($this->params->get('page_heading')); ?>
@@ -37,4 +41,3 @@
 			<?php echo JHtml::_('form.token'); ?>
 	</form>
 </section>
-

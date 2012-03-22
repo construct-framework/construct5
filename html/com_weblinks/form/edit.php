@@ -7,6 +7,8 @@
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
+// Joomla 1.6+ only
+
 JHtml::_('behavior.keepalive');
 JHtml::_('behavior.tooltip');
 JHtml::_('behavior.formvalidation');
@@ -41,7 +43,7 @@ $params = $this->state->get('params');
 				<?php echo $this->form->getLabel('title'); ?>
 				<?php echo $this->form->getInput('title'); ?>
 			</div>
-
+			
 			<div class="formelm">
 				<?php echo $this->form->getLabel('alias'); ?>
 				<?php echo $this->form->getInput('alias'); ?>
@@ -84,4 +86,3 @@ $params = $this->state->get('params');
 		<?php echo JHtml::_( 'form.token' ); ?>
 	</form>
 </section>
-

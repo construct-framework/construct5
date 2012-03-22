@@ -8,6 +8,8 @@
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
+// no direct access
+
 $class = ' class="first"';
 if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) : ?>
     <ul>
@@ -49,5 +51,4 @@ if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) : ?>
 	        <?php endif; ?>
         <?php endforeach; ?>
     </ul>
-<?php endif;
-
+<?php endif; ?>

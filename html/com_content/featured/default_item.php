@@ -143,50 +143,49 @@ endif; ?>
 </header>
 <?php endif; ?>
 
-<?php  if (isset($images->image_intro) and !empty($images->image_intro)) : ?>
-	<?php $imgfloat = (empty($images->float_intro)) ? $params->get('float_intro') : $images->float_intro; ?>
-	<img class="img-intro <?php echo htmlspecialchars($imgfloat); ?>"
-		<?php if ($images->image_intro_caption):
-			echo 'class="caption"'.' title="' .htmlspecialchars($images->image_intro_caption) .'"';
-		endif; ?>
-		src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>"/>
-<?php endif; ?>
+	<?php  if (isset($images->image_intro) and !empty($images->image_intro)) : ?>
+		<?php $imgfloat = (empty($images->float_intro)) ? $params->get('float_intro') : $images->float_intro; ?>
+		<img class="img-intro <?php echo htmlspecialchars($imgfloat); ?>"
+			<?php if ($images->image_intro_caption):
+				echo 'class="caption"'.' title="' .htmlspecialchars($images->image_intro_caption) .'"';
+			endif; ?>
+			src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>"/>
+	<?php endif; ?>
 
-<?php echo $this->item->introtext; ?>
+	<?php echo $this->item->introtext; ?>
 
-<?php if ($params->get('show_readmore') && $this->item->readmore) :
-	if ($params->get('access-view')) :
-		$link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid));
-	else :
-		$menu = JFactory::getApplication()->getMenu();
-		$active = $menu->getActive();
-		$itemId = $active->id;
-		$link1 = JRoute::_('index.php?option=com_users&view=login&Itemid=' . $itemId);
-		$returnURL = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid));
-		$link = new JURI($link1);
-		$link->setVar('return', base64_encode($returnURL));
-	endif; ?>
-
-	<a class="readmore" href="<?php echo $link; ?>">
-		<?php if (!$params->get('access-view')) :
-			echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
-		elseif ($readmore = $this->item->alternative_readmore) :
-			echo $readmore;
-			if ($params->get('show_readmore_title', 0) != 0) :
-				echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
-			endif;
-		elseif ($params->get('show_readmore_title', 0) == 0) :
-			echo JText::sprintf('COM_CONTENT_READ_MORE_TITLE');
+	<?php if ($params->get('show_readmore') && $this->item->readmore) :
+		if ($params->get('access-view')) :
+			$link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid));
 		else :
-			echo JText::_('COM_CONTENT_READ_MORE');
-			echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
+			$menu = JFactory::getApplication()->getMenu();
+			$active = $menu->getActive();
+			$itemId = $active->id;
+			$link1 = JRoute::_('index.php?option=com_users&view=login&&Itemid=' . $itemId);
+			$returnURL = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid));
+			$link = new JURI($link1);
+			$link->setVar('return', base64_encode($returnURL));
 		endif; ?>
-	</a>
-<?php endif; ?>
 
-<?php if ($this->item->state == 0) : ?>
-</section>
-<?php endif; ?>
+		<a class="readmore" href="<?php echo $link; ?>">
+			<?php if (!$params->get('access-view')) :
+				echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
+			elseif ($readmore = $this->item->alternative_readmore) :
+				echo $readmore;
+				if ($params->get('show_readmore_title', 0) != 0) :
+					echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
+				endif;
+			elseif ($params->get('show_readmore_title', 0) == 0) :
+				echo JText::sprintf('COM_CONTENT_READ_MORE_TITLE');
+			else :
+				echo JText::_('COM_CONTENT_READ_MORE');
+				echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
+			endif; ?>
+		</a>
+	<?php endif; ?>
 
-<?php echo $this->item->event->afterDisplayContent; ?>
+    <?php if ($this->item->state == 0) : ?>
+    </section>
+    <?php endif; ?>
 
+    <?php echo $this->item->event->afterDisplayContent; ?>

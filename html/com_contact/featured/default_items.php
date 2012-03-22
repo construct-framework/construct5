@@ -7,6 +7,8 @@
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
+// Joomla 1.6+ only
+
 JHtml::core();
 
 $listOrder	= $this->escape($this->state->get('list.ordering'));
@@ -15,8 +17,10 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 // Create a shortcut for params.
 $params = &$this->item->params;
 
-if (empty($this->items)) : ?>
-<p> <?php echo JText::_('COM_CONTACT_NO_CONTACTS'); ?> </p>
+?>
+
+<?php if (empty($this->items)) : ?>
+	<p> <?php echo JText::_('COM_CONTACT_NO_CONTACTS'); ?> </p>
 <?php else : ?>
 
 <form action="<?php echo JFilterOutput::ampReplace(JFactory::getURI()->toString()); ?>" method="post" name="adminForm" id="adminForm" class="clearfix">
@@ -156,4 +160,3 @@ if (empty($this->items)) : ?>
 	</table>
 </form>
 <?php endif; ?>
-

@@ -7,6 +7,8 @@
 * @license		GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+// Joomla 1.6+ only
+
 JHtml::_('behavior.keepalive');
 ?>
 
@@ -67,4 +69,3 @@ JHtml::_('behavior.keepalive');
 		<?php endif; ?>
 	</ul>
 </section>
-
