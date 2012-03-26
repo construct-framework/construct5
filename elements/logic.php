@@ -455,15 +455,15 @@ if ($enableSwitcher) {
 // Typography
 if ($googleWebFont) {
 	$doc->addStyleSheet('http://fonts.googleapis.com/css?family='.$googleWebFont.'');
-	$doc->addStyleDeclaration('  '.$googleWebFontTargets.' {font-family:'.$googleWebFontFamily.', serif;font-size:'.$googleWebFontSize.';}');
+	$doc->addStyleDeclaration($googleWebFontTargets.' {font-family:'.$googleWebFontFamily.', serif;font-size:'.$googleWebFontSize.';}');
 }
 if ($googleWebFont2) {
 	$doc->addStyleSheet('http://fonts.googleapis.com/css?family='.$googleWebFont2.'');
-	$doc->addStyleDeclaration('  '.$googleWebFontTargets2.' {font-family:'.$googleWebFontFamily2.', serif;font-size:'.$googleWebFontSize2.';}');
+	$doc->addStyleDeclaration($googleWebFontTargets2.' {font-family:'.$googleWebFontFamily2.', serif;font-size:'.$googleWebFontSize2.';}');
 }
 if ($googleWebFont3) {
 	$doc->addStyleSheet('http://fonts.googleapis.com/css?family='.$googleWebFont3.'');
-	$doc->addStyleDeclaration('  '.$googleWebFontTargets3.' {font-family:'.$googleWebFontFamily3.', serif;font-size:'.$googleWebFontSize3.';}');
+	$doc->addStyleDeclaration($googleWebFontTargets3.' {font-family:'.$googleWebFontFamily3.', serif;font-size:'.$googleWebFontSize3.';}');
 }
 
 // JavaScript
