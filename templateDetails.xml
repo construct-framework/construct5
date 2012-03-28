@@ -31,7 +31,7 @@
 		div.panel fieldset {margin-bottom:0;padding-bottom:0;}
 		table.admintable td.key, table.admintable td.paramlist_key {border:none;}
 	</style>
-	<a href="http://construct-framework.com/" target="_blank"><img src="../templates/construct5-pro/images/logo.png"></a>
+	<a href="http://construct-framework.com/" target="_blank"><img src="http://construct-framework.com/images/logo.png"></a>
 	<p>Now that you've installed Construct, getting started is easy. The 48 included module positions occupy the most commonly used areas within a template. With dynamic width logic, the availability of five columns (including the component area), the numerous module positions and expanded functionality via template parameters, building your unique Joomla website is greatly simplified with this framework. Once you have your content, components and modules in place, just add your unique style.</p>
 	<p>Adding your unique style is accomplished by adding a custom style sheet to the CSS directory located within Construct. Once created, just open Construct in the Template Manager and select YES next to <em>Use custom style sheet</em> and select the one you added. There is also an example template pack included within this template&rsquo;s installation archive to help you get you started; just extract the example template pack archive to this template&rsquo;s directory.</p>
 	<p>Integrated mobile device detection ensures that all of your visitors get the content they desire. The included mobile version of the template is a great start for serving your mobile audience. It&rsquo;s fast loading, progressively enhanced with jQuery Mobile and uses a responsive layout to accommodate both mobile and tablet devices.</p>

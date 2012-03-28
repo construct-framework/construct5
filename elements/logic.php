@@ -17,7 +17,7 @@ $app 					= JFactory::getApplication();
 // Returns a reference to the global document object
 $doc 					= JFactory::getDocument();
 // Returns an array of any system messages
-$messageQueue = count($app->getMessageQueue());
+$messageQueue			= count($app->getMessageQueue());
 // Define relative path to the  current template directory
 $template 				= 'templates/' . $this->template;
 // Define absolute path to the template directory
@@ -27,7 +27,7 @@ $url 					= clone(JURI::getInstance());
 // To access the current user object
 $user 					= JFactory::getUser();
 // Get the current view
-$view     				= JRequest::getCmd('view');
+$view					= JRequest::getCmd('view');
 
 // Define shortcuts for template parameters
 $customStyleSheet 		= $this->params->get('customStyleSheet');
