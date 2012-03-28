@@ -8,12 +8,9 @@
  * @since		1.6
  */
 
-// Joomla 1.6+ only
-
 JHtml::_('behavior.tooltip');
-?>
 
-<section class="profile<?php echo $this->pageclass_sfx?>">
+?><section class="profile<?php echo $this->pageclass_sfx?>">
     <?php if ($this->params->get('show_page_heading')) : ?>
         <h1>
 	        <?php echo htmlspecialchars($this->params->get('page_heading')); ?>
@@ -32,3 +29,4 @@ JHtml::_('behavior.tooltip');
 	    </a>
     <?php endif; ?>
 </section>
+

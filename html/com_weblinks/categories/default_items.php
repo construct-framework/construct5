@@ -8,13 +8,9 @@
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// Joomla 1.6+ only
-
 $class = ' class="first"';
 
-?>
-
-<?php if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) : ?>
+if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) : ?>
 	<ol>
 	<?php foreach($this->items[$this->parent->id] as $id => $item) : ?>
 		<?php
@@ -42,7 +38,7 @@ $class = ' class="first"';
 					<dd><?php echo $item->numitems; ?></dd>
 				</dl>
 			<?php endif; ?>
-	
+
 			<?php if(count($item->getChildren()) > 0) :
 				$this->items[$item->id] = $item->getChildren();
 				$this->parent = $item;
@@ -51,9 +47,10 @@ $class = ' class="first"';
 				$this->parent = $item->getParent();
 				$this->maxLevelcat++;
 			endif; ?>
-	
+
 		</li>
 		<?php endif; ?>
 	<?php endforeach; ?>
 	</ol>
 <?php endif; ?>
+

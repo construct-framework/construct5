@@ -7,18 +7,13 @@
 * @license		GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-if (substr(JVERSION, 0, 3) >= '1.6') {
-// Joomla 1.6+ ?>
-  
-    <?php
-    JHtml::core();
-    
-    $listOrder	= $this->escape($this->state->get('list.ordering'));
-    $listDirn	= $this->escape($this->state->get('list.direction'));
-    ?>
-	
-	<?php if (empty($this->items)) : ?>
-		<p><?php echo JText::_('COM_CONTACT_NO_ARTICLES'); ?></p>
+JHtml::core();
+
+$listOrder	= $this->escape($this->state->get('list.ordering'));
+$listDirn	= $this->escape($this->state->get('list.direction'));
+
+if (empty($this->items)) :
+?><p><?php echo JText::_('COM_CONTACT_NO_ARTICLES'); ?></p>
 	<?php else : ?>
 
 	<form action="<?php echo JFilterOutput::ampReplace(JFactory::getURI()->toString()); ?>" method="post" name="adminForm" id="adminForm">
@@ -166,58 +161,9 @@ if (substr(JVERSION, 0, 3) >= '1.6') {
 			<?php endif; ?>
 			<?php echo $this->pagination->getPagesLinks(); ?>
 		</nav>
-		<?php endif; ?>		
+		<?php endif; ?>
 		<input type="hidden" name="filter_order" value="<?php echo $listOrder; ?>" />
-		<input type="hidden" name="filter_order_Dir" value="<?php echo $listDirn; ?>" />		
+		<input type="hidden" name="filter_order_Dir" value="<?php echo $listDirn; ?>" />
 	</form>
-	<?php endif; ?>
+	<?php endif;
 
-<?php
-}
-else {
-// Joomla 1.5 ?>
-
-	<?php foreach ($this->items as $item) : ?>
-	<tr>
-		<td class="item-count">
-			<?php echo (int)$item->count + 1; ?>
-		</td>
-
-		<?php if ($this->params->get('show_position')) : ?>
-		<td class="item-position">
-			<?php echo htmlspecialchars($item->con_position); ?>
-		</td>
-		<?php endif; ?>
-
-		<td class="item-name">
-			<a href="<?php echo $item->link; ?>">
-				<?php echo htmlspecialchars($item->name); ?></a>
-		</td>
-
-		<?php if ($this->params->get('show_email')) : ?>
-		<td class="item-email">
-			<?php echo $item->email_to; ?>
-		</td>
-		<?php endif; ?>
-
-		<?php if ($this->params->get('show_telephone')) : ?>
-		<td class="item-phone">
-			<?php echo htmlspecialchars($item->telephone); ?>
-		</td>
-		<?php endif; ?>
-
-		<?php if ($this->params->get('show_mobile')) : ?>
-		<td class="item-mobile">
-			<?php echo htmlspecialchars($item->mobile); ?>
-		</td>
-		<?php endif; ?>
-
-		<?php if ($this->params->get('show_fax')) : ?>
-		<td class="item-fax">
-			<?php echo htmlspecialchars($item->fax); ?>
-		</td>
-		<?php endif; ?>
-	</tr>
-	<?php endforeach; 
-	
-}

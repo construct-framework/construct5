@@ -8,15 +8,12 @@
  * @since		1.6
  */
 
-// Joomla 1.6+ only
-
 JHtml::_('behavior.keepalive');
 JHtml::_('behavior.tooltip');
 JHtml::_('behavior.formvalidation');
-?>
 
-<section class="registration<?php echo $this->pageclass_sfx?>">
-    <?php if ($this->params->get('show_page_heading')) : ?>        
+?><section class="registration<?php echo $this->pageclass_sfx?>">
+    <?php if ($this->params->get('show_page_heading')) : ?>
 	    <h1>
 	        <?php echo htmlspecialchars($this->params->get('page_heading')); ?>
 	    </h1>
@@ -48,7 +45,7 @@ JHtml::_('behavior.formvalidation');
 	            </fieldset>
             <?php endif;?>
         <?php endforeach;?>
-	    
+
 	    <button type="submit" class="validate"><?php echo JText::_('JREGISTER');?></button>
 	    <?php echo JText::_('COM_USERS_OR');?>
 	    <a href="<?php echo JRoute::_('');?>" title="<?php echo JText::_('JCANCEL');?>"><?php echo JText::_('JCANCEL');?></a>
@@ -58,3 +55,4 @@ JHtml::_('behavior.formvalidation');
 
     </form>
 </section>
+

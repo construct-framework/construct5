@@ -7,8 +7,6 @@
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// Joomla 1.6+ only
-
 JHtml::_('behavior.keepalive');
 JHtml::_('behavior.tooltip');
 JHtml::_('behavior.calendar');
@@ -140,14 +138,14 @@ endif;
 		<?php endif; ?>
 
 		<fieldset>
-			<legend><?php echo JText::_('COM_CONTENT_PUBLISHING'); ?></legend>
-			<div class="formelm">
-			<?php echo $this->form->getLabel('catid'); ?>
-			<span class="category">
+		    <legend><?php echo JText::_('COM_CONTENT_PUBLISHING'); ?></legend>
+		    <div class="formelm">
+		    <?php echo $this->form->getLabel('catid'); ?>
+		    <span class="category">
 			<?php echo $this->form->getInput('catid'); ?>
-			</span>
+		    </span>
 			</div>
-
+			
 			<div class="formelm">
 			<?php echo $this->form->getLabel('created_by_alias'); ?>
 			<?php echo $this->form->getInput('created_by_alias'); ?>
@@ -213,3 +211,4 @@ endif;
 		</fieldset>
 	</form>
 </section>
+

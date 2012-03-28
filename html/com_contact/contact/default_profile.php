@@ -7,11 +7,7 @@
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// Joomla 1.6+ only
-
-?>
-
-<?php if (JPluginHelper::isEnabled('user', 'profile')) :
+if (JPluginHelper::isEnabled('user', 'profile')) :
     $fields = $this->item->profile->getFieldset('profile'); ?>
     <section class="contact-profile" id="users-profile-custom">
 	    <dl>
@@ -40,3 +36,4 @@
 	    </dl>
     </section>
 <?php endif;
+

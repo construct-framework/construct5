@@ -7,10 +7,8 @@
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// Joomla 1.6+ only
-
 //enable accessing template parameters
-$templateParams = JFactory::getApplication()->getTemplate(true)->params; 
+$templateParams = JFactory::getApplication()->getTemplate(true)->params;
 
 // Note. It is important to remove spaces between elements.
 ?>
@@ -80,3 +78,4 @@ foreach ($list as $i => &$item) :
 	}
 endforeach;
 ?></ul>
+

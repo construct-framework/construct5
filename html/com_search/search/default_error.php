@@ -7,24 +7,9 @@
 * @license		GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-if (substr(JVERSION, 0, 3) >= '1.6') {
-// Joomla 1.6+ ?>
-
-    <?php if($this->error): ?>
+if($this->error): ?>
         <section class="error">
 	        <?php echo htmlspecialchars($this->error); ?>
         </section>
-    <?php endif; ?>
+    <?php endif;
 
-<?php
-}
-else {
-// Joomla 1.5 ?>
-
-    <?php if($this->error): ?>
-	    <section class="error">
-		    <?php echo htmlspecialchars($this->error); ?>
-	    </section>
-    <?php endif; ?>
-
-<?php }
