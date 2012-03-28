@@ -14,8 +14,6 @@ jimport('joomla.filesystem.file');
 $app 					= JFactory::getApplication();
 // Returns a reference to the global document object
 $doc 					= JFactory::getDocument();
-// Check if version 1.5
-$isPresent = (substr(JVERSION, 0, 3) == '1.5');
 // Get the offline status of the website
 $offLine 				= $app->getCfg('offline');
 // Define relative path to the  current template directory
@@ -41,13 +39,7 @@ $columnGroupBetaClass 	= '';
 $footerAboveClass 		= 'count-1';
 
 // Access template parameters
-if ($isPresent) {
-	global $mainframe;
-	$params = new JParameter(JFile::read(JPATH_BASE.'/templates/'.$mainframe->getTemplate().'/params.ini'));
-}
-else {
-	$params = JFactory::getApplication()->getTemplate(true)->params;
-}
+$params = JFactory::getApplication()->getTemplate(true)->params;
 
 $customStyleSheet 		= $params->get('customStyleSheet');
 $detectTablets			= $params->get('detectTablets');

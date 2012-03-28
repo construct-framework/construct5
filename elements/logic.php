@@ -16,10 +16,6 @@ if (JFile::exists(dirname(__FILE__).'/helper.php')) {
 $app 					= JFactory::getApplication();
 // Returns a reference to the global document object
 $doc 					= JFactory::getDocument();
-// Is version 1.6 and later
-$isOnward = (substr(JVERSION, 0, 3) >= '1.6');
-// Is version 1.5
-$isPresent = (substr(JVERSION, 0, 3) == '1.5');
 // Returns an array of any system messages
 $messageQueue = count($app->getMessageQueue());
 // Define relative path to the  current template directory
@@ -82,13 +78,8 @@ $alternatemTemplate		= JPATH_THEMES.'/'. $this->template .'/layouts/mobile.php';
 $this->setGenerator($setGeneratorTag);
 
 // Enable Mootols
-if ( $isOnward && $loadMoo ) {
+if ( $loadMoo ) {
 	JHtml::_('behavior.framework', true);
-}
-
-// Behavior.mootools is depreciated and may be removed after 1.6
-if ( $isPresent && $loadMoo ) {
-	JHtml::_('behavior.mootools');
 }
 
 // Enable modal pop-ups
@@ -327,7 +318,7 @@ $styleOverride->includeFile[] 				= $template.'/css/item/'.$overrideTheme.'-item
 $styleOverride->includeFile[] 				= $template.'/css/item/item-'.$itemId.'.css';
 $styleOverride->includeFile[] 				= $template.'/css/category/'.$overrideTheme.'-category-'.$catId.'.css';
 $styleOverride->includeFile[] 				= $template.'/css/category/category-'.$catId.'.css';
-if ($isOnward && $catId && $inheritStyle) {
+if ( $catId && $inheritStyle ) {
 	$styleOverride->includeFile[] 			= $template.'/css/category/category-'.$parentCategory.'.css';
 
 	$results 								= getAncestorCategories($catId);
@@ -374,7 +365,7 @@ $layoutOverride->includeFile[] 				= $template.'/layouts/item/'.$overrideTheme.'
 $layoutOverride->includeFile[] 				= $template.'/layouts/item/item-'.$itemId.'.php';
 $layoutOverride->includeFile[] 				= $template.'/layouts/category/'.$overrideTheme.'-category-'.$catId.'.php';
 $layoutOverride->includeFile[] 				= $template.'/layouts/category/category-'.$catId.'.php';
-if ($isOnward && $catId && $inheritLayout) {
+if ( $catId && $inheritLayout ) {
 	$layoutOverride->includeFile[] 			= $template.'/layouts/category/category-'.$parentCategory.'.php';
 
 	$results 								= getAncestorCategories($catId);
