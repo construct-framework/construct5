@@ -89,6 +89,10 @@
 		</div>
 	</div>
 
+	<?php if ($this->countModules('analytics')) : ?>
+		<jdoc:include type="modules" name="analytics" />
+	<?php endif ?>
+
 </body>
 </html>
 
