@@ -74,7 +74,7 @@ if ($mobileResults) {
 		<?php if ( $mNavPosition && ($this->countModules('nav'))) : ?>
 			<div id="nav">
 				<jdoc:include type="modules" name="nav" style="raw" />
-			</div><!-- end nav-->
+			</div>
 		<?php endif ?>
 		
 		<div id="content-container" data-role="content" data-theme="<?php echo $mContentDataTheme ?>">
@@ -87,7 +87,7 @@ if ($mobileResults) {
 		<?php if ( !$mNavPosition && ($this->countModules('nav'))) : ?>
 			<div id="nav">
 				<jdoc:include type="modules" name="nav" style="raw" />
-			</div><!-- end nav-->
+			</div>
 		<?php endif ?>
 
 		<div id="footer" data-role="footer" data-theme="<?php echo $mFooterDataTheme ?>">

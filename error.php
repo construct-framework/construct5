@@ -186,7 +186,7 @@ echo "\n" ?>
 				</div>	
 				<div id="header-above-6" class="<?php echo $headerAboveClass ?>">
 					<?php echo $renderer->render('header-above-6', $jexhtml, null) ?>
-				</div>									
+				</div>
 			</div>
 		<?php endif ?>
 		
@@ -223,31 +223,31 @@ echo "\n" ?>
 					</ul>
 				<?php endif ?>
 				
-			</div><!-- end gutter -->
-		</header><!-- end header -->
+			</div>
+		</header>
  
 		<section id="body-container">
 			<?php if ($headerBelowClass) : ?>
-				<div id="header-below" class="clearfix">						
+				<div id="header-below" class="clearfix">
 						<div id="header-below-1" class="<?php echo $headerBelowClass ?>">
 							<?php echo $renderer->render('header-below-1', $jexhtml, null) ?>
-						</div><!-- end header-below-1 -->								
+						</div>
 						<div id="header-below-2" class="<?php echo $headerBelowClass ?>">
 							<?php echo $renderer->render('header-below-2', $jexhtml, null) ?>
-						</div><!-- end header-below-2 -->
+						</div>
 						<div id="header-below-3" class="<?php echo $headerBelowClass ?>">
 							<?php echo $renderer->render('header-below-3', $jexhtml, null) ?>
-						</div><!-- end header-below-3 -->
+						</div>
 						<div id="header-below-4" class="<?php echo $headerBelowClass ?>">
 							<?php echo $renderer->render('header-below-4', $jexhtml, null) ?>
-						</div><!-- end header-below-4 -->
+						</div>
 						<div id="header-below-5" class="<?php echo $headerBelowClass ?>">
 							<?php echo $renderer->render('header-below-5', $jexhtml, null) ?>
-						</div><!-- end header-below-5 -->
+						</div>
 						<div id="header-below-6" class="<?php echo $headerBelowClass ?>">
 							<?php echo $renderer->render('header-below-6', $jexhtml, null) ?>
-						</div><!-- end header-below-6 -->												
-				</div><!-- end header-below -->
+						</div>
+				</div>
 			<?php endif ?>
 				
 			<?php echo $renderer->render('breadcrumbs', $raw, null) ?>
@@ -258,55 +258,55 @@ echo "\n" ?>
  
 			<div id="content-container" class="clear clearfix">  
 				<?php if ($navBelowClass) : ?>			
-					<div id="nav-below" class="clearfix">						
+					<div id="nav-below" class="clearfix">
 						<div id="nav-below-1" class="<?php echo $navBelowClass ?>">
 							<?php echo $renderer->render('nav-below-1', $jexhtml, null) ?>
-						</div><!-- end nav-below-1 -->								
+						</div>
 						<div id="nav-below-2" class="<?php echo $navBelowClass ?>">
 							<?php echo $renderer->render('nav-below-2', $jexhtml, null) ?>
-						</div><!-- end nav-below-2 -->
+						</div>
 						<div id="nav-below-3" class="<?php echo $navBelowClass ?>">
 							<?php echo $renderer->render('nav-below-3', $jexhtml, null) ?>
-						</div><!-- end nav-below-3 -->
+						</div>
 						<div id="nav-below-4" class="<?php echo $navBelowClass ?>">
 							<?php echo $renderer->render('nav-below-4', $jexhtml, null) ?>
-						</div><!-- end nav-below-4 -->				
+						</div>
 						<div id="nav-below-5" class="<?php echo $navBelowClass ?>">
 							<?php echo $renderer->render('nav-below-5', $jexhtml, null) ?>
-						</div><!-- end nav-below-5 -->	
+						</div>
 						<div id="nav-below-6" class="<?php echo $navBelowClass ?>">
 							<?php echo $renderer->render('nav-below-6', $jexhtml, null) ?>
-						</div><!-- end nav-below-6 -->								
+						</div>
 					</div>
 				<?php endif ?>
 				
 				<div id="load-first" class="clearfix">
 					<div id="content-main">
 						<div class="gutter">
-						<?php if ($contentAboveClass) : ?>						
+						<?php if ($contentAboveClass) : ?>
 								<div id="content-above" class="clearfix">	
 									<div id="content-above" class="<?php echo $contentAboveClass ?>">
 										<?php echo $renderer->render('content-above-1', $jexhtml, null) ?>
-									</div><!-- end top -->						   
+									</div>
 									<div id="content-above-2" class="<?php echo $contentAboveClass ?>">
 										<?php echo $renderer->render('content-above-2', $jexhtml, null) ?>
-									</div><!-- end content-above-2 -->							
+									</div>
 									<div id="content-above-3" class="<?php echo $contentAboveClass ?>">
 										<?php echo $renderer->render('content-above-3', $jexhtml, null) ?>
-									</div><!-- end content-above-3 -->								
+									</div>
 									<div id="content-above-4" class="<?php echo $contentAboveClass ?>">
 										<?php echo $renderer->render('content-above-4', $jexhtml, null) ?>
-									</div><!-- end content-above-4 -->		
+									</div>
 									<div id="content-above-5" class="<?php echo $contentAboveClass ?>">
 										<?php echo $renderer->render('content-above-5', $jexhtml, null) ?>
-									</div><!-- end content-above-5 -->		
+									</div>
 									<div id="content-above-6" class="<?php echo $contentAboveClass ?>">
 										<?php echo $renderer->render('content-above-6', $jexhtml, null) ?>
-									</div><!-- end content-above-6 -->																					
+									</div>
 								</div>
 							<?php endif ?>
 							
-							<div id="error-message">							             
+							<div id="error-message">
 								<?php echo $this->error->getCode() ?> - <?php echo $this->error->getMessage() ?>
 								<p><strong><?php echo JText::_('You may not be able to visit this page because of:') ?></strong></p>
 									<ol>
@@ -320,7 +320,7 @@ echo "\n" ?>
 								<p><strong><?php echo JText::_('Please try one of the following pages:') ?></strong></p>
 								<ul>
 									<li><a href="<?php echo $this->baseurl ?>/" title="<?php echo JText::_('Go to the home page') ?>"><?php echo JText::_('Home Page') ?></a></li>
-								</ul>								
+								</ul>
 								<p><?php echo JText::_('If difficulties persist, please contact the system administrator of this site.') ?></p>
 								<p><?php echo $this->error->getMessage() ?></p>
 								<p>
@@ -329,90 +329,90 @@ echo "\n" ?>
 									endif ?>
 								</p>
 							</div>
-							<?php if ($contentBelowClass) : ?>							
+							<?php if ($contentBelowClass) : ?>
 								<div id="content-below" class="clearfix">	
 									<div id="content-below-1" class="<?php echo $contentBelowClass ?>">
 										<?php echo $renderer->render('content-below-1', $jexhtml, null) ?>
-									</div><!-- end content-below-1 -->						   
+									</div>
 									<div id="content-below-2" class="<?php echo $contentBelowClass ?>">
 										<?php echo $renderer->render('content-below-2', $jexhtml, null) ?>
-									</div><!-- end content-below-2 -->							
+									</div>
 									<div id="content-below-3" class="<?php echo $contentBelowClass ?>">
 										<?php echo $renderer->render('content-below-3', $jexhtml, null) ?>
-									</div><!-- end content-below-3 -->								
+									</div>
 									<div id="content-below-4" class="<?php echo $contentBelowClass ?>">
 										<?php echo $renderer->render('content-below-4', $jexhtml, null) ?>
-									</div><!-- end content-below-4 -->	
+									</div>
 									<div id="content-below-5" class="<?php echo $contentBelowClass ?>">
 										<?php echo $renderer->render('content-below-5', $jexhtml, null) ?>
-									</div><!-- end content-below-5 -->	
+									</div>
 									<div id="content-below-6" class="<?php echo $contentBelowClass ?>">
 										<?php echo $renderer->render('content-below-6', $jexhtml, null) ?>
-									</div><!-- end content-below-6 -->																					
+									</div>
 								</div>	
 							<?php endif ?>
-						</div><!-- end gutter -->					
-					</div><!-- end content-main --> 
-					<?php if ($columnGroupAlphaClass) : ?>								
+						</div>
+					</div>
+					<?php if ($columnGroupAlphaClass) : ?>
 						<div id="column-group-alpha">
 							<div class="gutter clearfix">
 								<div id="column-1" class="<?php echo $columnGroupAlphaClass ?>">
 									<?php echo $renderer->render('column-1', $jexhtml, null) ?>
-								</div><!-- end column-1 -->
+								</div>
 								<div id="column-2" class="<?php echo $columnGroupAlphaClass ?>">
 									<?php echo $renderer->render('column-2', $jexhtml, null) ?>
-								</div><!-- end column-2 -->
-							</div><!--end gutter -->
-						</div><!-- end column-group-alpha -->
+								</div>
+							</div>
+						</div>
 					<?php endif ?>
-				</div><!--end load-first-->
+				</div>
 				
-					<?php if ($columnGroupBetaClass) : ?>								
+					<?php if ($columnGroupBetaClass) : ?>
 						<div id="column-group-beta">
 							<div class="gutter clearfix">
 								<div id="column-3" class="<?php echo $columnGroupBetaClass ?>">
 									<?php echo $renderer->render('column-3', $jexhtml, null) ?>
-								</div><!-- end column-3 -->
+								</div>
 								<div id="column-4" class="<?php echo $columnGroupBetaClass ?>">
 									<?php echo $renderer->render('column-4', $jexhtml, null) ?>
-								</div><!-- end column-4 -->
-							</div><!--end gutter -->
-						</div><!-- end column-group-beta -->
+								</div>
+							</div>
+						</div>
 					<?php endif ?>
 	   
 				<?php if ($footerAboveClass) : ?>
-					<div id="footer-above" class="clearfix">						
+					<div id="footer-above" class="clearfix">
 						<div id="footer-above-1" class="<?php echo $footerAboveClass ?>">
 							<?php echo $renderer->render('footer-above-1', $jexhtml, null) ?>
-						</div><!-- end footer-above-1 -->								
+						</div>
 						<div id="footer-above-2" class="<?php echo $footerAboveClass ?>">
 							<?php echo $renderer->render('footer-above-2', $jexhtml, null) ?>
-						</div><!-- end footer-above-2 -->
+						</div>
 						<div id="footer-above-3" class="<?php echo $footerAboveClass ?>">
 							<?php echo $renderer->render('footer-above-3', $jexhtml, null) ?>
-						</div><!-- end footer-above-3 -->
+						</div>
 						<div id="footer-above-4" class="<?php echo $footerAboveClass ?>">
 							<?php echo $renderer->render('footer-above-4', $jexhtml, null) ?>
-						</div><!-- end footer-above-4 -->
+						</div>
 						<div id="footer-above-5" class="<?php echo $footerAboveClass ?>">
 							<?php echo $renderer->render('footer-above-5', $jexhtml, null) ?>
-						</div><!-- end footer-above-5 -->
+						</div>
 						<div id="footer-above-6" class="<?php echo $footerAboveClass ?>">
 							<?php echo $renderer->render('footer-above-6', $jexhtml, null) ?>
-						</div><!-- end footer-above-6 -->				
-					</div><!-- end footer-above --> 
+						</div>
+					</div>
 				<?php endif ?>
-			</div><!-- end content-container -->
-		</section><!-- end body-container -->
-	</div><!-- end footer-push -->
+			</div>
+		</section>
+	</div>
 	
 	<footer id="footer" class="clear clearfix">
 		<div class="gutter clearfix">
 			<a id="to-page-top" href="<?php echo $this->baseurl ?>/index.php#page-top">Back to Top</a>
 			<?php echo $renderer->render('syndicate', $jexhtml, null) ?>
 			<?php echo $renderer->render('footer', $jexhtml, null) ?>
-		</div><!--end gutter -->
-	</footer><!-- end footer -->
+		</div>
+	</footer>
 			
 <?php echo $renderer->render('analytics', $raw, null) ?>
 
