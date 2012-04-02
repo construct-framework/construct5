@@ -16,7 +16,6 @@ if(JFile::exists($template.'/layouts/mobile-offline.php')) {
 }
 else {
 ?>
-
 <!DOCTYPE html>
 <html class="no-js">
 	<head>
@@ -34,15 +33,15 @@ else {
 		<div id="header" data-role="header" data-theme="<?php echo $mHeaderDataTheme ?>">
 			<h1><a href="<?php echo $this->baseurl ?>/" title="<?php echo htmlspecialchars($app->getCfg('sitename')) ?>"><?php echo htmlspecialchars($app->getCfg('sitename')) ?></a></h1>
 		</div>
-	
+
 		<?php if ( $mNavPosition && ($this->countModules('nav'))) : ?>
 			<div id="nav">
 				<jdoc:include type="modules" name="nav" style="raw" />
 			</div><!-- end nav-->
 		<?php endif ?>
-		
+
 		<div id="content-container" data-role="content" data-theme="<?php echo $mContentDataTheme ?>">
-	
+
 			<?php if ($this->getBuffer('message')) : ?>
 				<jdoc:include type="message" />
 			<?php endif ?>
@@ -69,16 +68,16 @@ else {
 				<input type="hidden" name="return" value="<?php echo base64_encode(JURI::base()) ?>" />
 				<?php echo JHtml::_('form.token') ?>
 			</fieldset>
-			</form>						
-			
+			</form>
+
 		</div>
-		
+
 		<?php if ( !$mNavPosition && ($this->countModules('nav'))) : ?>
 			<div id="nav">
 				<jdoc:include type="modules" name="nav" style="raw" />
 			</div><!-- end nav-->
 		<?php endif ?>
-									
+
 		<div id="footer" data-role="footer" data-theme="<?php echo $mFooterDataTheme ?>">
 			<a class="view-desktop" href="<?php echo JURI::current() ?>?viewDesktop=true">View Desktop Version</a>
 			<?php if ($this->countModules('footer')) : ?>
@@ -86,7 +85,11 @@ else {
 			<?php endif ?>
 		</div>
 	</div>
-	  
+
+	<?php if ($this->countModules('analytics')) : ?>
+		<jdoc:include type="modules" name="analytics" />
+	<?php endif ?>
+
 </body>
 </html>
 <?php }

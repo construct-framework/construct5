@@ -18,7 +18,6 @@ if ($mobileResults) {
 	include_once $alternateIndexFile;
 } else {
 ?>
-
 <!DOCTYPE html> 
 <html class="no-js">
 	<head>
@@ -63,15 +62,15 @@ if ($mobileResults) {
 							        if (count($results) > 0) {
 								        foreach ($results as $item) {
 									        echo ' '.$item->id.' ';
-								        }			
-							        }								
+								        }
+							        }
 						        echo'</li>';
 						    }
 						  } ?>
 			    </ul>
 			<?php endif ?>
 		</div>
-	
+
 		<?php if ( $mNavPosition && ($this->countModules('nav'))) : ?>
 			<div id="nav">
 				<jdoc:include type="modules" name="nav" style="raw" />
@@ -90,7 +89,7 @@ if ($mobileResults) {
 				<jdoc:include type="modules" name="nav" style="raw" />
 			</div><!-- end nav-->
 		<?php endif ?>
-									
+
 		<div id="footer" data-role="footer" data-theme="<?php echo $mFooterDataTheme ?>">
 			<a class="view-desktop" href="<?php echo JURI::current() ?>?viewDesktop=true">View Desktop Version</a>
 			<?php if ($this->countModules('footer')) : ?>
@@ -98,11 +97,11 @@ if ($mobileResults) {
 			<?php endif ?>
 		</div>
 	</div>
-	
+
 	<?php if ($this->countModules('analytics')) : ?>
 		<jdoc:include type="modules" name="analytics" />
 	<?php endif ?>
-	  
+
 </body>
 </html>
 <?php }

@@ -32,7 +32,7 @@ $doc->addStyleSheet($template.'/css/modal.css','text/css','screen');
 </head>
 
 <body class="modal <?php if($articleId) echo 'article-'.$articleId ?>">
-	<jdoc:include type="component" />     
+	<jdoc:include type="component" />
 </body>
 </html>
 <?php }
