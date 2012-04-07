@@ -69,7 +69,7 @@
 		<?php endif ?>
 
 		<div id="content-container" data-role="content" data-theme="<?php echo $mContentDataTheme ?>">
-			<?php if ($this->getBuffer('message')) : ?>
+			<?php if ($messageQueue) : ?>
 					<jdoc:include type="message" />
 			<?php endif ?>
 			<jdoc:include type="component" />
