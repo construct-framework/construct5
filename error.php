@@ -10,7 +10,7 @@
 // Load Joomla filesystem package
 jimport('joomla.filesystem.file');
 
-// To enable use of site configuration
+// To get an application object
 $app 					= JFactory::getApplication();
 // Returns a reference to the global document object
 $doc 					= JFactory::getDocument();

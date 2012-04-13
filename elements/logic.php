@@ -12,11 +12,11 @@ if (JFile::exists(dirname(__FILE__).'/helper.php')) {
     include dirname(__FILE__).'/helper.php';
 }
 
-// To enable use of site configuration
+// To get an application object
 $app 					= JFactory::getApplication();
 // Returns a reference to the global document object
 $doc 					= JFactory::getDocument();
-// Returns an array of any system messages
+// Checks for any system messages
 $messageQueue			= count($app->getMessageQueue());
 // Define relative path to the  current template directory
 $template 				= 'templates/' . $this->template;

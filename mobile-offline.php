@@ -7,7 +7,7 @@
 * @license		GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
 */	
 
-// To enable use of site configuration
+// To get an application object
 $app 					= JFactory::getApplication();
 
 // Check for layout override

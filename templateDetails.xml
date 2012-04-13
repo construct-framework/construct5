@@ -168,7 +168,7 @@
 					<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
-				<field name="customStyleSheet" type="filelist" default="example.css" label="TPL_CONSTRUCT5_PRO_CUSTOM_STYLE_SHEET_LABEL" directory="templates/construct5-pro/css" filter="\.css" exclude="core-classes-ids\.css|diagnostic\.css|editor\.css|modal\.css|normal\.css|print\.css|rtl\.css|screen\.css|ie6\.css|wireframe\.css|mobile\.css|mobile\.css" description="TPL_CONSTRUCT5_PRO_CUSTOM_STYLE_SHEET_DESC" />
+				<field name="customStyleSheet" type="filelist" default="" label="TPL_CONSTRUCT5_PRO_CUSTOM_STYLE_SHEET_LABEL" directory="templates/construct5-pro/css" filter="\.css" exclude="core-classes-ids\.css|diagnostic\.css|editor\.css|modal\.css|normal\.css|print\.css|rtl\.css|screen\.css|ie6\.css|wireframe\.css|mobile\.css|mobile\.css" description="TPL_CONSTRUCT5_PRO_CUSTOM_STYLE_SHEET_DESC" />
 				<field name="gridSystem" type="filelist" default="construct.css" label="TPL_CONSTRUCT5_PRO_GRID_SYSTEM_LABEL" directory="templates/construct5-pro/css/grids" filter="\.css" description="TPL_CONSTRUCT5_PRO_GRID_SYSTEM_DESC" />
 				<field name="setGeneratorTag" type="text" default="Construct Framework | http://Construct-Framework.com" label="Generator Meta Tag" description="Customize the generator meta tag output by your template." size="56" />
 			</fieldset>
