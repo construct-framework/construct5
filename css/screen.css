@@ -1335,6 +1335,8 @@ ul.menu ul {
     left: -999em;
     z-index: 999;
     width: 16em;
+	margin: 0;
+	padding: 0;
 }
 /* change width to alter sub-menu widths */
 
@@ -1382,12 +1384,6 @@ nav:after,
 
 nav {
     z-index: 999;
-}
-
-nav ul,
-nav ul li {
-    margin: 0;
-    padding: 0;
 }
 
 nav ul.menu li a,
