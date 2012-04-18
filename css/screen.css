@@ -1382,21 +1382,22 @@ nav:after,
     top: 0;
 }
 
-nav {
-    z-index: 999;
+#nav {
+	z-index: 999;
+	position:relative;
 }
 
-nav ul.menu li a,
-nav ul.menu li span.separator {
+#nav ul.menu li a,
+#nav ul.menu li span.separator {
     line-height: 1.8em;
     padding: 6px 15px 5px;
 }
 
-nav ul.menu li span.sub {
+#nav ul.menu li span.sub {
     display:block
 }
 
-nav ul.menu ul ul{
+#nav ul.menu ul ul{
     margin:0 0 0 100%;
     top:0;
 }
@@ -1483,6 +1484,12 @@ ul.menu ul li.pie_hover ul,
 ul.menu ul ul li.pie_hover ul,
 ul.menu ul ul ul li.pie_hover ul {
     left: auto;
+}
+
+/* IE7 Sticky Suckerfish Fix */
+.ie7 ul.menu li:hover,
+.ie7 ul.menu li.pie_hover {
+    position: static;
 }
 
 /* =============================================================================
