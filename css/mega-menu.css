@@ -1,0 +1,49 @@
+/* Establish a default width of all sub-menus */
+#nav ul.menu ul {
+	width:70em;
+}
+
+/* Establish width of specific sub-menus */
+#nav ul.menu li.item-102 ul {
+	width: 35em;
+}
+
+/* Creates columns starting with second level items*/
+#nav ul.menu ul li {
+	float: left;
+	width: 16em;
+}
+
+/* Display third level menu items with second */
+#nav ul.menu ul ul {
+	position:relative;
+	margin:0;
+	padding:0;
+	left:0;
+	background:none;
+	z-index:auto;
+}
+
+/* Reinstate stacking of third level menu items */
+#nav ul.menu ul ul li {
+	float:none;
+	width:auto;
+	/* Indent for display purposes */
+	padding-left: 1em;
+}
+
+/* Reinstate hiding for fourth level menu items */
+#nav ul.menu ul ul ul {
+	position: absolute;
+	left: -999em;
+	width: 16em;
+	/* Only 15em as we are already indented 1em */
+	margin: 0 0 0 15em;
+	top: 0;
+	z-index:1000;
+}
+
+/* Add hover to show forth level*/
+#nav ul.menu ul ul li:hover ul {
+	left: auto;
+}
