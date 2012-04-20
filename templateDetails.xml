@@ -59,10 +59,10 @@
 		<filename>css/article/index.html</filename>
 		<filename>css/category/index.html</filename>
 		<filename>css/component/index.html</filename>
-		<filename>css/grids/construct.css</filename>
-		<filename>css/grids/construct-responsive.css</filename>
-		<filename>css/grids/index.html</filename>
+		<folder>css/grids</folder>
 		<filename>css/item/index.html</filename>
+		<filename>css/construct-dark.css</filename>
+		<filename>css/construct-light.css</filename>
 		<filename>css/diagnostic.css</filename>
 		<filename>css/editor.css</filename>
 		<filename>css/ie6.css</filename>
