@@ -20,6 +20,7 @@ else {
 <html class="no-js">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="<?php echo $this->baseurl . '/templates/' . $this->template ?>/css/mobile.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
 		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
