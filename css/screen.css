@@ -1298,7 +1298,7 @@ header {
 }
 
 #system-message dd.message ul {
-	margin-bottom: 0;
+	margin: 0;
 }
 
 #system-message dd.warning {
@@ -1309,7 +1309,7 @@ header {
 }
 
 #system-message dd.warning ul {
-	margin-bottom: 0;
+	margin: 0;
 }
 
 #system-message dd.error {

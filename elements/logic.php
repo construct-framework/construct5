@@ -408,7 +408,7 @@ $mobileLayoutOverride->includeFile[]		= $template.'/layouts/mobile.php';
 
 // Always force latest IE rendering engine (even in intranet) & Chrome Frame
 $doc->addCustomTag('<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">');
-// Mobile viewport optimized: j.mp/bplateviewport
+// Set initial scale of mobile viewport to 100% - see http://bit.ly/sK7Zty
 $doc->addCustomTag(' <meta name="viewport" content="width=device-width, initial-scale=1.0">');
 
 $doc->addCustomTag('<meta name="copyright" content="'.htmlspecialchars($app->getCfg('sitename')).'" />');
