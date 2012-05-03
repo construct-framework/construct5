@@ -7,7 +7,10 @@
 * @license		GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-?><section class="weblink-category<?php echo $this->pageclass_sfx;?>">
+JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
+
+?>
+<section class="weblink-category<?php echo $this->pageclass_sfx;?>">
     <?php if ($this->params->get('show_page_heading', 1)) : ?>
         <h1>
             <?php echo htmlspecialchars($this->params->get('page_heading')); ?>
