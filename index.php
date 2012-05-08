@@ -303,7 +303,7 @@ elseif ($results) {
 								</div>
 							<?php endif ?>
 
-							<?php if (count($app->getMessageQueue())) : ?>
+							<?php if (!empty($messageQueue)) : ?>
 							<jdoc:include type="message" />
 							<?php endif ?>
 
