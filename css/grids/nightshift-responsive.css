@@ -14,13 +14,6 @@ body {
 	/* 12px in most modern browsers - used as basis of layout and typography.
 	 * Calculate em based dims as: target dim(px) / container dim(px) = result in em
 	 */
-div {
-	-o-transition: all 1s linear;
-	-moz-transition: all 1s linear;
-	-webkit-transition: all 1s linear;
-	-ms-transition: all 1s linear;
-	transition: all 1s linear;
-}
 
 /* 480px */
 @media only screen and (max-width: 480px) {
