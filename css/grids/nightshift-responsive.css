@@ -1,93 +1,19 @@
-@charset "utf-8";
-
-/* _________________________________________________
-
-Partly inspired by 320 and Up boilerplate extension
-Andy Clarke http://about.me/malarkey
-Keith Clark 
-URL: http://stuffandnonsense.co.uk/projects/320andup/
-License: http://creativecommons.org/licenses/MIT/
-*/
 body {
 	font-size: 76%;
 	}
-	/* 12px in most modern browsers - used as basis of layout and typography.
-	 * Calculate em based dims as: target dim(px) / container dim(px) = result in em
-	 */
-div {
-	-o-transition: all 1s linear;
-	-moz-transition: all 1s linear;
-	-webkit-transition: all 1s linear;
-	-ms-transition: all 1s linear;
-	transition: all 1s linear;
+
+#body-container {
+	width: 96%;
 }
-
-/* 480px */
-@media only screen and (max-width: 480px) {
-	#body-container {
-		width: 95%;
-	}
-	.alpha-1-main #content-main, .alpha-1-main #column-group-alpha, .alpha-2-main #load-first, .alpha-2-main #content-main, .alpha-2-main #column-group-alpha, .main-beta-1 #content-main, .main-beta-1 #load-first, .main-beta-1 #column-group-beta, .main-beta-2 #content-main, .main-beta-2 #load-first, .main-beta-2 #column-group-beta, .alpha-1-main-beta-1 #load-first, .alpha-1-main-beta-1 #content-main, .alpha-1-main-beta-1 #column-group-alpha, .alpha-1-main-beta-1 #column-group-beta, .alpha-2-main-beta-1 #load-first, .alpha-2-main-beta-1 #content-main, .alpha-2-main-beta-1 #column-group-alpha, .alpha-2-main-beta-1 #column-group-beta, .alpha-1-main-beta-2 #load-first, .alpha-1-main-beta-2 #content-main, .alpha-1-main-beta-2 #column-group-alpha, .alpha-1-main-beta-2 #column-group-beta, .alpha-2-main-beta-2 #load-first, .alpha-2-main-beta-2 #content-main, .alpha-2-main-beta-2 #column-group-alpha, .alpha-2-main-beta-2 #column-group-beta, .count-1, .count-2, .count-3, .count-4, .count-5, .count-6, .cols-1, .cols-2 .item, .cols-3 .item, .cols-4 .item, .cols-5 .item, .cols-6 .item, .cols-2 .item, .cols-3 .item, .cols-4 .item, .cols-5 .item, .cols-6 .item {
-		float: none;
-		margin: 0 auto;
-		width: 100%;
-	}
-	#column-group-alpha , #column-group-beta {
-		float: right;
-	}
-	.count-2 div, .count-3 div, .count-4 div {
-		word-wrap: break-word;
-	}
-	* .gutter, #column-group-alpha .gutter, #column-group-beta .gutter {
-		margin: 0;
-	}
-}
-
-@media only screen and (max-width: 600px) {
-	#body-container {
-		width: 95%;
-	}
-	.alpha-2-main #load-first, .main-beta-1 #load-first, .main-beta-2 #load-first, .alpha-1-main-beta-1 #load-first, .alpha-2-main-beta-1 #load-first, .alpha-1-main-beta-2 #load-first, .alpha-2-main-beta-2 #load-first, .main-beta-1 #column-group-beta, .main-beta-2 #column-group-beta, .alpha-1-main-beta-1 #column-group-beta, .alpha-2-main-beta-1 #column-group-beta, .alpha-1-main-beta-2 #column-group-beta, .alpha-2-main-beta-2 #column-group-beta, .count-1, .count-2, .count-3, .count-4, .count-5, .count-6, .cols-1, .cols-2 .item, .cols-3 .item, .cols-4 .item, .cols-5 .item, .cols-6 .item, .cols-2 .item, .cols-3 .item, .cols-4 .item, .cols-5 .item, .cols-6 .item {
-		float: none;
-		margin: 0 auto;
-		width: 100%;
-	}
-	.alpha-1-main #column-group-alpha, .alpha-2-main #column-group-alpha, .alpha-1-main-beta-1 #column-group-alpha, .alpha-2-main-beta-1 #column-group-alpha, .alpha-1-main-beta-2 #column-group-alpha, .alpha-2-main-beta-2 #column-group-alpha,
-	.alpha-1-main #content-main, .alpha-2-main #content-main, .main-beta-1 #content-main, .main-beta-2 #content-main, .alpha-1-main-beta-1 #content-main, .alpha-2-main-beta-1 #content-main, .alpha-1-main-beta-2 #content-main, .alpha-2-main-beta-2 #content-main {
-		float: left;
-	}
-	.count-2 div, .count-3 div, .count-4 div {
-		word-wrap: break-word;
-	}
-	* #column-group-alpha .gutter {
-		margin : 0 0 0 1em;
-	}
-	* .gutter, #column-group-beta .gutter {
-		margin: 0;
-	}
-}
-
-@media only screen and (max-width: 768px) {
-
-	.count-1, .count-2, .count-3, .count-4, .count-5, .count-6, .cols-1, .cols-2 .item, .cols-3 .item, .cols-4 .item, .cols-5 .item, .cols-6 .item, .cols-2 .item, .cols-3 .item, .cols-4 .item, .cols-5 .item, .cols-6 .item {
-		float: none;
-		margin: 0 auto;
-		width: 100%;
-	}
-
-	.count-2 div, .count-3 div, .count-4 div {
-		word-wrap: break-word;
-	}
-	* .gutter {
-		margin: 0;
-	}
+#body-container .gutter {
+	margin: 0 2%;
 }
 
 /* =============================================================================
    grid.css
    ========================================================================== */
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 750px) {
 
 	#body-container,
 	#header-above {
@@ -124,7 +50,7 @@ div {
 
 	.alpha-1-main #column-group-alpha {
 		float: left;
-		width: 19%;
+		width: 17%;
 	}
 
 	.alpha-2-main #load-first {
@@ -138,7 +64,7 @@ div {
 
 	.alpha-2-main #column-group-alpha {
 		float: left;
-		width: 38%;
+		width: 36%;
 	}
 
 	.main-beta-1 #content-main {
@@ -152,7 +78,7 @@ div {
 
 	.main-beta-1 #column-group-beta {
 		float: right;
-		width: 19%;
+		width: 17%;
 	}
 
 	.main-beta-2 #content-main {
@@ -166,7 +92,7 @@ div {
 
 	.main-beta-2 #column-group-beta {
 		float: right;
-		width: 38%;
+		width: 36%;
 	}
 
 	.alpha-1-main-beta-1 #load-first {
@@ -180,12 +106,12 @@ div {
 
 	.alpha-1-main-beta-1 #column-group-alpha {
 		float: left;
-		width: 25.8%;
+		width: 23.8%;
 	}
 
 	.alpha-1-main-beta-1 #column-group-beta {
 		float: right;
-		width: 19%;
+		width: 17%;
 	}
 
 	.alpha-2-main-beta-1 #load-first {
@@ -199,12 +125,12 @@ div {
 
 	.alpha-2-main-beta-1 #column-group-alpha {
 		float: left;
-		width: 38%;
+		width: 36%;
 	}
 
 	.alpha-2-main-beta-1 #column-group-beta {
 		float: right;
-		width: 19%;
+		width: 17%;
 	}
 
 	.alpha-1-main-beta-2 #load-first {
@@ -218,12 +144,12 @@ div {
 
 	.alpha-1-main-beta-2 #column-group-alpha {
 		float: left;
-		width: 34.5%;
+		width: 32.5%;
 	}
 
 	.alpha-1-main-beta-2 #column-group-beta {
 		float: right;
-		width: 38%;
+		width: 36%;
 	}
 
 	.alpha-2-main-beta-2 #load-first {
@@ -237,12 +163,12 @@ div {
 
 	.alpha-2-main-beta-2 #column-group-alpha {
 		float: left;
-		width: 62%;
+		width: 60%;
 	}
 
 	.alpha-2-main-beta-2 #column-group-beta {
 		float: right;
-		width: 38%;
+		width: 36%;
 	}
 
 	/* =============================================================================
@@ -250,15 +176,15 @@ div {
 	   ========================================================================== */
 
 	.gutter {
-		margin: 10px;
+		margin: 0;
 	}
 
 	#column-group-alpha .gutter {
-		margin: 0 10px 0 0;
+		margin: 0 2% 0 0;
 	}
 
 	#column-group-beta .gutter {
-		margin: 0 0 0 10px;
+		margin: 0 0 0 2%;
 	}
 
 	/* =============================================================================
@@ -306,28 +232,38 @@ div {
 	}
 
 	.cols-2 .item {
-		width: 47.8%;
-		padding: 1%;
+		width: 49%;
+	}
+	.cols-2 .item + .item {
+		padding-left: 2%;
 	}
 
 	.cols-3 .item {
-		width: 30.9%;
-		padding: 1%;
+		width: 32%;
+	}
+	.cols-3 .item + .item {
+		padding-left: 2%;
 	}
 
 	.cols-4 .item {
-		width: 22.4%;
-		padding: 1%;
+		width: 23.5%;
+	}
+	.cols-4 .item + .item {
+		padding-left: 2%;
 	}
 
 	.cols-5 .item {
-		width: 18.1%;
-		padding: 1%;
+		width: 18.4%;
+	}
+	.cols-5 .item + .item {
+		padding-left: 2%;
 	}
 
 	.cols-6 .item {
-		width: 14.8%;
-		padding: 1%;
+		width: 15%;
+	}
+	.cols-6 .item + .item {
+		padding-left: 2%;
 	}
 
 	.cols-2 .item,
@@ -344,7 +280,7 @@ div {
 	}
 
 	.alpha-2-main-beta-2 #column-group-alpha {
-	width: 33%;
+	width: 31%;
 	}
 
 	.alpha-2-main-beta-2 #load-first {
