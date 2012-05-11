@@ -60,7 +60,7 @@
 function pagination_list_render($list)
 {
 	// Initialize variables
-	$lang =& JFactory::getLanguage();
+	$lang = JFactory::getLanguage();
 	$html = "<ol class=\"pagination\">";
 
 	$html .= $list['start']['data'];
