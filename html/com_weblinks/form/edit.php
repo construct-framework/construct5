@@ -1,10 +1,10 @@
 <?php defined('_JEXEC') or die;
 /**
- * @version		$Id: edit.php 21321 2011-05-11 01:05:59Z dextercowley $
- * @package		Joomla.Site
- * @subpackage	com_weblinks
- * @copyright	Copyright (C) 2005 - 2011 Open Source Matters, Inc. All rights reserved.
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @version        $Id: edit.php 21321 2011-05-11 01:05:59Z dextercowley $
+ * @package        Joomla.Site
+ * @subpackage    com_weblinks
+ * @copyright    Copyright (C) 2005 - 2011 Open Source Matters, Inc. All rights reserved.
+ * @license        GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 JHtml::_('behavior.keepalive');
@@ -16,12 +16,11 @@ $params = $this->state->get('params');
 ?>
 
 <script type="text/javascript">
-	Joomla.submitbutton = function(task) {
+	Joomla.submitbutton = function (task) {
 		if (task == 'weblink.cancel' || document.formvalidator.isValid(document.id('adminForm'))) {
-			<?php echo $this->form->getField('description')->save(); ?>
+		<?php echo $this->form->getField('description')->save(); ?>
 			Joomla.submitform(task);
-		}
-		else {
+		} else {
 			alert('<?php echo htmlspecialchars(JText::_('JGLOBAL_VALIDATION_FORM_FAILED'));?>');
 		}
 	}
@@ -29,13 +28,13 @@ $params = $this->state->get('params');
 
 <section class="edit<?php echo $this->pageclass_sfx; ?>">
 	<?php if ($this->params->get('show_page_heading', 1)) : ?>
-		<h1>
-			<?php echo htmlspecialchars($this->params->get('page_heading')); ?>
-		</h1>
+	<h1>
+		<?php echo htmlspecialchars($this->params->get('page_heading')); ?>
+	</h1>
 	<?php endif; ?>
-<form action="<?php echo JRoute::_('index.php?option=com_weblinks&view=form&w_id='.(int) $this->item->id); ?>" method="post" name="adminForm" id="adminForm" class="form-validate">
-	<fieldset>
-		<legend><?php echo JText::_('COM_WEBLINKS_LINK'); ?></legend>
+	<form action="<?php echo JRoute::_('index.php?option=com_weblinks&view=form&w_id=' . (int)$this->item->id); ?>" method="post" name="adminForm" id="adminForm" class="form-validate">
+		<fieldset>
+			<legend><?php echo JText::_('COM_WEBLINKS_LINK'); ?></legend>
 
 			<div class="formelm">
 				<?php echo $this->form->getLabel('title'); ?>
@@ -56,10 +55,10 @@ $params = $this->state->get('params');
 				<?php echo $this->form->getInput('url'); ?>
 			</div>
 			<?php if ($this->user->authorise('core.edit.state', 'com_weblinks.weblink')): ?>
-				<div class="formelm">
-					<?php echo $this->form->getLabel('state'); ?>
-					<?php echo $this->form->getInput('state'); ?>
-				</div>
+			<div class="formelm">
+				<?php echo $this->form->getLabel('state'); ?>
+				<?php echo $this->form->getInput('state'); ?>
+			</div>
 			<?php endif; ?>
 			<div class="formelm">
 				<?php echo $this->form->getLabel('language'); ?>
@@ -77,11 +76,11 @@ $params = $this->state->get('params');
 				<?php echo $this->form->getLabel('description'); ?>
 				<?php echo $this->form->getInput('description'); ?>
 			</div>
-	</fieldset>
+		</fieldset>
 
 		<input type="hidden" name="return" value="<?php echo $this->return_page;?>" />
 		<input type="hidden" name="task" value="" />
-		<?php echo JHtml::_( 'form.token' ); ?>
+		<?php echo JHtml::_('form.token'); ?>
 	</form>
 </section>
 

@@ -1,56 +1,56 @@
 <?php defined('_JEXEC') or die;
 /**
-* @package		Unified HTML5 Template Framework for Joomla!+
-* @author		Cristina Solana http://nightshiftcreative.com
-* @author		Matt Thomas http://construct-framework.com | http://betweenbrain.com
-* @copyright	Copyright (C) 2009 - 2012 Matt Thomas. All rights reserved.
-* @license		GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
-*/
+ * @package        Unified HTML5 Template Framework for Joomla!+
+ * @author        Cristina Solana http://nightshiftcreative.com
+ * @author        Matt Thomas http://construct-framework.com | http://betweenbrain.com
+ * @copyright    Copyright (C) 2009 - 2012 Matt Thomas. All rights reserved.
+ * @license        GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
+ */
 
 /**
  * This is a file to add template specific chrome to pagination rendering.
  *
  * pagination_list_footer
- *	 Input variable $list is an array with offsets:
- *		 $list[limit]		: int
- *		 $list[limitstart]	: int
- *		 $list[total]		: int
- *		 $list[limitfield]	: string
- *		 $list[pagescounter]	: string
- *		 $list[pageslinks]	: string
+ *     Input variable $list is an array with offsets:
+ *         $list[limit]        : int
+ *         $list[limitstart]    : int
+ *         $list[total]        : int
+ *         $list[limitfield]    : string
+ *         $list[pagescounter]    : string
+ *         $list[pageslinks]    : string
  *
  * pagination_list_render
- *	 Input variable $list is an array with offsets:
- *		 $list[all]
- *			 [data]		: string
- *			 [active]	: boolean
- *		 $list[start]
- *			 [data]		: string
- *			 [active]	: boolean
- *		 $list[previous]
- *			 [data]		: string
- *			 [active]	: boolean
- *		 $list[next]
- *			 [data]		: string
- *			 [active]	: boolean
- *		 $list[end]
- *			 [data]		: string
- *			 [active]	: boolean
- *		 $list[pages]
- *			 [{PAGE}][data]		: string
- *			 [{PAGE}][active]	: boolean
+ *     Input variable $list is an array with offsets:
+ *         $list[all]
+ *             [data]        : string
+ *             [active]    : boolean
+ *         $list[start]
+ *             [data]        : string
+ *             [active]    : boolean
+ *         $list[previous]
+ *             [data]        : string
+ *             [active]    : boolean
+ *         $list[next]
+ *             [data]        : string
+ *             [active]    : boolean
+ *         $list[end]
+ *             [data]        : string
+ *             [active]    : boolean
+ *         $list[pages]
+ *             [{PAGE}][data]        : string
+ *             [{PAGE}][active]    : boolean
  *
  * pagination_item_active
- *	 Input variable $item is an object with fields:
- *		 $item->base	: integer
- *		 $item->link	: string
- *		 $item->text	: string
+ *     Input variable $item is an object with fields:
+ *         $item->base    : integer
+ *         $item->link    : string
+ *         $item->text    : string
  *
  * pagination_item_inactive
- *	 Input variable $item is an object with fields:
- *		 $item->base	: integer
- *		 $item->link	: string
- *		 $item->text	: string
+ *     Input variable $item is an object with fields:
+ *         $item->base    : integer
+ *         $item->link    : string
+ *         $item->text    : string
  *
  * This gives template designers ultimate control over how pagination is rendered.
  *
@@ -66,15 +66,14 @@ function pagination_list_render($list)
 	$html .= $list['start']['data'];
 	$html .= $list['previous']['data'];
 
-	foreach( $list['pages'] as $page )
-	{
-		if($page['data']['active']) {
+	foreach ($list['pages'] as $page) {
+		if ($page['data']['active']) {
 			// $html .= '<strong>';
 		}
 
 		$html .= $page['data'];
 
-		if($page['data']['active']) {
+		if ($page['data']['active']) {
 			//  $html .= '</strong>';
 		}
 	}
@@ -87,11 +86,14 @@ function pagination_list_render($list)
 	return $html;
 }
 
-function pagination_item_active(&$item) {
-	return "<li><a href=\"".$item->link."\" title=\"".$item->text."\">".$item->text."</a></li>";
+function pagination_item_active(&$item)
+{
+	return "<li><a href=\"" . $item->link . "\" title=\"" . $item->text . "\">" . $item->text . "</a></li>";
 }
 
-function pagination_item_inactive(&$item) {
-	return "<li>".$item->text."</li>";
+function pagination_item_inactive(&$item)
+{
+	return "<li>" . $item->text . "</li>";
 }
+
 ?>
