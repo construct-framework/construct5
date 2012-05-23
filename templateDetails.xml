@@ -345,7 +345,7 @@
 				</field>
 				<field name="mNavPosition"
 					   type="radio"
-					   default="1"
+					   default="0"
 					   label="TPL_CONSTRUCT5_PRO_MNAVPOSITION_LABEL"
 					   description="TPL_CONSTRUCT5_PRO_MNAVPOSITION_DESC">
 					<option value="1">Before Content</option>

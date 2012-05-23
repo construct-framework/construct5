@@ -30,64 +30,65 @@
 
 	<div data-role="page" data-theme="<?php echo $mPageDataTheme ?>">
 
-		<div id="header" data-role="header" data-theme="<?php echo $mHeaderDataTheme ?>">
+		<header id="header" data-role="header" data-theme="<?php echo $mHeaderDataTheme ?>">
 
-			<h1><a href="<?php echo $this->baseurl ?>/" title="<?php echo htmlspecialchars($app->getCfg('sitename')) ?>"><?php echo htmlspecialchars($app->getCfg('sitename')) ?></a></h1>
+			<h1><a href="<?php echo $baseUrl ?>/" title="<?php echo htmlspecialchars($app->getCfg('sitename')) ?>"><?php echo htmlspecialchars($app->getCfg('sitename')) ?></a></h1>
 
-				<?php if ($showDiagnostics) : ?>
-					<ul id="diagnostics">
-					    <li>layout override</li>
-					    <li>column layout <?php echo $columnLayout ?></li>
-						<li>component <?php echo $currentComponent ?></li>
-					    <?php if($view)			echo '<li>'.$view.' view</li>' ?>
-					    <?php if($articleId)	echo '<li>article '.$articleId.'</li>' ?>
-					    <?php if($itemId)		echo '<li>menu item '.$itemId.'</li>' ?>
-					    <?php if($sectionId) 	echo '<li>section '.$sectionId.'</li>' ?>
-					    <?php if($catId)   		echo '<li>category '.$catId.'</li>' ?>
-					    <?php if ($catId && ($inheritStyle || $inheritLayout)) {
-					    		if ($parentCategory) {
-					    		    echo '<li>parent category '.$parentCategory.'</li>';
-					    		}
-					    		$results = getAncestorCategories($catId);
-							    if ($results) {
-							        echo '<li>ancestor categories';
-								        if (count($results) > 0) {
-									        foreach ($results as $item) {
-										        echo ' '.$item->id.' ';
-									        }
+			<?php if ($showDiagnostics) : ?>
+				<ul id="diagnostics">
+				    <li>column layout <?php echo $columnLayout ?></li>
+					<li>component <?php echo $currentComponent ?></li>
+				    <?php if($view)			echo '<li>'.$view.' view</li>' ?>
+				    <?php if($articleId)	echo '<li>article '.$articleId.'</li>' ?>
+				    <?php if($itemId)		echo '<li>menu item '.$itemId.'</li>' ?>
+				    <?php if($catId)   		echo '<li>category '.$catId.'</li>' ?>
+				    <?php if ($catId && ($inheritStyle || $inheritLayout)) {
+				    		if ($parentCategory) {
+				    		    echo '<li>parent category '.$parentCategory.'</li>';
+				    		}
+				    		$results = getAncestorCategories($catId);
+						    if ($results) {
+						        echo '<li>ancestor categories';
+							        if (count($results) > 0) {
+								        foreach ($results as $item) {
+									        echo ' '.$item->id.' ';
 								        }
-							        echo'</li>';
-							    }
-							  } ?>
-				    </ul>
-				<?php endif ?>
-		</div>
+							        }
+						        echo'</li>';
+						    }
+						  } ?>
+			    </ul>
+			<?php endif ?>
+			<?php if ( !$mNavPosition && ($this->countModules('nav'))) : ?>
+			<a href="<?php echo JURI::current() ?>#nav" data-ajax="false">Menu</a>
+			<?php endif ?>
+		</header>
 
 		<?php if ( $mNavPosition && ($this->countModules('nav'))) : ?>
-			<div id="nav">
+			<nav id="nav">
 				<jdoc:include type="modules" name="nav" style="raw" />
-			</div>
+			</nav>
 		<?php endif ?>
 
-		<div id="content-container" data-role="content" data-theme="<?php echo $mContentDataTheme ?>">
+		<section id="content-container" data-role="content" data-theme="<?php echo $mContentDataTheme ?>">
 			<?php if (!empty($messageQueue)) : ?>
 					<jdoc:include type="message" />
 			<?php endif ?>
 			<jdoc:include type="component" />
-		</div>
+		</section>
 
 		<?php if ( !$mNavPosition && ($this->countModules('nav'))) : ?>
-			<div id="nav">
+			<nav id="nav">
 				<jdoc:include type="modules" name="nav" style="raw" />
-			</div>
+			</nav>
 		<?php endif ?>
 
-		<div id="footer" data-role="footer" data-theme="<?php echo $mFooterDataTheme ?>">
+		<footer id="footer" data-role="footer" data-theme="<?php echo $mFooterDataTheme ?>">
 			<a class="view-desktop" href="<?php echo JURI::current() ?>?viewDesktop=true">View Desktop Version</a>
 			<?php if ($this->countModules('footer')) : ?>
 				<jdoc:include type="modules" name="footer" style="xhtml" />
 			<?php endif ?>
-		</div>
+		</footer>
 	</div>
 
 	<?php if ($this->countModules('analytics')) : ?>
