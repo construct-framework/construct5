@@ -204,7 +204,7 @@
 					   description="TPL_CONSTRUCT5_PRO_CUSTOM_STYLE_SHEET_DESC"/>
 				<field name="gridSystem"
 					   type="filelist"
-					   default="nightshift-responsive.css"
+					   default="construct.css"
 					   label="TPL_CONSTRUCT5_PRO_GRID_SYSTEM_LABEL"
 					   directory="templates/construct5-pro/css/grids"
 					   filter="\.css"
