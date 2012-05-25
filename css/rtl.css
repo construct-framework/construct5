@@ -1,142 +1,142 @@
 .main-only #content-main {
 	float      : right;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .main-only #load-first {
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .alpha-1-main #load-first {
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .alpha-1-main #content-main {
 	float      : left;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .alpha-1-main #column-group-alpha {
 	float      : right;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .alpha-2-main #load-first {
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .alpha-2-main #content-main {
 	float      : left;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .alpha-2-main #column-group-alpha {
 	float      : right;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .main-beta-1 #content-main {
 	float      : right;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .main-beta-1 #column-group-beta {
 	float      : left;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .main-beta-2 #content-main {
 	float      : right;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .main-beta-2 #column-group-beta {
 	float      : left;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .alpha-1-main-beta-1 #content-main {
 	float      : left;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .alpha-1-main-beta-1 #column-group-alpha {
 	float      : right;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .alpha-1-main-beta-1 #column-group-beta {
 	float      : left;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .alpha-2-main-beta-1 #content-main {
 	float      : left;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .alpha-2-main-beta-1 #column-group-alpha {
 	float      : right;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .alpha-2-main-beta-1 #column-group-beta {
 	float      : left;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .alpha-1-main-beta-2 #content-main {
 	float      : left;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .alpha-1-main-beta-2 #column-group-alpha {
 	float      : right;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .alpha-1-main-beta-2 #column-group-beta {
 	float      : left;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .alpha-2-main-beta-2 #content-main {
 	float      : left;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .alpha-2-main-beta-2 #column-group-alpha {
 	float      : right;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .alpha-2-main-beta-2 #column-group-beta {
 	float      : left;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 .count-1,
@@ -146,53 +146,53 @@
 .count-5,
 .count-6 {
 	float     : right;
-	direction : rtl
+	direction : rtl;
 }
 
 .date-container {
-	float : left
+	float : left;
 }
 
 .date-container span {
-	float : right
+	float : right;
 }
 
 #access {
 	float     : right;
-	direction : rtl
+	direction : rtl;
 }
 
 #access li {
 	float     : right;
-	direction : rtl
+	direction : rtl;
 }
 
 #breadcrumbs {
 	float      : right;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 #content-container {
 	padding    : 0;
 	margin     : 0;
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 #column-group-alpha {
-	float : right
+	float : right;
 }
 
 #column-group-beta {
-	float : left
+	float : left;
 }
 
 #column-group-alpha ul#mainlevel li,
 #left ul.menu li {
 	float     : right;
 	position  : relative;
-	direction : rtl
+	direction : rtl;
 }
 
 #column-group-alpha ul.menu ul,
@@ -202,7 +202,7 @@
 	position : absolute;
 	top      : 10px;
 	right    : 75%;
-	z-index  : 900
+	z-index  : 900;
 }
 
 #column-group-beta ul#mainlevel li,
@@ -212,14 +212,14 @@
 	padding    : 0 0 0 0;
 	margin     : 0;
 	text-align : left;
-	direction  : rtl
+	direction  : rtl;
 }
 
 #column-group-beta ul#mainlevel li,
 #column-group-beta ul.menu li {
 	float     : right;
 	position  : relative;
-	direction : rtl
+	direction : rtl;
 }
 
 #column-group-beta ul.menu ul,
@@ -229,26 +229,26 @@
 	position : absolute;
 	top      : 10px;
 	right    : -75%;
-	z-index  : 900
+	z-index  : 900;
 }
 
 #footer p {
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 #header {
 	text-align : right;
-	direction  : rtl
+	direction  : rtl;
 }
 
 #load-first {
-	float : right
+	float : right;
 }
 
 #nav {
 	float     : right;
-	direction : rtl
+	direction : rtl;
 }
 
 #nav ul {
@@ -259,19 +259,19 @@
 
 #nav ul li {
 	float     : right;
-	direction : rtl
+	direction : rtl;
 }
 
 #nav ul li ul {
-	display : none
+	display : none;
 }
 
 #nav ul.menu li:hover ul {
 	right     : 0;
-	direction : rtl
+	direction : rtl;
 }
 
 #nav ul.menu li:hover ul li:hover ul {
 	left      : -105px;
-	direction : rtl
+	direction : rtl;
 }

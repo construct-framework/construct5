@@ -30,17 +30,17 @@ body {
    ========================================================================== */
 
 #body-container {
-	min-width : 50em; /* 2x LC width + RC width */
+	min-width : 50em; /* 2x LC width + RC width */;
 }
 
 .alpha-1-main #content-container,
 .alpha-2-main #content-container {
-	padding-left : 200px; /* LC width */
+	padding-left : 200px; /* LC width */;
 }
 
 .main-beta-1 #content-container,
 .main-beta-2 #content-container {
-	padding-right : 200px; /* RC width */
+	padding-right : 200px; /* RC width */;
 }
 
 .alpha-1-main-beta-1 #content-container,
@@ -48,7 +48,7 @@ body {
 .alpha-1-main-beta-2 #content-container,
 .alpha-2-main-beta-2 #content-container {
 	padding-left  : 200px; /* LC width */
-	padding-right : 200px; /* RC width */
+	padding-right : 200px; /* RC width */;
 }
 
 #content-main,
@@ -70,7 +70,7 @@ body {
 
 #column-group-beta {
 	width        : 200px; /* RC width */
-	margin-right : -200px; /* RC width */
+	margin-right : -200px; /* RC width */;
 }
 
 /* =============================================================================

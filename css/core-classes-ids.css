@@ -8,7 +8,7 @@ a.pathway
 a.readon
 a.tooltip
 button#trigger_ {
-	ID
+	ID;
 }
 
 /* Value is set programatically */
@@ -50,7 +50,7 @@ form#selectForm
 form.form-validate
 form.josForm
 form {
-	FORMNAME
+	FORMNAME;
 }
 
 /* Value is set programatically */
@@ -65,17 +65,17 @@ input#{NAME} /* Value is set programatically */
 input#{VALUE} /* Value is set programatically */
 input#alt
 input#area_ {
-	VALUE
+	VALUE;
 }
 
 /* Value is set programatically */
 input#cb {
-	ITEM_ID
+	ITEM_ID;
 }
 
 /* Value is set programatically */
 input#cb {
-	ROW_NUMBER
+	ROW_NUMBER;
 }
 
 /* Value is set programatically */
@@ -102,7 +102,7 @@ input#title
 input#token
 input#username
 input#voteid {
-	VOTE ID NUMBER
+	VOTE ID NUMBER;
 }
 
 /* Value is set programatically */

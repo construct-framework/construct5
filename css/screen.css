@@ -67,7 +67,7 @@ audio:not([controls]) {
 html {
 	font-size                : 100%; /* 1 */
 	-webkit-text-size-adjust : 100%; /* 2 */
-	-ms-text-size-adjust     : 100%; /* 2 */
+	-ms-text-size-adjust     : 100%; /* 2 */;
 }
 
 /*
@@ -262,7 +262,7 @@ nav ol {
 
 img {
 	border                 : 0; /* 1 */
-	-ms-interpolation-mode : bicubic; /* 2 */
+	-ms-interpolation-mode : bicubic; /* 2 */;
 }
 
 /*
@@ -317,7 +317,7 @@ legend {
 	border       : 0; /* 1 */
 	padding      : 0;
 	white-space  : normal; /* 2 */
-	*margin-left : -7px; /* 3 */
+	*margin-left : -7px; /* 3 */;
 }
 
 /*
@@ -333,7 +333,7 @@ textarea {
 	font-size       : 100%; /* 1 */
 	margin          : 0; /* 2 */
 	vertical-align  : baseline; /* 3 */
-	*vertical-align : middle; /* 3 */
+	*vertical-align : middle; /* 3 */;
 }
 
 /*
@@ -342,7 +342,7 @@ textarea {
 
 button,
 input {
-	line-height : normal; /* 1 */
+	line-height : normal; /* 1 */;
 }
 
 /*
@@ -358,7 +358,7 @@ input[type="reset"],
 input[type="submit"] {
 	cursor             : pointer; /* 1 */
 	-webkit-appearance : button; /* 2 */
-	*overflow          : visible; /* 3 */
+	*overflow          : visible; /* 3 */;
 }
 
 /*
@@ -382,7 +382,7 @@ input[type="radio"] {
 	box-sizing : border-box; /* 1 */
 	padding    : 0; /* 2 */
 	*height    : 13px; /* 3 */
-	*width     : 13px; /* 3 */
+	*width     : 13px; /* 3 */;
 }
 
 /*
@@ -424,7 +424,7 @@ input::-moz-focus-inner {
 
 textarea {
 	overflow       : auto; /* 1 */
-	vertical-align : top; /* 2 */
+	vertical-align : top; /* 2 */;
 }
 
 /*! end normalize.css 2012-02-07T12:37 UTC - http://github.com/necolas/normalize.css */
@@ -706,7 +706,7 @@ isindex,
 }
 
 .article-info time {
-	display : block
+	display : block;
 }
 
 .breadcrumbs {
@@ -748,7 +748,7 @@ table.category {
 }
 
 .category .cat-list-row1 {
-
+;
 }
 
 .category th img {
@@ -1032,7 +1032,7 @@ ul.menu-horizontal li {
 }
 
 .publishing label {
-	display : block
+	display : block;
 }
 
 .publishing input {
@@ -1406,7 +1406,7 @@ nav:after,
 }
 
 #nav ul.menu li span.sub {
-	display : block
+	display : block;
 }
 
 #nav ul.menu ul ul {
