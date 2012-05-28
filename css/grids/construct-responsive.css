@@ -8,53 +8,53 @@
 
 /* Default styles for under 40em */
 
-/* Diagnostic code
+	/* Diagnostic code
 	ul.menu li.item-435 a:before {
 		content : "under 40em - ";
 	}/* end diagnostic code */
 
-body {
-	font-size : 76%;
-}
+	body {
+		font-size : 76%;
+	}
 
-#body-container,
-#header-above {
-	margin  : 0 auto;
-	padding : 0;
-}
+	#body-container,
+	#header-above {
+		margin  : 0 auto;
+		padding : 0;
+	}
 
-#load-first,
-#footer-above {
-	float : left;
-}
+	#load-first,
+	#footer-above {
+		float : left;
+	}
 
-#footer-above {
-	width : 100%;
-}
+	#footer-above {
+		width : 100%;
+	}
 
-#body-container {
-	width : 95%;
-}
+	#body-container {
+		width : 95%;
+	}
 
-.gutter {
-	margin : 10px;
-}
+	.gutter {
+		margin : 10px;
+	}
 
-header .gutter {
-	margin-top : 0;
-}
+	header .gutter {
+		margin-top : 0;
+	}
 
-footer .gutter {
-	margin-bottom : 0;
-}
+	footer .gutter {
+		margin-bottom : 0;
+	}
 
-#column-group-alpha .gutter {
-	margin : 0 10px 0 0;
-}
+	#column-group-alpha .gutter {
+		margin : 0 10px 0 0;
+	}
 
-#column-group-beta .gutter {
-	margin : 0 0 0 10px;
-}
+	#column-group-beta .gutter {
+		margin : 0 0 0 10px;
+	}
 
 /* end default styles */
 
