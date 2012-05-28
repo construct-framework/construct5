@@ -1,3 +1,18 @@
+/**
+ * @package       HTML5 Template Framework for Joomla!
+ * @author        Matt Thomas http://construct-framework.com | http://betweenbrain.com
+ * @copyright     Copyright (C) 2009 - 2012 Matt Thomas. All rights reserved.
+ * @license       GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
+ * @inspiration   320 and Up by Andy Clarke http://stuffandnonsense.co.uk/projects/320andup/
+ */
+
+/* Default styles for under 40em */
+
+/* Diagnostic code
+	ul.menu li.item-435 a:before {
+		content : "under 40em - ";
+	}/* end diagnostic code */
+
 body {
 	font-size : 76%;
 }
@@ -17,107 +32,109 @@ body {
 	width : 100%;
 }
 
-/* Default styles are for small screen devices */
-
 #body-container {
 	width : 95%;
 }
 
+.gutter {
+	margin : 10px;
+}
+
+header .gutter {
+	margin-top : 0;
+}
+
+footer .gutter {
+	margin-bottom : 0;
+}
+
+#column-group-alpha .gutter {
+	margin : 0 10px 0 0;
+}
+
+#column-group-beta .gutter {
+	margin : 0 0 0 10px;
+}
+
+/* end default styles */
+
 @media only screen and (min-width: 40em /*480px*/) {
 
+	/* Diagnostic code
 	ul.menu li.item-435 a:before {
 		content : "min 40em - ";
+	}/* end diagnostic code */
+
+	.count-2,
+	.count-3,
+	.count-4,
+	.count-5,
+	.count-6 {
+		width : 50%;
+		float : left;
 	}
+}
+
+@media only screen and (min-width: 50em /*600px*/) {
+
+	/* Diagnostic code
+	ul.menu li.item-435 a:before {
+		content : "min 50em - ";
+	}/* end diagnostic code */
 
 	.alpha-1-main-beta-1 #content-main,
 	.alpha-1-main-beta-2 #content-main,
 	.alpha-2-main-beta-1 #content-main,
 	.alpha-2-main-beta-2 #content-main {
-		width : 100%;
+		width : 62%;
+		float : right;
 	}
 
 	.alpha-1-main-beta-1 #load-first,
 	.alpha-1-main-beta-2 #load-first,
 	.alpha-2-main-beta-1 #load-first,
 	.alpha-2-main-beta-2 #load-first {
-		width : 62%;
+		width : 100%;
 	}
 
 	.alpha-1-main-beta-1 #column-group-alpha,
 	.alpha-1-main-beta-2 #column-group-alpha,
 	.alpha-2-main-beta-1 #column-group-alpha,
 	.alpha-2-main-beta-2 #column-group-alpha {
-		width : 50%;
-	}
-
-	.alpha-1-main-beta-1 #column-group-beta,
-	.alpha-1-main-beta-2 #column-group-beta,
-	.alpha-2-main-beta-1 #column-group-beta,
-	.alpha-2-main-beta-2 #column-group-beta {
 		width : 38%;
 	}
 
-	.alpha-2-main #column-group-alpha,
-	.alpha-2-main-beta-1 #column-group-alpha,
-	.alpha-1-main-beta-2 #column-group-alpha,
-	.alpha-2-main-beta-2 #column-group-alpha {
-		width : 100%;
+	.alpha-1-main #column-group-alpha,
+	.alpha-2-main #column-group-alpha {
+		width : 38%;
 	}
 
-	.alpha-1-main #column-1,
-	.alpha-1-main #column-2,
-	.main-beta-1 #column-3,
-	.main-beta-1 #column-4,
-	.alpha-1-main-beta-1 #column-1,
-	.alpha-1-main-beta-2 #column-1,
-	.alpha-1-main-beta-1 #column-2,
-	.alpha-1-main-beta-2 #column-2,
-	.alpha-1-main-beta-1 #column-3,
-	.alpha-2-main-beta-1 #column-3,
-	.alpha-1-main-beta-1 #column-4,
-	.alpha-2-main-beta-1 #column-4 {
-		width : 100%;
+	.alpha-1-main #content-main,
+	.alpha-2-main #content-main {
+		width : 62%;
+		float : right;
 	}
 
-	.alpha-2-main #column-1,
-	.alpha-2-main #column-2,
-	.main-beta-2 #column-3,
-	.main-beta-2 #column-4,
-	.alpha-2-main-beta-1 #column-1,
-	.alpha-2-main-beta-2 #column-1,
-	.alpha-2-main-beta-1 #column-2,
-	.alpha-2-main-beta-2 #column-2,
-	.alpha-1-main-beta-2 #column-3,
-	.alpha-2-main-beta-2 #column-3,
-	.alpha-1-main-beta-2 #column-4,
-	.alpha-2-main-beta-2 #column-4 {
-		width : 50%;
+	.main-beta-1 #load-first,
+	.main-beta-2 #load-first {
+		width : 62%;
+		float : left;
 	}
 
-	.count-2,
-	.count-3,
-	.count-4,
-	.count-5,
-	.count-6,
-	.cols-2 .item,
-	.cols-3 .item,
-	.cols-4 .item,
-	.cols-5 .item,
-	.cols-6 .item {
-		width : 50%;
+	.main-beta-1 #column-group-beta,
+	.main-beta-2 #column-group-beta {
+		width : 38%;
+		float : right;
 	}
-
-}
-
-@media only screen and (min-width: 50em /*600px*/) {
 
 }
 
 @media only screen and (min-width: 64em /*768px*/) {
 
+	/* Diagnostic code
 	ul.menu li.item-435 a:before {
 		content : "min 64em - ";
-	}
+	}/* end diagnostic code */
 
 	.alpha-1-main #content-main {
 		float : right;
@@ -210,22 +227,22 @@ body {
 	}
 
 	.alpha-1-main-beta-2 #load-first {
-		width : 62%;
+		width : 81%;
 	}
 
 	.alpha-1-main-beta-2 #content-main {
 		float : right;
-		width : 100%;
+		width : 81%;
 	}
 
 	.alpha-1-main-beta-2 #column-group-alpha {
 		float : left;
-		width : 100%;
+		width : 19%;
 	}
 
 	.alpha-1-main-beta-2 #column-group-beta {
 		float : right;
-		width : 38%;
+		width : 19%;
 	}
 
 	.alpha-2-main-beta-2 #load-first {
@@ -247,13 +264,58 @@ body {
 		width : 100%;
 	}
 
+	.cols-1 {
+		display : block;
+		float   : none !important;
+		margin  : 0 !important;
+	}
+
+	.cols-2 .item {
+		width   : 47.8%;
+		padding : 1%;
+	}
+
+	.cols-3 .item {
+		width   : 30.9%;
+		padding : 1%;
+	}
+
+	.cols-4 .item {
+		width   : 22.4%;
+		padding : 1%;
+	}
+
+	.cols-5 .item {
+		width   : 19.1%;
+		padding : 1%;
+	}
+
+	.cols-6 .item {
+		width   : 15.9%;
+		padding : 1%;
+	}
+
+	.cols-2 .item,
+	.cols-3 .item,
+	.cols-4 .item,
+	.cols-5 .item,
+	.cols-6 .item {
+		float : left;
+	}
+
+	.column-1,
+	.items-more {
+		clear : both;
+	}
+
 }
 
 @media only screen and (min-width: 82.6em /*992px*/) {
 
+	/* Diagnostic code
 	ul.menu li.item-435 a:before {
 		content : "min 82.6em - ";
-	}
+	}/* end diagnostic code */
 
 	.main-only #content-main {
 		float : left;
@@ -396,26 +458,6 @@ body {
 		width : 38%;
 	}
 
-	.gutter {
-		margin : 10px;
-	}
-
-	header .gutter {
-		margin-top : 0;
-	}
-
-	footer .gutter {
-		margin-bottom : 0;
-	}
-
-	#column-group-alpha .gutter {
-		margin : 0 10px 0 0;
-	}
-
-	#column-group-beta .gutter {
-		margin : 0 0 0 10px;
-	}
-
 	.count-1 {
 		float : left;
 		width : 100%;
@@ -493,67 +535,13 @@ body {
 
 @media only screen and (min-width: 115em /*1382px*/) {
 
+	/* Diagnostic code
 	ul.menu li.item-435 a:before {
-		content : "115em ";
-	}
+		content : "min 115em - ";
+	}/* end diagnostic code */
 
-	body {
-		max-width : 1440px;
-	}
-
-}
-
-/*@media only screen and (max-width:40em) {
 	#body-container {
-		width : 95%;
-	}
-
-	#load-first,
-	#footer-above,
-	.main-only #content-main,
-	.main-only #load-first,
-	.alpha-1-main #load-first,
-	.alpha-1-main #content-main,
-	.alpha-1-main #column-group-alpha,
-	.alpha-2-main #load-first,
-	.alpha-2-main #content-main,
-	.alpha-2-main #column-group-alpha,
-	.main-beta-1 #content-main,
-	.main-beta-1 #load-first,
-	.main-beta-1 #column-group-beta,
-	.main-beta-2 #content-main,
-	.main-beta-2 #load-first,
-	.main-beta-2 #column-group-beta,
-	.alpha-1-main-beta-1 #load-first,
-	.alpha-1-main-beta-1 #content-main,
-	.alpha-1-main-beta-1 #column-group-alpha,
-	.alpha-1-main-beta-1 #column-group-beta,
-	.alpha-2-main-beta-1 #load-first,
-	.alpha-2-main-beta-1 #content-main,
-	.alpha-2-main-beta-1 #column-group-alpha,
-	.alpha-2-main-beta-1 #column-group-beta,
-	.alpha-1-main-beta-2 #load-first,
-	.alpha-1-main-beta-2 #content-main,
-	.alpha-1-main-beta-2 #column-group-alpha,
-	.alpha-1-main-beta-2 #column-group-beta,
-	.alpha-2-main-beta-2 #load-first,
-	.alpha-2-main-beta-2 #content-main,
-	.alpha-2-main-beta-2 #column-group-alpha,
-	.alpha-2-main-beta-2 #column-group-beta,
-	.count-1,
-	.count-2,
-	.count-3,
-	.count-4,
-	.count-5,
-	.count-6,
-	.cols-2 .item,
-	.cols-3 .item,
-	.cols-4 .item,
-	.cols-5 .item,
-	.cols-6 .item {
-		width : 100%;
+		max-width : 120em;
 	}
 
 }
-
-*/
