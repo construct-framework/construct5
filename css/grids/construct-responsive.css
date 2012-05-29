@@ -8,7 +8,7 @@
 
 /* Default styles for under 40em */
 
-	/* Diagnostic code */
+	/* Diagnostic code
 	ul.menu li.item-435 a:before {
 		content : "under 40em - ";
 	}/* end diagnostic code */
@@ -60,7 +60,7 @@
 
 @media only screen and (min-width: 40em /*480px*/) {
 
-	/* Diagnostic code */
+	/* Diagnostic code
 	ul.menu li.item-435 a:before {
 		content : "min 40em - ";
 	}/* end diagnostic code */
@@ -77,7 +77,7 @@
 
 @media only screen and (min-width: 50em /*600px*/) {
 
-	/* Diagnostic code */
+	/* Diagnostic code
 	ul.menu li.item-435 a:before {
 		content : "min 50em - ";
 	}/* end diagnostic code */
@@ -137,7 +137,7 @@
 
 @media only screen and (min-width: 64em /*768px*/) {
 
-	/* Diagnostic code */
+	/* Diagnostic code
 	ul.menu li.item-435 a:before {
 		content : "min 64em - ";
 	}/* end diagnostic code */
@@ -226,7 +226,7 @@
 
 @media only screen and (min-width: 82.6em /*992px*/) {
 
-	/* Diagnostic code */
+	/* Diagnostic code
 	ul.menu li.item-435 a:before {
 		content : "min 82.6em - ";
 	}/* end diagnostic code */
@@ -460,7 +460,7 @@
 
 @media only screen and (min-width: 115em /*1382px*/) {
 
-	/* Diagnostic code */
+	/* Diagnostic code
 	ul.menu li.item-435 a:before {
 		content : "min 115em - ";
 	}/* end diagnostic code */
