@@ -8,7 +8,7 @@
 
 /* Default styles for under 40em */
 
-	/* Diagnostic code
+	/* Diagnostic code */
 	ul.menu li.item-435 a:before {
 		content : "under 40em - ";
 	}/* end diagnostic code */
@@ -60,7 +60,7 @@
 
 @media only screen and (min-width: 40em /*480px*/) {
 
-	/* Diagnostic code
+	/* Diagnostic code */
 	ul.menu li.item-435 a:before {
 		content : "min 40em - ";
 	}/* end diagnostic code */
@@ -69,11 +69,7 @@
 		float: left;
 	}
 
-	.count-2,
-	.count-3,
-	.count-4,
-	.count-5,
-	.count-6 {
+	.count-2 {
 		width : 50%;
 		float : left;
 	}
@@ -81,7 +77,7 @@
 
 @media only screen and (min-width: 50em /*600px*/) {
 
-	/* Diagnostic code
+	/* Diagnostic code */
 	ul.menu li.item-435 a:before {
 		content : "min 50em - ";
 	}/* end diagnostic code */
@@ -90,7 +86,7 @@
 	.alpha-1-main-beta-2 #content-main,
 	.alpha-2-main-beta-1 #content-main,
 	.alpha-2-main-beta-2 #content-main {
-		width : 62%;
+		width : 81%;
 		float : right;
 	}
 
@@ -101,171 +97,80 @@
 		width : 100%;
 	}
 
+	.alpha-1-main #column-group-alpha,
+	.alpha-2-main #column-group-alpha,
 	.alpha-1-main-beta-1 #column-group-alpha,
 	.alpha-1-main-beta-2 #column-group-alpha,
 	.alpha-2-main-beta-1 #column-group-alpha,
 	.alpha-2-main-beta-2 #column-group-alpha {
-		width : 38%;
-	}
-
-	.alpha-1-main #column-group-alpha,
-	.alpha-2-main #column-group-alpha {
-		width : 38%;
+		width : 19%;
 	}
 
 	.alpha-1-main #content-main,
 	.alpha-2-main #content-main {
-		width : 62%;
+		width : 81%;
 		float : right;
 	}
 
 	.main-beta-1 #load-first,
 	.main-beta-2 #load-first {
-		width : 62%;
+		width : 81%;
 		float : left;
 	}
 
 	.main-beta-1 #column-group-beta,
 	.main-beta-2 #column-group-beta {
-		width : 38%;
+		width : 19%;
 		float : right;
+	}
+
+	.main-beta-1 .count-2,
+	.main-beta-2 .count-2,
+	.alpha-1-main .count-2,
+	.alpha-2-main .count-2,
+	.alpha-2-main-beta-1 #column-group-alpha .count-2,
+	.alpha-2-main-beta-2 #column-group-alpha .count-2 {
+		width: 100%;
 	}
 
 }
 
 @media only screen and (min-width: 64em /*768px*/) {
 
-	/* Diagnostic code
+	/* Diagnostic code */
 	ul.menu li.item-435 a:before {
 		content : "min 64em - ";
 	}/* end diagnostic code */
 
-	.alpha-1-main #content-main {
-		float : right;
-		width : 81%;
-	}
-
-	.alpha-1-main #column-group-alpha {
-		float : left;
-		width : 19%;
-	}
-
-	.alpha-2-main #load-first {
-		width : 100%;
-	}
-
-	.alpha-2-main #content-main {
-		float : right;
-		width : 62%;
-	}
-
-	.alpha-2-main #column-group-alpha {
-		float : left;
-		width : 38%;
-	}
-
-	.main-beta-1 #content-main {
-		float : left;
-		width : 100%;
-	}
-
-	.main-beta-1 #load-first {
-		width : 81%;
-	}
-
-	.main-beta-1 #column-group-beta {
-		float : right;
-		width : 19%;
-	}
-
-	.main-beta-2 #content-main {
-		float : left;
-		width : 100%;
-	}
-
-	.main-beta-2 #load-first {
-		width : 62%;
-	}
-
-	.main-beta-2 #column-group-beta {
-		float : right;
-		width : 38%;
-	}
-
-	.alpha-1-main-beta-1 #load-first {
-		width : 100%;
-	}
-
-	.alpha-1-main-beta-1 #content-main {
-		float : right;
-		width : 62%;
-	}
-
-	.alpha-1-main-beta-1 #column-group-alpha {
-		float : left;
-		width : 38%;
-	}
-
-	.alpha-1-main-beta-1 #column-group-beta {
-		float : right;
-		width : 100%;
-	}
-
-	.alpha-2-main-beta-1 #load-first {
-		width : 81%;
-	}
-
-	.alpha-2-main-beta-1 #content-main {
-		float : right;
-		width : 62%;
-	}
-
-	.alpha-2-main-beta-1 #column-group-alpha {
-		float : left;
-		width : 38%;
-	}
-
-	.alpha-2-main-beta-1 #column-group-beta {
-		float : right;
-		width : 19%;
-	}
-
-	.alpha-1-main-beta-2 #load-first {
-		width : 81%;
-	}
-
-	.alpha-1-main-beta-2 #content-main {
-		float : right;
-		width : 81%;
-	}
-
-	.alpha-1-main-beta-2 #column-group-alpha {
-		float : left;
-		width : 19%;
-	}
-
-	.alpha-1-main-beta-2 #column-group-beta {
-		float : right;
-		width : 19%;
-	}
-
+	.alpha-1-main-beta-1 #load-first,
+	.alpha-2-main-beta-1 #load-first,
+	.alpha-1-main-beta-2 #load-first,
 	.alpha-2-main-beta-2 #load-first {
-		width : 100%;
+		width : 81%;
 	}
 
+	.alpha-1-main-beta-1 #content-main,
+	.alpha-2-main-beta-1 #content-main,
+	.alpha-1-main-beta-2 #content-main,
 	.alpha-2-main-beta-2 #content-main {
 		float : right;
-		width : 62%;
+		width : 74.2%;
 	}
 
+	.alpha-1-main-beta-1 #column-group-alpha,
+	.alpha-2-main-beta-1 #column-group-alpha,
+	.alpha-1-main-beta-2 #column-group-alpha,
 	.alpha-2-main-beta-2 #column-group-alpha {
 		float : left;
-		width : 38%;
+		width : 25.8%;
 	}
 
+	.alpha-1-main-beta-1 #column-group-beta,
+	.alpha-2-main-beta-1 #column-group-beta,
+	.alpha-1-main-beta-2 #column-group-beta,
 	.alpha-2-main-beta-2 #column-group-beta {
 		float : right;
-		width : 100%;
+		width : 19%;
 	}
 
 	.cols-1 {
@@ -312,11 +217,16 @@
 		clear : both;
 	}
 
+	.alpha-2-main-beta-2 #column-group-beta .count-2,
+	.alpha-1-main-beta-2 #column-group-beta .count-2 {
+		width:100%;
+	}
+
 }
 
 @media only screen and (min-width: 82.6em /*992px*/) {
 
-	/* Diagnostic code
+	/* Diagnostic code */
 	ul.menu li.item-435 a:before {
 		content : "min 82.6em - ";
 	}/* end diagnostic code */
@@ -462,6 +372,17 @@
 		width : 38%;
 	}
 
+	.main-beta-1 .count-2,
+	.main-beta-2 .count-2,
+	.alpha-1-main .count-2,
+	.alpha-2-main .count-2,
+	.alpha-2-main-beta-1 #column-group-alpha .count-2,
+	.alpha-2-main-beta-2 #column-group-alpha .count-2,
+	.alpha-1-main-beta-2 #column-group-beta .count-2,
+	.alpha-2-main-beta-2 #column-group-beta .count-2 {
+		width:50%;
+	}
+
 	.count-1 {
 		float : left;
 		width : 100%;
@@ -539,7 +460,7 @@
 
 @media only screen and (min-width: 115em /*1382px*/) {
 
-	/* Diagnostic code
+	/* Diagnostic code */
 	ul.menu li.item-435 a:before {
 		content : "min 115em - ";
 	}/* end diagnostic code */
