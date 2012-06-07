@@ -12,16 +12,16 @@ defined('_JEXEC') or die;
 // Note. It is important to remove spaces between elements.
 $title = $item->anchor_title ? 'title="' . $item->anchor_title . '" ' : '';
 if ($item->menu_image) {
-	$item->params->get('menu_text', 1) ?
-			$linktype = '<img src="' . $item->menu_image . '" alt="' . $item->title . '" /><span class="image-title">' . $item->title . '</span> ' :
-			$linktype = '<img src="' . $item->menu_image . '" alt="' . $item->title . '" />';
+    $item->params->get('menu_text', 1) ?
+            $linktype = '<img src="' . $item->menu_image . '" alt="' . $item->title . '" /><span class="image-title">' . $item->title . '</span> ' :
+            $linktype = '<img src="' . $item->menu_image . '" alt="' . $item->title . '" />';
 }
 else {
-	$linktype = $item->title;
-	$split = explode('||', $linktype, 2);
-	if (count($split) == 2) {
-		$linktype = '<span class="title">' . $split[0] . '</span><span class="sub">' . $split[1] . '</span>';
-	}
+    $linktype = $item->title;
+    $split = explode('||', $linktype, 2);
+    if (count($split) == 2) {
+        $linktype = '<span class="title">' . $split[0] . '</span><span class="sub">' . $split[1] . '</span>';
+    }
 }
 
 ?><span class="separator"><?php echo $title; ?><?php echo $linktype; ?></span>

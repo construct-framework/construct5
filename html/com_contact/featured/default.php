@@ -13,20 +13,20 @@ JHtml::addIncludePath(JPATH_COMPONENT . DS . 'helpers');
 <section class="blog-featured<?php echo $this->pageclass_sfx;?>">
 <?php if ($this->params->get('show_page_heading') != 0): ?>
 <h1>
-	<?php echo htmlspecialchars($this->params->get('page_heading')); ?>
+    <?php echo htmlspecialchars($this->params->get('page_heading')); ?>
 </h1>
-	<?php endif; ?>
+    <?php endif; ?>
 
 <?php echo $this->loadTemplate('items'); ?>
 <?php if ($this->params->def('show_pagination', 2) == 1 || ($this->params->get('show_pagination') == 2 && $this->pagination->get('pages.total') > 1)) : ?>
 <nav class="pagination">
-	<?php if ($this->params->def('show_pagination_results', 1)) : ?>
-	<p class="counter">
-		<?php echo $this->pagination->getPagesCounter(); ?>
-	</p>
-	<?php endif; ?>
-	<?php echo $this->pagination->getPagesLinks(); ?>
+    <?php if ($this->params->def('show_pagination_results', 1)) : ?>
+    <p class="counter">
+        <?php echo $this->pagination->getPagesCounter(); ?>
+    </p>
+    <?php endif; ?>
+    <?php echo $this->pagination->getPagesLinks(); ?>
 </nav>
-	<?php endif; ?>
+    <?php endif; ?>
 </section>
 

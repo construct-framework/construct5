@@ -59,41 +59,41 @@
 
 function pagination_list_render($list)
 {
-	// Initialize variables
-	$lang = JFactory::getLanguage();
-	$html = "<ol class=\"pagination\">";
+    // Initialize variables
+    $lang = JFactory::getLanguage();
+    $html = "<ol class=\"pagination\">";
 
-	$html .= $list['start']['data'];
-	$html .= $list['previous']['data'];
+    $html .= $list['start']['data'];
+    $html .= $list['previous']['data'];
 
-	foreach ($list['pages'] as $page) {
-		if ($page['data']['active']) {
-			// $html .= '<strong>';
-		}
+    foreach ($list['pages'] as $page) {
+        if ($page['data']['active']) {
+            // $html .= '<strong>';
+        }
 
-		$html .= $page['data'];
+        $html .= $page['data'];
 
-		if ($page['data']['active']) {
-			//  $html .= '</strong>';
-		}
-	}
+        if ($page['data']['active']) {
+            //  $html .= '</strong>';
+        }
+    }
 
-	$html .= $list['next']['data'];
-	$html .= $list['end']['data'];
-	// $html .= '&#171;';
+    $html .= $list['next']['data'];
+    $html .= $list['end']['data'];
+    // $html .= '&#171;';
 
-	$html .= "</ol>";
-	return $html;
+    $html .= "</ol>";
+    return $html;
 }
 
 function pagination_item_active(&$item)
 {
-	return "<li><a href=\"" . $item->link . "\" title=\"" . $item->text . "\">" . $item->text . "</a></li>";
+    return "<li><a href=\"" . $item->link . "\" title=\"" . $item->text . "\">" . $item->text . "</a></li>";
 }
 
 function pagination_item_inactive(&$item)
 {
-	return "<li>" . $item->text . "</li>";
+    return "<li>" . $item->text . "</li>";
 }
 
 ?>

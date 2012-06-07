@@ -14,9 +14,9 @@ JHtml::_('behavior.tooltip');
 <section class="profile<?php echo $this->pageclass_sfx?>">
 <?php if ($this->params->get('show_page_heading')) : ?>
 <h1>
-	<?php echo htmlspecialchars($this->params->get('page_heading')); ?>
+    <?php echo htmlspecialchars($this->params->get('page_heading')); ?>
 </h1>
-	<?php endif; ?>
+    <?php endif; ?>
 
 <?php echo $this->loadTemplate('core'); ?>
 
@@ -26,8 +26,8 @@ JHtml::_('behavior.tooltip');
 
 <?php if (JFactory::getUser()->id == $this->data->id) : ?>
 <a href="<?php echo JRoute::_('index.php?option=com_users&task=profile.edit&user_id=' . (int)$this->data->id);?>">
-	<?php echo JText::_('COM_USERS_Edit_Profile'); ?>
+    <?php echo JText::_('COM_USERS_Edit_Profile'); ?>
 </a>
-	<?php endif; ?>
+    <?php endif; ?>
 </section>
 

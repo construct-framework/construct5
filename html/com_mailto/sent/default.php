@@ -10,12 +10,12 @@
 ?>
 <section>
 <h2>
-	<?php echo JText::_('COM_MAILTO_EMAIL_SENT'); ?>
+    <?php echo JText::_('COM_MAILTO_EMAIL_SENT'); ?>
 </h2>
 
 <a href="javascript: void window.close()">
-	<?php echo JText::_('COM_MAILTO_CLOSE_WINDOW'); ?>
-	<?php echo JHtml::_('image', 'mailto/close-x.png', NULL, NULL, true); ?>
+    <?php echo JText::_('COM_MAILTO_CLOSE_WINDOW'); ?>
+    <?php echo JHtml::_('image', 'mailto/close-x.png', NULL, NULL, true); ?>
 </a>
 </section>
 

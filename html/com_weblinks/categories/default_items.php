@@ -12,45 +12,45 @@ $class = ' class="first"';
 
 if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) : ?>
 <ol>
-	<?php foreach ($this->items[$this->parent->id] as $id => $item) : ?>
-	<?php
-	if ($this->params->get('show_empty_categories_cat') || $item->numitems || count($item->getChildren())) :
-		if (!isset($this->items[$this->parent->id][$id + 1])) {
-			$class = ' class="last"';
-		}
-		?>
-		<li<?php echo $class; ?>>
-			<?php $class = ''; ?>
-			<span class="item-title"><a href="<?php echo JRoute::_(WeblinksHelperRoute::getCategoryRoute($item->id));?>">
-				<?php echo htmlspecialchars($item->title); ?></a>
-			</span>
-			<?php if ($this->params->get('show_subcat_desc_cat') == 1) : ?>
-			<?php if ($item->description) : ?>
-				<p class="category-desc">
-					<?php echo JHtml::_('content.prepare', $item->description, '', 'com_weblinks.categories'); ?>
-				</p>
-				<?php endif; ?>
-			<?php endif; ?>
-			<?php if ($this->params->get('show_cat_num_links_cat') == 1) : ?>
-			<dl class="weblink-count">
-				<dt>
-					<?php echo JText::_('COM_WEBLINKS_NUM'); ?></dt>
-				<dd><?php echo $item->numitems; ?></dd>
-			</dl>
-			<?php endif; ?>
+    <?php foreach ($this->items[$this->parent->id] as $id => $item) : ?>
+    <?php
+    if ($this->params->get('show_empty_categories_cat') || $item->numitems || count($item->getChildren())) :
+        if (!isset($this->items[$this->parent->id][$id + 1])) {
+            $class = ' class="last"';
+        }
+        ?>
+        <li<?php echo $class; ?>>
+            <?php $class = ''; ?>
+            <span class="item-title"><a href="<?php echo JRoute::_(WeblinksHelperRoute::getCategoryRoute($item->id));?>">
+                <?php echo htmlspecialchars($item->title); ?></a>
+            </span>
+            <?php if ($this->params->get('show_subcat_desc_cat') == 1) : ?>
+            <?php if ($item->description) : ?>
+                <p class="category-desc">
+                    <?php echo JHtml::_('content.prepare', $item->description, '', 'com_weblinks.categories'); ?>
+                </p>
+                <?php endif; ?>
+            <?php endif; ?>
+            <?php if ($this->params->get('show_cat_num_links_cat') == 1) : ?>
+            <dl class="weblink-count">
+                <dt>
+                    <?php echo JText::_('COM_WEBLINKS_NUM'); ?></dt>
+                <dd><?php echo $item->numitems; ?></dd>
+            </dl>
+            <?php endif; ?>
 
-			<?php if (count($item->getChildren()) > 0) :
-			$this->items[$item->id] = $item->getChildren();
-			$this->parent = $item;
-			$this->maxLevelcat--;
-			echo $this->loadTemplate('items');
-			$this->parent = $item->getParent();
-			$this->maxLevelcat++;
-		endif; ?>
+            <?php if (count($item->getChildren()) > 0) :
+            $this->items[$item->id] = $item->getChildren();
+            $this->parent = $item;
+            $this->maxLevelcat--;
+            echo $this->loadTemplate('items');
+            $this->parent = $item->getParent();
+            $this->maxLevelcat++;
+        endif; ?>
 
-		</li>
-		<?php endif; ?>
-	<?php endforeach; ?>
+        </li>
+        <?php endif; ?>
+    <?php endforeach; ?>
 </ol>
 <?php endif; ?>
 

@@ -9,7 +9,7 @@
 
 if ($this->error): ?>
 <section class="error">
-	<?php echo htmlspecialchars($this->error); ?>
+    <?php echo htmlspecialchars($this->error); ?>
 </section>
 <?php endif;
 
