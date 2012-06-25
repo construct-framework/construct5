@@ -420,7 +420,7 @@
                        description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_DESC"/>
                 <field name="googleWebFontTargets"
                        type="text"
-                       default="h1,h2,h3,h4,h5,h6"
+                       default=""
                        label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_LABEL"
                        description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_DESC"
                        size="50"/>
@@ -432,7 +432,7 @@
                        description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_DESC"/>
                 <field name="googleWebFontTargets2"
                        type="text"
-                       default="h1,h2,h3,h4,h5,h6"
+                       default=""
                        label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_LABEL"
                        description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_DESC"
                        size="50"/>
@@ -444,7 +444,7 @@
                        description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_DESC"/>
                 <field name="googleWebFontTargets3"
                        type="text"
-                       default="h1,h2,h3,h4,h5,h6"
+                       default=""
                        label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_LABEL"
                        description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_DESC"
                        size="50"/>
