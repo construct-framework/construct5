@@ -41,44 +41,41 @@ $footerAboveClass = 'count-1';
 // Access template parameters
 $params = JFactory::getApplication()->getTemplate(true)->params;
 
-$customStyleSheet = $params->get('customStyleSheet');
-$detectTablets = $params->get('detectTablets');
-$enableSwitcher = $params->get('enableSwitcher');
-$fluidMedia = $params->get('fluidMedia');
-$fullWidth = $params->get('fullWidth');
-$googleWebFont = $params->get('googleWebFont');
-$googleWebFontSize = $params->get('googleWebFontSize');
-$googleWebFontTargets = $params->get('googleWebFontTargets');
-$googleWebFont2 = $params->get('googleWebFont2');
-$googleWebFontSize2 = $params->get('googleWebFontSize2');
+$customStyleSheet      = $params->get('customStyleSheet');
+$detectTablets         = $params->get('detectTablets');
+$enableSwitcher        = $params->get('enableSwitcher');
+$fluidMedia            = $params->get('fluidMedia');
+$fullWidth             = $params->get('fullWidth');
+$googleWebFont         = $params->get('googleWebFont');
+$googleWebFontTargets  = $params->get('googleWebFontTargets');
+$googleWebFont2        = $params->get('googleWebFont2');
 $googleWebFontTargets2 = $params->get('googleWebFontTargets2');
-$googleWebFont3 = $params->get('googleWebFont3');
-$googleWebFontSize3 = $params->get('googleWebFontSize3');
+$googleWebFont3        = $params->get('googleWebFont3');
 $googleWebFontTargets3 = $params->get('googleWebFontTargets3');
-$gridSystem = $params->get('gridSystem');
-$IECSS3 = $params->get('IECSS3');
-$IECSS3Targets = $params->get('IECSS3Targets');
-$IE6TransFix = $params->get('IE6TransFix');
-$IE6TransFixTargets = $params->get('IE6TransFixTargets');
-$inheritLayout = $params->get('inheritLayout');
-$inheritStyle = $params->get('inheritStyle');
-$loadMoo = $params->get('loadMoo');
-$loadModal = $params->get('loadModal');
-$loadjQuery = $params->get('loadjQuery');
-$mContentDataTheme = $params->get('mContentDataTheme');
-$mdetect = $params->get('mdetect');
-$mFooterDataTheme = $params->get('mFooterDataTheme');
-$mHeaderDataTheme = $params->get('mHeaderDataTheme');
-$mNavPosition = $params->get('mNavPosition');
-$mNavDataTheme = $params->get('mNavDataTheme');
-$mPageDataTheme = $params->get('mPageDataTheme');
-$setGeneratorTag = $params->get('setGeneratorTag');
-$showDiagnostics = $params->get('showDiagnostics');
-$siteWidth = $params->get('siteWidth');
-$siteWidthType = $params->get('siteWidthType');
-$siteWidthUnit = $params->get('siteWidthUnit');
-$stickyFooterHeight = $params->get('stickyFooterHeight');
-$useStickyFooter = $params->get('useStickyFooter');
+$gridSystem            = $params->get('gridSystem');
+$IECSS3                = $params->get('IECSS3');
+$IECSS3Targets         = $params->get('IECSS3Targets');
+$IE6TransFix           = $params->get('IE6TransFix');
+$IE6TransFixTargets    = $params->get('IE6TransFixTargets');
+$inheritLayout         = $params->get('inheritLayout');
+$inheritStyle          = $params->get('inheritStyle');
+$loadMoo               = $params->get('loadMoo');
+$loadModal             = $params->get('loadModal');
+$loadjQuery            = $params->get('loadjQuery');
+$mContentDataTheme     = $params->get('mContentDataTheme');
+$mdetect               = $params->get('mdetect');
+$mFooterDataTheme      = $params->get('mFooterDataTheme');
+$mHeaderDataTheme      = $params->get('mHeaderDataTheme');
+$mNavPosition          = $params->get('mNavPosition');
+$mNavDataTheme         = $params->get('mNavDataTheme');
+$mPageDataTheme        = $params->get('mPageDataTheme');
+$setGeneratorTag       = $params->get('setGeneratorTag');
+$showDiagnostics       = $params->get('showDiagnostics');
+$siteWidth             = $params->get('siteWidth');
+$siteWidthType         = $params->get('siteWidthType');
+$siteWidthUnit         = $params->get('siteWidthUnit');
+$stickyFooterHeight    = $params->get('stickyFooterHeight');
+$useStickyFooter       = $params->get('useStickyFooter');
 
 // Render module positions
 $renderer = $doc->loadRenderer('modules');
@@ -118,13 +115,13 @@ else {
         echo "\n" . $cssFile;
     if ($googleWebFont != "")
         echo '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=' . $googleWebFont . '">
-        <style type="text/css">' . $googleWebFontTargets . '{font-family:' . $googleWebFont . ', serif !important;font-size:' . $googleWebFontSize . '} </style>';
+        <style type="text/css">' . $googleWebFontTargets . '{font-family:' . $googleWebFont . ', serif !important;} </style>';
     if ($googleWebFont2 != "")
         echo '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=' . $googleWebFont2 . '">
-        <style type="text/css">' . $googleWebFontTargets2 . '{font-family:' . $googleWebFont2 . ', serif !important;font-size:' . $googleWebFontSize2 . '} </style>';
+        <style type="text/css">' . $googleWebFontTargets2 . '{font-family:' . $googleWebFont2 . ', serif !important;} </style>';
     if ($googleWebFont3 != "")
         echo '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=' . $googleWebFont3 . '">
-        <style type="text/css">' . $googleWebFontTargets3 . '{font-family:' . $googleWebFont3 . ', serif !important;font-size:' . $googleWebFontSize3 . '} </style>';
+        <style type="text/css">' . $googleWebFontTargets3 . '{font-family:' . $googleWebFont3 . ', serif !important;} </style>';
     if ($loadjQuery != "")
         $doc->addScript("http://ajax.googleapis.com/ajax/libs/jquery/'.$loadjQuery.'/jquery.min.js");
     if ($enableSwitcher)

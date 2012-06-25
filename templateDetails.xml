@@ -424,12 +424,6 @@
                        label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_LABEL"
                        description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_DESC"
                        size="50"/>
-                <field name="googleWebFontSize"
-                       type="text"
-                       default="85%"
-                       label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_SIZE_LABEL"
-                       description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_SIZE_DESC"
-                       size="5"/>
                 <field type="spacer" default=" "/>
                 <field name="googleWebFont2"
                        type="googlewebfont"
@@ -442,12 +436,6 @@
                        label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_LABEL"
                        description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_DESC"
                        size="50"/>
-                <field name="googleWebFontSize2"
-                       type="text"
-                       default="2.1em"
-                       label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_SIZE_LABEL"
-                       description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_SIZE_DESC"
-                       size="5"/>
                 <field type="spacer" default=" "/>
                 <field name="googleWebFont3"
                        type="googlewebfont"
@@ -460,12 +448,6 @@
                        label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_LABEL"
                        description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_DESC"
                        size="50"/>
-                <field name="googleWebFontSize3"
-                       type="text"
-                       default="20px"
-                       label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_SIZE_LABEL"
-                       description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_SIZE_DESC"
-                       size="5"/>
             </fieldset>
             <fieldset name="version_check">
                 <field label="TPL_CONSTRUCT5_PRO_VERSION_CHECK_LABEL" type="upgradecheck"/>

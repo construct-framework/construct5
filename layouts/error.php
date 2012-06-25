@@ -34,13 +34,13 @@
         echo "\n" . $cssFile;
     if ($googleWebFont != "")
         echo '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=' . $googleWebFont . '">
-        <style type="text/css">' . $googleWebFontTargets . '{font-family:' . $googleWebFont . ', serif !important;font-size:' . $googleWebFontSize . '} </style>';
+        <style type="text/css">' . $googleWebFontTargets . '{font-family:' . $googleWebFont . ', serif !important;} </style>';
     if ($googleWebFont2 != "")
         echo '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=' . $googleWebFont2 . '">
-        <style type="text/css">' . $googleWebFontTargets2 . '{font-family:' . $googleWebFont2 . ', serif !important;font-size:' . $googleWebFontSize2 . '} </style>';
+        <style type="text/css">' . $googleWebFontTargets2 . '{font-family:' . $googleWebFont2 . ', serif !important;} </style>';
     if ($googleWebFont3 != "")
         echo '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=' . $googleWebFont3 . '">
-        <style type="text/css">' . $googleWebFontTargets3 . '{font-family:' . $googleWebFont3 . ', serif !important;font-size:' . $googleWebFontSize3 . '} </style>';
+        <style type="text/css">' . $googleWebFontTargets3 . '{font-family:' . $googleWebFont3 . ', serif !important;} </style>';
     if ($loadjQuery != "")
         $doc->addScript("http://ajax.googleapis.com/ajax/libs/jquery/'.$loadjQuery.'/jquery.min.js");
     if ($enableSwitcher)
