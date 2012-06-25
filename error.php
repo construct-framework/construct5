@@ -28,15 +28,15 @@ if ($offLine) {
 }
 
 // Manually define layout and module counts
-$columnLayout = 'alpha-1-main-beta-1';
-$headerAboveClass = 'count-1';
-$headerBelowClass = 'count-6';
-$navBelowClass = 'count-4';
-$contentAboveClass = 'count-1';
-$contentBelowClass = '';
+$columnLayout          = 'alpha-1-main-beta-1';
+$headerAboveClass      = 'count-1';
+$headerBelowClass      = 'count-6';
+$navBelowClass         = 'count-4';
+$contentAboveClass     = 'count-1';
+$contentBelowClass     = '';
 $columnGroupAlphaClass = 'count-1';
-$columnGroupBetaClass = '';
-$footerAboveClass = 'count-1';
+$columnGroupBetaClass  = '';
+$footerAboveClass      = 'count-1';
 
 // Access template parameters
 $params = JFactory::getApplication()->getTemplate(true)->params;
@@ -79,9 +79,9 @@ $useStickyFooter       = $params->get('useStickyFooter');
 
 // Render module positions
 $renderer = $doc->loadRenderer('modules');
-$raw = array('style' => 'raw');
-$xhtml = array('style' => 'xhtml');
-$jexhtml = array('style' => 'jexhtml');
+$raw      = array('style' => 'raw');
+$xhtml    = array('style' => 'xhtml');
+$jexhtml  = array('style' => 'jexhtml');
 
 // Check for layout override
 if (JFile::exists($template . '/layouts/error.php')) {
