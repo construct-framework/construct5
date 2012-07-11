@@ -30,46 +30,57 @@ $user = JFactory::getUser();
 $view = JRequest::getCmd('view');
 
 // Define shortcuts for template parameters
-$customStyleSheet      = $this->params->get('customStyleSheet');
-$detectTablets         = $this->params->get('detectTablets');
-$enableSwitcher        = $this->params->get('enableSwitcher');
-$fluidMedia            = $this->params->get('fluidMedia');
-$fullWidth             = $this->params->get('fullWidth');
-$googleWebFont         = $this->params->get('googleWebFont');
-$googleWebFontTargets  = htmlspecialchars($this->params->get('googleWebFontTargets'));
-$googleWebFont2        = $this->params->get('googleWebFont2');
-$googleWebFontTargets2 = htmlspecialchars($this->params->get('googleWebFontTargets2'));
-$googleWebFont3        = $this->params->get('googleWebFont3');
-$googleWebFontTargets3 = htmlspecialchars($this->params->get('googleWebFontTargets3'));
-$gridSystem            = $this->params->get('gridSystem');
-$IECSS3                = $this->params->get('IECSS3');
-$IECSS3Targets         = htmlspecialchars($this->params->get('IECSS3Targets'));
-$IE6TransFix           = $this->params->get('IE6TransFix');
-$IE6TransFixTargets    = htmlspecialchars($this->params->get('IE6TransFixTargets'));
-$inheritLayout         = $this->params->get('inheritLayout');
-$inheritStyle          = $this->params->get('inheritStyle');
-$loadMoo               = $this->params->get('loadMoo');
-$loadModal             = $this->params->get('loadModal');
-$loadjQuery            = $this->params->get('loadjQuery');
-$mContentDataTheme     = $this->params->get('mContentDataTheme');
-$mdetect               = $this->params->get('mdetect');
-$mFooterDataTheme      = $this->params->get('mFooterDataTheme');
-$mHeaderDataTheme      = $this->params->get('mHeaderDataTheme');
-$mNavPosition          = $this->params->get('mNavPosition');
-$mNavDataTheme         = $this->params->get('mNavDataTheme');
-$mPageDataTheme        = $this->params->get('mPageDataTheme');
-$setGeneratorTag       = htmlspecialchars($this->params->get('setGeneratorTag'));
-$showDiagnostics       = $this->params->get('showDiagnostics');
-$siteWidth             = htmlspecialchars($this->params->get('siteWidth'));
-$siteWidthType         = $this->params->get('siteWidthType');
-$siteWidthUnit         = $this->params->get('siteWidthUnit');
-$stickyFooterHeight    = htmlspecialchars($this->params->get('stickyFooterHeight'));
-$useStickyFooter       = $this->params->get('useStickyFooter');
+$customStyleSheet        = $this->params->get('customStyleSheet');
+$customStyleSheetVersion = htmlspecialchars($this->params->get('customStyleSheetVersion'));
+$detectTablets           = $this->params->get('detectTablets');
+$enableSwitcher          = $this->params->get('enableSwitcher');
+$fluidMedia              = $this->params->get('fluidMedia');
+$fullWidth               = $this->params->get('fullWidth');
+$googleWebFont           = $this->params->get('googleWebFont');
+$googleWebFontTargets    = htmlspecialchars($this->params->get('googleWebFontTargets'));
+$googleWebFont2          = $this->params->get('googleWebFont2');
+$googleWebFontTargets2   = htmlspecialchars($this->params->get('googleWebFontTargets2'));
+$googleWebFont3          = $this->params->get('googleWebFont3');
+$googleWebFontTargets3   = htmlspecialchars($this->params->get('googleWebFontTargets3'));
+$gridSystem              = $this->params->get('gridSystem');
+$IECSS3                  = $this->params->get('IECSS3');
+$IECSS3Targets           = htmlspecialchars($this->params->get('IECSS3Targets'));
+$IE6TransFix             = $this->params->get('IE6TransFix');
+$IE6TransFixTargets      = htmlspecialchars($this->params->get('IE6TransFixTargets'));
+$inheritLayout           = $this->params->get('inheritLayout');
+$inheritStyle            = $this->params->get('inheritStyle');
+$loadMoo                 = $this->params->get('loadMoo');
+$loadModal               = $this->params->get('loadModal');
+$loadjQuery              = $this->params->get('loadjQuery');
+$mContentDataTheme       = $this->params->get('mContentDataTheme');
+$mdetect                 = $this->params->get('mdetect');
+$mFooterDataTheme        = $this->params->get('mFooterDataTheme');
+$mHeaderDataTheme        = $this->params->get('mHeaderDataTheme');
+$mNavPosition            = $this->params->get('mNavPosition');
+$mNavDataTheme           = $this->params->get('mNavDataTheme');
+$mPageDataTheme          = $this->params->get('mPageDataTheme');
+$setGeneratorTag         = htmlspecialchars($this->params->get('setGeneratorTag'));
+$showDiagnostics         = $this->params->get('showDiagnostics');
+$siteWidth               = htmlspecialchars($this->params->get('siteWidth'));
+$siteWidthType           = $this->params->get('siteWidthType');
+$siteWidthUnit           = $this->params->get('siteWidthUnit');
+$stickyFooterHeight      = htmlspecialchars($this->params->get('stickyFooterHeight'));
+$useStickyFooter         = $this->params->get('useStickyFooter');
 
 // Define absolute paths to files
-$mdetectFile = JPATH_THEMES . '/' . $this->template . '/elements/mdetect.php';
-$mTemplate = JPATH_THEMES . '/' . $this->template . '/mobile.php';
-$alternatemTemplate = JPATH_THEMES . '/' . $this->template . '/layouts/mobile.php';
+$mdetectFile        = $templateDir . '/elements/mdetect.php';
+$mTemplate          = $templateDir . '/mobile.php';
+$alternatemTemplate = $templateDir . '/layouts/mobile.php';
+
+// Get the template's XML for versioning
+$xmlfile = $templateDir . '/templateDetails.xml';
+$data    = JApplicationHelper::parseXMLInstallFile($xmlfile);
+$version = $data['version'];
+
+// Define fallback version number for custom style sheet
+if ($customStyleSheetVersion == '') {
+	$customStyleSheetVersion = $version;
+}
 
 // Change generator tag
 $this->setGenerator($setGeneratorTag);
@@ -419,21 +430,21 @@ $doc->addFavicon($template . '/favicon.png', 'image/png', 'shortcut icon');
 $doc->addFavicon($template . '/apple-touch-icon.png', 'image/png', 'apple-touch-icon');
 
 // Style sheets
-$doc->addStyleSheet($template . '/css/screen.css', 'text/css', 'screen');
-$doc->addStyleSheet($template . '/css/print.css', 'text/css', 'print');
+$doc->addStyleSheet($template . '/css/screen.css?' . $version, 'text/css', 'screen');
+$doc->addStyleSheet($template . '/css/print.css?' . $version, 'text/css', 'print');
 if ($gridSystem != '-1') {
-    $doc->addStyleSheet($template . '/css/grids/' . $gridSystem, 'text/css', 'screen');
+    $doc->addStyleSheet($template . '/css/grids/' . $gridSystem . '?' . $version, 'text/css', 'screen');
 }
-if ($customStyleSheet != '-1') {
-    $doc->addStyleSheet($template . '/css/' . $customStyleSheet, 'text/css', 'screen');
+if ($customStyleSheet > -1) {
+    $doc->addStyleSheet($template . '/css/' . $customStyleSheet . '?' . $customStyleSheetVersion, 'text/css', 'screen');
 }
 if ($this->direction == 'rtl') {
-    $doc->addStyleSheet($template . '/css/rtl.css', 'text/css', 'screen');
+    $doc->addStyleSheet($template . '/css/rtl.css?' . $version, 'text/css', 'screen');
 }
 // Override style sheet returned from our template helper
 $cssFile = $styleOverride->getIncludeFile();
 if ($cssFile) {
-    $doc->addStyleSheet($cssFile, 'text/css', 'screen');
+    $doc->addStyleSheet($cssFile . '?' . $version, 'text/css', 'screen');
 }
 
 // Style sheet switcher
