@@ -471,9 +471,9 @@ if ($googleWebFont3) {
 // JavaScript
 
 //Quick port of Modernizer's method of replacing "no-js" HTML class with "js" - NOTE: removes all other classes added to HTML element
-$doc->addCustomTag('<script type="text/javascript">docElement = document.documentElement;docElement.className = docElement.className.replace(/\bno-js\b/, \'js\');</script>');
+$doc->addScriptDeclaration('docElement = document.documentElement;docElement.className = docElement.className.replace(/\bno-js\b/, \'js\');');
 
-$doc->addCustomTag('<script type="text/javascript">window.addEvent(\'domready\',function(){new SmoothScroll({duration:1200},window);});</script>');
+$doc->addScriptDeclaration('window.addEvent(\'domready\',function(){new SmoothScroll({duration:1200},window)});');
 if ($loadjQuery) {
     $doc->addCustomTag('<script type="text/javascript" src="' . $loadjQuery . '"></script>');
     $doc->addCustomTag('<script type="text/javascript">jQuery.noConflict();</script>');
@@ -481,17 +481,17 @@ if ($loadjQuery) {
 
 // Layout Declarations
 if ($siteWidth) {
-    $doc->addStyleDeclaration('#body-container, #header-above {' . $siteWidthType . ':' . $siteWidth . $siteWidthUnit . ';}');
+    $doc->addStyleDeclaration(' #body-container, #header-above {' . $siteWidthType . ':' . $siteWidth . $siteWidthUnit . ';}');
 }
 if (($siteWidthType == 'max-width') && $fluidMedia) {
-    $doc->addStyleDeclaration('img, object {max-width:100%;}');
+    $doc->addStyleDeclaration(' img, object {max-width:100%;}');
 }
-if (!$fullWidth) {
-    $doc->addStyleDeclaration('#header, #footer {' . $siteWidthType . ':' . $siteWidth . $siteWidthUnit . '; margin:0 auto;}');
+if ($siteWidth && !$fullWidth) {
+    $doc->addStyleDeclaration(' #header, #footer {' . $siteWidthType . ':' . $siteWidth . $siteWidthUnit . '; margin:0 auto;}');
 }
 if ($useStickyFooter) {
-    $doc->addStyleDeclaration('.sticky-footer #body-container {padding-bottom:' . $stickyFooterHeight . 'px;}');
-    $doc->addStyleDeclaration('.sticky-footer #footer {margin-top:-' . $stickyFooterHeight . 'px;height:' . $stickyFooterHeight . 'px;}');
+    $doc->addStyleDeclaration(' .sticky-footer #body-container {padding-bottom:' . $stickyFooterHeight . 'px;}');
+    $doc->addStyleDeclaration(' .sticky-footer #footer {margin-top:-' . $stickyFooterHeight . 'px;height:' . $stickyFooterHeight . 'px;}');
 }
 
 // Internet Explorer Fixes
