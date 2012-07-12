@@ -511,7 +511,7 @@ $doc->addCustomTag('#body-container {text-align:left;}');
 if ($useStickyFooter) {
     $doc->addCustomTag('body.sticky-footer #footer-push {display:table;height:100%;}');
 }
-if (!$fullWidth) {
+if ($siteWidth && !$fullWidth) {
     $doc->addCustomTag('#body-container, #header-above, #header, #footer {width: expression( document.body.clientWidth >' . ($siteWidth - 1) . ' ? "' . $siteWidth . $siteWidthUnit . '" : "auto" );margin:0 auto;}');
 } else {
     $doc->addCustomTag('#body-container, #header-above {width: expression( document.body.clientWidth >' . ($siteWidth - 1) . ' ? "' . $siteWidth . $siteWidthUnit . '" : "auto" );margin:0 auto;}');
