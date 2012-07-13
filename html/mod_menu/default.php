@@ -11,7 +11,7 @@
 $templateParams = JFactory::getApplication()->getTemplate(true)->params;
 
 // Note. It is important to remove spaces between elements.
-$first = 0;
+$count = 0;
 ?>
 
 <ul data-role="listview" data-inset="true" data-theme="<?php echo $templateParams->get('mNavDataTheme'); ?>" class="menu<?php echo $class_sfx;?> clearfix"<?php
@@ -43,15 +43,18 @@ $first = 0;
 			$class .= ' parent';
 		}
 
+		// Negate count if next item is a child. Will be 0 for first child once incremented. Can't use $item->parent in case sub-menu isn't rendered.
 		if ($item->deeper) {
-			$first = -1;
+			$count = -1;
 		}
 
-		if ($first == 0) {
+		// If first item to be counted or first in the list array.
+		if ($count == 0 || $i == 0) {
 			$class .= ' first';
 		}
 
-		if ($i == (count($list) + 1) || $item->shallower) {
+		// Last item of the level or last in the list array.
+		if ($item->shallower || $item == end($list)) {
 			$class .= ' last';
 		}
 
@@ -86,7 +89,7 @@ $first = 0;
 		else {
 			echo '</li>';
 		}
-		$first++;
+		$count++;
 	endforeach;
 	?></ul>
 
