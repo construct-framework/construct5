@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <extension version="2.5" type="template" client="site" method="upgrade">
-	<name>construct5-pro</name>
+	<name>construct5</name>
 	<creationDate>June 8, 2012</creationDate>
 	<author>Cristina Solana | Matt Thomas</author>
 	<authorEmail>support@construct-framework.com</authorEmail>
@@ -9,7 +9,7 @@
 	<copyright>Copyright (C) 2009 - 2012 Matt Thomas. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<version>2.5.17</version>
-	<description>TPL_CONSTRUCT5_PRO_DESCRIPTION</description>
+	<description>TPL_CONSTRUCT5_DESCRIPTION</description>
 	<files>
 		<filename>css/article/index.html</filename>
 		<filename>css/category/index.html</filename>
@@ -116,59 +116,59 @@
 
 	<config>
 		<fields name="params">
-			<fieldset name="general" addfieldpath="/templates/construct5-pro/elements">
+			<fieldset name="general" addfieldpath="/templates/construct5/elements">
 				<field name="enableSwitcher"
 					   type="radio"
 					   default="0"
-					   label="TPL_CONSTRUCT5_PRO_ENABLE_SWITCHER_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_ENABLE_SWITCHER_DESC">
+					   label="TPL_CONSTRUCT5_ENABLE_SWITCHER_LABEL"
+					   description="TPL_CONSTRUCT5_ENABLE_SWITCHER_DESC">
 					<option value="1">Show</option>
 					<option value="0">Hide</option>
 				</field>
 				<field name="showDiagnostics"
 					   type="radio"
 					   default="0"
-					   label="TPL_CONSTRUCT5_PRO_SHOW_DIAGNOSTICS_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_SHOW_DIAGNOSTICS_DESC">
+					   label="TPL_CONSTRUCT5_SHOW_DIAGNOSTICS_LABEL"
+					   description="TPL_CONSTRUCT5_SHOW_DIAGNOSTICS_DESC">
 					<option value="1">Show</option>
 					<option value="0">Hide</option>
 				</field>
 				<field name="inheritLayout"
 					   type="radio"
 					   default="0"
-					   label="TPL_CONSTRUCT5_PRO_INHERIT_CAT_LAYOUT_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_INHERIT_CAT_LAYOUT_DESC">
+					   label="TPL_CONSTRUCT5_INHERIT_CAT_LAYOUT_LABEL"
+					   description="TPL_CONSTRUCT5_INHERIT_CAT_LAYOUT_DESC">
 					<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
 				<field name="inheritStyle"
 					   type="radio"
 					   default="0"
-					   label="TPL_CONSTRUCT5_PRO_INHERIT_CAT_STYLE_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_INHERIT_CAT_STYLE_DESC">
+					   label="TPL_CONSTRUCT5_INHERIT_CAT_STYLE_LABEL"
+					   description="TPL_CONSTRUCT5_INHERIT_CAT_STYLE_DESC">
 					<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
 				<field name="customStyleSheet"
 					   type="filelist"
 					   default=""
-					   label="TPL_CONSTRUCT5_PRO_CUSTOM_STYLE_SHEET_LABEL"
-					   directory="templates/construct5-pro/css"
+					   label="TPL_CONSTRUCT5_CUSTOM_STYLE_SHEET_LABEL"
+					   directory="templates/construct5/css"
 					   filter="\.css"
 					   exclude="core-classes-ids\.css|diagnostic\.css|editor\.css|modal\.css|normal\.css|print\.css|rtl\.css|screen\.css|ie6\.css|wireframe\.css|mobile\.css|mobile\.css"
-					   description="TPL_CONSTRUCT5_PRO_CUSTOM_STYLE_SHEET_DESC"/>
+					   description="TPL_CONSTRUCT5_CUSTOM_STYLE_SHEET_DESC"/>
 				<field name="customStyleSheetVersion"
 					   type="text"
 					   default=""
-					   label="TPL_CONSTRUCT5_PRO_CUSTOM_STYLE_SHEET_VERSION_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_CUSTOM_STYLE_SHEET_VERSION_DESC"/>
+					   label="TPL_CONSTRUCT5_CUSTOM_STYLE_SHEET_VERSION_LABEL"
+					   description="TPL_CONSTRUCT5_CUSTOM_STYLE_SHEET_VERSION_DESC"/>
 				<field name="gridSystem"
 					   type="filelist"
 					   default="construct-responsive.css"
-					   label="TPL_CONSTRUCT5_PRO_GRID_SYSTEM_LABEL"
-					   directory="templates/construct5-pro/css/grids"
+					   label="TPL_CONSTRUCT5_GRID_SYSTEM_LABEL"
+					   directory="templates/construct5/css/grids"
 					   filter="\.css"
-					   description="TPL_CONSTRUCT5_PRO_GRID_SYSTEM_DESC"/>
+					   description="TPL_CONSTRUCT5_GRID_SYSTEM_DESC"/>
 				<field name="setGeneratorTag"
 					   type="text"
 					   default="Construct Framework | http://Construct-Framework.com"
@@ -180,31 +180,31 @@
 				<field name="IECSS3"
 					   type="radio"
 					   default="1"
-					   label="TPL_CONSTRUCT5_PRO_IE_CSS3_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_IE_CSS3_DESC">
+					   label="TPL_CONSTRUCT5_IE_CSS3_LABEL"
+					   description="TPL_CONSTRUCT5_IE_CSS3_DESC">
 					<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
 				<field name="IECSS3Targets"
 					   type="textarea"
 					   default=".drop-shadow, .outline, .rounded, ul.menu li"
-					   label="TPL_CONSTRUCT5_PRO_IE_CSS3_TARGETS_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_IE_CSS3_TARGETS_DESC"
+					   label="TPL_CONSTRUCT5_IE_CSS3_TARGETS_LABEL"
+					   description="TPL_CONSTRUCT5_IE_CSS3_TARGETS_DESC"
 					   rows="5"
 					   cols="50"/>
 				<field name="IE6TransFix"
 					   type="radio"
 					   default="1"
-					   label="TPL_CONSTRUCT5_PRO_IE6_TRANS_FIX_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_IE6_TRANS_FIX_DESC">
+					   label="TPL_CONSTRUCT5_IE6_TRANS_FIX_LABEL"
+					   description="TPL_CONSTRUCT5_IE6_TRANS_FIX_DESC">
 					<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
 				<field name="IE6TransFixTargets"
 					   type="textarea"
 					   default="h1 a"
-					   label="TPL_CONSTRUCT5_PRO_IE6_TRANS_FIX_TARGETS_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_IE6_TRANS_FIX_TARGETS_DESC"
+					   label="TPL_CONSTRUCT5_IE6_TRANS_FIX_TARGETS_LABEL"
+					   description="TPL_CONSTRUCT5_IE6_TRANS_FIX_TARGETS_DESC"
 					   rows="5"
 					   cols="50"/>
 			</fieldset>
@@ -212,45 +212,45 @@
 				<field name="loadMoo"
 					   type="radio"
 					   default="1"
-					   label="TPL_CONSTRUCT5_PRO_LOAD_MOO_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_LOAD_MOO_DESC">
+					   label="TPL_CONSTRUCT5_LOAD_MOO_LABEL"
+					   description="TPL_CONSTRUCT5_LOAD_MOO_DESC">
 					<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
 				<field name="loadModal"
 					   type="radio"
 					   default="1"
-					   label="TPL_CONSTRUCT5_PRO_LOAD_MODAL_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_LOAD_MODAL_DESC">
+					   label="TPL_CONSTRUCT5_LOAD_MODAL_LABEL"
+					   description="TPL_CONSTRUCT5_LOAD_MODAL_DESC">
 					<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
 				<field name="loadjQuery"
 					   type="jqueryversion"
 					   default=""
-					   label="TPL_CONSTRUCT5_PRO_LOAD_JQUERY_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_LOAD_JQUERY_DESC"/>
+					   label="TPL_CONSTRUCT5_LOAD_JQUERY_LABEL"
+					   description="TPL_CONSTRUCT5_LOAD_JQUERY_DESC"/>
 			</fieldset>
 			<fieldset name="Layout">
 				<field name="siteWidth"
 					   type="text"
 					   default=""
-					   label="TPL_CONSTRUCT5_PRO_SITE_WIDTH_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_SITE_WIDTH_DESC"
+					   label="TPL_CONSTRUCT5_SITE_WIDTH_LABEL"
+					   description="TPL_CONSTRUCT5_SITE_WIDTH_DESC"
 					   size="10"/>
 				<field name="siteWidthType"
 					   type="radio"
 					   default="max-width"
-					   label="TPL_CONSTRUCT5_PRO_SITE_WIDTH_TYPE_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_SITE_WIDTH_TYPE_DESC">
+					   label="TPL_CONSTRUCT5_SITE_WIDTH_TYPE_LABEL"
+					   description="TPL_CONSTRUCT5_SITE_WIDTH_TYPE_DESC">
 					<option value="max-width">Fluid Max Width</option>
 					<option value="width">Fixed Width</option>
 				</field>
 				<field name="siteWidthUnit"
 					   type="radio"
 					   default="em"
-					   label="TPL_CONSTRUCT5_PRO_SITE_WIDTH_UNIT_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_SITE_WIDTH_UNIT_DESC">
+					   label="TPL_CONSTRUCT5_SITE_WIDTH_UNIT_LABEL"
+					   description="TPL_CONSTRUCT5_SITE_WIDTH_UNIT_DESC">
 					<option value="em">Em</option>
 					<option value="px">Pixel</option>
 					<option value="%">Percent</option>
@@ -258,64 +258,64 @@
 				<field name="fluidMedia"
 					   type="radio"
 					   default="0"
-					   label="TPL_CONSTRUCT5_PRO_FLUID_MEDIA_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_FLUID_MEDIA_DESC">
+					   label="TPL_CONSTRUCT5_FLUID_MEDIA_LABEL"
+					   description="TPL_CONSTRUCT5_FLUID_MEDIA_DESC">
 					<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
 				<field name="fullWidth"
 					   type="radio"
 					   default="1"
-					   label="TPL_CONSTRUCT5_PRO_FULL_WIDTH_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_FULL_WIDTH_DESC">
+					   label="TPL_CONSTRUCT5_FULL_WIDTH_LABEL"
+					   description="TPL_CONSTRUCT5_FULL_WIDTH_DESC">
 					<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
 				<field name="useStickyFooter"
 					   type="radio"
 					   default="1"
-					   label="TPL_CONSTRUCT5_PRO_USE_STICKY_FOOTER_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_USE_STICKY_FOOTER_DESC">
+					   label="TPL_CONSTRUCT5_USE_STICKY_FOOTER_LABEL"
+					   description="TPL_CONSTRUCT5_USE_STICKY_FOOTER_DESC">
 					<option value="1">On</option>
 					<option value="0">Off</option>
 				</field>
 				<field name="stickyFooterHeight"
 					   type="text"
 					   default=""
-					   label="TPL_CONSTRUCT5_PRO_STICKY_FOOTER_HEIGHT_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_STICKY_FOOTER_HEIGHT_DESC"
+					   label="TPL_CONSTRUCT5_STICKY_FOOTER_HEIGHT_LABEL"
+					   description="TPL_CONSTRUCT5_STICKY_FOOTER_HEIGHT_DESC"
 					   size="5"/>
 			</fieldset>
 			<fieldset name="mobile">
 				<field name="mdetect"
 					   type="radio"
 					   default="1"
-					   label="TPL_CONSTRUCT5_PRO_MDETECT_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_MDETECT_DESC">
+					   label="TPL_CONSTRUCT5_MDETECT_LABEL"
+					   description="TPL_CONSTRUCT5_MDETECT_DESC">
 					<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
 				<field name="detectTablets"
 					   type="radio"
 					   default="1"
-					   label="TPL_CONSTRUCT5_PRO_DETECT_TABLETS_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_DETECT_TABLETS_DESC">
+					   label="TPL_CONSTRUCT5_DETECT_TABLETS_LABEL"
+					   description="TPL_CONSTRUCT5_DETECT_TABLETS_DESC">
 					<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
 				<field name="mNavPosition"
 					   type="radio"
 					   default="0"
-					   label="TPL_CONSTRUCT5_PRO_MNAVPOSITION_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_MNAVPOSITION_DESC">
+					   label="TPL_CONSTRUCT5_MNAVPOSITION_LABEL"
+					   description="TPL_CONSTRUCT5_MNAVPOSITION_DESC">
 					<option value="1">Before Content</option>
 					<option value="0">After Content</option>
 				</field>
 				<field name="mPageDataTheme"
 					   type="list"
 					   default="b"
-					   label="TPL_CONSTRUCT5_PRO_MPAGEDATATHEME_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_MPAGEDATATHEME_DESC">
+					   label="TPL_CONSTRUCT5_MPAGEDATATHEME_LABEL"
+					   description="TPL_CONSTRUCT5_MPAGEDATATHEME_DESC">
 					<option value="">- None Selected -</option>
 					<option value="a">Black</option>
 					<option value="b">Blue</option>
@@ -326,8 +326,8 @@
 				<field name="mHeaderDataTheme"
 					   type="list"
 					   default=""
-					   label="TPL_CONSTRUCT5_PRO_MHEADERDATATHEME_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_MHEADERDATATHEME_DESC">
+					   label="TPL_CONSTRUCT5_MHEADERDATATHEME_LABEL"
+					   description="TPL_CONSTRUCT5_MHEADERDATATHEME_DESC">
 					<option value="">- None Selected -</option>
 					<option value="a">Black</option>
 					<option value="b">Blue</option>
@@ -338,8 +338,8 @@
 				<field name="mNavDataTheme"
 					   type="list"
 					   default=""
-					   label="TPL_CONSTRUCT5_PRO_MNAVDATATHEME_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_MNAVDATATHEME_DESC">
+					   label="TPL_CONSTRUCT5_MNAVDATATHEME_LABEL"
+					   description="TPL_CONSTRUCT5_MNAVDATATHEME_DESC">
 					<option value="">- None Selected -</option>
 					<option value="a">Black</option>
 					<option value="b">Blue</option>
@@ -350,8 +350,8 @@
 				<field name="mContentDataTheme"
 					   type="list"
 					   default=""
-					   label="TPL_CONSTRUCT5_PRO_MCONTENTDATATHEME_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_MCONTENTDATATHEME_DESC">
+					   label="TPL_CONSTRUCT5_MCONTENTDATATHEME_LABEL"
+					   description="TPL_CONSTRUCT5_MCONTENTDATATHEME_DESC">
 					<option value="">- None Selected -</option>
 					<option value="a">Black</option>
 					<option value="b">Blue</option>
@@ -362,8 +362,8 @@
 				<field name="mFooterDataTheme"
 					   type="list"
 					   default=""
-					   label="TPL_CONSTRUCT5_PRO_MFOOTERDATATHEME_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_MFOOTERDATATHEME_DESC">
+					   label="TPL_CONSTRUCT5_MFOOTERDATATHEME_LABEL"
+					   description="TPL_CONSTRUCT5_MFOOTERDATATHEME_DESC">
 					<option value="">- None Selected -</option>
 					<option value="a">Black</option>
 					<option value="b">Blue</option>
@@ -376,41 +376,41 @@
 				<field name="googleWebFont"
 					   type="googlewebfont"
 					   default=""
-					   label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_DESC"/>
+					   label="TPL_CONSTRUCT5_GOOGLE_WEB_FONT_LABEL"
+					   description="TPL_CONSTRUCT5_GOOGLE_WEB_FONT_DESC"/>
 				<field name="googleWebFontTargets"
 					   type="text"
 					   default=""
-					   label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_DESC"
+					   label="TPL_CONSTRUCT5_GOOGLE_WEB_FONT_TARGETS_LABEL"
+					   description="TPL_CONSTRUCT5_GOOGLE_WEB_FONT_TARGETS_DESC"
 					   size="50"/>
 				<field type="spacer" default=" "/>
 				<field name="googleWebFont2"
 					   type="googlewebfont"
 					   default=""
-					   label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_DESC"/>
+					   label="TPL_CONSTRUCT5_GOOGLE_WEB_FONT_LABEL"
+					   description="TPL_CONSTRUCT5_GOOGLE_WEB_FONT_DESC"/>
 				<field name="googleWebFontTargets2"
 					   type="text"
 					   default=""
-					   label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_DESC"
+					   label="TPL_CONSTRUCT5_GOOGLE_WEB_FONT_TARGETS_LABEL"
+					   description="TPL_CONSTRUCT5_GOOGLE_WEB_FONT_TARGETS_DESC"
 					   size="50"/>
 				<field type="spacer" default=" "/>
 				<field name="googleWebFont3"
 					   type="googlewebfont"
 					   default=""
-					   label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_DESC"/>
+					   label="TPL_CONSTRUCT5_GOOGLE_WEB_FONT_LABEL"
+					   description="TPL_CONSTRUCT5_GOOGLE_WEB_FONT_DESC"/>
 				<field name="googleWebFontTargets3"
 					   type="text"
 					   default=""
-					   label="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_LABEL"
-					   description="TPL_CONSTRUCT5_PRO_GOOGLE_WEB_FONT_TARGETS_DESC"
+					   label="TPL_CONSTRUCT5_GOOGLE_WEB_FONT_TARGETS_LABEL"
+					   description="TPL_CONSTRUCT5_GOOGLE_WEB_FONT_TARGETS_DESC"
 					   size="50"/>
 			</fieldset>
 			<fieldset name="version_check">
-				<field label="TPL_CONSTRUCT5_PRO_VERSION_CHECK_LABEL" type="version"/>
+				<field label="TPL_CONSTRUCT5_VERSION_CHECK_LABEL" type="version"/>
 			</fieldset>
 		</fields>
 	</config>

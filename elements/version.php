@@ -50,11 +50,11 @@ class JFormFieldVersion extends JFormField
 	{
 		// Check if cURL is loaded; if not, proceed no further
 		if (!extension_loaded('curl')) {
-			return JText::_('TPL_CONSTRUCT5_PRO_ERROR_NOCURL');
+			return JText::_('TPL_CONSTRUCT5_ERROR_NOCURL');
 		} // If cURL is supported, check the current version available.
 		else {
 			// Get the module's XML
-			$xmlfile = JPATH_SITE . '/templates/construct5-pro/templateDetails.xml';
+			$xmlfile = JPATH_SITE . '/templates/construct5/templateDetails.xml';
 
 			$data = JApplicationHelper::parseXMLInstallFile($xmlfile);
 
@@ -73,14 +73,14 @@ class JFormFieldVersion extends JFormField
 			curl_close($curl);
 
 			// Message containing the version
-			$message = '<label style="max-width:100%">' . JText::sprintf('TPL_CONSTRUCT5_PRO_VERSION_INSTALLED', $name, $version);
+			$message = '<label style="max-width:100%">' . JText::sprintf('TPL_CONSTRUCT5_VERSION_INSTALLED', $name, $version);
 
 			// If an update is available, and compatible with the current Joomla! version, notify the user
 			if (version_compare($version, $update,'lt')) {
-				$message .= '  <a href="http://construct-framework.com" target="_blank">' . JText::sprintf('TPL_CONSTRUCT5_PRO_VERSION_UPDATE', $update) . '</a></label>';
+				$message .= '  <a href="http://construct-framework.com" target="_blank">' . JText::sprintf('TPL_CONSTRUCT5_VERSION_UPDATE', $update) . '</a></label>';
 			} // No updates, or the Joomla! version is not compatible, so let the user know they're using the current version
 			else {
-				$message .= '  ' . JText::_('TPL_CONSTRUCT5_PRO_VERSION_CURRENT') . '</label>';
+				$message .= '  ' . JText::_('TPL_CONSTRUCT5_VERSION_CURRENT') . '</label>';
 			}
 			return $message;
 		}
