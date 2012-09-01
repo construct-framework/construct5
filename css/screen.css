@@ -679,6 +679,112 @@ isindex,
 	text-decoration : none;
 }
 
+.btn {
+	-moz-box-shadow         : 2px 2px 3px #ccc;
+	-webkit-box-shadow      : 2px 2px 3px #ccc;
+	box-shadow              : 2px 2px 3px #ccc;
+	-moz-border-radius      : 2px;
+	-webkit-border-radius   : 2px;
+	border-radius           : 2px;
+	border                  : 1px solid #bbb;
+	-webkit-background-clip : padding-box;
+	outline                 : 0;
+	text-shadow             : 0 0 1px #f8f8f8;
+	text-align              : center;
+	-webkit-transition      : 0.2s linear all;
+	-moz-transition         : 0.2s linear all;
+	-ms-transition          : 0.2s linear all;
+	-o-transition           : 0.2s linear all;
+	transition              : 0.2s linear all;
+	padding                 : 1em;
+}
+
+.btn:hover {
+	cursor             : pointer;
+	border-color       : #999;
+	color              : #303030;
+	text-decoration    : none;
+	text-shadow        : 1px 1px 1px rgba(255, 255, 255, 0.50), 0 0 1px rgba(255, 255, 255, 0.50);
+	-moz-box-shadow    : 2px 2px 2px #aaa;
+	-webkit-box-shadow : 2px 2px 2px #aaa;
+	box-shadow         : 2px 2px 2px #aaa;
+}
+
+.btn:active {
+	-moz-box-shadow    : 1px 1px 1px #aaa;
+	-webkit-box-shadow : 1px 1px 1px #aaa;
+	box-shadow         : 1px 1px 1px #aaa;
+}
+
+.btn.blue {
+	color      : #fff;
+	background : rgb(0, 138, 213);
+	background : -moz-linear-gradient(top, rgba(0, 138, 213, 1) 0%, rgba(26, 97, 174, 1) 100%);
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 138, 213, 1)), color-stop(100%, rgba(26, 97, 174, 1)));
+	background : -webkit-linear-gradient(top, rgba(0, 138, 213, 1) 0%, rgba(26, 97, 174, 1) 100%);
+	background : -o-linear-gradient(top, rgba(0, 138, 213, 1) 0%, rgba(26, 97, 174, 1) 100%);
+	background : -ms-linear-gradient(top, rgba(0, 138, 213, 1) 0%, rgba(26, 97, 174, 1) 100%);
+	background : linear-gradient(to bottom, rgba(0, 138, 213, 1) 0%, rgba(26, 97, 174, 1) 100%);
+	filter     : progid:DXImageTransform.Microsoft.gradient(startColorstr = '#008ad5', endColorstr = '#1a61ae', GradientType = 0);
+}
+
+.btn.blue:hover {
+	background : rgb(0, 138, 213);
+	background : -moz-linear-gradient(top, rgba(0, 138, 213, 1) 0%, rgba(26, 97, 174, 1) 50%, rgba(26, 97, 174, 1) 100%);
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 138, 213, 1)), color-stop(50%, rgba(26, 97, 174, 1)), color-stop(100%, rgba(26, 97, 174, 1)));
+	background : -webkit-linear-gradient(top, rgba(0, 138, 213, 1) 0%, rgba(26, 97, 174, 1) 50%, rgba(26, 97, 174, 1) 100%);
+	background : -o-linear-gradient(top, rgba(0, 138, 213, 1) 0%, rgba(26, 97, 174, 1) 50%, rgba(26, 97, 174, 1) 100%);
+	background : -ms-linear-gradient(top, rgba(0, 138, 213, 1) 0%, rgba(26, 97, 174, 1) 50%, rgba(26, 97, 174, 1) 100%);
+	background : linear-gradient(to bottom, rgba(0, 138, 213, 1) 0%, rgba(26, 97, 174, 1) 50%, rgba(26, 97, 174, 1) 100%);
+	filter     : progid:DXImageTransform.Microsoft.gradient(startColorstr = '#008ad5', endColorstr = '#1a61ae', GradientType = 0);
+}
+
+.btn.red {
+	color      : #fff;
+	background : rgb(217, 101, 95);
+	background : -moz-linear-gradient(top, rgba(217, 101, 95, 1) 0%, rgba(187, 66, 62, 1) 100%);
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(217, 101, 95, 1)), color-stop(100%, rgba(187, 66, 62, 1)));
+	background : -webkit-linear-gradient(top, rgba(217, 101, 95, 1) 0%, rgba(187, 66, 62, 1) 100%);
+	background : -o-linear-gradient(top, rgba(217, 101, 95, 1) 0%, rgba(187, 66, 62, 1) 100%);
+	background : -ms-linear-gradient(top, rgba(217, 101, 95, 1) 0%, rgba(187, 66, 62, 1) 100%);
+	background : linear-gradient(to bottom, rgba(217, 101, 95, 1) 0%, rgba(187, 66, 62, 1) 100%);
+	filter     : progid:DXImageTransform.Microsoft.gradient(startColorstr = '#d9655f', endColorstr = '#bb423e', GradientType = 0);
+}
+
+.btn.red:hover {
+	background : rgb(217, 101, 95);
+	background : -moz-linear-gradient(top, rgba(217, 101, 95, 1) 0%, rgba(187, 66, 62, 1) 50%, rgba(187, 66, 62, 1) 100%);
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(217, 101, 95, 1)), color-stop(50%, rgba(187, 66, 62, 1)), color-stop(100%, rgba(187, 66, 62, 1)));
+	background : -webkit-linear-gradient(top, rgba(217, 101, 95, 1) 0%, rgba(187, 66, 62, 1) 50%, rgba(187, 66, 62, 1) 100%);
+	background : -o-linear-gradient(top, rgba(217, 101, 95, 1) 0%, rgba(187, 66, 62, 1) 50%, rgba(187, 66, 62, 1) 100%);
+	background : -ms-linear-gradient(top, rgba(217, 101, 95, 1) 0%, rgba(187, 66, 62, 1) 50%, rgba(187, 66, 62, 1) 100%);
+	background : linear-gradient(to bottom, rgba(217, 101, 95, 1) 0%, rgba(187, 66, 62, 1) 50%, rgba(187, 66, 62, 1) 100%);
+	filter     : progid:DXImageTransform.Microsoft.gradient(startColorstr = '#d9655f', endColorstr = '#bb423e', GradientType = 0);
+}
+
+.btn.grey {
+	color      : #fff;
+	background : rgb(92, 92, 92);
+	background : -moz-linear-gradient(top, rgba(92, 92, 92, 1) 0%, rgba(55, 55, 55, 1) 100%);
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(92, 92, 92, 1)), color-stop(100%, rgba(55, 55, 55, 1)));
+	background : -webkit-linear-gradient(top, rgba(92, 92, 92, 1) 0%, rgba(55, 55, 55, 1) 100%);
+	background : -o-linear-gradient(top, rgba(92, 92, 92, 1) 0%, rgba(55, 55, 55, 1) 100%);
+	background : -ms-linear-gradient(top, rgba(92, 92, 92, 1) 0%, rgba(55, 55, 55, 1) 100%);
+	background : linear-gradient(to bottom, rgba(92, 92, 92, 1) 0%, rgba(55, 55, 55, 1) 100%);
+	filter     : progid:DXImageTransform.Microsoft.gradient(startColorstr = '#5c5c5c', endColorstr = '#373737', GradientType = 0);
+}
+
+.btn.grey:hover {
+	background : rgb(92, 92, 92);
+	background : -moz-linear-gradient(top, rgba(92, 92, 92, 1) 0%, rgba(55, 55, 55, 1) 50%, rgba(55, 55, 55, 1) 100%);
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(92, 92, 92, 1)), color-stop(50%, rgba(55, 55, 55, 1)), color-stop(100%, rgba(55, 55, 55, 1)));
+	background : -webkit-linear-gradient(top, rgba(92, 92, 92, 1) 0%, rgba(55, 55, 55, 1) 50%, rgba(55, 55, 55, 1) 100%);
+	background : -o-linear-gradient(top, rgba(92, 92, 92, 1) 0%, rgba(55, 55, 55, 1) 50%, rgba(55, 55, 55, 1) 100%);
+	background : -ms-linear-gradient(top, rgba(92, 92, 92, 1) 0%, rgba(55, 55, 55, 1) 50%, rgba(55, 55, 55, 1) 100%);
+	background : linear-gradient(to bottom, rgba(92, 92, 92, 1) 0%, rgba(55, 55, 55, 1) 50%, rgba(55, 55, 55, 1) 100%);
+	filter     : progid:DXImageTransform.Microsoft.gradient(startColorstr = '#5c5c5c', endColorstr = '#373737', GradientType = 0);
+}
+
 /* =============================================================================
    Core Classes
    ========================================================================== */
@@ -747,8 +853,7 @@ table.category {
 	background : rgba(238, 238, 238, 0.5);
 }
 
-.category .cat-list-row1 {
-;
+.category .cat-list-row1 {;
 }
 
 .category th img {
