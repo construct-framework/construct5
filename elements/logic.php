@@ -14,8 +14,14 @@ if (JFile::exists(dirname(__FILE__) . '/helper.php')) {
 
 // To get an application object
 $app = JFactory::getApplication();
+// The default menu item
+$default = $menu->getActive() == $menu->getDefault($lang->getTag());
 // Returns a reference to the global document object
 $doc = JFactory::getDocument();
+// Returns a reference to the global language object
+$lang   = JFactory::getLanguage();
+// Returns a reference to the menu object
+$menu   = $app->getMenu();
 // Checks for any system messages
 $messageQueue = $app->getMessageQueue();
 // Define relative path to the  current template directory
