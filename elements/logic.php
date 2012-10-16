@@ -14,14 +14,12 @@ if (JFile::exists(dirname(__FILE__) . '/helper.php')) {
 
 // To get an application object
 $app = JFactory::getApplication();
-// The default menu item
-$default = $menu->getActive() == $menu->getDefault($lang->getTag());
 // Returns a reference to the global document object
 $doc = JFactory::getDocument();
 // Returns a reference to the global language object
-$lang   = JFactory::getLanguage();
+$lang = JFactory::getLanguage();
 // Returns a reference to the menu object
-$menu   = $app->getMenu();
+$menu = $app->getMenu();
 // Checks for any system messages
 $messageQueue = $app->getMessageQueue();
 // Define relative path to the  current template directory
@@ -34,6 +32,9 @@ $url = clone(JURI::getInstance());
 $user = JFactory::getUser();
 // Get the current view
 $view = JRequest::getCmd('view');
+
+// The default menu item
+$default = $menu->getActive() == $menu->getDefault($lang->getTag());
 
 // Define shortcuts for template parameters
 $customStyleSheet        = $this->params->get('customStyleSheet');
@@ -65,6 +66,7 @@ $mHeaderDataTheme        = $this->params->get('mHeaderDataTheme');
 $mNavPosition            = $this->params->get('mNavPosition');
 $mNavDataTheme           = $this->params->get('mNavDataTheme');
 $mPageDataTheme          = $this->params->get('mPageDataTheme');
+$mooExceptions           = htmlspecialchars($this->params->get('mooExceptions'));
 $setGeneratorTag         = htmlspecialchars($this->params->get('setGeneratorTag'));
 $showDiagnostics         = $this->params->get('showDiagnostics');
 $siteWidth               = htmlspecialchars($this->params->get('siteWidth'));
@@ -91,6 +93,12 @@ if ($customStyleSheetVersion == '') {
 // Change generator tag
 $this->setGenerator($setGeneratorTag);
 
+// Current component Name
+$currentComponent = JRequest::getCmd('option');
+
+// Turn $mooExceptions into an array, remove spaces from input
+$mooExceptions = explode(',', str_replace(' ', '', $mooExceptions));
+
 // Enable Mootols
 if ($loadMoo) {
 	JHtml::_('behavior.framework', TRUE);
@@ -102,7 +110,7 @@ if ($loadMoo && $loadModal) {
 }
 
 // Remove MooTools if set to no.
-if (!$loadMoo) {
+if (!$loadMoo && !in_array($currentComponent, $mooExceptions)) {
 	unset($doc->_scripts[$this->baseurl . '/media/system/js/mootools-core.js']);
 	unset($doc->_scripts[$this->baseurl . '/media/system/js/mootools-more.js']);
 	unset($doc->_scripts[$this->baseurl . '/media/system/js/core.js']);
@@ -216,8 +224,7 @@ $columnLayout = 'main-only';
 
 if (($columnGroupAlphaCount > 0) && ($columnGroupBetaCount == 0)) :
 	$columnLayout = 'alpha-' . $columnGroupAlphaCount . '-main'; elseif (($columnGroupAlphaCount > 0) && ($columnGroupBetaCount > 0)) :
-	$columnLayout = 'alpha-' . $columnGroupAlphaCount . '-main-beta-' . $columnGroupBetaCount;
-elseif (($columnGroupAlphaCount == 0) && ($columnGroupBetaCount > 0)) :
+	$columnLayout = 'alpha-' . $columnGroupAlphaCount . '-main-beta-' . $columnGroupBetaCount; elseif (($columnGroupAlphaCount == 0) && ($columnGroupBetaCount > 0)) :
 	$columnLayout = 'main-beta-' . $columnGroupBetaCount;
 endif;
 
@@ -240,13 +247,11 @@ function getSection($id)
 		return NULL;
 	} elseif (JRequest::getCmd('view', 0) == "section") {
 		return $id;
-	}
-	elseif (JRequest::getCmd('view', 0) == "category") {
+	} elseif (JRequest::getCmd('view', 0) == "category") {
 		$sql = "SELECT section FROM #__categories WHERE id = $id ";
 		$database->setQuery($sql);
 		return $database->loadResult();
-	}
-	elseif (JRequest::getCmd('view', 0) == "article") {
+	} elseif (JRequest::getCmd('view', 0) == "article") {
 		$temp = explode(":", $id);
 		$sql  = "SELECT sectionid FROM #__content WHERE id = " . $temp[0];
 		$database->setQuery($sql);
@@ -265,8 +270,7 @@ function getCategory($id)
 		return NULL;
 	} elseif ((JRequest::getCmd('view', 0) == "category") || (JRequest::getCmd('view', 0) == "categories")) {
 		return $id;
-	}
-	elseif (JRequest::getCmd('view', 0) == "article") {
+	} elseif (JRequest::getCmd('view', 0) == "article") {
 		$temp = explode(":", $id);
 		$sql  = "SELECT catid FROM #__content WHERE id = " . $temp[0];
 		$database->setQuery($sql);
@@ -313,10 +317,6 @@ if ($catId && ($inheritStyle || $inheritLayout)) {
 if ($itemId) {
 	$currentAlias = $app->getMenu()->getActive()->alias;
 }
-
-#----------------------------- Component Name -----------------------------#
-
-$currentComponent = JRequest::getCmd('option');
 
 #------------------Extended Template Style Overrides------------------------#
 
