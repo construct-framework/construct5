@@ -704,7 +704,7 @@ isindex,
 	border-color       : #999;
 	color              : #303030;
 	text-decoration    : none;
-	text-shadow        : 1px 1px 1px rgba(255, 255, 255, 0.50), 0 0 1px rgba(255, 255, 255, 0.50);
+	text-shadow        : 0 0 1px rgba(255, 255, 255, 0.50), 0 0 1px rgba(255, 255, 255, 0.50);
 	-moz-box-shadow    : 2px 2px 2px #aaa;
 	-webkit-box-shadow : 2px 2px 2px #aaa;
 	box-shadow         : 2px 2px 2px #aaa;
