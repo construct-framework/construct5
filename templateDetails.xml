@@ -380,6 +380,12 @@
 				</field>
 			</fieldset>
 			<fieldset name="typography">
+				<field name="googlewebfontapikey"
+				       type="text"
+				       default=""
+				       label="TPL_CONSTRUCT5_GOOGLE_WEB_FONT_API_KEY_LABEL"
+				       description="TPL_CONSTRUCT5_GOOGLE_WEB_FONT_API_KEY_DESC"
+				       size="50"/>
 				<field name="googleWebFont"
 					   type="googlewebfont"
 					   default=""
