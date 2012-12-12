@@ -35,14 +35,10 @@ class JFormFieldGooglewebfont extends JFormFieldList {
      */
     protected function getOptions() {
 
-        $db  = JFactory::getDBO();
-        $sql = "SELECT params
-                FROM #__template_styles
-                WHERE template = 'construct5'";
-        $db->setQuery($sql);
-        $params = $db->loadResult();
-        $json   = json_decode($params, true);
-        $apiKey = $json['googlewebfontapikey'];
+        $obj    = $this->form->getValue('params');
+        $params = new JRegistry();
+        $params->loadObject($obj);
+        $apiKey = $params->get('googlewebfontapikey');
 
         if ($apiKey) {
             $link = 'https://www.googleapis.com/webfonts/v1/webfonts?key=' . $apiKey;
@@ -51,7 +47,7 @@ class JFormFieldGooglewebfont extends JFormFieldList {
         }
 
         $json    = @file_get_contents($link);
-        $data    = json_decode($json, true);
+        $data    = json_decode($json, TRUE);
         $items   = $data['items'];
         $options = array();
 
