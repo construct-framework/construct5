@@ -311,6 +311,14 @@
 					<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
+				<field name="enableMobileUrl"
+				       type="radio"
+				       default="1"
+				       label="TPL_CONSTRUCT5_MOBILE_URL_LABEL"
+				       description="TPL_CONSTRUCT5_MOBILE_URL_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
 				<field name="mNavPosition"
 				       type="radio"
 				       default="0"
