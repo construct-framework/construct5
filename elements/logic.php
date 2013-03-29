@@ -40,7 +40,7 @@ $default = $menu->getActive() == $menu->getDefault($lang->getTag());
 $customStyleSheet        = $this->params->get('customStyleSheet');
 $customStyleSheetVersion = htmlspecialchars($this->params->get('customStyleSheetVersion'));
 $detectTablets           = $this->params->get('detectTablets');
-$allowMobileUrl          = $this->params->get('enableMobileUrl');
+$enableMobileUrl         = $this->params->get('enableMobileUrl');
 $enableSwitcher          = $this->params->get('enableSwitcher');
 $fluidMedia              = $this->params->get('fluidMedia');
 $fullWidth               = $this->params->get('fullWidth');

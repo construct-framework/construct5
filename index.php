@@ -34,7 +34,7 @@ if (isset($_GET['viewDesktop'])) {
 }
 
 // Check if url is requesting mobile, and enabled in templateDetails.xml
-if (isset($_GET['mobile']) && $allowMobileUrl) {
+if (isset($_GET['mobile']) && $enableMobileUrl) {
     $_SESSION['mobile'] = $_GET['mobile'];
     // unset view desktop session
     if (isset($_SESSION['viewDesktop'])) {
@@ -43,7 +43,7 @@ if (isset($_GET['mobile']) && $allowMobileUrl) {
 }
 
 // Check if mobile device detection is turned on and, test if visitor is a mobile device, and if so, load mobile sub-template
-if ((($mdetect && $isMobile) || ($mdetect && $detectTablets && $isTablet) || (isset($_SESSION['mobile']) && $allowMobileUrl)) && (!isset($_SESSION['viewDesktop']))) {
+if ((($mdetect && $isMobile) || ($mdetect && $detectTablets && $isTablet) || (isset($_SESSION['mobile']) && $enableMobileUrl)) && (!isset($_SESSION['viewDesktop']))) {
     if (JFile::exists($mTemplate)) {
         include_once $mTemplate;
     }
