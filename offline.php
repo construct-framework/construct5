@@ -29,12 +29,12 @@ if (JFile::exists($mdetectFile)) {
 }
 
 // Check if mobile device has opted for desktop version
-if (isset($_GET['viewDesktop'])) {
-    $_SESSION['viewDesktop'] = $_GET['viewDesktop'];
+if (isset($_GET['desktop'])) {
+    $_SESSION['desktop'] = $_GET['desktop'];
 }
 
 // Check if mobile device detection is turned on and test if visitor is a mobile device. If so, load mobile version
-if ((($mdetect && $isMobile) || ($mdetect && $detectTablets && $isTablet)) && (!isset($_SESSION['viewDesktop']))) {
+if ((($mdetect && $isMobile) || ($mdetect && $detectTablets && $isTablet)) && (!isset($_SESSION['desktop']))) {
     if (JFile::exists($mTemplate)) {
         include_once $mTemplate;
     }
