@@ -17,7 +17,7 @@ if (JFile::exists($logicFile)) {
 }
 
 // Mobile device detection
-if (JFile::exists($mdetectFile)) {
+if ($mdetect &&  JFile::exists($mdetectFile)) {
     include_once $mdetectFile;
     // Instantiate the mobile object class
     $uagent_obj = new uagent_info();
