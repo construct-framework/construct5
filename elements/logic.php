@@ -16,6 +16,8 @@ if (JFile::exists(dirname(__FILE__) . '/helper.php')) {
 $app = JFactory::getApplication();
 // Returns a reference to the global document object
 $doc = JFactory::getDocument();
+// Returns a reference to JInput
+$jinput = $app->input;
 // Returns a reference to the global language object
 $lang = JFactory::getLanguage();
 // Returns a reference to the menu object
@@ -31,7 +33,7 @@ $url = clone(JURI::getInstance());
 // To access the current user object
 $user = JFactory::getUser();
 // Get the current view
-$view = JRequest::getCmd('view');
+$view = $jinput->get('view');
 
 // The default menu item
 $default = $menu->getActive() == $menu->getDefault($lang->getTag());
@@ -98,7 +100,7 @@ if ($customStyleSheetVersion == '') {
 $this->setGenerator($setGeneratorTag);
 
 // Current component Name
-$currentComponent = JRequest::getCmd('option');
+$currentComponent = $jinput->get('option');
 
 // Turn $mooExceptions into an array, remove spaces from input
 $mooExceptions = explode(',', str_replace(' ', '', $mooExceptions));
@@ -234,47 +236,25 @@ endif;
 
 #-------------------------------- Item ID ---------------------------------#
 
-$itemId = JRequest::getInt('Itemid', 0);
+$itemId = $jinput->get('Itemid', 0);
 
 #------------------------------- Article ID -------------------------------#
 
 if ($view == 'article')
-    $articleId = JRequest::getInt('id');
+    $articleId = $jinput->get('id');
 else ($articleId = NULL);
-
-#------------------------------- Section ID -------------------------------#
-
-function getSection($id) {
-    $database = JFactory::getDBO();
-    if ((substr(JVERSION, 0, 3) >= '1.6')) {
-        return NULL;
-    } elseif (JRequest::getCmd('view', 0) == "section") {
-        return $id;
-    } elseif (JRequest::getCmd('view', 0) == "category") {
-        $sql = "SELECT section FROM #__categories WHERE id = $id ";
-        $database->setQuery($sql);
-
-        return $database->loadResult();
-    } elseif (JRequest::getCmd('view', 0) == "article") {
-        $temp = explode(":", $id);
-        $sql  = "SELECT sectionid FROM #__content WHERE id = " . $temp[0];
-        $database->setQuery($sql);
-
-        return $database->loadResult();
-    }
-}
-
-$sectionId = getSection(JRequest::getInt('id'));
 
 #------------------------------ Category ID -------------------------------#
 
 function getCategory($id) {
+    $app      = JFactory::getApplication();
     $database = JFactory::getDBO();
-    if (JRequest::getCmd('view', 0) == "section") {
+    $jinput   = $app->input;
+    if ($jinput->get('view', 0) == "section") {
         return NULL;
-    } elseif ((JRequest::getCmd('view', 0) == "category") || (JRequest::getCmd('view', 0) == "categories")) {
+    } elseif (($jinput->get('view', 0) == "category") || ($jinput->get('view', 0) == "categories")) {
         return $id;
-    } elseif (JRequest::getCmd('view', 0) == "article") {
+    } elseif ($jinput->get('view', 0) == "article") {
         $temp = explode(":", $id);
         $sql  = "SELECT catid FROM #__content WHERE id = " . $temp[0];
         $database->setQuery($sql);
@@ -283,7 +263,7 @@ function getCategory($id) {
     }
 }
 
-$catId = getCategory(JRequest::getInt('id'));
+$catId = getCategory($jinput->get('id'));
 
 #------------------------- Ancestor Category IDs --------------------------#
 
