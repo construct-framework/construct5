@@ -303,6 +303,10 @@ if ($itemId) {
     $currentAlias = $app->getMenu()->getActive()->alias;
 }
 
+#------------------------------- Page Class -------------------------------#
+
+$pageClass = $menu->getParams($itemId)->get('pageclass_sfx');
+
 #------------------Extended Template Style Overrides------------------------#
 
 $styleOverride = new ConstructTemplateHelper ();
@@ -332,8 +336,6 @@ if ($view == 'category') {
 if ($view == 'categories') {
     $styleOverride->includeFile[] = $template . '/css/category/categories.css';
 }
-$styleOverride->includeFile[] = $template . '/css/section/' . $overrideTheme . '-section-' . $sectionId . '.css';
-$styleOverride->includeFile[] = $template . '/css/section/section-' . $sectionId . '.css';
 $styleOverride->includeFile[] = $template . '/css/section/section.css';
 $styleOverride->includeFile[] = $template . '/css/component/' . $currentComponent . '.css';
 $styleOverride->includeFile[] = $template . '/css/component/' . $overrideTheme . '-' . $currentComponent . '.css';
@@ -347,7 +349,6 @@ $mobileStyleOverride->includeFile = array();
 $mobileStyleOverride->includeFile[] = $template . '/css/article/article-' . $articleId . '-mobile.css';
 $mobileStyleOverride->includeFile[] = $template . '/css/item/item-' . $itemId . '-mobile.css';
 $mobileStyleOverride->includeFile[] = $template . '/css/category/category-' . $catId . '-mobile.css';
-$mobileStyleOverride->includeFile[] = $template . '/css/section/section-' . $sectionId . '-mobile.css';
 $mobileStyleOverride->includeFile[] = $template . '/css/component/' . $currentComponent . '-mobile.css';
 
 #-------------------Extended Template Layout Overrides-----------------------#
@@ -379,8 +380,6 @@ if ($view == 'category') {
 if ($view == 'categories') {
     $layoutOverride->includeFile[] = $template . '/layouts/category/categories.php';
 }
-$layoutOverride->includeFile[] = $template . '/layouts/section/' . $overrideTheme . '-section-' . $sectionId . '.php';
-$layoutOverride->includeFile[] = $template . '/layouts/section/section-' . $sectionId . '.php';
 $layoutOverride->includeFile[] = $template . '/layouts/section/section.php';
 $layoutOverride->includeFile[] = $template . '/layouts/component/' . $overrideTheme . '-' . $currentComponent . '.php';
 $layoutOverride->includeFile[] = $template . '/layouts/component/' . $currentComponent . '.php';
