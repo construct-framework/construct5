@@ -473,8 +473,8 @@ $doc->addScriptDeclaration('docElement = document.documentElement;docElement.cla
 
 $doc->addScriptDeclaration('window.addEvent(\'domready\',function(){new SmoothScroll({duration:1200},window)});');
 if ($loadjQuery) {
-    $doc->addCustomTag('<script type="text/javascript" src="' . $loadjQuery . '"></script>');
-    $doc->addCustomTag('<script type="text/javascript">jQuery.noConflict();</script>');
+    $doc->addScript($loadjQuery);
+    $doc->addScript($template . '/js/jquery-noconflict.js');
 }
 
 // Layout Declarations
