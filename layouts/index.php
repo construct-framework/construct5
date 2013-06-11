@@ -3,7 +3,7 @@
  * @package        Template Framework for Joomla!+
  * @author        Cristina Solana http://nightshiftcreative.com
  * @author        Matt Thomas http://construct-framework.com | http://betweenbrain.com
- * @copyright    Copyright (C) 2009 - 2012 Matt Thomas. All rights reserved.
+ * @copyright    Copyright (C) 2009 - 2013 Matt Thomas. All rights reserved.
  * @license        GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
  */
 
@@ -17,7 +17,7 @@
     <jdoc:include type="head" />
 </head>
 
-<body id="page-top" class="<?php echo $columnLayout; if ($useStickyFooter) echo ' sticky-footer'; echo ' ' . $currentComponent; if ($articleId) echo ' article-' . $articleId; if ($itemId) echo ' item-' . $itemId; if ($catId) echo ' category-' . $catId; if ($default) echo ' default'; ?>">
+<body id="page-top" class="<?php echo $columnLayout; if ($useStickyFooter) echo ' sticky-footer'; echo ' ' . $currentComponent; if ($articleId) echo ' article-' . $articleId; if ($itemId) echo ' item-' . $itemId; if ($catId) echo ' category-' . $catId; if ($default) echo ' default'; if($pageClass) echo ' ' . $pageClass ?>">
 
 <div id="footer-push">
 

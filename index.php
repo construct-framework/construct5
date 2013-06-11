@@ -3,7 +3,7 @@
  * @package        Template Framework for Joomla!+
  * @author        Cristina Solana http://nightshiftcreative.com
  * @author        Matt Thomas http://construct-framework.com | http://betweenbrain.com
- * @copyright    Copyright (C) 2009 - 2012 Matt Thomas. All rights reserved.
+ * @copyright    Copyright (C) 2009 - 2013 Matt Thomas. All rights reserved.
  * @license        GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
  */
 
@@ -17,7 +17,7 @@ if (JFile::exists($logicFile)) {
 }
 
 // Mobile device detection
-if (JFile::exists($mdetectFile)) {
+if ($mdetect &&  JFile::exists($mdetectFile)) {
     include_once $mdetectFile;
     // Instantiate the mobile object class
     $uagent_obj = new uagent_info();
@@ -29,21 +29,21 @@ if (JFile::exists($mdetectFile)) {
 $results = $layoutOverride->getIncludeFile();
 
 // Check if mobile device has opted for desktop version
-if (isset($_GET['viewDesktop'])) {
-    $_SESSION['viewDesktop'] = $_GET['viewDesktop'];
+if (isset($_GET['desktop'])) {
+    $_SESSION['desktop'] = $_GET['desktop'];
 }
 
 // Check if url is requesting mobile, and enabled in templateDetails.xml
-if (isset($_GET['mobile']) && $allowMobileUrl) {
+if (isset($_GET['mobile']) && $enableMobileUrl) {
     $_SESSION['mobile'] = $_GET['mobile'];
     // unset view desktop session
-    if (isset($_SESSION['viewDesktop'])) {
-        unset($_SESSION['viewDesktop']);
+    if (isset($_SESSION['desktop'])) {
+        unset($_SESSION['desktop']);
     }
 }
 
 // Check if mobile device detection is turned on and, test if visitor is a mobile device, and if so, load mobile sub-template
-if ((($mdetect && $isMobile) || ($mdetect && $detectTablets && $isTablet) || (isset($_SESSION['mobile']) && $allowMobileUrl)) && (!isset($_SESSION['viewDesktop']))) {
+if ((($mdetect && $isMobile) || ($mdetect && $detectTablets && $isTablet) || (isset($_SESSION['mobile']) && $enableMobileUrl)) && (!isset($_SESSION['desktop']))) {
     if (JFile::exists($mTemplate)) {
         include_once $mTemplate;
     }
@@ -62,7 +62,7 @@ elseif ($results) {
     <jdoc:include type="head" />
 </head>
 
-<body id="page-top" class="<?php echo $columnLayout; if ($useStickyFooter) echo ' sticky-footer'; echo ' ' . $currentComponent; if ($articleId) echo ' article-' . $articleId; if ($itemId) echo ' item-' . $itemId; if ($catId) echo ' category-' . $catId; if ($default) echo ' default'; ?>">
+<body id="page-top" class="<?php echo $columnLayout; if ($useStickyFooter) echo ' sticky-footer'; echo ' ' . $currentComponent; if ($articleId) echo ' article-' . $articleId; if ($itemId) echo ' item-' . $itemId; if ($catId) echo ' category-' . $catId; if ($default) echo ' default'; if($pageClass) echo ' ' . $pageClass ?>">
 
 <div id="footer-push">
 

@@ -3,7 +3,7 @@
  * @package        Template Framework for Joomla!+
  * @author        Cristina Solana http://nightshiftcreative.com
  * @author        Matt Thomas http://construct-framework.com | http://betweenbrain.com
- * @copyright    Copyright (C) 2009 - 2012 Matt Thomas. All rights reserved.
+ * @copyright    Copyright (C) 2009 - 2013 Matt Thomas. All rights reserved.
  * @license        GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
  */
 
@@ -94,7 +94,7 @@
     <?php endif ?>
 
     <footer id="footer" data-role="footer" data-theme="<?php echo $mFooterDataTheme ?>">
-        <a class="view-desktop" href="<?php echo JURI::current() ?>?viewDesktop=true">View Desktop Version</a>
+        <a class="view-desktop" href="<?php echo JURI::current() ?>?desktop=true">View Desktop Version</a>
         <?php if ($this->countModules('footer')) : ?>
         <jdoc:include type="modules" name="footer" style="xhtml" />
         <?php endif ?>
