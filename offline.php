@@ -3,7 +3,7 @@
  * @package        Template Framework for Joomla!+
  * @author        Cristina Solana http://nightshiftcreative.com
  * @author        Matt Thomas http://construct-framework.com | http://betweenbrain.com
- * @copyright    Copyright (C) 2009 - 2012 Matt Thomas. All rights reserved.
+ * @copyright    Copyright (C) 2009 - 2013 Matt Thomas. All rights reserved.
  * @license        GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
  */
 
@@ -29,12 +29,12 @@ if (JFile::exists($mdetectFile)) {
 }
 
 // Check if mobile device has opted for desktop version
-if (isset($_GET['viewDesktop'])) {
-    $_SESSION['viewDesktop'] = $_GET['viewDesktop'];
+if (isset($_GET['desktop'])) {
+    $_SESSION['desktop'] = $_GET['desktop'];
 }
 
 // Check if mobile device detection is turned on and test if visitor is a mobile device. If so, load mobile version
-if ((($mdetect && $isMobile) || ($mdetect && $detectTablets && $isTablet)) && (!isset($_SESSION['viewDesktop']))) {
+if ((($mdetect && $isMobile) || ($mdetect && $detectTablets && $isTablet)) && (!isset($_SESSION['desktop']))) {
     if (JFile::exists($mTemplate)) {
         include_once $mTemplate;
     }

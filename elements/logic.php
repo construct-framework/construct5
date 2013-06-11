@@ -3,7 +3,7 @@
  * @package        Template Framework for Joomla!+
  * @author         Cristina Solana http://nightshiftcreative.com
  * @author         Matt Thomas http://construct-framework.com | http://betweenbrain.com
- * @copyright      Copyright (C) 2009 - 2012 Matt Thomas. All rights reserved.
+ * @copyright      Copyright (C) 2009 - 2013 Matt Thomas. All rights reserved.
  * @license        GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
  */
 
@@ -16,6 +16,8 @@ if (JFile::exists(dirname(__FILE__) . '/helper.php')) {
 $app = JFactory::getApplication();
 // Returns a reference to the global document object
 $doc = JFactory::getDocument();
+// Returns a reference to JInput
+$jinput = $app->input;
 // Returns a reference to the global language object
 $lang = JFactory::getLanguage();
 // Returns a reference to the menu object
@@ -31,7 +33,7 @@ $url = clone(JURI::getInstance());
 // To access the current user object
 $user = JFactory::getUser();
 // Get the current view
-$view = JRequest::getCmd('view');
+$view = $jinput->get('view');
 
 // The default menu item
 $default = $menu->getActive() == $menu->getDefault($lang->getTag());
@@ -40,7 +42,7 @@ $default = $menu->getActive() == $menu->getDefault($lang->getTag());
 $customStyleSheet        = $this->params->get('customStyleSheet');
 $customStyleSheetVersion = htmlspecialchars($this->params->get('customStyleSheetVersion'));
 $detectTablets           = $this->params->get('detectTablets');
-$allowMobileUrl          = $this->params->get('enableMobileUrl');
+$enableMobileUrl         = $this->params->get('enableMobileUrl');
 $enableSwitcher          = $this->params->get('enableSwitcher');
 $fluidMedia              = $this->params->get('fluidMedia');
 $fullWidth               = $this->params->get('fullWidth');
@@ -98,7 +100,7 @@ if ($customStyleSheetVersion == '') {
 $this->setGenerator($setGeneratorTag);
 
 // Current component Name
-$currentComponent = JRequest::getCmd('option');
+$currentComponent = $jinput->get('option');
 
 // Turn $mooExceptions into an array, remove spaces from input
 $mooExceptions = explode(',', str_replace(' ', '', $mooExceptions));
@@ -234,47 +236,25 @@ endif;
 
 #-------------------------------- Item ID ---------------------------------#
 
-$itemId = JRequest::getInt('Itemid', 0);
+$itemId = $jinput->get('Itemid', 0);
 
 #------------------------------- Article ID -------------------------------#
 
 if ($view == 'article')
-    $articleId = JRequest::getInt('id');
+    $articleId = $jinput->get('id');
 else ($articleId = NULL);
-
-#------------------------------- Section ID -------------------------------#
-
-function getSection($id) {
-    $database = JFactory::getDBO();
-    if ((substr(JVERSION, 0, 3) >= '1.6')) {
-        return NULL;
-    } elseif (JRequest::getCmd('view', 0) == "section") {
-        return $id;
-    } elseif (JRequest::getCmd('view', 0) == "category") {
-        $sql = "SELECT section FROM #__categories WHERE id = $id ";
-        $database->setQuery($sql);
-
-        return $database->loadResult();
-    } elseif (JRequest::getCmd('view', 0) == "article") {
-        $temp = explode(":", $id);
-        $sql  = "SELECT sectionid FROM #__content WHERE id = " . $temp[0];
-        $database->setQuery($sql);
-
-        return $database->loadResult();
-    }
-}
-
-$sectionId = getSection(JRequest::getInt('id'));
 
 #------------------------------ Category ID -------------------------------#
 
 function getCategory($id) {
+    $app      = JFactory::getApplication();
     $database = JFactory::getDBO();
-    if (JRequest::getCmd('view', 0) == "section") {
+    $jinput   = $app->input;
+    if ($jinput->get('view', 0) == "section") {
         return NULL;
-    } elseif ((JRequest::getCmd('view', 0) == "category") || (JRequest::getCmd('view', 0) == "categories")) {
+    } elseif (($jinput->get('view', 0) == "category") || ($jinput->get('view', 0) == "categories")) {
         return $id;
-    } elseif (JRequest::getCmd('view', 0) == "article") {
+    } elseif ($jinput->get('view', 0) == "article") {
         $temp = explode(":", $id);
         $sql  = "SELECT catid FROM #__content WHERE id = " . $temp[0];
         $database->setQuery($sql);
@@ -283,7 +263,7 @@ function getCategory($id) {
     }
 }
 
-$catId = getCategory(JRequest::getInt('id'));
+$catId = getCategory($jinput->get('id'));
 
 #------------------------- Ancestor Category IDs --------------------------#
 
@@ -323,6 +303,10 @@ if ($itemId) {
     $currentAlias = $app->getMenu()->getActive()->alias;
 }
 
+#------------------------------- Page Class -------------------------------#
+
+$pageClass = $menu->getParams($itemId)->get('pageclass_sfx');
+
 #------------------Extended Template Style Overrides------------------------#
 
 $styleOverride = new ConstructTemplateHelper ();
@@ -352,8 +336,6 @@ if ($view == 'category') {
 if ($view == 'categories') {
     $styleOverride->includeFile[] = $template . '/css/category/categories.css';
 }
-$styleOverride->includeFile[] = $template . '/css/section/' . $overrideTheme . '-section-' . $sectionId . '.css';
-$styleOverride->includeFile[] = $template . '/css/section/section-' . $sectionId . '.css';
 $styleOverride->includeFile[] = $template . '/css/section/section.css';
 $styleOverride->includeFile[] = $template . '/css/component/' . $currentComponent . '.css';
 $styleOverride->includeFile[] = $template . '/css/component/' . $overrideTheme . '-' . $currentComponent . '.css';
@@ -367,7 +349,6 @@ $mobileStyleOverride->includeFile = array();
 $mobileStyleOverride->includeFile[] = $template . '/css/article/article-' . $articleId . '-mobile.css';
 $mobileStyleOverride->includeFile[] = $template . '/css/item/item-' . $itemId . '-mobile.css';
 $mobileStyleOverride->includeFile[] = $template . '/css/category/category-' . $catId . '-mobile.css';
-$mobileStyleOverride->includeFile[] = $template . '/css/section/section-' . $sectionId . '-mobile.css';
 $mobileStyleOverride->includeFile[] = $template . '/css/component/' . $currentComponent . '-mobile.css';
 
 #-------------------Extended Template Layout Overrides-----------------------#
@@ -399,8 +380,6 @@ if ($view == 'category') {
 if ($view == 'categories') {
     $layoutOverride->includeFile[] = $template . '/layouts/category/categories.php';
 }
-$layoutOverride->includeFile[] = $template . '/layouts/section/' . $overrideTheme . '-section-' . $sectionId . '.php';
-$layoutOverride->includeFile[] = $template . '/layouts/section/section-' . $sectionId . '.php';
 $layoutOverride->includeFile[] = $template . '/layouts/section/section.php';
 $layoutOverride->includeFile[] = $template . '/layouts/component/' . $overrideTheme . '-' . $currentComponent . '.php';
 $layoutOverride->includeFile[] = $template . '/layouts/component/' . $currentComponent . '.php';
@@ -494,8 +473,8 @@ $doc->addScriptDeclaration('docElement = document.documentElement;docElement.cla
 
 $doc->addScriptDeclaration('window.addEvent(\'domready\',function(){new SmoothScroll({duration:1200},window)});');
 if ($loadjQuery) {
-    $doc->addCustomTag('<script type="text/javascript" src="' . $loadjQuery . '"></script>');
-    $doc->addCustomTag('<script type="text/javascript">jQuery.noConflict();</script>');
+    $doc->addScript($loadjQuery);
+    $doc->addScript($template . '/js/jquery-noconflict.js');
 }
 
 // Layout Declarations
